@@ -18,7 +18,7 @@ const main = async () => {
       },
       {
         "title": "Electric Car",
-        "imgURL": '',
+        "imgURL": 'https://i.imgur.com/K9O1PdG.jpg',
         "description": "Produces 0 tailpipe emissions, but power plant may produce CO2."
       },
       {
