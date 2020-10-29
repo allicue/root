@@ -1,0 +1,33 @@
+
+.top-left-container{
+display: flex;
+flex-flow: column;
+align-items: flex-start;
+margin-left: 50px;
+
+}
+
+.page-direction{
+  margin-left: 20px;
+  width: 189px;
+  height: 51px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  color: #3d3d3d;
+  }
+  
+.title {
+  width: 657px;
+  height: 120px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  color: #3d3d3d;
+  margin-left: -110px;
+}
+.root-logo {
+width: 518px;
+height: 212px;
+}
