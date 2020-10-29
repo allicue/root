@@ -1,0 +1,55 @@
+.transportation-types-main {
+display: flex;
+width: 90vw;
+margin: 0 auto;
+
+}
+
+.title-list {
+  display: flex;
+  flex-direction: column;
+  background: orange;
+}
+
+.transportation-types-parent {
+  display: flex;
+  flex-direction: column;
+}
+
+.transportation-types {
+  display: flex;
+  flex-direction: column;
+}
+
+.green-news {
+  background: lightblue;
+  min-width: 350px;
+  max-width: 400px;
+}
+
+.green-news-child {
+  /* display: flex;
+  flex-direction: column; */
+}
+
+.green-news-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h1 {
+  width: 50%;
+}
+
+#illinois {
+  background: url(https://i.imgur.com/VQ0gohx.png);
+  height: 500px;
+}
+
+#amazon {
+  background: url(https://i.imgur.com/tm15X7G.png);
+  background-size: 150%;
+  background-position: center;
+  height: 500px;
+}

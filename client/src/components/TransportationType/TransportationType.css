@@ -5,6 +5,11 @@
   height: 200px;
 }
 
+.transportation-type {
+  display: flex;
+  align-items: center;
+}
+
 h3 {
   margin: 0 auto;
   font-size: 25px;
