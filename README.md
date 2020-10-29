@@ -9,6 +9,7 @@ https://whimsical.com/5mRKMSMpTjbL66AQxEUpJf
 ## GitHub Project Board
 https://github.com/allicue/root/projects/1?add_cards_query=is%3Aopen
 
+## Example Schema
 ```
 const Type = new Schema(
   {
@@ -18,3 +19,6 @@ const Type = new Schema(
   }
 )
 ```
+
+## Project Overview
+Root is an application designed to provide sustainable transportation methods to users. The first iteration will include information on the different types of transportation where users can add, delete, edit or view options. Application also shows transportion policies and initatives for select cities in the US.
