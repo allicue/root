@@ -1,10 +1,26 @@
 
+.top-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 50px;
+}
+
+
 .top-left-container{
 display: flex;
 flex-flow: column;
 align-items: flex-start;
 margin-left: 50px;
 
+}
+.top-right-container {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-end;
+  margin-right: 110px;
+  margin-top: 230px;
 }
 
 .page-direction{
@@ -31,3 +47,32 @@ margin-left: 50px;
 width: 518px;
 height: 212px;
 }
+
+
+
+.top-right-input{
+  width: 302px;
+  height: 36px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  background: url('https://www.hangtimemedia.com/wp-content/uploads/2018/06/location-icon-png-3.png') no-repeat right 10px center;
+  background-size: 17px 23px;
+  width: 387px;
+  height: 49.1px;
+  border-radius: 30px;
+  border: solid 1px #3d3d3d;
+  background-color: #ffffff;
+  text-indent: 20px;
+}
+
+.enter-location {
+  width: 249px;
+  height: 24px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  color: #3d3d3d;
+}
+
