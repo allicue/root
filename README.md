@@ -8,3 +8,13 @@ https://whimsical.com/5mRKMSMpTjbL66AQxEUpJf
 
 ## GitHub Project Board
 https://github.com/allicue/root/projects/1?add_cards_query=is%3Aopen
+
+```
+const Type = new Schema(
+  {
+    title: { type: String, required: true },
+    imgURL: { type: String, required: true },
+    description: { type: String, required: true }
+  }
+)
+```
