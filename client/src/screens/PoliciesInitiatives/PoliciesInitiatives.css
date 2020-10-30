@@ -3,24 +3,24 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
-  margin-top: 50px;
+  align-items: center;
+  margin-top: 33px;
 }
 
-
+a {
+  text-decoration: none;
+  color: #3d3d3d;
+}
 .top-left-container{
-display: flex;
-flex-flow: column;
-align-items: flex-start;
-margin-left: 50px;
-
+margin-left: 30px;
 }
+
 .top-right-container {
   display: flex;
   flex-flow: column;
-  align-items: flex-end;
-  margin-right: 110px;
-  margin-top: 230px;
+  margin-right: 30px;
+  margin-top: 310px;
+  flex: 0.2;
 }
 
 .page-direction{
@@ -33,19 +33,28 @@ margin-left: 50px;
   text-align: center;
   color: #3d3d3d;
   }
+
+  .page-direction:hover{
+    cursor: default;
+  }
   
 .title {
-  width: 657px;
-  height: 120px;
+  /* width: 657px; */
+  /* height: 120px; */
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   text-align: center;
   color: #3d3d3d;
-  margin-left: -110px;
+  margin-left: 28px;
+  font-size: 48px;
 }
+.title:hover{
+  cursor: default;
+}
+
 .root-logo {
-width: 518px;
-height: 212px;
+max-width: 518px;
+max-height: 212px;
 }
 
 
@@ -56,14 +65,18 @@ height: 212px;
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   font-weight: 500;
-  background: url('https://www.hangtimemedia.com/wp-content/uploads/2018/06/location-icon-png-3.png') no-repeat right 10px center;
-  background-size: 17px 23px;
+  background: url('../../Assets/Icons/ROOT_MapPin-17.svg') no-repeat right -20px center;
+  background-size: 100px 100px;
   width: 387px;
   height: 49.1px;
   border-radius: 30px;
   border: solid 1px #3d3d3d;
   background-color: #ffffff;
   text-indent: 20px;
+}
+
+:focus {
+  outline: none;
 }
 
 .enter-location {
@@ -74,5 +87,133 @@ height: 212px;
   font-weight: 500;
   text-align: center;
   color: #3d3d3d;
+  margin: 0 auto;
+}
+.enter-location:hover{
+cursor: default;
 }
 
+
+
+
+
+img:hover {
+  cursor: pointer;
+}
+
+.content-image{
+    width: 288px;
+    height: 246px;
+    filter: contrast(70%) brightness(92%);
+  }
+
+  
+.box-text-container {
+width: 287px;
+height: 236px;
+background-color: #e8e4d9;
+padding-top: 1px;
+padding-bottom: 10px;
+}
+
+.box-text{
+  font-family: 'Monsterrat', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: left;
+  color: #3d3d3d;
+  display: flex;
+  margin: 29px 19px 29px 22px;
+}
+
+.box-text:hover {
+  cursor: pointer;
+  transform: translate(0.50px);
+}
+
+.box-text-small{
+font-family: 'Monsterrat', sans-serif;
+font-size: 16px;
+font-weight: 500;
+font-style: italic;
+margin-left: 26px;
+color: #3d3d3d
+}
+.box-text-small:hover {
+  cursor: pointer;
+  transform: translate(0.50px);
+}
+
+
+.content-container{
+  display: flex;
+  flex-flow: row wrap;
+  margin: 16px 19px 16px 19px;
+}
+
+.image-text{
+    position: absolute;
+    font-family: 'Monsterrat', sans-serif;
+    font-size: 27px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    width: 290px;
+    height: 101px;
+    margin-top: 120px;
+  }
+
+  .image-text:hover{
+    cursor: pointer;
+    transform: translate(0.70px);
+  }
+
+  .middle-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 66px;
+    margin-bottom: 118px;
+    justify-content: center;
+  }
+  
+  .middle-right{
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .middle-left{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  @media screen and (max-width: 768px) {
+    .top-container {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: flex-start;
+      margin-top: 33px;
+    }
+    
+  
+    .top-left-container{
+      margin: 0 auto;
+    }
+
+      .root-logo{
+
+      }
+      
+      .top-right-container {
+        margin: 0 auto;
+        margin-top: 10px;
+      }
+
+      
+    .middle-container{
+      display: flex;
+      flex-flow: column nowrap;
+      margin: 0 160px;
+    }
+  }

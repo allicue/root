@@ -5,9 +5,7 @@ function App() {
   return (
     <div>
       <Switch>
-        <Route exact path='/' component={PoliciesInitiatives}/> // remember to change path to = './policies-initiatves'
-          
-
+       <Route exact path='/policies-and-initiatives' component={PoliciesInitiatives} />      
       </Switch> 
     </div>
   );
