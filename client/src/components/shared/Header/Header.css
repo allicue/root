@@ -9,48 +9,103 @@
  display: flex;
  margin-left: 100px;
  margin-top: 25px;
+ margin-right: 50px;
+}
+
+.link-home{
+  display: flex;
+  font-family: Montserrat, Semi bold;
+  font-size: 16px;
+  font-weight: 900;
+  color: #3d3d3d;
+  margin-top: 25px;
 }
 
 .header-plan{
   display: flex;
+  font-family: Montserrat, Semi bold;
+  font-size: 16px;
+  font-weight: 900;
+  color: #3d3d3d;
   margin-left: 45px;
   margin-top: 25px;
-  margin-right: 25px;
+  margin-right: 50px;
  }
+
+ .link-plan{
+  display: flex;
+  margin-top: 25px;
+}
 
  .header-transport{
   display: flex;
+  font-family: Montserrat, Semi bold;
+  font-size: 16px;
+  font-weight: 900;
+  color: #3d3d3d;
   margin-left: 15px;
   margin-top: 25px;
   margin-right: 15px;
  }
 
+ .link-transport{
+  display: flex;
+  margin-top: 25px;
+}
+
  .header-image{
   display: flex;
-  height: 84px;
-  margin-top: 5px;
-  margin-left: 55px;
-  margin-right: 55px;
-  width: 88px;
+  height: 100px;
+  margin-top: 15px;
+  margin-left: 90px;
+  margin-right: 90px;
+  width: 100px;
  }
  
  .header-polices{
   display: flex;
-  margin-left: 15px;
+  font-family: Montserrat, Semi bold;
+  font-size: 16px;
+  font-weight: 900;
+  color: #3d3d3d;
+  margin-left: 35px;
   margin-top: 25px;
-  margin-right: 15px;
+  margin-right: 65px;
  }
+
+ .link-polices{
+  display: flex;
+  margin-top: 25px;
+}
 
  .header-community{
   display: flex;
+  font-family: Montserrat, Semi bold;
+  font-size: 16px;
+  font-weight: 900;
+  color: #3d3d3d;
   margin-left: 45px;
   margin-top: 25px;
-  margin-right: 25px;
+  margin-right: 85px;
  }
+
+ .link-community{
+  display: flex;
+  margin-top: 25px;
+}
 
  .header-account{
   display: flex;
-  margin-left: 45px;
+  font-family: Montserrat, Semi bold;
+  font-size: 16px;
+  font-weight: 900;
+  color: #3d3d3d;
+  margin-left: 50px;
   margin-top: 25px;
  }
+
+ .link-account{
+  display: flex;
+  margin-top: 25px;
+}
 
