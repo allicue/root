@@ -16,7 +16,14 @@ export default function ManageTransportationTypes() {
   }, [updated])
 
   const UPDATETYPES = transportationTypes.map(item =>
-    <EditTransportationType id={item._id} title={item.title.toUpperCase()} imgURL={item.imgURL} description={item.description} updated={updated} setUpdated={setUpdated} />
+    <EditTransportationType
+      key={item._id}
+      id={item._id}
+      title={item.title.toUpperCase()}
+      imgURL={item.imgURL}
+      description={item.description}
+      updated={updated}
+      setUpdated={setUpdated} />
   )
 
   return (
