@@ -1,7 +1,7 @@
 .top-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   margin-top: 33px;
 }
@@ -11,14 +11,10 @@ a {
   color: #3d3d3d;
 }
 .top-left-container {
-  /* margin-left: 100px; */
+  margin-left: -40px;
 }
 
 .top-right-container {
-  display: flex;
-  flex-flow: column;
-  /* margin-right: 100px; */
-  
   margin-top: 310px;
 }
 
@@ -38,8 +34,6 @@ a {
 }
 
 .title {
-  /* width: 657px; */
-  /* height: 120px; */
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   text-align: center;
@@ -71,7 +65,7 @@ a {
   border: solid 1px #3d3d3d;
   background-color: #ffffff;
   text-indent: 20px;
-  box-shadow: 2px 2px 2px 2px grey;
+  box-shadow: 2px 2px 4px 2px #999;
 }
 
 input::placeholder {
