@@ -4,26 +4,26 @@ import "./Header.css"
 function Header() {
   return (
     <header className="header">
-      <div>
-        <p className="header-home">Home</p>
+      <div className="header-home">
+        <p>Home</p>
       </div>
-      <div>
-      <p className="header-plan">Plan Your Route</p>
+      <div className="header-plan">
+      <p>Plan Your Route</p>
       </div>
-      <div>
-      <p className="header-transport">Climate Type by Transportation Type</p>
+      <div className="header-transport">
+      <p>Climate Type by Transportation Type</p>
       </div>
-      <div>
-        <img src="https://i.imgur.com/gC1ttIE.png" alt="user image" />
+      <div >
+        <img className="header-image" src="https://i.imgur.com/gC1ttIE.png" alt="user image" />
       </div>
-      <div>
-      <p className="header-polices">Policies + initiatives</p>
+      <div className="header-polices">
+      <p>Policies + initiatives</p>
       </div>
-      <div>
-        <p className="header-community">Community + Advocacy</p>
+      <div className="header-community">
+        <p>Community + Advocacy</p>
       </div>
-      <div>
-        <p className="header-account">Account</p>
+      <div className="header-account">
+        <p>Account</p>
       </div> 
     </header>
   )
