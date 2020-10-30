@@ -1,55 +1,96 @@
+* {
+  font-family: Montserrat;
+}
+
 .transportation-types-main {
 display: flex;
-width: 90vw;
+min-width: 1200px;
+width: 85vw;
 margin: 0 auto;
+
 
 }
 
 .title-list {
   display: flex;
   flex-direction: column;
-  background: orange;
+
+}
+
+.Layout-placeholder {
+  display: flex;
+  flex-direction: column;
+  width: 85vw;
+  margin: 0 auto;
+}
+
+.page-title {
+  font-size: 26px;
+  width: 650px;
+  margin: 10px;
+}
+
+h1 {
+  font-weight: 850;
 }
 
 .transportation-types-parent {
   display: flex;
   flex-direction: column;
+  margin-right: 1vw;
 }
 
 .transportation-types {
   display: flex;
   flex-direction: column;
+  min-width: 70%;
 }
 
 .green-news {
-  background: lightblue;
   min-width: 350px;
   max-width: 400px;
 }
 
 .green-news-child {
-  /* display: flex;
-  flex-direction: column; */
+  margin: 10px 10px 40px 0;
+  box-shadow: 0 3px 3px gray;
 }
 
 .green-news-title {
+  color: white;
+  padding: 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-h1 {
-  width: 50%;
+h2 {
+  font-size: 30px;
+  margin: 10px;
+  margin-top: 15px;
+}
+
+h4 {
+  font-size: 25px;
+  margin: 10px;
+}
+
+.green-news-text {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 30px 10px 50px 10px;
+  background: #e8e4d9;
 }
 
 #illinois {
-  background: url(https://i.imgur.com/VQ0gohx.png);
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(https://i.imgur.com/VQ0gohx.png);
   height: 500px;
+  opacity: 95%;
 }
 
 #amazon {
-  background: url(https://i.imgur.com/tm15X7G.png);
-  background-size: 150%;
-  background-position: center;
-  height: 500px;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(https://i.imgur.com/tm15X7G.png);
+  background-size: 100%;
+  background-position: top;
+  height: 450px;
 }
