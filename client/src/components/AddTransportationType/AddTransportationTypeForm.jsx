@@ -39,9 +39,9 @@ textarea{
   border-radius: 30px;
   border: solid 1px #3d3d3d;
   background-color: #ffffff;
-  text-indent: 20px;
+  text-indent: 40px;
   box-shadow: 2px 2px 4px 1px #999;
-
+  resize: none;
 }
 
 textarea::placeholder {
@@ -52,12 +52,8 @@ textarea::placeholder {
   color: #3d3d3d;
 }
 
-textarea::focus {
-  font-family: "Monsterrat", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  text-align: left;
-  color: #3d3d3d;
+textarea:focus {
+  outline: none;
 }
 
 input::placeholder {
