@@ -1,12 +1,12 @@
-import React from 'react'
-import SanFranPolicyStatic from '../../components/PoliciesInitiatives/SanFranPolicy/SanFranPolicyStatic'
+import React from "react";
+import SanFranPolicyStatic from "../../components/PoliciesInitiatives/SanFranPolicy/SanFranPolicyStatic";
 
 function SanFranPolicy() {
   return (
     <>
- <SanFranPolicyStatic />
-</>
-  )
+      <SanFranPolicyStatic />
+    </>
+  );
 }
 
-export default SanFranPolicy
+export default SanFranPolicy;
