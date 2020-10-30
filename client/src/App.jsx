@@ -4,6 +4,7 @@ import Home from './screens/Home/Home';
 import PoliciesInitiatives from './screens/PoliciesInitiatives/PoliciesInitiatives';
 import TransportationTypes from './screens/TransportationType/TransportationTypes';
 import Header from "./components/shared/Header/Header";
+import AddTransportationType from './screens/AddTransportationType/AddTransportationType.jsx'
 
 function App() {
   return (
@@ -13,6 +14,8 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route exact path="/header" component={Header} />
         <Route exact path='/transportation-types' component={TransportationTypes} />
+        <Route exact path='/add-transportation-type' component={AddTransportationType} />
+
       </Switch>
     </div>
   );
