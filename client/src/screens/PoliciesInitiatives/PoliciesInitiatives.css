@@ -105,7 +105,7 @@ img:hover {
 
 .content-image {
   width: 288px;
-  height: 246px;
+  height: 256px;
   filter: contrast(70%) brightness(92%);
 }
 
@@ -114,7 +114,7 @@ img:hover {
   height: 236px;
   background-color: #e8e4d9;
   padding-top: 1px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
 
 .box-text {
