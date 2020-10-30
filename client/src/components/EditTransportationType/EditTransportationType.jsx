@@ -21,7 +21,7 @@ export default function EditTransportationType(props) {
       setTransportationType(type)
     }
     fetchType()
-  }, [id])
+  }, [isUpdated])
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -36,6 +36,7 @@ export default function EditTransportationType(props) {
     let id = props.id
     const updated = await updateTransportationType(id, transportationType)
     setIsUpdated(updated)
+    props.setUpdated(!props.updated)
   }
 
   return (

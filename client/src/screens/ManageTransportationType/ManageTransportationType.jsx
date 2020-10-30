@@ -3,6 +3,7 @@ import EditTransportationType from '../../components/EditTransportationType/Edit
 import { getTransportationTypes } from '../../services/transportationTypes'
 
 export default function ManageTransportationTypes() {
+  const [updated, setUpdated] = useState(false)
   const [transportationTypes, setTransportationTypes] = useState([])
 
 
@@ -12,10 +13,10 @@ export default function ManageTransportationTypes() {
       setTransportationTypes(types)
     }
     getData()
-  }, [])
+  }, [updated])
 
   const UPDATETYPES = transportationTypes.map(item =>
-    <EditTransportationType id={item._id} title={item.title.toUpperCase()} imgURL={item.imgURL} description={item.description} />
+    <EditTransportationType id={item._id} title={item.title.toUpperCase()} imgURL={item.imgURL} description={item.description} updated={updated} setUpdated={setUpdated} />
   )
 
   return (
