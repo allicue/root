@@ -1,3 +1,9 @@
+import React from 'react'
+import { Link } from 'react-router-dom'
+import styled from 'styled-components'
+import AddTransportationTypeForm from '../../components/AddTransportationType/AddTransportationTypeForm'
+
+let StyledDiv = styled.div`
 .top-container {
   display: flex;
   flex-direction: row;
@@ -48,36 +54,6 @@ a {
 .root-logo {
   max-width: 518px;
   max-height: 212px;
-}
-
-.top-right-input {
-  width: 302px;
-  height: 36px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  background: url("../../Assets/Icons/ROOT_MapPin-17.svg") no-repeat right -20px
-    center;
-  background-size: 100px 100px;
-  width: 387px;
-  height: 49.1px;
-  border-radius: 30px;
-  border: solid 1px #3d3d3d;
-  background-color: #ffffff;
-  text-indent: 20px;
-  box-shadow: 2px 2px 4px 1px #999;
-}
-
-input::placeholder {
-  font-family: "Monsterrat", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  text-align: left;
-  color: #3d3d3d;
-}
-
-:focus {
-  outline: none;
 }
 
 .enter-location {
@@ -131,7 +107,7 @@ img:hover {
   font-size: 16px;
   font-weight: 500;
   font-style: italic;
-  margin-left: 26px;
+  margin-left: 22px;
   color: #3d3d3d;
 }
 
@@ -167,8 +143,8 @@ img:hover {
 
 .middle-container {
   display: flex;
-  flex-flow: row wrap;
-  align-items: center;
+  /* flex-flow: row wrap; */
+  align-items: flex-end;
   margin-top: 66px;
   margin-bottom: 118px;
   justify-content: center;
@@ -211,3 +187,30 @@ img:hover {
     margin: 20px;
   }
 }
+`
+function AddTransportationType() {
+  return (
+    <>
+      <StyledDiv>
+<div className="top-container">
+      <div className="top-left-container">
+      <p className="page-direction"><Link to='/'>Home</Link>/ <Link to='/add-transportation-type'>Add Transportation Type</Link></p>
+      <Link to='/'><img className="root-logo" src="https://i.imgur.com/mV0w6j7.png" alt="ROOT Logo"/></Link>
+      <h1 className='title'>ADD TRANSPORTATION TYPE</h1>
+      </div>
+      <div className="top-right-container">
+        </div>
+      </div>
+      <div className="middle-container">
+         
+        <AddTransportationTypeForm />
+       
+          </div>
+       
+
+        </StyledDiv>
+      </>
+  )
+}
+
+export default AddTransportationType

@@ -6,6 +6,8 @@ import TransportationTypes from './screens/TransportationType/TransportationType
 import Header from "./components/shared/Header/Header";
 import Footer from './components/shared/Footer/Footer';
 import ManageTransportationTypes from './screens/ManageTransportationType/ManageTransportationType';
+import AddTransportationType from './screens/AddTransportationType/AddTransportationType.jsx';
+
 
 function App() {
   return (
@@ -17,6 +19,7 @@ function App() {
         <Route exact path="/footer" component={Footer} />
         <Route exact path='/transportation-types' component={TransportationTypes} />
         <Route exact path='/manage-transportation-types' component={ManageTransportationTypes} />
+        <Route exact path='/add-transportation-type' component={AddTransportationType} />
       </Switch>
     </div>
   );
