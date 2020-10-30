@@ -33,7 +33,7 @@ export default function EditTransportationType(props) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    let { id } = props.match.params
+    let id = props.id
     const updated = await updateTransportationType(id, transportationType)
     setIsUpdated(updated)
   }
