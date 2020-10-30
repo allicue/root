@@ -47,7 +47,7 @@ function Home(props) {
               <div className="community-b"></div>
               </section>
           </div>
-          <div className="column">
+          <div className="column column-b">
             <Link className="climate-link" to="/transportation-types">
               <section className="climate-impact-section">
                 <div className="climate-impact-img"><img src={LeafIcon} className="leaf-icon" alt="leaf"/></div>
