@@ -200,6 +200,9 @@ img:hover {
     margin: 0 auto;
   }
 
+  .box-text-container{
+    display: none;
+  }
   .top-right-container {
     margin: 0 auto;
     margin-top: 10px;
@@ -207,7 +210,7 @@ img:hover {
 
   .middle-container {
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row nowrap;
     margin: 0 160px;
   }
 }
