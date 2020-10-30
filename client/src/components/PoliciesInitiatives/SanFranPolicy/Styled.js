@@ -41,7 +41,7 @@ const Styled = styled.div`
     font-weight: bold;
     text-align: center;
     color: #3d3d3d;
-    margin-left: 28px;
+    margin-left: -50px;
     font-size: 48px;
   }
   .title:hover {

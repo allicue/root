@@ -50,7 +50,7 @@ function SanFranPolicyStatic() {
                 et iusto odio dignissim qui blandit praesent luptatum zzril
                 delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum
                 dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy
-                nibh euismod{" "}
+                nibh euismod
               </p>
             </div>
           </div>
@@ -98,7 +98,7 @@ function SanFranPolicyStatic() {
                 et iusto odio dignissim qui blandit praesent luptatum zzril
                 delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum
                 dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy
-                nibh euismod{" "}
+                nibh euismod
               </p>
             </div>
           </div>
