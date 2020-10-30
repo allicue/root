@@ -45,7 +45,7 @@ function PoliciesInitiativesStatic() {
         </div>
         <div className="middle-right">
           <div className="content-container">
-          <img className="content-image" src="https://i.imgur.com/Jvc4VTr.jpg" alt="Los Angeles" />
+          <img className="content-image" src="https://i.ibb.co/Rcy7c1S/seattle-citiypolicies-hi-res.png" alt="Seattle" />
           <h1 className="image-text">SEATTLE</h1>
             <div className='box-text-container'>
           <p className='box-text'>Lorem ipsum dolor sir amet </p> <p className='box-text'> Ut wisi enim ad </p> <p className='box-text'> Duis autem vel eum</p> <p className="box-text-small">California EPA ></p>
@@ -62,7 +62,7 @@ function PoliciesInitiativesStatic() {
 
           <div className="content-container">
           <img className="content-image" src="https://i.imgur.com/KRbCKiX.jpg" alt="Chicago" />
-          <h1 className="image-text">CHICAO</h1>
+          <h1 className="image-text">CHICAGO</h1>
             <div className='box-text-container'>
           <p className='box-text'>Lorem ipsum dolor sir amet </p> <p className='box-text'> Ut wisi enim ad </p> <p className='box-text'> Duis autem vel eum</p> <p className="box-text-small">California EPA ></p>
           </div>
