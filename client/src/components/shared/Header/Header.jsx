@@ -1,29 +1,30 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import "./Header.css"
 
 function Header() {
   return (
     <header className="header">
       <div className="header-home">
-        <p>Home</p>
+        <Link to="/" className="link-home">Home</Link>
       </div>
       <div className="header-plan">
-      <p>Plan Your Route</p>
+      <Link className="link-plan">Plan Your Route</Link>
       </div>
       <div className="header-transport">
-      <p>Climate Type by Transportation Type</p>
+      <Link to="/transportation-types" className="link-transport">Climate Impact by Transportation Type</Link>
       </div>
-      <div >
+      <div>
         <img className="header-image" src="https://i.imgur.com/gC1ttIE.png" alt="user image" />
       </div>
       <div className="header-polices">
-      <p>Policies + initiatives</p>
+      <Link to="/policies-and-initiatives" className="link-polices">Policies + Initiatives</Link>
       </div>
       <div className="header-community">
-        <p>Community + Advocacy</p>
+        <Link className="link-community">Community + Advocacy</Link>
       </div>
       <div className="header-account">
-        <p>Account</p>
+        <Link className="link-account">Account</Link>
       </div> 
     </header>
   )
