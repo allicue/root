@@ -33,11 +33,10 @@
   width: 100%;
   max-width: 900px;
   display: flex;
-  align-items: center;;
+  align-items: center;
   margin-left: 20px;
   background: #e8e4d9;
 }
-
 
 .description {
   font-size: 26px;
