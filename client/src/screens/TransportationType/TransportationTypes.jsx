@@ -3,7 +3,7 @@ import TransportationType from '../../components/TransportationType/Transportati
 import './TransportationTypes.css'
 import { getTransportationTypes } from '../../services/transportationTypes'
 
-export default function ManageTransportationTypes() {
+export default function TransportationTypes() {
   const [transportationTypes, setTransportationTypes] = useState([])
 
 

@@ -13,7 +13,7 @@ const main = async () => {
       },
       {
         "title": "Biking",
-        "imgURL": 'https://i.imgur.com/YptlxUK.png',
+        "imgURL": 'https://i.imgur.com/t6MSCFD.jpeg',
         "description": "Produces 0 carbon emissions."
       },
       {
@@ -48,7 +48,7 @@ const main = async () => {
       },
       {
         "title": "Airplane",
-        "imgURL": 'https://i.imgur.com/qJ1pc11.jpg',
+        "imgURL": 'https://i.imgur.com/5ktpsRP.png',
         "description": "Produces 0.24 kg of CO2 per passenger per mile on average (ranking factors in more passengers and more miles on average than other methods)."
       }
     ]
@@ -59,7 +59,7 @@ const main = async () => {
 }
 const run = async () => {
   await main()
-    db.close()
+  db.close()
 }
 
 run()
