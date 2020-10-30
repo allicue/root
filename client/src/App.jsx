@@ -7,13 +7,14 @@ import Header from "./components/shared/Header/Header";
 import Footer from './components/shared/Footer/Footer';
 import ManageTransportationTypes from './screens/ManageTransportationType/ManageTransportationType';
 import AddTransportationType from './screens/AddTransportationType/AddTransportationType.jsx';
-
+import SanFranPolicy from './screens/SanFranPolicy/SanFranPolicy'
 
 function App() {
   return (
     <div>
       <Switch>
         <Route exact path='/policies-and-initiatives' component={PoliciesInitiatives} />
+        <Route exact path='/policies-and-initiatives/san-fransisco' component={SanFranPolicy} />
         <Route exact path="/" component={Home} />
         <Route exact path="/header" component={Header} />
         <Route exact path="/footer" component={Footer} />
