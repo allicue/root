@@ -1,7 +1,7 @@
 .top-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   margin-top: 33px;
 }
@@ -11,15 +11,15 @@ a {
   color: #3d3d3d;
 }
 .top-left-container {
-  margin-left: 30px;
+  /* margin-left: 100px; */
 }
 
 .top-right-container {
   display: flex;
   flex-flow: column;
-  margin-right: 30px;
+  /* margin-right: 100px; */
+  
   margin-top: 310px;
-  flex: 0.2;
 }
 
 .page-direction {
@@ -71,6 +71,7 @@ a {
   border: solid 1px #3d3d3d;
   background-color: #ffffff;
   text-indent: 20px;
+  box-shadow: 2px 2px 2px 2px grey;
 }
 
 input::placeholder {
