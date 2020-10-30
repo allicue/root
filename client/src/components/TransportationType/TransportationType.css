@@ -1,23 +1,18 @@
-* {
-  font-family: Montserrat;
-  color: #3d3d3d;
-}
-
 .title-container {
   text-align: center;
   min-width: 300px;
   opacity: 90%;
 }
 
-
 .transportation-type {
+  font-family: Montserrat;
+  color: #3d3d3d;
   display: flex;
   align-items: center;
   margin: 10px;
-  
 }
 
-  .h3-container {
+ .h3-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,7 +23,7 @@
   background: rgba(0, 0, 0, .4);
 }
 
-h3 {
+.type-title {
   color: white;
   font-weight: bold;
 }
@@ -43,9 +38,10 @@ h3 {
   background: #e8e4d9;
 }
 
-/* p {
+
+.description {
   font-size: 26px;
   line-height: 30px;
   font-weight: 500;
   padding: 20px;
-} */
+} 
