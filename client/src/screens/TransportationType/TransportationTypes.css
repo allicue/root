@@ -1,4 +1,4 @@
-* {
+.Layout-placeholder {
   font-family: Montserrat;
   color: #3d3d3d;
 }
@@ -8,7 +8,6 @@ display: flex;
 min-width: 1200px;
 width: 85vw;
 margin: 0 auto;
-
 
 }
 
@@ -25,13 +24,13 @@ margin: 0 auto;
   margin: 0 auto;
 }
 
-.page-title {
+.page-title-div {
   font-size: 26px;
   width: 650px;
   margin: 10px;
 }
 
-h1 {
+.page-title-text {
   font-weight: 850;
 }
 
@@ -65,7 +64,7 @@ h1 {
   justify-content: space-between;
 }
 
-h2 {
+.green-news-title-text {
   font-size: 30px;
   font-weight: bold;
   margin: 10px;
@@ -73,7 +72,7 @@ h2 {
   color: white;
 }
 
-h4 {
+.green-news-subtitle {
   font-size: 25px;
   margin: 10px;
   color: white;
