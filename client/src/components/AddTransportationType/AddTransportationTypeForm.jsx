@@ -54,7 +54,7 @@ function AddTransportationTypeForm() {
         />
       </div>  
       <div>      
-      <label for="description">Description</label>
+      <label className='description' for="description">Description</label>
         <textarea name="description"
           placeholder="Enter Description"
           rows="8"

@@ -38,7 +38,8 @@ textarea{
   border-radius: 30px;
   border: solid 1px #3d3d3d;
   background-color: #ffffff;
-  text-indent: 40px;
+  /* text-indent: 40px; */
+  padding-left: 40px;
   box-shadow: 2px 2px 4px 1px #999;
   resize: none;
   padding: 10px;
@@ -79,6 +80,7 @@ input:focus {
 
 div {
   margin: 20px auto;
+  text-align: center;
 }
 
   button {
@@ -97,8 +99,15 @@ div {
   box-shadow: 2px 3px 4px 1px #999;
 }
 
+.description {
+  margin-right: 10px;
+}
 button:hover {
   cursor: pointer;
+  text-shadow: 2px 2px #999;
+  transform: translateY(-1.004px);
+  box-shadow: 2px 4px 4px 1px #999;
+
 }
 `
 
