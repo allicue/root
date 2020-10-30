@@ -7,15 +7,46 @@
   background-position: center;
   height: 961px;
   color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.root-logo {
+.homepage-root-logo {
   margin-top: 125px;
   width: 900px;
 }
 
+.homepage-subtitle {
+  font-family: Montserrat;
+  font-size: 48px;
+}
+
 .homepage-header-text-container {
   margin-top: 65px;
+}
+
+.homepage-news-container {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.homepage-subtitle-a {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 500;
+  width: 505px;
+  margin-right: 10%;
+}
+
+.homepage-subtitle-b {
+  font-family: Montserrat;
+  width: 600px;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 hr {
@@ -24,8 +55,15 @@ hr {
   background-color: white;
 }
 
+.homepage-header-navbar {
+  display: flex;
+  margin-top: 50px;
+}
+
 button {
   width: 391px;
+  font-family: Montserrat;
+  font-weight: 600;
   height: 81px;
   background-color: #749f5c;
   border-style: none;
@@ -78,7 +116,6 @@ button {
   width: 386px;
   height: 547px;
 }
-
 
 .community-advocacy-section {
   background-color: slategrey;

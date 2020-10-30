@@ -8,11 +8,13 @@ function Home(props) {
     <div className="homepage">
       
       <div className="homepage-header"> 
-        <img className="root-logo" src={Logo}/>
+        <img className="homepage-root-logo" alt="root-logo" src={Logo}/>
           <div className="homepage-header-text-container">
-            <h2>GREEN TRANSPORT</h2>
-            <p>Articles, News and Inspiration For You</p>
-            <p>California Will Phase Out Gasoline-Powered Cars in Fight Against Climate Change ></p>
+          <h2 className="homepage-subtitle">GREEN TRANSPORT</h2>
+          <div className="homepage-news-container">
+            <p className="homepage-subtitle-a">Articles, News and Inspiration For You</p>
+            <p className="homepage-subtitle-b">California Will Phase Out Gasoline-Powered Cars in <br></br>Fight Against Climate Change ></p>
+          </div>
         </div>
         <hr></hr>
         <nav className="homepage-header-navbar">
@@ -35,7 +37,7 @@ function Home(props) {
         </section>
         <section className="community-advocacy-section">
           <div className="community-a"><h3>COMMUNITY + ADVOCACY</h3></div>
-          <div className="community-b"><img className="community-advocacy-img" src={CommunityImg}/></div>
+          <div className="community-b"><img className="community-advocacy-img" src={CommunityImg} alt="community-advocacy"/></div>
         </section>
       </div>
 

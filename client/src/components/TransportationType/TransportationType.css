@@ -1,7 +1,4 @@
-* {
-  font-family: Montserrat;
-  color: #3d3d3d;
-}
+
 
 .title-container {
   text-align: center;
@@ -28,10 +25,10 @@
   background: rgba(0, 0, 0, .4);
 }
 
-h3 {
+/* h3 {
   color: white;
   font-weight: bold;
-}
+} */
 
 .description-container {
   height: 100%;
@@ -43,9 +40,9 @@ h3 {
   background: #e8e4d9;
 }
 
-p {
+/* p {
   font-size: 26px;
   line-height: 30px;
   font-weight: 500;
   padding: 20px;
-}
+} */
