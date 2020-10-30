@@ -65,7 +65,7 @@ a {
   border: solid 1px #3d3d3d;
   background-color: #ffffff;
   text-indent: 20px;
-  box-shadow: 2px 2px 4px 2px #999;
+  box-shadow: 2px 2px 4px 1px #999;
 }
 
 input::placeholder {
