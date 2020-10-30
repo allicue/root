@@ -18,7 +18,7 @@
 }
 
 .homepage-subtitle {
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-size: 48px;
 }
 
@@ -33,7 +33,7 @@
 }
 
 .homepage-subtitle-a {
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-size: 24px;
   font-weight: 500;
   width: 505px;
@@ -41,7 +41,7 @@
 }
 
 .homepage-subtitle-b {
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   width: 600px;
   font-size: 16px;
   font-weight: 500;
@@ -60,9 +60,9 @@ hr {
   margin-top: 50px;
 }
 
-button {
+.homepage-button {
   width: 391px;
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   height: 81px;
   background-color: #749f5c;
@@ -80,18 +80,33 @@ button {
 }
 
 .homepage-body {
-  max-width: 90%;
+  max-width: 87%;
   margin: 0 auto;
   margin-top: 30px;
   display: flex;
-  flex-flow: wrap;
+  /* flex-direction: column; */
+  /* flex-wrap: wrap; */
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
 }
 
 .policies-section {
   background-image: linear-gradient(
     rgba(0, 0, 0, 0.5),
     rgba(0, 0, 0, 0.5)), url("./photos/chicagoskyline.png");
-  background-position-y: 40%;
+  background-position-y: 45%;
   width: 796px;
   height: 381px;
   background-size: cover;
@@ -105,20 +120,42 @@ button {
   bottom: 0px;
   font-size: 24px;
   padding-left: 20px;
+  margin-bottom: 20px;
 }
 
 .policies-text-headline {
   font-size: 48px;
+  font-family: 'Montserrat', sans-serif;
   margin-bottom: 0px;
+}
+
+.train-image {
+  width: 386px;
+  height: 381px;
 }
 
 .climate-impact-section {
   width: 386px;
   height: 547px;
+  margin-left: 34px;
+  background-color: #e8e4d9;
+  font-family: 'Montserrat', sans-serif;
+  color: #3d3d3d;
+}
+
+.climate-impact-header {
+  font-size: 30px;
+  font-weight: bold;
+  padding-left: 12px;
+}
+
+.climate-impact-text {
+  font-size: 24px;
+  padding: 18px 68px 16px 12px;
 }
 
 .community-advocacy-section {
-  background-color: slategrey;
+  background-color: #3d3d3d;
   height: 149px;
   color: white;
   text-align: left; 
@@ -128,7 +165,10 @@ button {
 
 .community-a {
   width: 318px;
+  padding: 10px;
+  font-family: 'Montserrat', sans-serif;
   font-size: 30px;
+  font-weight: 700;
 }
 
 .community-b {
