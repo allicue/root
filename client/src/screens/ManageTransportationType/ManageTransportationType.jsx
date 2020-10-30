@@ -25,15 +25,15 @@ export default function ManageTransportationTypes() {
       <div className="page-title">
         <h1>CLIMATE IMPACT BY TRANSPORTATION TYPE</h1>
       </div>
-      <div className="page-content">
-        <div className="transportation-types-main">
-          <div className="title-list">
-            <div className="transportation-types-parent">
-              <div className="transportation-types">{UPDATETYPES}</div>
-            </div>
-          </div>
+      <div className="edit-page-content">
+
+
+        <div className="edit-transportation-types-parent">
+          <div className="edit-transportation-types">{UPDATETYPES}</div>
         </div>
       </div>
+
+
     </div>
   )
 }

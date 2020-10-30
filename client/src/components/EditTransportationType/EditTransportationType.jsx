@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-// import './TransportationType.css'
+import './EditTransportationType.css'
 import { updateTransportationType } from '../../services/transportationTypes'
 
 export default function EditTransportationType(props) {
@@ -38,25 +38,32 @@ export default function EditTransportationType(props) {
   }
 
   return (
-    <div>
+    <div className="edit-transportation-type" >
       <form onSubmit={handleSubmit}>
-        <input
-          className="edit-title"
-          placeholder="Mode of Transportation"
-          value={props.title}
-          name="title"
-          required
-          onChange={handleChange}
-        />
-        <input
-          className="edit-description"
-          placeholder="Climate Impact"
-          value={props.description}
-          name="description"
-          required
-          onChange={handleChange}
-        />
-
+        <div className="edit-top-container">
+          <div className="edit-title-container" style={{ background: `url(${props.imgURL})`, backgroundSize: "380px", backgroundPosition: "center" }}>
+            <div className="h3-container">
+              <input
+                className="edit-title"
+                placeholder="Mode of Transportation"
+                value={props.title}
+                name="title"
+                required
+                onChange={handleChange}
+              />
+            </div>
+          </div>
+          <div className="edit-description-container">
+            <input
+              className="edit-description"
+              placeholder="Climate Impact"
+              value={props.description}
+              name="description"
+              required
+              onChange={handleChange}
+            />
+          </div>
+        </div>
         <input
           className="edit-image-link"
           placeholder="Copy Image Link Here"

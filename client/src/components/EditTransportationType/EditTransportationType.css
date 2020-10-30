@@ -1,0 +1,21 @@
+.edit-transportation-type {
+  display: flex;
+  flex-direction: column;
+  background: lightcyan;
+}
+
+.edit-title-container {
+  max-width: 300px;
+
+}
+
+.edit-top-container {
+  display: flex;
+  width: 100%;
+  background: lightcoral;
+}
+
+.edit-description-container {
+width: 100%;
+/* background: yellow; */
+}
