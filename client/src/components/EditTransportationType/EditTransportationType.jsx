@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from 'react'
-import './TransportationType.css'
+import { useParams } from 'react-router-dom'
+import './EditTransportationType.css'
 import { updateTransportationType } from '../../services/transportationTypes'
 
 export default function EditTransportationType(props) {
   const [isUpdated, setIsUpdated] = useState(false)
 
   const [transportationType, setTransportationType] = useState({
-    title: '',
-    imgURL: '',
-    description: ''
+    title: props.title,
+    imgURL: props.imgURL,
+    description: props.description
   })
 
+  let { id } = useParams()
 
 
   useEffect(() => {
@@ -18,14 +20,60 @@ export default function EditTransportationType(props) {
       const type = await updateTransportationType(props.id)
       setTransportationType(type)
     }
-  })
+    fetchType()
+  }, [id])
+
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    setTransportationType({
+      ...transportationType,
+      [name]: value
+    })
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    let { id } = props.match.params
+    const updated = await updateTransportationType(id, transportationType)
+    setIsUpdated(updated)
+  }
 
   return (
-    <div>
-      <form>
-        <input />
-        <input />
-        <input />
+    <div className="edit-transportation-type" >
+      <form onSubmit={handleSubmit}>
+        <div className="edit-top-container">
+          <div className="edit-title-container" style={{ background: `url(${props.imgURL})`, backgroundSize: "380px", backgroundPosition: "center" }}>
+            <div className="h3-container">
+              <input
+                className="edit-title"
+                placeholder="Mode of Transportation"
+                value={transportationType.title}
+                name="title"
+                required
+                onChange={handleChange}
+              />
+            </div>
+          </div>
+          <div className="edit-description-container">
+            <input
+              className="edit-description"
+              placeholder="Climate Impact"
+              value={transportationType.description}
+              name="description"
+              required
+              onChange={handleChange}
+            />
+          </div>
+        </div>
+        <input
+          className="edit-image-link"
+          placeholder="Copy Image Link Here"
+          value={transportationType.imgURL}
+          name="imgURL"
+          required
+          onChange={handleChange}
+        />
+        <button type="submit" >Submit</button>
       </form>
     </div>
   )
@@ -34,3 +82,4 @@ export default function EditTransportationType(props) {
 // get type by id
 // id will be passed down through props
 // put function will take props.id
+

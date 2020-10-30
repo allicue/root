@@ -23,8 +23,8 @@ export default function TransportationTypes() {
   return (
     <div className="Layout-placeholder">
       {/* Edit divs when layout is implemented */}
-      <div className="page-title">
-        <h1>CLIMATE IMPACT BY TRANSPORTATION TYPE</h1>
+      <div className="page-title-div">
+        <h1 className="page-title-text">CLIMATE IMPACT BY TRANSPORTATION TYPE</h1>
       </div>
       <div className="page-content">
         <div className="transportation-types-main">
@@ -36,8 +36,8 @@ export default function TransportationTypes() {
           <div className="green-news">
             <div className="green-news-child">
               <div className="green-news-title" id="illinois">
-                <h2>GREEN NEWS</h2>
-                <h4>A GREEN NEW DEAL FOR ILLINOIS TRANSPORTATION</h4>
+                <h2 className="green-news-title-text">GREEN NEWS</h2>
+                <h4 className="green-news-subtitle">A GREEN NEW DEAL FOR ILLINOIS TRANSPORTATION</h4>
               </div>
               <div className="green-news-text">
                 <small>Last week while forest fires were raging in California, Governor Gavin Newsom issued an executive order declaring a goal of eliminating fossil fuels from the transportation sector.<br></br><br></br>
@@ -46,8 +46,8 @@ export default function TransportationTypes() {
             </div>
             <div className="green-news-child">
               <div className="green-news-title" id="amazon">
-                <h2>GREEN NEWS</h2>
-                <h4>AMAZON UNVEILS ITS NEW ELECTRIC DELIVERY VANS BUILT BY RIVIAN</h4>
+                <h2 className="green-news-title-text">GREEN NEWS</h2>
+                <h4 className="green-news-subtitle">AMAZON UNVEILS ITS NEW ELECTRIC DELIVERY VANS BUILT BY RIVIAN</h4>
               </div>
               <div className="green-news-text">
                 <small>Amazon unveiled its first all-electric delivery van on Thursday. The vehicle, built by EV startup Rivian, will come with state-of-the-art technology, like sensing equipment and an advanced driver-assist system. <br></br><br></br>

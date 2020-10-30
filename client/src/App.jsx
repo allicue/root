@@ -5,6 +5,7 @@ import PoliciesInitiatives from './screens/PoliciesInitiatives/PoliciesInitiativ
 import TransportationTypes from './screens/TransportationType/TransportationTypes';
 import Header from "./components/shared/Header/Header";
 import Footer from './components/shared/Footer/Footer';
+import ManageTransportationTypes from './screens/ManageTransportationType/ManageTransportationType';
 
 function App() {
   return (
@@ -13,8 +14,9 @@ function App() {
         <Route exact path='/policies-and-initiatives' component={PoliciesInitiatives} />
         <Route exact path="/" component={Home} />
         <Route exact path="/header" component={Header} />
-        <Route exact path="/Footer" component={Footer} />
+        <Route exact path="/footer" component={Footer} />
         <Route exact path='/transportation-types' component={TransportationTypes} />
+        <Route exact path='/manage-transportation-types' component={ManageTransportationTypes} />
       </Switch>
     </div>
   );
