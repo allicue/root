@@ -1,7 +1,7 @@
 .homepage-header {
   background-image: linear-gradient(
   rgba(0, 0, 0, 0.5),
-  rgba(0, 0, 0, 0.5)), url("./photos/root_header_hi_res.png");
+  rgba(0, 0, 0, 0.5)), url("../../Assets/Images/Hi-Res/root_header_hi_res.png");
   background-size: cover;
   padding: 50px;
   background-position: center;
@@ -29,24 +29,34 @@
 .homepage-news-container {
   display: flex;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .homepage-subtitle-a {
   font-family: 'Montserrat', sans-serif;
   font-size: 24px;
   font-weight: 500;
-  width: 505px;
-  margin-right: 10%;
+  width: 550px;
+  margin-right: 5%;
 }
 
 .homepage-subtitle-b {
   font-family: 'Montserrat', sans-serif;
-  width: 600px;
+  width: 550px;
   font-size: 16px;
-  font-weight: 500;
   display: flex;
   flex-wrap: wrap;
+  padding-bottom: 10px;
+}
+
+.homepage-subtitle-b-link {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.homepage-subtitle-b:hover {
+  font-weight: bold;
+  border-bottom: solid 2px white;
 }
 
 hr {
@@ -75,18 +85,22 @@ hr {
   margin: 15px;
 }
 
+.homepage-button:hover {
+  cursor: pointer;
+  text-shadow: 2px 2px 5px rgb(54, 54, 54);
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 .button-text {
   width: 300px;
   margin: 0 auto;
 }
 
 .homepage-body {
-  max-width: 87%;
+  width: 90%;
   margin: 0 auto;
   margin-top: 30px;
   display: flex;
-  /* flex-direction: column; */
-  /* flex-wrap: wrap; */
 }
 
 .row {
@@ -100,13 +114,14 @@ hr {
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
+  align-items: left;
   flex: 1;
 }
 
 .policies-section {
   background-image: linear-gradient(
     rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.5)), url("./photos/chicagoskyline.png");
+    rgba(0, 0, 0, 0.5)), url("../../Assets/Images/Hi-Res/chicago_citiypolicies_hi_res.png");
   background-position-y: 45%;
   width: 796px;
   height: 381px;
@@ -114,6 +129,7 @@ hr {
   color: white;
   text-align: left;
   position: relative;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .policies-text {
@@ -126,13 +142,7 @@ hr {
 
 .policies-text-headline {
   font-size: 48px;
-  font-family: 'Montserrat', sans-serif;
   margin-bottom: 0px;
-}
-
-.train-image {
-  width: 386px;
-  height: 381px;
 }
 
 .climate-impact-section {
@@ -148,11 +158,30 @@ hr {
   font-size: 30px;
   font-weight: bold;
   padding-left: 12px;
+  padding-top: 10px;
+}
+
+.climate-impact-img {
+  width: 386px;
+  height: 381px;
+  background-image: url("../../Assets/Images/Hi-Res/root_desktop_hi_res.png");
+  background-size: cover;
+}
+
+.leaf-icon {
+  width: 65px;
+  height: 65px;
+  padding: 7px;
 }
 
 .climate-impact-text {
   font-size: 24px;
   padding: 18px 68px 16px 12px;
+}
+
+.climate-link{
+  text-decoration: none;
+  width: 386px;
 }
 
 .community-advocacy-section {
@@ -162,6 +191,7 @@ hr {
   text-align: left; 
   display: flex;
   width: 794px;
+  margin-top: 18px;
 }
 
 .community-a {
@@ -170,12 +200,33 @@ hr {
   font-family: 'Montserrat', sans-serif;
   font-size: 30px;
   font-weight: 700;
+  display: flex;
+  flex-direction: column;
+}
+
+.community-a-title {
+  position: absolute;
+  width: 318px;
+}
+
+.community-icon {
+  position: relative;
+  align-self: flex-end;
+  margin-top: 10%;
+  width: 120px;
+  height: 120px;
 }
 
 .community-b {
- width: 478px;
+  width: 478px;
+  background-image: linear-gradient(
+    rgba(122, 121, 121, 0.342),
+    rgba(122, 121, 121, 0.342)), url("../../Assets/Images/Hi-Res/molly_profile_community_hi_res.png");
+    background-position-y: 45%;
+    background-size: cover;
 }
 
 .community-advocacy-img {
-margin-left: 45%;
+  width: 478px;
+  object-fit: contain;
 }
