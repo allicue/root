@@ -30,6 +30,36 @@ input {
   box-shadow: 2px 2px 4px 1px #999;
 }
 
+textarea{
+  width: 409px;
+  height: 52px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 30px;
+  border: solid 1px #3d3d3d;
+  background-color: #ffffff;
+  text-indent: 20px;
+  box-shadow: 2px 2px 4px 1px #999;
+
+}
+
+textarea::placeholder {
+  font-family: "Monsterrat", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
+  color: #3d3d3d;
+}
+
+textarea::focus {
+  font-family: "Monsterrat", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
+  color: #3d3d3d;
+}
+
 input::placeholder {
   font-family: "Monsterrat", sans-serif;
   font-size: 16px;
@@ -79,7 +109,7 @@ function AddTransportationTypeForm() {
       </div>  
       <div>      
       <label for="description">Description</label>
-       <input type="text" name="description" placeholder="Enter Description"/>
+       <textarea type="text" name="description" placeholder="Enter Description"/>
       </div>  
      <div>
       <button>SUBMIT</button>
