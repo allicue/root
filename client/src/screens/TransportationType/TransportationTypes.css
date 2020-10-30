@@ -8,7 +8,6 @@ display: flex;
 min-width: 1200px;
 width: 85vw;
 margin: 0 auto;
-
 }
 
 .title-list {
@@ -64,6 +63,7 @@ margin: 0 auto;
   justify-content: space-between;
 }
 
+
 .green-news-title-text {
   font-size: 30px;
   font-weight: bold;
@@ -76,7 +76,7 @@ margin: 0 auto;
   font-size: 25px;
   margin: 10px;
   color: white;
-}
+} 
 
 .green-news-text {
   font-size: 20px;

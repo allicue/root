@@ -12,7 +12,7 @@
   margin: 10px;
 }
 
-  .h3-container {
+ .h3-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,9 +38,10 @@
   background: #e8e4d9;
 }
 
+
 .description {
   font-size: 26px;
   line-height: 30px;
   font-weight: 500;
   padding: 20px;
-}
+} 
