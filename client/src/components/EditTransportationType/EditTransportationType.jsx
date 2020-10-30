@@ -7,23 +7,24 @@ export default function EditTransportationType(props) {
   const [isUpdated, setIsUpdated] = useState(false)
 
   const [transportationType, setTransportationType] = useState({
-    title: '',
-    imgURL: '',
-    description: ''
-  }, [])
+    title: props.title,
+    imgURL: props.imgURL,
+    description: props.description
+  })
 
   let { id } = useParams()
+
 
   useEffect(() => {
     const fetchType = async () => {
       const type = await updateTransportationType(props.id)
-      fetchType(type)
-
+      setTransportationType(type)
     }
-  })
+    fetchType()
+  }, [id])
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target
     setTransportationType({
       ...transportationType,
       [name]: value
@@ -32,7 +33,7 @@ export default function EditTransportationType(props) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    let { id } = props.match.params;
+    let { id } = props.match.params
     const updated = await updateTransportationType(id, transportationType)
     setIsUpdated(updated)
   }
@@ -46,7 +47,7 @@ export default function EditTransportationType(props) {
               <input
                 className="edit-title"
                 placeholder="Mode of Transportation"
-                value={props.title}
+                value={transportationType.title}
                 name="title"
                 required
                 onChange={handleChange}
@@ -57,7 +58,7 @@ export default function EditTransportationType(props) {
             <input
               className="edit-description"
               placeholder="Climate Impact"
-              value={props.description}
+              value={transportationType.description}
               name="description"
               required
               onChange={handleChange}
@@ -67,7 +68,7 @@ export default function EditTransportationType(props) {
         <input
           className="edit-image-link"
           placeholder="Copy Image Link Here"
-          value={props.imgURL}
+          value={transportationType.imgURL}
           name="imgURL"
           required
           onChange={handleChange}

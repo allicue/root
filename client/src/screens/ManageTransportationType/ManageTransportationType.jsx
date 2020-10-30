@@ -9,7 +9,6 @@ export default function ManageTransportationTypes() {
   useEffect(() => {
     const getData = async () => {
       const types = await getTransportationTypes()
-      console.log(types)
       setTransportationTypes(types)
     }
     getData()
@@ -26,14 +25,10 @@ export default function ManageTransportationTypes() {
         <h1>CLIMATE IMPACT BY TRANSPORTATION TYPE</h1>
       </div>
       <div className="edit-page-content">
-
-
         <div className="edit-transportation-types-parent">
           <div className="edit-transportation-types">{UPDATETYPES}</div>
         </div>
       </div>
-
-
     </div>
   )
 }
