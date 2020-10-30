@@ -1,5 +1,6 @@
 * {
   font-family: Montserrat;
+  color: #3d3d3d;
 }
 
 .transportation-types-main {
@@ -66,19 +67,24 @@ h1 {
 
 h2 {
   font-size: 30px;
+  font-weight: bold;
   margin: 10px;
   margin-top: 15px;
+  color: white;
 }
 
 h4 {
   font-size: 25px;
+  font-weight: regular;
   margin: 10px;
+  color: white;
 }
 
 .green-news-text {
   font-size: 20px;
   font-weight: 500;
-  padding: 30px 10px 50px 10px;
+  line-height: 20px;
+  padding: 30px 15px 50px 15px;
   background: #e8e4d9;
 }
 
