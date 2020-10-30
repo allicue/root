@@ -59,7 +59,7 @@
   border-bottom: solid 2px white;
 }
 
-hr {
+.header-line {
   width: 1204px;
   height: 2px;
   background-color: white;

@@ -20,7 +20,7 @@ function Home(props) {
             </a>
           </div>
         </div>
-        <hr></hr>
+        <hr className='header-line'></hr>
         <nav className="homepage-header-navbar">
           <Link to=""><button className="homepage-button"><p className="button-text">Plan Your Route</p></button></Link>
           <Link to="/transportation-types"><button className="homepage-button"><p className="button-text">Climate Impact By Transportation Type</p></button></Link>
