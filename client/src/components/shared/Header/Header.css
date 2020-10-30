@@ -1,0 +1,56 @@
+.header{
+  display: flex;
+  position: fixed;
+  background-color: #e8e4d9;
+  width: 100%;
+  height: 20%;
+}
+.header-home{
+ display: flex;
+ margin-left: 100px;
+ margin-top: 25px;
+}
+
+.header-plan{
+  display: flex;
+  margin-left: 45px;
+  margin-top: 25px;
+  margin-right: 25px;
+ }
+
+ .header-transport{
+  display: flex;
+  margin-left: 15px;
+  margin-top: 25px;
+  margin-right: 15px;
+ }
+
+ .header-image{
+  display: flex;
+  height: 84px;
+  margin-top: 5px;
+  margin-left: 55px;
+  margin-right: 55px;
+  width: 88px;
+ }
+ 
+ .header-polices{
+  display: flex;
+  margin-left: 15px;
+  margin-top: 25px;
+  margin-right: 15px;
+ }
+
+ .header-community{
+  display: flex;
+  margin-left: 45px;
+  margin-top: 25px;
+  margin-right: 25px;
+ }
+
+ .header-account{
+  display: flex;
+  margin-left: 45px;
+  margin-top: 25px;
+ }
+
