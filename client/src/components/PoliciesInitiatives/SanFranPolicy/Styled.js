@@ -13,7 +13,6 @@ a {
   text-decoration: none;
   color: #3d3d3d;
 }
-
 .top-left-container {
   margin-left: -40px;
 }
@@ -102,13 +101,12 @@ img:hover {
 }
 
 .content-image {
-  width: 288px;
-  height: 256px;
-  filter: contrast(70%) brightness(92%);
+  width: 1204px;
+  height: 319px;
 }
 
 .box-text-container {
-  width: 287px;
+  width: 1202px;
   height: 236px;
   background-color: #e8e4d9;
   padding-top: 1px;
@@ -146,7 +144,7 @@ img:hover {
 
 .content-container {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column nowrap;
   margin: 16px 19px 16px 19px;
 }
 
@@ -171,22 +169,13 @@ img:hover {
 
 .middle-container {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   align-items: center;
   margin-top: 66px;
   margin-bottom: 118px;
   justify-content: center;
 }
 
-.middle-right {
-  flex-flow: column;
-  align-items: flex-end;
-}
-
-.middle-left {
-  flex-direction: column;
-  align-items: flex-start;
-}
 
 @media screen and (max-width: 768px) {
   .top-container {

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Styled from './Styled'
-
+import SanFranPolicy from './SanFranPolicy/SanFranPolicyStatic'
 
 function PoliciesInitiativesStatic() {
   return (
@@ -22,7 +22,7 @@ function PoliciesInitiativesStatic() {
        <div className="middle-left">
         <div className="content-container">
             <img className="content-image" src="https://i.imgur.com/XX7kg1z.png" alt="San Fransisco" />
-            <h1 className="image-text">SAN FRANSISCO</h1>
+            <Link className='image-text' to='/policies-and-initiatives/san-fransisco'>SAN FRANSISCO</Link> 
        <div className='box-text-container'>
        <p className='box-text'>Commuter Benefits Ordinance </p> <p className='box-text'> Tenant Bicycle Parking </p> <p className='box-text'> Congestion Pricing</p> <p className="box-text-small">California EPA ></p>          </div>
           </div>
