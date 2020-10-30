@@ -1,5 +1,92 @@
-.footer-social{
- margin-left: 20px;
+.footer{
+  position: fixed;
+  background-color: #f2f2f2;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.parent-links{
+  display: flex;
 }
 
-.
+.footer-social{
+  width: 25%;
+}
+
+.link-instagram{
+  width: 100px;
+  height: 100px;
+}
+
+.link-twitter{
+  width: 100px;
+  height: 100px;
+}
+
+.link-vector-community{
+  width: 100px;
+  height: 100px;
+}
+
+.footer-root{
+  padding-top: 40px;
+  padding-bottom: 40px;
+  width: 197px;
+  height: 77px;
+  margin-left: 200px;
+}
+
+.page-links{
+  display: flex;
+}
+
+.link-home-footer{
+  margin-left: 300px;
+  font-size: 26px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+.link-about{
+  margin-left: 127px;
+  font-size: 26px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+.link-contact{
+  margin-left: 127px;
+  font-size: 26px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+.link-connected{
+  margin-left: 127px;
+  font-size: 26px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+/* .footer-line{
+  border-bottom: 2px solid black;
+} */
+
+.footer-map{
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+}
+
+.link-sitemap{
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+
+.link-privacy{
+  margin-bottom: 20px;
+}
