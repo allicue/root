@@ -11,7 +11,7 @@ https://github.com/allicue/root/projects/1?add_cards_query=is%3Aopen
 
 ## Example Schema
 ```
-const Type = new Schema(
+const transportationType = new Schema(
   {
     title: { type: String, required: true },
     imgURL: { type: String, required: true },
