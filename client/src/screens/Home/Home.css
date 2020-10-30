@@ -1,0 +1,103 @@
+.homepage-header {
+  background-image: linear-gradient(
+  rgba(0, 0, 0, 0.5),
+  rgba(0, 0, 0, 0.5)), url("./photos/root_header_hi_res.png");
+  background-size: cover;
+  padding: 50px;
+  background-position: center;
+  height: 961px;
+  color: white;
+}
+
+.root-logo {
+  margin-top: 125px;
+  width: 900px;
+}
+
+.homepage-header-text-container {
+  margin-top: 65px;
+}
+
+hr {
+  width: 1204px;
+  height: 2px;
+  background-color: white;
+}
+
+button {
+  width: 391px;
+  height: 81px;
+  background-color: #749f5c;
+  border-style: none;
+  border-radius: 45px;
+  font-size: 24px;
+  text-align: center;
+  color: white;
+  margin: 15px;
+}
+
+.button-text {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.homepage-body {
+  max-width: 90%;
+  margin: 0 auto;
+  margin-top: 30px;
+  display: flex;
+  flex-flow: wrap;
+}
+
+.policies-section {
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)), url("./photos/chicagoskyline.png");
+  background-position-y: 40%;
+  width: 796px;
+  height: 381px;
+  background-size: cover;
+  color: white;
+  text-align: left;
+  position: relative;
+}
+
+.policies-text {
+  position: absolute;
+  bottom: 0px;
+  font-size: 24px;
+  padding-left: 20px;
+}
+
+.policies-text-headline {
+  font-size: 48px;
+  margin-bottom: 0px;
+}
+
+.climate-impact-section {
+  width: 386px;
+  height: 547px;
+}
+
+
+.community-advocacy-section {
+  background-color: slategrey;
+  height: 149px;
+  color: white;
+  text-align: left; 
+  display: flex;
+  width: 794px;
+}
+
+.community-a {
+  width: 318px;
+  font-size: 30px;
+}
+
+.community-b {
+ width: 478px;
+}
+
+.community-advocacy-img {
+margin-left: 45%;
+}
