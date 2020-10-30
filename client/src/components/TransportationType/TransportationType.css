@@ -3,26 +3,29 @@
 }
 
 .title-container {
-  display: flex;
-  align-items: center;
   text-align: center;
   min-width: 300px;
-  width: 300px;
-  height: 250px;
   opacity: 90%;
 }
+
 
 .transportation-type {
   display: flex;
   align-items: center;
   margin: 10px;
-
+  
 }
 
-h3 {
+  .h3-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: white;
   margin: 0 auto;
   font-size: 25px;
+  height: 250px;
+  width: 300px;
+  background: rgba(0, 0, 0, .4);
 }
 
 .description-container {
