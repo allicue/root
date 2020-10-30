@@ -161,6 +161,8 @@ img:hover {
 .image-text:hover {
   cursor: pointer;
   transform: translate(0.7px);
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
 }
 
 .middle-container {
