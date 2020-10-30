@@ -1,13 +1,15 @@
 import React from 'react'
+import { Route, Switch } from 'react-router-dom'
+import PoliciesInitiatives from './screens/PoliciesInitiatives/PoliciesInitiatives'
 import Header from "./components/shared/Header/Header"
-import './App.css';
-import { Route } from 'react-router-dom'
-
-
+        
 function App() {
   return (
-    <div className="App">
-    <Route exact path="/" component={Header} />
+    <div>
+      <Switch>
+       <Route exact path='/policies-and-initiatives' component={PoliciesInitiatives} />  
+       <Route exact path="/" component={Header} />
+      </Switch> 
     </div>
   );
 }
