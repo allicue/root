@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import AddTransportationTypeForm from '../../components/AddTransportationType/AddTransportationTypeForm'
 
 let StyledDiv = styled.div`
 .top-container {
@@ -53,36 +54,6 @@ a {
 .root-logo {
   max-width: 518px;
   max-height: 212px;
-}
-
-input {
-  width: 302px;
-  height: 36px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  background: url("../../Assets/Icons/ROOT_MapPin-17.svg") no-repeat right -20px
-    center;
-  background-size: 100px 100px;
-  width: 387px;
-  height: 49.1px;
-  border-radius: 30px;
-  border: solid 1px #3d3d3d;
-  background-color: #ffffff;
-  text-indent: 20px;
-  box-shadow: 2px 2px 4px 1px #999;
-}
-
-input::placeholder {
-  font-family: "Monsterrat", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  text-align: left;
-  color: #3d3d3d;
-}
-
-input:focus {
-  outline: none;
 }
 
 .enter-location {
@@ -172,8 +143,8 @@ img:hover {
 
 .middle-container {
   display: flex;
-  flex-flow: row wrap;
-  align-items: center;
+  /* flex-flow: row wrap; */
+  align-items: flex-end;
   margin-top: 66px;
   margin-bottom: 118px;
   justify-content: center;
@@ -231,18 +202,12 @@ function AddTransportationType() {
         </div>
       </div>
       <div className="middle-container">
-       <div className="middle-left">
          
+        <AddTransportationTypeForm />
        
           </div>
        
-          <div className="middle-right">
-          <form>
-              <input />
-       </form>
 
-            </div>
-        </div>
         </StyledDiv>
       </>
   )
