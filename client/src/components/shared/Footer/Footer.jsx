@@ -32,8 +32,9 @@ function Footer() {
       </div>
       <div className="footer-connected">
         <Link className="link-connected">STAY CONNECTED</Link>
+        </div>
       </div>
-      </div>
+      <hr className="footer-line"></hr>
       <div className="footer-map">
         <Link className="link-sitemap">Sitemap</Link>
         <Link className="link-privacy">Privacy Policy</Link>
@@ -46,22 +47,14 @@ function Footer() {
           {/* <img src={leaf} alt="leaf logo" className="message-leaf"/> */}
         </div>
       </div>
-      <div>
+      <div className="contact-div">
         <div className="info-div">
           <p className="info-email">Join our community for news, tips, and advocacy information</p>
-        </div>
-      </div>
-      <div className="email-parent">
-        <div className="email-child">
           <form className="email">
-            <input type="text" value="email address" />
-            <input type="submit" value="Submit" />
+            <input type="text" value="email address" className="email-text" />
+            <input type="submit" value="Sign Up" className="email-submit"/>
           </form>
-        </div>
-      </div>
-      <div className="phone-parent">
-        <div className="phone-number">
-          <small>1 (327) 496-6765</small>
+          <small className="phone-number-box">1 (327) 496-6765</small>
         </div>
       </div>
       <div className="address-parent">
