@@ -7,16 +7,16 @@ function PoliciesInitiativesStatic() {
   return (
     <>
       <Styled>
-        <div className="top-container">
-         
-          </div>
+
           <div className="top-right-container">
-            <p className="enter-location">Or enter your location:</p>
+           <div className="input-container">
+          <p className="enter-location">Or enter your location:</p>
             <input
               className="top-right-input"
               type="text"
               placeholder="Zipcode or City, State"
             />
+            </div>
           </div>
         <div className="middle-container">
           <div className="middle-left">

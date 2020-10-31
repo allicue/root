@@ -54,8 +54,7 @@ img:hover {
   flex-direction: column;
   width: 50%;
   background: red;
-  //  margin-top: 200px; 
-  margin-bottom: 200px;
+  margin-left: 7.5vw;
 }
 
 

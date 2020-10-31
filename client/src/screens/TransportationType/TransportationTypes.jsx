@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Layout from '../../components/shared/Layout/Layout'
 import TransportationType from '../../components/TransportationType/TransportationType'
 import './TransportationTypes.css'
 import { getTransportationTypes } from '../../services/transportationTypes'
@@ -21,12 +22,8 @@ export default function TransportationTypes() {
   )
 
   return (
-    <div className="Layout-placeholder">
-      {/* Edit divs when layout is implemented */}
-      <div className="page-title-div">
-        <h1 className="page-title-text">CLIMATE IMPACT BY TRANSPORTATION TYPE</h1>
-      </div>
-      <div className="page-content">
+      <Layout title="climate impact by transportation type">
+    <div className="page-content">
         <div className="transportation-types-main">
           <div className="title-list">
             <div className="transportation-types-parent">
@@ -57,6 +54,6 @@ export default function TransportationTypes() {
           </div>
         </div>
       </div>
-    </div>
+    </Layout>
   )
 }

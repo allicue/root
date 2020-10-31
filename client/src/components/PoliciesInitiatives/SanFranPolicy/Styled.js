@@ -20,20 +20,17 @@ const Styled = styled.div`
   .top-right-container {
     margin-top: 310px;
   }
-
-  .page-direction {
-    margin-left: 20px;
-    width: 189px;
-    height: 51px;
-    font-family: "Montserrat", sans-serif;
-    font-size: 12px;
-    font-weight: bold;
-    text-align: center;
-    color: #3d3d3d;
+  .top-right-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: -80px;
+    width: 80.5vw;
+    
   }
 
-  .page-direction:hover {
-    cursor: default;
+  .input-container {
+
   }
 
   .title {
@@ -41,7 +38,7 @@ const Styled = styled.div`
     font-weight: bold;
     text-align: center;
     color: #3d3d3d;
-    margin-left: -50px;
+    margin-left: 28px;
     font-size: 48px;
   }
   .title:hover {
@@ -69,6 +66,55 @@ const Styled = styled.div`
     text-indent: 20px;
     box-shadow: 2px 2px 4px 1px #999;
   }
+
+  /* .page-direction {
+    margin-left: 20px;
+    width: 189px;
+    height: 51px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    color: #3d3d3d;
+  } */
+
+  .page-direction:hover {
+    cursor: default;
+  }
+
+  .title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: #3d3d3d;
+    margin-left: -50px;
+    font-size: 48px;
+  }
+  .title:hover {
+    cursor: default;
+  }
+
+  .root-logo {
+    max-width: 518px;
+    max-height: 212px;
+  }
+
+  /* .top-right-input {
+    width: 302px;
+    height: 36px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    background: url("https://svgur.com/i/R66.svg") no-repeat right -20px center;
+    background-size: 100px 100px;
+    width: 387px;
+    height: 49.1px;
+    border-radius: 30px;
+    border: solid 1px #3d3d3d;
+    background-color: #ffffff;
+    text-indent: 20px;
+    box-shadow: 2px 2px 4px 1px #999;
+  } */
 
   input::placeholder {
     font-family: "Monsterrat", sans-serif;

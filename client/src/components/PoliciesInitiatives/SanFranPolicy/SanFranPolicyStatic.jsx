@@ -8,7 +8,7 @@ function SanFranPolicyStatic() {
       <Styled>
         <div className="top-container">
           <div className="top-left-container">
-            <p className="page-direction">
+            {/* <p className="page-direction">
               <Link to="/">Home</Link>/{" "}
               <Link to="/policies-and-initiatives">Policies + Initiatives</Link>
             </p>
@@ -19,15 +19,17 @@ function SanFranPolicyStatic() {
                 alt="ROOT Logo"
               />
             </Link>
-            <h1 className="title">SAN FRANSISCO</h1>
+            <h1 className="title">SAN FRANSISCO</h1> */}
           </div>
           <div className="top-right-container">
+         <div className="input-container">
             <p className="enter-location">Or enter your location:</p>
             <input
               className="top-right-input"
               type="text"
               placeholder="Zipcode or City, State"
             />
+            </div>1
           </div>
         </div>
         <div className="middle-container">
