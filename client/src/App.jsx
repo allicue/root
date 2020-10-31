@@ -8,6 +8,7 @@ import Footer from './components/shared/Footer/Footer';
 import ManageTransportationTypes from './screens/ManageTransportationType/ManageTransportationType';
 import AddTransportationType from './screens/AddTransportationType/AddTransportationType.jsx';
 import SanFranPolicy from './screens/SanFranPolicy/SanFranPolicy'
+import PlanRoute from './screens/PlanRoute/PlanRoute';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route exact path='/transportation-types' component={TransportationTypes} />
         <Route exact path='/manage-transportation-types' component={ManageTransportationTypes} />
         <Route exact path='/add-transportation-type' component={AddTransportationType} />
+        <Route exact path='/plan-your-route' component={PlanRoute} />
       </Switch>
     </div>
   );
