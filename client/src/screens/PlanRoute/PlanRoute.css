@@ -1,0 +1,90 @@
+.plan-route-page {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0 auto;
+  color: #3d3d3d;
+}
+
+.plan-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.plan-input {
+  border: solid .5px black;
+  border-radius: 30px;
+  width: 599px;
+  height: 76.3px;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 500;
+  padding-left: 28px;
+  margin-bottom: 20px;
+}
+
+.plan-button {
+  width: 620px;  
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  height: 81px;
+  background-color: #749f5c;
+  border-style: none;
+  border-radius: 45px;
+  font-size: 24px;
+  text-align: center;
+  color: white;
+}
+
+.plan-breakpoint {
+  margin: 0 auto;
+  margin-top: 100px;
+  width: 1222px;
+  height: 2px;
+  background-color: #759f5c;
+}
+
+.grid-view {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-self: baseline;
+}
+
+.grid-section-a {
+  margin: 50px 40px 50px 40px;
+  padding: 30px;
+  border-right: 2px solid #759f5c;
+}
+
+.grid-section-b {
+  margin: 50px 40px 50px 40px;
+}
+
+.grid-section-c {
+  margin: 50px 40px 50px 40px;
+}
+
+.grid-icons {
+  font-size: 43px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.grid-text {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 100;
+}
+
+.grid-leaf-icon {
+  margin-left: 5px;
+  width: 57px;
+  height: 57px;
+}
+
+.clock-icon {
+  width: 100px;
+}
