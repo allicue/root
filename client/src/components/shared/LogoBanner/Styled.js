@@ -13,9 +13,8 @@ a {
 
 
 .page-direction {
-  margin-left: 20px;
   padding: 20px;
-  // margin-top: 200px;
+  margin-top: 200px;
   font-family: "Montserrat", sans-serif;
   font-size: 12px;
   font-weight: bold;
@@ -55,7 +54,8 @@ img:hover {
   flex-direction: column;
   width: 50%;
   background: red;
-  margin-top: 200px;
+  //  margin-top: 200px; 
+  margin-bottom: 200px;
 }
 
 

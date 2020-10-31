@@ -20,7 +20,10 @@ a {
 } */
 
 .top-right-container {
-
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 350px;
 }
 
 .title {
@@ -71,14 +74,15 @@ input:focus {
 }
 
 .enter-location {
-  width: 249px;
-  height: 24px;
+  
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   font-weight: 500;
   text-align: center;
   color: #3d3d3d;
-  margin: 0 auto;
+  margin-right: 150px;
+  margin-bottom: 5px;
+  display: flex;
 }
 .enter-location:hover {
   cursor: default;

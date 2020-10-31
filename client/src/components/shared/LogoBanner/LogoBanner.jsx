@@ -13,12 +13,12 @@ function LogoBanner(props) {
   return (
     <>
       <Styled>
-    <div className="top-left-container">
+    {/* <div className="top-left-container"> */}
+          <div className="logo-title-container">
       <p className="page-direction">
         <Link to="/">Home</Link>/{" "}
         <Link to="/policies-and-initiatives">Policies + Initiatives</Link>
           </p>
-          <div className="logo-title-container">
       <Link to="/">
         <img
           className="root-logo"
@@ -28,7 +28,7 @@ function LogoBanner(props) {
       </Link>
       <h1 className="title">{props.title}</h1>
           </div>
-          </div>
+          {/* </div> */}
         </Styled>
         </>
   )
