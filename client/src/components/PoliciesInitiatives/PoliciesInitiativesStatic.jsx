@@ -8,19 +8,7 @@ function PoliciesInitiativesStatic() {
     <>
       <Styled>
         <div className="top-container">
-          <div className="top-left-container">
-            <p className="page-direction">
-              <Link to="/">Home</Link>/{" "}
-              <Link to="/policies-and-initiatives">Policies + Initiatives</Link>
-            </p>
-            <Link to="/">
-              <img
-                className="root-logo"
-                src="https://i.imgur.com/mV0w6j7.png"
-                alt="ROOT Logo"
-              />
-            </Link>
-            <h1 className="title">POLICIES + INITIATIVES</h1>
+         
           </div>
           <div className="top-right-container">
             <p className="enter-location">Or enter your location:</p>
@@ -30,7 +18,6 @@ function PoliciesInitiativesStatic() {
               placeholder="Zipcode or City, State"
             />
           </div>
-        </div>
         <div className="middle-container">
           <div className="middle-left">
             <div className="content-container">

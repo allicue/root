@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 const Styled = styled.div`
+
 .top-container {
   display: flex;
   flex-direction: row;
@@ -14,27 +15,12 @@ a {
   color: #3d3d3d;
 }
 
-.top-left-container {
+/* .top-left-container {
   margin-left: -40px;
-}
+} */
 
 .top-right-container {
-  margin-top: 310px;
-}
 
-.page-direction {
-  margin-left: 20px;
-  width: 189px;
-  height: 51px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 12px;
-  font-weight: bold;
-  text-align: center;
-  color: #3d3d3d;
-}
-
-.page-direction:hover {
-  cursor: default;
 }
 
 .title {
