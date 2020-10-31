@@ -5,11 +5,6 @@
   font-family: Montserrat;
 }
 
-.edit-title-container {
-  max-width: 300px;
-  height: 250px;
-}
-
 .main-div-contents {
 display: flex;
 }
@@ -21,6 +16,11 @@ display: flex;
   width: 100%;
   max-height: 250px;
   margin-bottom: 10px;
+}
+
+.edit-title-container {
+  max-width: 300px;
+  height: 250px;
 }
 
 .edit-description, .edit-title {

@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import './EditTransportationType.css'
 import { updateTransportationType } from '../../services/transportationTypes'
-
+import Logo from '../../Assets/Icons/ROOT_Logo_Icon_Primary.png'
 export default function EditTransportationType(props) {
   const [refresh, setRefresh] = useState(false);
+
 
   const [transportationType, setTransportationType] = useState({
     title: props.title,
@@ -34,13 +35,22 @@ export default function EditTransportationType(props) {
     props.setUpdated(!props.updated)
   }
 
+  // const onError = () => {
+  //   if (error.errored) {
+  //     setError({
+  //       imgURL: Logo,
+  //       errored: true
+  //     })
+  //   }
+  // }
+
   return (
     <div className="edit-transportation-type" >
       <form onSubmit={handleSubmit}>
         <div className="main-div-contents">
           <div className="edit-top-container">
             <div className="edit-title-left-div">
-              <img className="title-image" src={props.imgURL} alt={props.id} />
+              <img className="title-image" src={props.imgURL} onError={(e) =>  e.target.src = Logo } alt={props.id} />
               <div className="edit-title-container">
                 <input
                   className="edit-title"

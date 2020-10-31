@@ -4,6 +4,7 @@ import EditTransportationType from '../../components/EditTransportationType/Edit
 import Layout from '../../components/shared/Layout/Layout'
 import LogoBanner from '../../components/shared/LogoBanner/LogoBanner'
 import Icon from '../../Assets/Icons/ROOT_Add_Note_Icon.png'
+
 import './ManageTransportationType.css'
 import { getTransportationTypes } from '../../services/transportationTypes'
 
@@ -36,7 +37,7 @@ export default function ManageTransportationTypes() {
       <LogoBanner title="Climate Impact By Transportation Type - Manage Page" />
       <span className="add-icon-link" >
         <Link to="/add-transportation-type">
-        <img className="add-icon" alt="Edit Icon" src={Icon} /></Link>
+          <img className="add-icon" alt="Edit Icon" src={Icon}/></Link>
         <p id="add-icon-text">Did we forget something? Add your favorite mode of transportation here</p>
       </span>
       <div className="manage-parent" >
