@@ -1,34 +1,33 @@
+.edit-icon-link {
+display: flex;
+flex-direction: row;
+height: 60px;
+align-items: center;
+/* margin-top: 60px;
+margin-left: 8vw; */
 
+margin: 60px 0 -10px 8vw;
+}
+
+.edit-icon {
+  width: 60px;
+}
+
+#edit-icon-text {
+  font-size: 18px;
+}
 
 .transportation-types-main {
-display: flex;
-min-width: 1200px;
-width: 85vw;
-margin: 0 auto;
-margin-top: 60px;
+  display: flex;
+  min-width: 1200px;
+  width: 85vw;
+  margin: 0 auto;
 }
 
 .title-list {
   display: flex;
   flex-direction: column;
-
-}
-
-/* .Layout-placeholder {
-  display: flex;
-  flex-direction: column;
-  width: 85vw;
-  margin: 0 auto;
-} */
-
-.page-title-div {
-  font-size: 26px;
-  width: 650px;
-  margin: 10px;
-}
-
-.page-title-text {
-  font-weight: 850;
+  margin-top: 10px;
 }
 
 .transportation-types-parent {
@@ -45,7 +44,7 @@ margin-top: 60px;
 
 .green-news {
   min-width: 350px;
-  max-width: 400px;
+  max-width: 410px;
 }
 
 .green-news-child {
@@ -61,7 +60,6 @@ margin-top: 60px;
   justify-content: space-between;
 }
 
-
 .green-news-title-text {
   font-size: 30px;
   font-weight: bold;
@@ -71,7 +69,7 @@ margin-top: 60px;
 }
 
 .green-news-subtitle {
-  font-size: 25px;
+  font-size: 24px;
   margin: 10px;
   color: white;
 } 

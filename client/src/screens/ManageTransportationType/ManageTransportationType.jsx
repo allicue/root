@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import EditTransportationType from '../../components/EditTransportationType/EditTransportationType'
 import Layout from '../../components/shared/Layout/Layout'
 import LogoBanner from '../../components/shared/LogoBanner/LogoBanner'
+import Icon from '../../Assets/Icons/ROOT_Add_Note_Icon.png'
 import './ManageTransportationType.css'
 import { getTransportationTypes } from '../../services/transportationTypes'
 
@@ -31,17 +33,14 @@ export default function ManageTransportationTypes() {
 
   return (
     <Layout>
-      <LogoBanner title="Climate Impact By Transportation Type - Manage" />
+      <LogoBanner title="Climate Impact By Transportation Type - Manage Page" />
+      <span className="add-icon-link" >
+        <Link to="/add-transportation-type">
+        <img className="add-icon" alt="Edit Icon" src={Icon} /></Link>
+        <p id="add-icon-text">Did we forget something? Add your favorite mode of transportation here</p>
+      </span>
       <div className="manage-parent" >
-      {/* Edit divs when layout is implemented */}
-      <div className="page-title">
-        {/* <h1>CLIMATE IMPACT BY TRANSPORTATION TYPE</h1> */}
-      </div>
-      <div className="edit-page-content">
-        <div className="edit-transportation-types-parent">
-          <div className="edit-transportation-types">{UPDATETYPES}</div>
-        </div>
-      </div>
+            <div className="edit-transportation-types">{UPDATETYPES}</div>
       </div>
     </Layout>
   )
