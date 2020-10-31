@@ -19,6 +19,10 @@ a {
   font-family: 'Monsterrat', sans serif;
 }
 
+h1:hover{
+  cursor: default;
+}
+
 p {
   color: #000000;
   margin-bottom: 20px;  
