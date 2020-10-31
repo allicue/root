@@ -6,6 +6,12 @@
   margin: 0 auto;
 }
 
+a {
+  text-decoration: none;
+  color: #749f5c;
+  font-weight: 600;
+}
+
 .edit-transportation-types {
   min-width: 900px;
 }

@@ -4,14 +4,13 @@ import EditTransportationType from '../../components/EditTransportationType/Edit
 import Layout from '../../components/shared/Layout/Layout'
 import LogoBanner from '../../components/shared/LogoBanner/LogoBanner'
 import Icon from '../../Assets/Icons/ROOT_Add_Note_Icon.png'
-
 import './ManageTransportationType.css'
 import { getTransportationTypes } from '../../services/transportationTypes'
 
-export default function ManageTransportationTypes() {
+export default function ManageTransportationTypes() { 
+
   const [updated, setUpdated] = useState(false)
   const [transportationTypes, setTransportationTypes] = useState([])
-
 
   useEffect(() => {
     const getData = async () => {
@@ -38,7 +37,7 @@ export default function ManageTransportationTypes() {
       <span className="add-icon-link" >
         <Link to="/add-transportation-type">
           <img className="add-icon" alt="Edit Icon" src={Icon}/></Link>
-        <p id="add-icon-text">Did we forget something? Add your favorite mode of transportation here</p>
+        <p id="add-icon-text">Missing something? Add your favorite mode of transportation <Link to="/add-transportation-type">here </Link></p>
       </span>
       <div className="manage-parent" >
             <div className="edit-transportation-types">{UPDATETYPES}</div>
