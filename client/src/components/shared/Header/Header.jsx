@@ -15,7 +15,7 @@ function Header() {
       <Link to="/transportation-types" className="link-transport">Climate Impact by Transportation Type</Link>
       </div>
       <div>
-        <img className="header-image" src="https://i.imgur.com/gC1ttIE.png" alt="user image" />
+        <img className="header-image" src="https://i.imgur.com/thepnzF.png" alt="user image" />
       </div>
       <div className="header-polices">
       <Link to="/policies-and-initiatives" className="link-polices">Policies + Initiatives</Link>
