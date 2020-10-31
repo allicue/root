@@ -9,6 +9,7 @@ import ManageTransportationTypes from './screens/ManageTransportationType/Manage
 import AddTransportationType from './screens/AddTransportationType/AddTransportationType.jsx';
 import SanFranPolicy from './screens/SanFranPolicy/SanFranPolicy'
 import PlanRoute from './screens/PlanRoute/PlanRoute';
+import Error from './screens/Error/Error'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route exact path='/manage-transportation-types' component={ManageTransportationTypes} />
         <Route exact path='/add-transportation-type' component={AddTransportationType} />
         <Route exact path='/plan-your-route' component={PlanRoute} />
+        <Route component={Error} /> {/* keep this the lowest route */}
       </Switch>
     </div>
   );

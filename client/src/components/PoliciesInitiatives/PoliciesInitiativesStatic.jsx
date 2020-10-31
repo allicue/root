@@ -1,36 +1,25 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Styled from "./Styled";
-import SanFranPolicy from "./SanFranPolicy/SanFranPolicyStatic";
+import LogoBanner from '../../components/shared/LogoBanner/LogoBanner'
 
 function PoliciesInitiativesStatic() {
   return (
     <>
       <Styled>
-        <div className="top-container">
-          <div className="top-left-container">
-            <p className="page-direction">
-              <Link to="/">Home</Link>/{" "}
-              <Link to="/policies-and-initiatives">Policies + Initiatives</Link>
-            </p>
-            <Link to="/">
-              <img
-                className="root-logo"
-                src="https://i.imgur.com/mV0w6j7.png"
-                alt="ROOT Logo"
-              />
-            </Link>
-            <h1 className="title">POLICIES + INITIATIVES</h1>
-          </div>
+        <div className="top-left-container">
+          <LogoBanner title="Policies + Initiatives" />
+        </div>
           <div className="top-right-container">
-            <p className="enter-location">Or enter your location:</p>
+           <div className="input-container">
+          <p className="enter-location">Or enter your location:</p>
             <input
               className="top-right-input"
               type="text"
               placeholder="Zipcode or City, State"
             />
+            </div>
           </div>
-        </div>
         <div className="middle-container">
           <div className="middle-left">
             <div className="content-container">
