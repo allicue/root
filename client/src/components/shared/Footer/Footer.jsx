@@ -9,6 +9,7 @@ import "./Footer.css"
 
 function Footer() {
   return (
+    
     <footer className="footer">
       <div className="parent-links">
         <div className="footer-social">
