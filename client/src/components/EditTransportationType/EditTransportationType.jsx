@@ -3,6 +3,7 @@ import './EditTransportationType.css'
 import { updateTransportationType } from '../../services/transportationTypes'
 
 export default function EditTransportationType(props) {
+  const [refresh, setRefresh] = useState(false);
 
   const [transportationType, setTransportationType] = useState({
     title: props.title,
@@ -16,7 +17,7 @@ export default function EditTransportationType(props) {
       setTransportationType(type)
     }
     fetchType()
-  }, [props.id])
+  }, [refresh])
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -61,12 +62,15 @@ export default function EditTransportationType(props) {
                 onChange={handleChange}
               />
             </div>
-            <button className="edit-form-submit" type="submit" >Submit</button>
+            <div className="buttons">
+              <button className="edit-form-submit" type="submit" >Save</button>
+              <button className="reset" onClick={() => setRefresh(!refresh)} >Reset</button>
+            </div>
           </div>
         </div>
 
         <div className="input-image-parent">
-          <label htmlFor="imgURL">Copy Image URL Here: </label>
+          <label className="input-image" htmlFor="imgURL">Copy Image URL Here: </label>
           <input
             className="edit-image-link"
             placeholder="Copy Image Link Here"
