@@ -1,35 +1,28 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Styled from "./Styled";
+import LogoBanner from '../../../components/shared/LogoBanner/LogoBanner'
 
 function SanFranPolicyStatic() {
   return (
     <>
       <Styled>
-        <div className="top-container">
+        
+        {/* <div className="top-container"> */}
           <div className="top-left-container">
-            <p className="page-direction">
-              <Link to="/">Home</Link>/{" "}
-              <Link to="/policies-and-initiatives">Policies + Initiatives</Link>
-            </p>
-            <Link to="/">
-              <img
-                className="root-logo"
-                src="https://i.imgur.com/mV0w6j7.png"
-                alt="ROOT Logo"
-              />
-            </Link>
-            <h1 className="title">SAN FRANSISCO</h1>
+            <LogoBanner title ="San Fransisco"/>
           </div>
           <div className="top-right-container">
+         <div className="input-container">
             <p className="enter-location">Or enter your location:</p>
             <input
               className="top-right-input"
               type="text"
               placeholder="Zipcode or City, State"
             />
+            </div>
           </div>
-        </div>
+        {/* </div> */}
         <div className="middle-container">
           <div className="content-container">
             <img
@@ -50,7 +43,7 @@ function SanFranPolicyStatic() {
                 et iusto odio dignissim qui blandit praesent luptatum zzril
                 delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum
                 dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy
-                nibh euismod{" "}
+                nibh euismod
               </p>
             </div>
           </div>
@@ -98,7 +91,7 @@ function SanFranPolicyStatic() {
                 et iusto odio dignissim qui blandit praesent luptatum zzril
                 delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum
                 dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy
-                nibh euismod{" "}
+                nibh euismod
               </p>
             </div>
           </div>

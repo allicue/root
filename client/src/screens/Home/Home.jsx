@@ -4,9 +4,11 @@ import Logo from '../../Assets/Icons/ROOT_Logo_RevWhite.png';
 import LeafIcon from '../../Assets/Icons/ROOT_Menu_Leaf.png';
 import CommunityIcon from '../../Assets/Icons/ROOT_Community_RevWhite.png';
 import { Link } from 'react-router-dom';
+import Layout from '../../components/shared/Layout/Layout'
 
 function Home(props) {
   return (
+    <Layout title="">
     <div className="homepage">
       
       <div className="homepage-header"> 
@@ -60,7 +62,8 @@ function Home(props) {
       </div>
       
 
-    </div>
+      </div>
+      </Layout>
   );
 }
 
