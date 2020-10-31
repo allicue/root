@@ -1,13 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Styled from "./Styled";
-import SanFranPolicy from "./SanFranPolicy/SanFranPolicyStatic";
+import LogoBanner from '../../components/shared/LogoBanner/LogoBanner'
 
 function PoliciesInitiativesStatic() {
   return (
     <>
       <Styled>
-
+        <div className="top-left-container">
+          <LogoBanner title="Policies + Initiatives" />
+        </div>
           <div className="top-right-container">
            <div className="input-container">
           <p className="enter-location">Or enter your location:</p>

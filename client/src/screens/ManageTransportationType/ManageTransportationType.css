@@ -1,0 +1,6 @@
+.manage-parent {
+  display: flex;
+  flex-direction: column;
+  width: 85vw;
+  margin: 0 auto;
+}

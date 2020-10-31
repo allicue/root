@@ -17,7 +17,7 @@ function LogoBanner(props) {
           <div className="logo-title-container">
       <p className="page-direction">
         <Link to="/">Home</Link>/{" "}
-        <Link to="/policies-and-initiatives">Policies + Initiatives</Link>
+        <Link to="/policies-and-initiatives">{props.title}</Link>
           </p>
       <Link to="/">
         <img
@@ -26,7 +26,7 @@ function LogoBanner(props) {
           alt="ROOT Logo"
         />
       </Link>
-      <h1 className="title">{props.title}</h1>
+      <h1 className="title">{props.title.toUpperCase()}</h1>
           </div>
           {/* </div> */}
         </Styled>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Layout from '../../components/shared/Layout/Layout'
+import LogoBanner from '../../components/shared/LogoBanner/LogoBanner'
 import TransportationType from '../../components/TransportationType/TransportationType'
 import './TransportationTypes.css'
 import { getTransportationTypes } from '../../services/transportationTypes'
@@ -22,7 +23,8 @@ export default function TransportationTypes() {
   )
 
   return (
-      <Layout title="climate impact by transportation type">
+    <Layout >
+      <LogoBanner title="Climate Impact By Transportation Type"/>
     <div className="page-content">
         <div className="transportation-types-main">
           <div className="title-list">

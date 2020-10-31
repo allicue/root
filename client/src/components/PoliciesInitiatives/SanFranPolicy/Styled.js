@@ -1,50 +1,28 @@
 import styled from "styled-components";
 
 const Styled = styled.div`
-  .top-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 33px;
-  }
+  
 
   a {
     text-decoration: none;
     color: #3d3d3d;
   }
-  .top-left-container {
-    margin-left: -40px;
-  }
 
-  .top-right-container {
-    margin-top: 310px;
-  }
-  .top-right-container {
+  .top-left-container {
+  margin-left: 9.5vw;
+
+}
+
+.top-right-container {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     margin-top: -80px;
     width: 80.5vw;
-    
   }
 
-  .input-container {
 
-  }
-
-  .title {
-    font-family: "Montserrat", sans-serif;
-    font-weight: bold;
-    text-align: center;
-    color: #3d3d3d;
-    margin-left: 28px;
-    font-size: 48px;
-  }
-  .title:hover {
-    cursor: default;
-  }
-
+  
   .root-logo {
     max-width: 518px;
     max-height: 212px;
@@ -65,56 +43,9 @@ const Styled = styled.div`
     background-color: #ffffff;
     text-indent: 20px;
     box-shadow: 2px 2px 4px 1px #999;
+    display: flex;
+    flex-direction: column;
   }
-
-  /* .page-direction {
-    margin-left: 20px;
-    width: 189px;
-    height: 51px;
-    font-family: "Montserrat", sans-serif;
-    font-size: 12px;
-    font-weight: bold;
-    text-align: center;
-    color: #3d3d3d;
-  } */
-
-  .page-direction:hover {
-    cursor: default;
-  }
-
-  .title {
-    font-family: "Montserrat", sans-serif;
-    font-weight: bold;
-    text-align: center;
-    color: #3d3d3d;
-    margin-left: -50px;
-    font-size: 48px;
-  }
-  .title:hover {
-    cursor: default;
-  }
-
-  .root-logo {
-    max-width: 518px;
-    max-height: 212px;
-  }
-
-  /* .top-right-input {
-    width: 302px;
-    height: 36px;
-    font-family: "Montserrat", sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    background: url("https://svgur.com/i/R66.svg") no-repeat right -20px center;
-    background-size: 100px 100px;
-    width: 387px;
-    height: 49.1px;
-    border-radius: 30px;
-    border: solid 1px #3d3d3d;
-    background-color: #ffffff;
-    text-indent: 20px;
-    box-shadow: 2px 2px 4px 1px #999;
-  } */
 
   input::placeholder {
     font-family: "Monsterrat", sans-serif;
@@ -219,13 +150,6 @@ const Styled = styled.div`
   }
 
   @media screen and (max-width: 768px) {
-    .top-container {
-      display: flex;
-      flex-flow: column wrap;
-      justify-content: center;
-      align-items: flex-start;
-      margin-top: 33px;
-    }
 
     .top-left-container {
       margin: 0 auto;
@@ -234,6 +158,7 @@ const Styled = styled.div`
     .box-text-container {
       display: none;
     }
+
     .top-right-container {
       margin: 0 auto;
       margin-top: 10px;

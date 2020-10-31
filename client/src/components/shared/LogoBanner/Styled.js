@@ -5,6 +5,7 @@ const Styled = styled.div`
 a {
   text-decoration: none;
   color: #3d3d3d;
+  width: 50px;
 }
 
 .top-left-container {
@@ -18,8 +19,9 @@ a {
   font-family: "Montserrat", sans-serif;
   font-size: 12px;
   font-weight: bold;
-  text-align: center;
+  text-align: left;
   color: #3d3d3d;
+  margin-left: 20px;
 }
 
 .page-direction:hover {
@@ -29,7 +31,7 @@ a {
 .title {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
-  /* text-align: center; */
+  text-align: left;
   color: #3d3d3d;
   margin-left: 28px;
   font-size: 48px;
@@ -53,7 +55,6 @@ img:hover {
   display: flex;
   flex-direction: column;
   width: 50%;
-  background: red;
   margin-left: 7.5vw;
 }
 
