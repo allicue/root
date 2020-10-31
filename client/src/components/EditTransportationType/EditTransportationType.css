@@ -1,8 +1,14 @@
 .edit-transportation-type {
   display: flex;
   flex-direction: column;
-  margin: 20px;
+  margin: 25px;
   font-family: Montserrat;
+  /* border: .5px solid lightgray; */
+  box-shadow: 2px 2px 4px 1px rgb(193, 193, 193);
+  padding: 20px;
+  width: 70vw;
+  min-width: 900px;
+  max-width: 1400px;
 }
 
 .main-div-contents {
@@ -31,16 +37,18 @@ display: flex;
 
 .edit-description:focus, .edit-title:focus, .edit-image-link:focus {
   outline: none;
+
 }
 
 .edit-description:focus {
-  background: rgba(240, 240, 240, .8);
+  /* background: rgba(240, 240, 240, .8); */
+  background-color: rgba(116, 159, 92, .5);
 }
 
 .edit-title:focus {
-  background: rgba(0, 0, 0, .4);
-  height: 40px;
-  font-size: 30px;
+  /* background: rgba(240, 240, 240, .8); */
+  /* color: #3d3d3d; */
+  background-color: rgba(116, 159, 92, .8);
 }
 
 
@@ -95,30 +103,32 @@ margin-right: 20px;
 }
 
 .edit-image-link {
-  width: 50%;
+  width: 45%;
   max-width: 600px;
-  min-width: 300px;
+  min-width: 200px;
   height: 42px;
-  margin: 0 0 20px 20px;
+  margin: 0 0 20px 30px;
   font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  border-radius: 30px;
-  border: solid 1px #3d3d3d;
-  background-color: #ffffff;
-  /* text-indent: 40px; */
+  font-size: 20px;
+  color: hsla(0, 0%, 83%, 0.1);
+  border: none;
   padding-left: 40px;
-  box-shadow: 2px 2px 4px 1px #999;
   padding: 10px;
+  background-color: rgba(211, 211, 211, .2);
 }
 
-.
+.edit-image-link:focus {
+  color: initial;
+  background-color: rgba(116, 159, 92, .5);
+  font-size: 20px;
+}
 
 .input-image {
   color: #3d3d3d;
   font-size: 20px;
   font-weight: 400;
-  margin-left: 75px;
+  margin-left: 188px;
+
 }
 
 .buttons {

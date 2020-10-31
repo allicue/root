@@ -50,9 +50,9 @@ export default function EditTransportationType(props) {
         <div className="main-div-contents">
           <div className="edit-top-container">
             <div className="edit-title-left-div">
-              <img className="title-image" src={props.imgURL} onError={(e) =>  e.target.src = Logo } alt={props.id} />
+              <img className="title-image" src={props.imgURL} onError={(e) => e.target.src = Logo} alt={props.id} />
               <div className="edit-title-container">
-                <input
+                <textarea
                   className="edit-title"
                   placeholder="Mode of Transportation"
                   value={transportationType.title.toUpperCase()}
@@ -80,7 +80,7 @@ export default function EditTransportationType(props) {
         </div>
 
         <div className="input-image-parent">
-          <label className="input-image" htmlFor="imgURL">Copy Image URL Here: </label>
+          <label className="input-image" htmlFor="imgURL">Image URL: </label>
           <input
             className="edit-image-link"
             placeholder="Copy Image Link Here"
