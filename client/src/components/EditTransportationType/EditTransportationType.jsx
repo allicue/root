@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
 import './EditTransportationType.css'
 import { updateTransportationType } from '../../services/transportationTypes'
 
 export default function EditTransportationType(props) {
-  const [isUpdated, setIsUpdated] = useState(false)
+  const [refresh, setRefresh] = useState(false);
 
   const [transportationType, setTransportationType] = useState({
     title: props.title,
@@ -12,16 +11,13 @@ export default function EditTransportationType(props) {
     description: props.description
   })
 
-  let { id } = useParams()
-
-
   useEffect(() => {
     const fetchType = async () => {
       const type = await updateTransportationType(props.id)
       setTransportationType(type)
     }
     fetchType()
-  }, [id])
+  }, [refresh])
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -33,47 +29,57 @@ export default function EditTransportationType(props) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    let { id } = props.match.params
-    const updated = await updateTransportationType(id, transportationType)
-    setIsUpdated(updated)
+    let id = props.id
+    await updateTransportationType(id, transportationType)
+    props.setUpdated(!props.updated)
   }
 
   return (
     <div className="edit-transportation-type" >
       <form onSubmit={handleSubmit}>
-        <div className="edit-top-container">
-          <div className="edit-title-container" style={{ background: `url(${props.imgURL})`, backgroundSize: "380px", backgroundPosition: "center" }}>
-            <div className="h3-container">
-              <input
-                className="edit-title"
-                placeholder="Mode of Transportation"
-                value={transportationType.title}
-                name="title"
+        <div className="main-div-contents">
+          <div className="edit-top-container">
+            <div className="edit-title-left-div">
+              <img className="title-image" src={props.imgURL} alt={props.id} />
+              <div className="edit-title-container">
+                <input
+                  className="edit-title"
+                  placeholder="Mode of Transportation"
+                  value={transportationType.title.toUpperCase()}
+                  name="title"
+                  required
+                  onChange={handleChange}
+                />
+              </div>
+            </div>
+            <div className="edit-description-container">
+              <textarea
+                className="edit-description"
+                placeholder="Climate Impact"
+                value={transportationType.description}
+                name="description"
                 required
                 onChange={handleChange}
               />
             </div>
-          </div>
-          <div className="edit-description-container">
-            <input
-              className="edit-description"
-              placeholder="Climate Impact"
-              value={transportationType.description}
-              name="description"
-              required
-              onChange={handleChange}
-            />
+            <div className="buttons">
+              <button className="edit-form-submit" type="submit" >Save</button>
+              <button className="reset" onClick={() => setRefresh(!refresh)} >Reset</button>
+            </div>
           </div>
         </div>
-        <input
-          className="edit-image-link"
-          placeholder="Copy Image Link Here"
-          value={transportationType.imgURL}
-          name="imgURL"
-          required
-          onChange={handleChange}
-        />
-        <button type="submit" >Submit</button>
+
+        <div className="input-image-parent">
+          <label className="input-image" htmlFor="imgURL">Copy Image URL Here: </label>
+          <input
+            className="edit-image-link"
+            placeholder="Copy Image Link Here"
+            value={transportationType.imgURL}
+            name="imgURL"
+            required
+            onChange={handleChange}
+          />
+        </div>
       </form>
     </div>
   )
