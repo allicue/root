@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import './EditTransportationType.css'
-import { updateTransportationType } from '../../services/transportationTypes'
-
+import { updateTransportationType, deleteTransportationType } from '../../services/transportationTypes'
+import Logo from '../../Assets/Icons/ROOT_Logo_Icon_Primary.png'
 export default function EditTransportationType(props) {
-  const [refresh, setRefresh] = useState(false);
+
 
   const [transportationType, setTransportationType] = useState({
     title: props.title,
@@ -17,7 +17,7 @@ export default function EditTransportationType(props) {
       setTransportationType(type)
     }
     fetchType()
-  }, [refresh])
+  }, [])
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -34,15 +34,24 @@ export default function EditTransportationType(props) {
     props.setUpdated(!props.updated)
   }
 
+  const handleDelete = async (e) => {
+    e.preventDefault();
+    let id = props.id
+    window.confirm('Are you sure you want to delete this?') ?
+      await deleteTransportationType(id, transportationType) :
+      console.log('hi');
+    props.setUpdated(!props.updated)
+  }
+
   return (
     <div className="edit-transportation-type" >
       <form onSubmit={handleSubmit}>
         <div className="main-div-contents">
           <div className="edit-top-container">
             <div className="edit-title-left-div">
-              <img className="title-image" src={props.imgURL} alt={props.id} />
+              <img className="title-image" src={props.imgURL} onError={(e) => e.target.src = Logo} alt={props.id} />
               <div className="edit-title-container">
-                <input
+                <textarea
                   className="edit-title"
                   placeholder="Mode of Transportation"
                   value={transportationType.title.toUpperCase()}
@@ -63,14 +72,14 @@ export default function EditTransportationType(props) {
               />
             </div>
             <div className="buttons">
+              <button className="delete" onClick={handleDelete}>Remove</button>
               <button className="edit-form-submit" type="submit" >Save</button>
-              <button className="reset" onClick={() => setRefresh(!refresh)} >Reset</button>
             </div>
           </div>
         </div>
 
         <div className="input-image-parent">
-          <label className="input-image" htmlFor="imgURL">Copy Image URL Here: </label>
+          <label className="input-image" htmlFor="imgURL">Image URL: </label>
           <input
             className="edit-image-link"
             placeholder="Copy Image Link Here"
