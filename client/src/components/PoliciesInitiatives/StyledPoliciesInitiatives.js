@@ -102,7 +102,7 @@ const StyledPoliciesInitiatives = styled.div`
 
   .box-text-container {
     width: 287px;
-    height: 236px;
+    /* height: 236px; */
     background-color: #e8e4d9;
     padding-top: 1px;
     padding-bottom: 20px;
