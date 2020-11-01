@@ -1,3 +1,14 @@
+.loading {
+  font-family: Montserrat;
+  margin: 0 auto;
+  width: 100%;
+  margin-top: 400px;
+  font-size: 40px;
+  display: flex;
+  flex-direction: columm;
+  justify-content: center;
+}
+
 .edit-icon-link {
 width: 85%;
 max-width: 1200px;
