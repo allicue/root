@@ -9,23 +9,22 @@ import './TransportationTypes.css'
 import { getTransportationTypes } from '../../services/transportationTypes'
 
 export default function TransportationTypes() {
-  const [transportationTypes, setTransportationTypes] = useState([])
-  const [loaded, setLoaded] = useState(false)
+  const [transportationTypes, setTransportationTypes] = useState([]);
+  const [loaded, setLoaded] = useState(false);
 
 
   useEffect(() => {
     const getData = async () => {
-      const types = await getTransportationTypes()
-      console.log(types)
-      setTransportationTypes(types)
-      setLoaded(true)
+      const types = await getTransportationTypes();
+      setTransportationTypes(types);
+      setLoaded(true);
     }
-    getData()
-  }, [])
+    getData();
+  }, []);
 
   const TYPES = transportationTypes.map(item =>
     <TransportationType title={item.title.toUpperCase()} imgURL={item.imgURL} description={item.description} />
-  )
+  );
 
   if (!loaded) {
     return <div className="loading">
@@ -34,12 +33,11 @@ export default function TransportationTypes() {
       <img className="leaf" src={Leaf} alt="leaf" />
       <img className="leaf" src={Leaf} alt="leaf" />
     </div>
-  }
+  };
 
   return (
     <Layout >
       <LogoBanner title="Climate Impact By Transportation Type" />
-
       <div className="transportation-types-main">
         <div className="title-list">
           <div className="transportation-types-parent">
@@ -49,7 +47,6 @@ export default function TransportationTypes() {
                 <img className="edit-icon" alt="Edit Icon" src={Icon} /></Link>
             </span>
             <div className="transportation-types">{TYPES}</div>
-
           </div>
         </div>
         <div className="green-news">
@@ -76,5 +73,5 @@ export default function TransportationTypes() {
         </div>
       </div>
     </Layout>
-  )
-}
+  );
+};

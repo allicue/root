@@ -2,14 +2,15 @@ import React, { useEffect, useState } from 'react'
 import './EditTransportationType.css'
 import { updateTransportationType, deleteTransportationType } from '../../services/transportationTypes'
 import Logo from '../../Assets/Icons/ROOT_Logo_Icon_Primary.png'
-export default function EditTransportationType(props) {
 
+
+export default function EditTransportationType(props) {
 
   const [transportationType, setTransportationType] = useState({
     title: props.title,
     imgURL: props.imgURL,
     description: props.description
-  })
+  });
 
   useEffect(() => {
     const fetchType = async () => {
@@ -24,23 +25,23 @@ export default function EditTransportationType(props) {
     setTransportationType({
       ...transportationType,
       [name]: value
-    })
+    });
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    let id = props.id
-    await updateTransportationType(id, transportationType)
-    props.setUpdated(!props.updated)
+    let id = props.id;
+    await updateTransportationType(id, transportationType);
+    props.setUpdated(!props.updated);
   }
 
   const handleDelete = async (e) => {
     e.preventDefault();
-    let id = props.id
+    let id = props.id;
     window.confirm('Are you sure you want to delete this?') ?
       await deleteTransportationType(id, transportationType) :
-      console.log('hi');
-    props.setUpdated(!props.updated)
+      console.log('deleted');
+    props.setUpdated(!props.updated);
   }
 
   return (
@@ -93,8 +94,3 @@ export default function EditTransportationType(props) {
     </div>
   )
 }
-
-// get type by id
-// id will be passed down through props
-// put function will take props.id
-

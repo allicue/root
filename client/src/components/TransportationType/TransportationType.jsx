@@ -13,5 +13,5 @@ export default function TransportationType(props) {
         <p className="description">{props.description}</p>
       </div>
     </div>
-  )
-}
+  );
+};

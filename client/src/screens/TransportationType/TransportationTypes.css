@@ -1,5 +1,6 @@
 .loading {
   font-family: Montserrat;
+  color: #3d3d3d;
   margin: 0 auto;
   width: 100%;
   margin-top: 400px;
@@ -7,25 +8,6 @@
   display: flex;
   flex-direction: columm;
   justify-content: center;
-}
-
-.edit-icon-link {
-width: 85%;
-max-width: 1200px;
-display: flex;
-flex-direction: row;
-justify-content: flex-end;
-height: 60px;
-align-items: center;
-margin: 60px 0 -10px 8vw;
-}
-
-.edit-icon {
-  width: 60px;
-}
-
-#edit-icon-text {
-  font-size: 18px;
 }
 
 .transportation-types-main {
@@ -45,6 +27,25 @@ margin: 60px 0 -10px 8vw;
   display: flex;
   flex-direction: column;
   margin-right: 1vw;
+}
+
+.edit-icon-link {
+  width: 85%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  height: 60px;
+  align-items: center;
+  margin: 60px 0 -10px 8vw;
+}
+
+#edit-icon-text {
+  font-size: 18px;
+}
+
+.edit-icon {
+  width: 60px;
 }
 
 .transportation-types {
