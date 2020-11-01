@@ -88,6 +88,8 @@ const Form = styled.form`
   .buttons {
     display: flex;
     flex-direction: row;
+    position: relative;
+    right: -10%;
   }
   .terms-of-service {
     display: flex;
@@ -103,7 +105,7 @@ const Form = styled.form`
   span {
     color: #82a1ab;
   }
-  span:hover{
+  span:hover {
     cursor: pointer;
   }
   .checkbox {
@@ -163,7 +165,7 @@ const Form = styled.form`
     text-shadow: 2px 2px 5px #999;
     cursor: pointer;
   }
-  .bottom-container{
+  .bottom-container {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -196,12 +198,32 @@ const Form = styled.form`
       flex-direction: column;
       margin: 0 auto;
       margin-top: 20px;
+      right: 0%;
+    }
+    .bottom-container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+     left: 0;
     }
   }
 
   @media screen and (max-width: 1000px) {
     div {
       margin: 20px auto;
+    }
+    .bottom-container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      right: 0%;
+      margin: 0 auto;
+    }
+    .bottons{
+      right: 0%; 
+      margin: 0 auto;
     }
   }
 `;

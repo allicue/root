@@ -106,7 +106,7 @@ function CreateAccountForm() {
     <div className="bottom-container">
       <div className="terms-of-service">
 <input type="checkbox" className="checkbox" required/>
-      <p>I agree to all statements in <span>Terms of service</span></p>
+      <p>I agree to all statements in <span>Terms of Service</span></p>
       </div>
         <div className='buttons'>
        <Link to="/"> <input type="submit" className="take-me-back" value="TAKE ME BACK"/> </Link>
