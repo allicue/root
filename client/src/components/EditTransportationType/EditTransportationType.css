@@ -137,7 +137,7 @@ flex-direction: column-reverse;
 /* justify-content: space-evenly; */
 }
 
-.edit-form-submit, .reset {
+.edit-form-submit, .reset, .delete {
   min-width: 110px;
   padding: 10px;
   font-family: 'Montserrat', sans-serif;
@@ -153,15 +153,19 @@ flex-direction: column-reverse;
   position: relative;
 }
 
-.edit-form-submit:hover, .reset:hover {
+.edit-form-submit:hover, .delete:hover {
   box-shadow: 2px 2px 4px 1px #999;
   text-shadow: 2px 2px 5px rgb(54, 54, 54);
 }
 
-.edit-for-submit:focus, .reset:focus {
+.edit-for-submit:focus, .delete:focus {
   outline: none;
 }
 
 .reset {
+}
+
+.delete {
   background: #999;
+  /* background: rgba(122, 57, 70, .8); */
 }

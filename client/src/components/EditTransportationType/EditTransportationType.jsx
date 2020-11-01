@@ -3,7 +3,6 @@ import './EditTransportationType.css'
 import { updateTransportationType, deleteTransportationType } from '../../services/transportationTypes'
 import Logo from '../../Assets/Icons/ROOT_Logo_Icon_Primary.png'
 export default function EditTransportationType(props) {
-  const [refresh, setRefresh] = useState(false);
 
 
   const [transportationType, setTransportationType] = useState({
@@ -18,7 +17,7 @@ export default function EditTransportationType(props) {
       setTransportationType(type)
     }
     fetchType()
-  }, [refresh])
+  }, [])
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -38,7 +37,7 @@ export default function EditTransportationType(props) {
   const handleDelete = async (e) => {
     e.preventDefault();
     let id = props.id
-    window.confirm('Are you sure you want to delete') ?
+    window.confirm('Are you sure you want to delete this?') ?
       await deleteTransportationType(id, transportationType) :
       console.log('hi');
     props.setUpdated(!props.updated)
@@ -73,9 +72,8 @@ export default function EditTransportationType(props) {
               />
             </div>
             <div className="buttons">
+              <button className="delete" onClick={handleDelete}>Remove</button>
               <button className="edit-form-submit" type="submit" >Save</button>
-              <button className="reset" onClick={() => setRefresh(!refresh)} >Reset</button>
-              <button className="reset" onClick={handleDelete}>Delete</button>
             </div>
           </div>
         </div>
