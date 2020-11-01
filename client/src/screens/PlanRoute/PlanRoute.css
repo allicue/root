@@ -4,6 +4,11 @@
   color: #3d3d3d;
 }
 
+
+.plan-form-container {
+  display: flex;
+}
+
 .plan-form {
   display: flex;
   flex-direction: column;
@@ -13,7 +18,7 @@
 .plan-input {
   border: solid .5px black;
   border-radius: 30px;
-  width: 599px;
+  width: 550px;
   height: 76.3px;
   font-family: Montserrat;
   font-size: 24px;
@@ -23,7 +28,7 @@
 }
 
 .plan-button {
-  width: 620px;  
+  width: 585px;  
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   height: 81px;
@@ -33,6 +38,10 @@
   font-size: 24px;
   text-align: center;
   color: white;
+}
+
+.world-image {
+  width: 590px;
 }
 
 .plan-breakpoint {
@@ -52,8 +61,6 @@
 
 .grid-section-a {
   margin: 50px 40px 50px 40px;
-  padding: 30px;
-  border-right: 2px solid #759f5c;
 }
 
 .grid-section-b {
@@ -62,6 +69,13 @@
 
 .grid-section-c {
   margin: 50px 40px 50px 40px;
+}
+
+.grid-breakpoint {
+  margin-top: 40px;
+  height: 300px;
+  border-left: 4px solid #759f5c;
+
 }
 
 .grid-icons {
@@ -75,8 +89,7 @@
 
 .grid-text {
   text-align: center;
-  font-size: 36px;
-  font-weight: 100;
+  font-size: 30px;
 }
 
 .grid-leaf-icon {
