@@ -30,7 +30,7 @@ function PoliciesInitiativesStatic() {
               />
               <Link
                 className="image-text"
-                to="/policies-and-initiatives/san-fransisco"
+                to="/san-fransisco"
               >
                 SAN FRANSISCO
               </Link>

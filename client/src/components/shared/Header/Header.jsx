@@ -24,7 +24,7 @@ function Header() {
         <Link className="link-community">Community + Advocacy</Link>
       </div>
       <div className="header-account">
-        <Link className="link-account">Account</Link>
+        <Link to="create-your-account" className="link-account">Account</Link>
       </div> 
     </header>
   )

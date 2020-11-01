@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledPoliciesInitiatives = styled.div`
+let StyledDiv = styled.div`
   .top-container {
     display: flex;
     flex-direction: row;
@@ -13,35 +13,39 @@ const StyledPoliciesInitiatives = styled.div`
     text-decoration: none;
     color: #3d3d3d;
   }
-
   .top-left-container {
-    /* margin-left: 7.5vw; */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  /* .logo-title-container{
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  margin-left: 7.5vw;
-} */
-
-  .title {
-    display: flex;
-    flex-direction: row;
+    margin-left: -40px;
   }
 
   .top-right-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin-top: -80px;
-    width: 91vw;
+    margin-top: 310px;
   }
 
-  .input-container {
+  .page-direction {
+    margin-left: 20px;
+    width: 189px;
+    height: 51px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    color: #3d3d3d;
+  }
+
+  .page-direction:hover {
+    cursor: default;
+  }
+
+  .title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: #3d3d3d;
+    margin-left: 28px;
+    font-size: 48px;
+  }
+  .title:hover {
+    cursor: default;
   }
 
   .root-logo {
@@ -49,44 +53,16 @@ const StyledPoliciesInitiatives = styled.div`
     max-height: 212px;
   }
 
-  .top-right-input {
-    width: 302px;
-    height: 36px;
-    font-family: "Montserrat", sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    background: url("https://svgur.com/i/R66.svg") no-repeat right -20px center;
-    background-size: 100px 100px;
-    width: 387px;
-    height: 49.1px;
-    border-radius: 30px;
-    border: solid 1px #3d3d3d;
-    background-color: #ffffff;
-    text-indent: 20px;
-    box-shadow: 2px 2px 4px 1px #999;
-  }
-
-  input::placeholder {
-    font-family: "Monsterrat", sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    text-align: left;
-    color: #3d3d3d;
-  }
-
-  input:focus {
-    outline: none;
-  }
-
   .enter-location {
+    width: 249px;
+    height: 24px;
     font-family: "Roboto", sans-serif;
     font-size: 12px;
     font-weight: 500;
     text-align: center;
     color: #3d3d3d;
-    margin-bottom: 5px;
+    margin: 0 auto;
   }
-
   .enter-location:hover {
     cursor: default;
   }
@@ -140,8 +116,7 @@ const StyledPoliciesInitiatives = styled.div`
   .content-container {
     display: flex;
     flex-flow: row nowrap;
-    margin: 16px 8px 16px 9px;
-    object-fit: contain;
+    margin: 16px 19px 16px 19px;
   }
 
   .image-text {
@@ -165,8 +140,8 @@ const StyledPoliciesInitiatives = styled.div`
 
   .middle-container {
     display: flex;
-    flex-flow: row wrap;
-    align-items: center;
+    /* flex-flow: row wrap; */
+    align-items: flex-end;
     margin-top: 66px;
     margin-bottom: 118px;
     justify-content: center;
@@ -202,34 +177,12 @@ const StyledPoliciesInitiatives = styled.div`
       margin: 0 auto;
       margin-top: 10px;
     }
-    
-    .root-logo{
-      width: 400px;
-    }
+
     .middle-container {
       display: flex;
       flex-flow: row nowrap;
       margin: 20px;
     }
   }
-  @media screen and (max-width: 600px) {
-  .content-image {
-      max-width: 220px;
-      max-height: 230px;
-    }
-    .image-text {
-      font-size: 25px;
-      font-weight: bold;
-      text-align: center;
-      color: #ffffff;
-      width: 220px;
-      height: 101px;
-      margin-top: 100px;
-    }
-    .logo-title-container{
-    display: inline-block;
-    }
-  }
 `;
-
-export default StyledPoliciesInitiatives;
+export default StyledDiv;

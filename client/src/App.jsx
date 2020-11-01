@@ -10,13 +10,14 @@ import AddTransportationType from './screens/AddTransportationType/AddTransporta
 import SanFranPolicy from './screens/SanFranPolicy/SanFranPolicy'
 import PlanRoute from './screens/PlanRoute/PlanRoute';
 import Error from './screens/Error/Error'
+import CreateAccount from './screens/CreateAccount/CreateAccount'
 
 function App() {
   return (
     <div>
       <Switch>
         <Route exact path='/policies-and-initiatives' component={PoliciesInitiatives} />
-        <Route exact path='/policies-and-initiatives/san-fransisco' component={SanFranPolicy} />
+        <Route exact path='/san-fransisco' component={SanFranPolicy} />
         <Route exact path="/" component={Home} />
         <Route exact path="/header" component={Header} />
         <Route exact path="/footer" component={Footer} />
@@ -24,6 +25,7 @@ function App() {
         <Route exact path='/manage-transportation-types' component={ManageTransportationTypes} />
         <Route exact path='/add-transportation-type' component={AddTransportationType} />
         <Route exact path='/plan-your-route' component={PlanRoute} />
+        <Route path='/create-your-account' exact component={CreateAccount} />
         <Route component={Error} /> {/* keep this the lowest route */}
       </Switch>
     </div>

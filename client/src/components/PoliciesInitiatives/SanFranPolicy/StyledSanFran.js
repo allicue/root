@@ -7,22 +7,31 @@ const StyledSanFran = styled.div`
     text-decoration: none;
     color: #3d3d3d;
   }
-
-  .top-left-container {
-  margin-left: 9.5vw;
-
+  
+.title{
+  width: 1000px;
 }
+.top-left-container {
+    margin-left: -1.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
 .top-right-container {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     margin-top: -80px;
-    width: 80.5vw;
+    width: 92vw;
   }
 
 
-  
+  .title {
+    display: flex;
+    flex-direction: row;
+  }
+
   .root-logo {
     max-width: 518px;
     max-height: 212px;
@@ -79,11 +88,15 @@ const StyledSanFran = styled.div`
   .content-image {
     width: 1204px;
     height: 319px;
+    max-width: 83.5vw 
   }
 
   .box-text-container {
+    
     width: 1202px;
     height: 236px;
+    max-height: 30vh;
+    max-width: 83.5vw;
     background-color: #e8e4d9;
     padding-top: 1px;
     padding-bottom: 20px;
@@ -92,12 +105,13 @@ const StyledSanFran = styled.div`
 
   .box-text {
     font-family: "Monsterrat", sans-serif;
+    display: flex;
+    flex-direction: column;
     font-size: 16px;
     font-weight: 500;
     text-align: left;
     color: black;
-    display: flex;
-    margin: 29px 19px 29px 22px;
+    margin: 40px 19px 40px 22px;
   }
 
   .box-text-title {
@@ -151,11 +165,29 @@ const StyledSanFran = styled.div`
 
   @media screen and (max-width: 768px) {
 
+    .content-container{
+      text-overflow: scroll;
+    }
+
+    .content-image{
+      max-width: 70vw;
+      max-height: 200px;
+    }
     .top-left-container {
       margin: 0 auto;
     }
 
+    .root-logo{
+      width: 400px;
+    }
+
     .box-text-container {
+      width: 70vw;
+      max-height: 20vh;
+      height: 20vh;
+    }
+
+    .box-text{
       display: none;
     }
 
@@ -166,9 +198,13 @@ const StyledSanFran = styled.div`
 
     .middle-container {
       display: flex;
-      flex-flow: row nowrap;
+      /* flex-flow: row nowrap; */
       margin: 20px;
     }
+        .title{
+          width: 600px;
+          font-size: 38px;
+        }
   }
 `;
 
