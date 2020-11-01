@@ -102,6 +102,7 @@ const StyledPoliciesInitiatives = styled.div`
 
   .box-text-container {
     width: 287px;
+    height: 256px;
     /* height: 236px; */
     background-color: #e8e4d9;
     padding-top: 1px;
@@ -214,17 +215,17 @@ const StyledPoliciesInitiatives = styled.div`
   }
   @media screen and (max-width: 600px) {
   .content-image {
-      max-width: 220px;
-      max-height: 230px;
+      max-width: 198px;
+      max-height: 200px;
     }
     .image-text {
-      font-size: 25px;
+      font-size: 26px;
       font-weight: bold;
       text-align: center;
       color: #ffffff;
-      width: 220px;
+      width: 200px;
       height: 101px;
-      margin-top: 100px;
+      margin-top: 90px;
     }
     .logo-title-container{
     display: inline-block;
