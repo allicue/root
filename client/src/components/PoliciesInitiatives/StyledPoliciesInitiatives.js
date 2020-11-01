@@ -1,7 +1,13 @@
 import styled from "styled-components";
 
-const Styled = styled.div`
-  
+const StyledPoliciesInitiatives = styled.div`
+  .top-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 33px;
+  }
 
   a {
     text-decoration: none;
@@ -9,20 +15,35 @@ const Styled = styled.div`
   }
 
   .top-left-container {
-  margin-left: 9.5vw;
+    /* margin-left: 7.5vw; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
-}
+  /* .logo-title-container{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-left: 7.5vw;
+} */
 
-.top-right-container {
+  .title {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .top-right-container {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     margin-top: -80px;
-    width: 80.5vw;
+    width: 91vw;
   }
 
+  .input-container {
+  }
 
-  
   .root-logo {
     max-width: 518px;
     max-height: 212px;
@@ -43,8 +64,6 @@ const Styled = styled.div`
     background-color: #ffffff;
     text-indent: 20px;
     box-shadow: 2px 2px 4px 1px #999;
-    display: flex;
-    flex-direction: column;
   }
 
   input::placeholder {
@@ -60,15 +79,14 @@ const Styled = styled.div`
   }
 
   .enter-location {
-    width: 249px;
-    height: 24px;
     font-family: "Roboto", sans-serif;
     font-size: 12px;
     font-weight: 500;
     text-align: center;
     color: #3d3d3d;
-    margin: 0 auto;
+    margin-bottom: 5px;
   }
+
   .enter-location:hover {
     cursor: default;
   }
@@ -77,48 +95,53 @@ const Styled = styled.div`
   }
 
   .content-image {
-    width: 1204px;
-    height: 319px;
+    width: 288px;
+    height: 256px;
+    filter: contrast(70%) brightness(92%);
   }
 
   .box-text-container {
-    width: 1202px;
+    width: 287px;
     height: 236px;
     background-color: #e8e4d9;
     padding-top: 1px;
     padding-bottom: 20px;
-    align-items: center;
   }
 
   .box-text {
     font-family: "Monsterrat", sans-serif;
-    font-size: 16px;
+    font-size: 24px;
     font-weight: 500;
-    text-align: left;
-    color: black;
-    display: flex;
-    margin: 29px 19px 29px 22px;
-  }
-
-  .box-text-title {
-    font-family: "Monsterrat", sans-serif;
-    font-size: 27px;
-    font-weight: bold;
     text-align: left;
     color: #3d3d3d;
     display: flex;
     margin: 29px 19px 29px 22px;
-    text-transform: uppercase;
   }
 
-  .box-text-title:hover {
-    cursor: default;
+  .box-text:hover {
+    cursor: pointer;
+    transform: translate(0.5px);
+  }
+
+  .box-text-small {
+    font-family: "Monsterrat", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: italic;
+    margin-left: 22px;
+    color: #3d3d3d;
+  }
+
+  .box-text-small:hover {
+    cursor: pointer;
+    transform: translate(0.5px);
   }
 
   .content-container {
     display: flex;
-    flex-flow: column nowrap;
-    margin: 16px 19px 16px 19px;
+    flex-flow: row nowrap;
+    margin: 16px 8px 16px 9px;
+    object-fit: contain;
   }
 
   .image-text {
@@ -142,14 +165,31 @@ const Styled = styled.div`
 
   .middle-container {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
     align-items: center;
     margin-top: 66px;
     margin-bottom: 118px;
     justify-content: center;
   }
 
+  .middle-right {
+    flex-flow: column;
+    align-items: flex-end;
+  }
+
+  .middle-left {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   @media screen and (max-width: 768px) {
+    .top-container {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: flex-start;
+      margin-top: 33px;
+    }
 
     .top-left-container {
       margin: 0 auto;
@@ -158,7 +198,6 @@ const Styled = styled.div`
     .box-text-container {
       display: none;
     }
-
     .top-right-container {
       margin: 0 auto;
       margin-top: 10px;
@@ -170,6 +209,27 @@ const Styled = styled.div`
       margin: 20px;
     }
   }
+  @media screen and (max-width: 600px) {
+  .content-image {
+      max-width: 220px;
+      max-height: 230px;
+    }
+    .image-text {
+      font-size: 25px;
+      font-weight: bold;
+      text-align: center;
+      color: #ffffff;
+      width: 220px;
+      height: 101px;
+      margin-top: 100px;
+    }
+    .logo-title-container{
+    display: inline-block;
+    }
+    .title{
+      
+    }
+  }
 `;
 
-export default Styled;
+export default StyledPoliciesInitiatives;

@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Styled from "./Styled";
+import StyledSanFran from "./StyledSanFran";
 import LogoBanner from '../../../components/shared/LogoBanner/LogoBanner'
 
 function SanFranPolicyStatic() {
   return (
     <>
-      <Styled>
+      <StyledSanFran>
         
         {/* <div className="top-container"> */}
           <div className="top-left-container">
@@ -96,7 +96,7 @@ function SanFranPolicyStatic() {
             </div>
           </div>
         </div>
-      </Styled>
+      </StyledSanFran>
     </>
   );
 }
