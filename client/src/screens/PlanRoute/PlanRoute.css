@@ -7,6 +7,13 @@
 
 .plan-form-container {
   display: flex;
+  justify-content: center;
+}
+
+.column-a {
+  display: flex;
+  flex-direction: column;
+  align-content: left;
 }
 
 .plan-form {
@@ -40,8 +47,14 @@
   color: white;
 }
 
+.plan-button:hover {
+  cursor: pointer;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 .world-image {
   width: 590px;
+  margin-top: 300px;
 }
 
 .plan-breakpoint {
@@ -60,15 +73,15 @@
 }
 
 .grid-section-a {
-  margin: 50px 40px 50px 40px;
+  margin: 70px 80px 50px 80px;
 }
 
 .grid-section-b {
-  margin: 50px 40px 50px 40px;
+  margin: 70px 80px 50px 80px;
 }
 
 .grid-section-c {
-  margin: 50px 40px 50px 40px;
+  margin: 70px 80px 50px 80px;
 }
 
 .grid-breakpoint {
@@ -89,7 +102,8 @@
 
 .grid-text {
   text-align: center;
-  font-size: 30px;
+  font-size: 36px;
+  font-weight: 500;
 }
 
 .grid-leaf-icon {
