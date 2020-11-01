@@ -218,11 +218,12 @@ const Form = styled.form`
       display: flex;
       flex-direction: column;
       align-items: center;
-      right: 0%;
+      right: 3%;
       margin: 0 auto;
     }
     .bottons{
       right: 0%; 
+      align-items: flex-start;
       margin: 0 auto;
     }
   }
