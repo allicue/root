@@ -6,10 +6,11 @@ import Form from "./Form";
 
 function CreateAccountForm() {
   // const [account, setAccount] = useState({
-  //   username: "",
+  //   name: "",
   //   imgURL: "",
   //   email: "",
   //   password:"",
+  //   zipcode: "",
   // });
 
   // const [isCreated, setCreated] = useState(false);
@@ -36,8 +37,8 @@ function CreateAccountForm() {
     <Form>
        {/*  onSubmit={handleSubmit}> */}
       <div>
-        <label className="username" for="username">Username</label>
-        <input
+        <label className="username" for="username">Name</label>
+        <input className="account-input"
           name="username"
           placeholder="Enter Username"
         //  value={account.username}
@@ -46,7 +47,7 @@ function CreateAccountForm() {
         //  onChange={handleChange}
         />
       </div>
-      <div>
+      {/* <div>
         <label className="image" for="imgURL">Image</label>
         <input
           name="imgURL"
@@ -55,15 +56,16 @@ function CreateAccountForm() {
           autoFocus
           // onChange={handleChange}
         />
-      </div>
+      </div> */}
+
       <div>
         <label className="email-label" for="email">
-          Email Address
+          Email
         </label>
         <input
-          
+          className="account-input"
           name="email"
-          placeholder="Email Address"
+          placeholder="Enter Email Address"
           // value={account.email}
           required
           autoFocus
@@ -76,6 +78,7 @@ function CreateAccountForm() {
           Password
         </label>
         <input
+          className="account-input"
           name="password"
           type="password"
           placeholder="Enter Password"
@@ -87,9 +90,29 @@ function CreateAccountForm() {
       </div>
 
       <div>
+        <label className="zipcode-label" for="zipcode">
+          ZIP CODE
+        </label>
+        <input
+          className="account-input"
+          name="zipcode"
+          placeholder="Enter Zipcode"
+        //  value={account.password}
+          required
+          autoFocus
+       //   onChange={handleChange}
+        />
+      </div>
+    <div className="bottom-container">
+      <div className="terms-of-service">
+<input type="checkbox" className="checkbox" required/>
+      <p>I agree to all statements in <span>Terms of service</span></p>
+      </div>
+        <div className='buttons'>
        <Link to="/"> <input type="submit" className="take-me-back" value="TAKE ME BACK"/> </Link>
         <button className="create-button">CREATE ACCOUNT</button>
-      </div>
+        </div>
+        </div>
     </Form>
   );
 }

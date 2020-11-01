@@ -32,21 +32,53 @@ a {
   cursor: default;
 }
 
-.user-picture {
-
-  background: red;
- width: 100px;
- height: 100px;
- border-radius: 50%;
- margin: 0 auto;
- margin-bottom: auto;
+.picture-container{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  top: 40px;
+  left: 50px;
+  margin: 0 auto;
+  margin-bottom: auto;
+  padding-right: 10px;
+  margin-right: 20px;
 }
+
+  .user-picture {
+  background: #c4c4c4;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  }
+
+  .user-picture:hover{
+    cursor: pointer;
+  }
+
+/* .add-image {
+text-align: center;
+font-family: 'Monsterrat', sans-serif;
+color: #3d3d3d;
+width: 200px;
+margin-top: 125px;
+margin-left: -145px;
+font-size: 24px;
+font-weight: 500;
+ margin-bottom: auto;
+} */
+
+.add-image:hover{
+  cursor: pointer;
+  text-shadow: 1px 2px #999;
+}
+
 .middle-container {
   display: flex;
   /* flex-flow: row wrap; */
   align-items: flex-end;
-  margin-top: 66px;
-  margin-bottom: 118px;
+  margin-top: 106px;
+  margin-bottom: 150px;
   justify-content: center;
 }
 
@@ -60,6 +92,8 @@ a {
   align-items: flex-start;
 }
 
+
+
 @media screen and (max-width: 768px) {
   .top-container {
     display: flex;
@@ -70,22 +104,22 @@ a {
     margin: 0 auto;
   }
 
+
   .top-left-container {
     margin: 0 auto;
   }
 
-  .box-text-container{
-    display: none;
-  }
+ 
   .top-right-container {
     margin: 0 auto;
-    margin-top: 10px;
+    margin-top: -10px;
   }
 
   .middle-container {
     display: flex;  
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     margin: 20px;
+    margin-bottom: 150px;
   }
 
   .root-logo{
@@ -94,6 +128,38 @@ a {
   .title{
     width:400px;
   }
+}
+
+@media screen and (max-width: 1000px) {
+  .top-container {
+    display: flex;
+    flex-flow: column wrap;
+    left: 0;
+    /* margin-top: 33px; */
+  }
+  .logo-title-container{
+  }
+.picture-container{
+margin:0 auto;
+margin-bottom: 50px;
+left: 0%;
+}
+
+
+  .top-left-container {
+
+    }
+
+  .middle-container {
+    display: flex;  
+    flex-flow: column nowrap;
+    margin: 20px;
+    margin-bottom: 150px;
+
+  }
+
+  
+  
 }
 `
 export default StyledDiv

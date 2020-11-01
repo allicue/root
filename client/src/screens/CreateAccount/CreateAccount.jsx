@@ -17,7 +17,10 @@ function AddTransportationType() {
           <div className="top-right-container"></div>
         </div>
         <div className="middle-container">
-            <h1 className="user-picture">EDIT IMAGE</h1>
+           <div className="picture-container">
+            <h1 className="user-picture"></h1>
+              <p className="add-image">Add<br />image</p>
+              </div>
             <CreateAccountForm />
         </div>
         </StyledDiv>
