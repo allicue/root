@@ -8,8 +8,8 @@ color: #3d3d3d;
 font-size: 24px;
 font-weight: bold;
 text-align: center;
-margin: 36px auto;
 text-transform: uppercase;
+margin-bottom: 100px;
 
 a {
   text-decoration: none;
