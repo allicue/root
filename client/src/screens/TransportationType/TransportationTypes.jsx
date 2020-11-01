@@ -27,15 +27,17 @@ export default function TransportationTypes() {
   return (
     <Layout >
       <LogoBanner title="Climate Impact By Transportation Type" />
-      <span className="edit-icon-link" >
-        <Link to="/manage-transportation-types">
-        <img className="edit-icon" alt="Edit Icon" src={Icon} /></Link>
-        <p id="edit-icon-text">Personalize</p>
-      </span>
+
       <div className="transportation-types-main">
         <div className="title-list">
           <div className="transportation-types-parent">
+          <span className="edit-icon-link" >
+         <Link to="/manage-transportation-types"><p id="edit-icon-text">Personalize</p> </Link>
+        <Link to="/manage-transportation-types">
+        <img className="edit-icon" alt="Edit Icon" src={Icon} /></Link>
+      </span>
             <div className="transportation-types">{TYPES}</div>
+            
           </div>
         </div>
         <div className="green-news">

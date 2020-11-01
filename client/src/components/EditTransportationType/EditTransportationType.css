@@ -37,7 +37,6 @@ display: flex;
 
 .edit-description:focus, .edit-title:focus, .edit-image-link:focus {
   outline: none;
-
 }
 
 .edit-description:focus {
@@ -49,6 +48,7 @@ display: flex;
   /* background: rgba(240, 240, 240, .8); */
   /* color: #3d3d3d; */
   background-color: rgba(116, 159, 92, .8);
+  min-width: 300px;
 }
 
 
@@ -85,7 +85,7 @@ margin-right: 20px;
   font-weight: bold;
   font-size: 25px;
   text-align: center;
-  max-width: 250px;
+  max-width: 300px;
 }
 
 .edit-title-container {
@@ -156,6 +156,10 @@ flex-direction: column-reverse;
 .edit-form-submit:hover, .reset:hover {
   box-shadow: 2px 2px 4px 1px #999;
   text-shadow: 2px 2px 5px rgb(54, 54, 54);
+}
+
+.edit-for-submit:focus, .reset:focus {
+  outline: none;
 }
 
 .reset {
