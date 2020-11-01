@@ -215,7 +215,7 @@ const StyledPoliciesInitiatives = styled.div`
   }
   @media screen and (max-width: 600px) {
   .content-image {
-      max-width: 198px;
+      max-width: 200px;
       max-height: 200px;
     }
     .image-text {
@@ -225,7 +225,7 @@ const StyledPoliciesInitiatives = styled.div`
       color: #ffffff;
       width: 200px;
       height: 101px;
-      margin-top: 90px;
+      margin-top: 95px;
     }
     .logo-title-container{
     display: inline-block;
