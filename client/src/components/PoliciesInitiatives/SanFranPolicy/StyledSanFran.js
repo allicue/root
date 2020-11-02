@@ -198,7 +198,6 @@ const StyledSanFran = styled.div`
 
     .middle-container {
       display: flex;
-      /* flex-flow: row nowrap; */
       margin: 20px;
     }
         .title{

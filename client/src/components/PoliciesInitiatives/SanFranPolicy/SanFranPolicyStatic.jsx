@@ -8,7 +8,6 @@ function SanFranPolicyStatic() {
     <>
       <StyledSanFran>
         
-        {/* <div className="top-container"> */}
           <div className="top-left-container">
             <LogoBanner title ="San Fransisco"/>
           </div>
@@ -22,7 +21,6 @@ function SanFranPolicyStatic() {
             />
             </div>
           </div>
-        {/* </div> */}
         <div className="middle-container">
           <div className="content-container">
             <img

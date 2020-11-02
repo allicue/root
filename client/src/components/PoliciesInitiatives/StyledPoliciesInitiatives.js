@@ -15,18 +15,10 @@ const StyledPoliciesInitiatives = styled.div`
   }
 
   .top-left-container {
-    /* margin-left: 7.5vw; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
-
-  /* .logo-title-container{
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  margin-left: 7.5vw;
-} */
 
   .title {
     display: flex;
@@ -103,7 +95,6 @@ const StyledPoliciesInitiatives = styled.div`
   .box-text-container {
     width: 287px;
     height: 256px;
-    /* height: 236px; */
     background-color: #e8e4d9;
     padding-top: 1px;
     padding-bottom: 20px;
