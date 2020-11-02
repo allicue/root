@@ -1,5 +1,8 @@
 .header{
   display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
   position: fixed;
   background-color: #e8e4d9;
   width: 100%;
@@ -9,7 +12,6 @@
 .header-home{
  display: flex;
  margin-left: 100px;
- margin-top: 25px;
  margin-right: 50px;
 }
 
@@ -29,9 +31,6 @@
   font-size: 16px;
   font-weight: 700;
   color: #3d3d3d;
-  margin-left: 45px;
-  margin-top: 25px;
-  margin-right: 50px;
  }
 
  .link-plan{
@@ -47,9 +46,6 @@
   font-size: 16px;
   font-weight: 700;
   color: #3d3d3d;
-  margin-left: 15px;
-  margin-top: 25px;
-  margin-right: 15px;
  }
 
  .link-transport{
@@ -57,14 +53,12 @@
   color: #3d3d3d;
   text-decoration: none;
   margin-top: 25px;
+  min-width: 183px;
 }
 
  .header-image{
   height: 100px;
   width: 100px;
-  margin-top: 10px;
-  margin-left: 90px;
-  margin-right: 90px;
  }
  
  .header-polices{
@@ -74,7 +68,6 @@
   font-weight: 700;
   color: #3d3d3d;
   margin-left: 35px;
-  margin-top: 25px;
   margin-right: 65px;
  }
 
@@ -91,9 +84,6 @@
   font-size: 16px;
   font-weight: 700;
   color: #3d3d3d;
-  margin-left: 45px;
-  margin-top: 25px;
-  margin-right: 85px;
  }
 
  .link-community{
@@ -109,8 +99,6 @@
   font-size: 16px;
   font-weight: 700;
   color: #3d3d3d;
-  margin-left: 50px;
-  margin-top: 25px;
  }
 
  .link-account{
@@ -118,5 +106,7 @@
   color: #3d3d3d;
   text-decoration: none;
   margin-top: 25px;
+  margin-left: 100px;
+  margin-right: 50px;
 }
 

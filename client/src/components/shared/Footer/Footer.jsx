@@ -3,9 +3,8 @@ import { Link } from "react-router-dom"
 import twitter from "../../../Assets/Icons/ROOT_Twitter.svg"
 import instagram from "../../../Assets/Icons/ROOT_Instagram.svg"
 import community from "../../../Assets/Icons/ROOT_Vector_Community.svg"
-import Root from "../../../Assets/Icons/ROOT_Logo_Primary.svg"
+import footerroot from "../../../Assets/Icons/ROOT_Logo_Primary.svg"
 import Leaf from '../../../Assets/Icons/ROOT_Leaf.svg'
-// import leaf from "../../../Assets/Icons/ROOT_Menu_Leaf.svg"
 import "./Footer.css"
 
 function Footer() {
@@ -19,7 +18,7 @@ function Footer() {
           <Link><img src={community} alt="community logo" className="link-social" /></Link>
         </div>
         <div className="root-logo">
-          <img src={Root} alt="Root logo" className="footer-root" />
+          <img src={footerroot} alt="Root logo" className="footer-root" />
         </div>
       </div>
       <div className="page-links">
