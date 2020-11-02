@@ -28,18 +28,18 @@ function PlanRoute(props) {
         <div className="grid-view">
           <div className="grid-section-a">
             <section className="grid-icons">
-              <img className="grid-leaf-icon" src={LeafIcon} />
-              <img className="grid-leaf-icon" src={LeafIcon} />
-              <img className="grid-leaf-icon" src={LeafIcon} />
-              <img className="grid-leaf-icon" src={LeafIcon} />
-              <img className="grid-leaf-icon" src={LeafIcon} />
+              <img className="grid-leaf-icon" src={LeafIcon} alt="leaf"/>
+              <img className="grid-leaf-icon" src={LeafIcon} alt="leaf"/>
+              <img className="grid-leaf-icon" src={LeafIcon} alt="leaf"/>
+              <img className="grid-leaf-icon" src={LeafIcon} alt="leaf"/>
+              <img className="grid-leaf-icon" src={LeafIcon} alt="leaf"/>
             </section>
             <section className="grid-text"><h2 className="grid-text">See Green Ratings</h2></section>
           </div>
           <div className="grid-breakpoint"></div>
           <div className="grid-section-b">
             <section className="grid-icons">
-              <img className="clock-icon" src={ClockIcon} />
+              <img className="clock-icon" src={ClockIcon} alt="clock"/>
             </section>
             <section className="grid-text">
               <h2 className="grid-text">View Time to <br></br> Destination</h2>
