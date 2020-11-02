@@ -1,0 +1,191 @@
+.footer{
+  position: absolute;
+  background-color: #f2f2f2;
+  left: 0;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.parent-links{
+  display: flex;
+  align-items: center;
+}
+
+.footer-social{
+  width: 25%;
+  margin-left: 7%;
+  min-width: 450px;
+}
+
+.link-social{
+  width: 150px;
+}
+
+.root-logo {
+  margin-left: 12%;
+}
+
+.footer-root{
+  display: inline-flex;
+  width: 197px;
+  height: 77px;
+  z-index: 998;
+}
+
+.page-links{
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: space-evenly;
+}
+
+.link-home-footer{
+  font-size: 26px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.link-bar{
+  color: #3d3d3d;
+  font-size: 26px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+  padding-bottom: 10px;
+}
+
+.footer-line{
+  width: 80%;
+  height: 1px;
+  border: 0 none;
+  margin-right: auto;
+  margin-left: auto;
+  background-color:#555;
+}
+
+.footer-bottom {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.footer-map{
+  display: flex;
+  flex-direction: column;
+}
+
+.leaf-parent {
+  margin: -20px;
+}
+
+.message-leaf {
+  height: 90px;
+  transform: rotate(220deg);
+}
+
+.link-sitemap {
+  color: #3d3d3d;
+  text-decoration: none;
+  padding-bottom: 18px;
+  font-weight: 500;
+}
+
+.message-parent{
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
+
+.message-container {
+  display: flex;
+}
+
+.message-commit{
+  font-size: 20px;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.message-mission{
+  font-size: 15px;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+.contact-div{
+  display: inline-flex;
+  text-align: left;
+  width: 25%;
+}
+
+.info-email{
+  font-size: 20px;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.email{
+  padding-bottom: 20px;
+}
+
+.email-container {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.email-text{
+  border: none;
+  height: 34px;
+  width: 70%;
+}
+
+.email-submit{
+  border: none;
+  height: 34px;
+  width: 30%;
+  background-color: #759f5c;
+  color: white;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.phone-parent{
+  display: inline-flex;
+  text-align: left;
+  width: 25%;
+}
+
+.phone-number-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 34px;
+  background-color: #759f5c;
+}
+
+#phone-number-box {
+  color: white;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.address-parent{
+  margin-top: 10px;
+  margin-bottom: 80px;
+  font-size: 26px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}

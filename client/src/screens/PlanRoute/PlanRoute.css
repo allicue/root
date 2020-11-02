@@ -1,0 +1,121 @@
+.plan-route-page {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0 auto;
+  color: #3d3d3d;
+}
+
+
+.plan-form-container {
+  display: flex;
+  justify-content: center;
+}
+
+.column-a {
+  display: flex;
+  flex-direction: column;
+  align-content: left;
+}
+
+.breadcrumb-plan-container {
+  margin-left: -8.5vw;
+}
+
+.plan-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.plan-input {
+  border: solid .5px black;
+  border-radius: 30px;
+  width: 550px;
+  height: 76.3px;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 500;
+  padding-left: 28px;
+  margin-bottom: 20px;
+}
+
+.plan-button {
+  width: 555px;  
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  height: 81px;
+  background-color: #749f5c;
+  border-style: none;
+  border-radius: 45px;
+  font-size: 24px;
+  text-align: center;
+  color: white;
+}
+
+.plan-button:hover {
+  cursor: pointer;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.world-image {
+  width: 590px;
+  margin-top: 300px;
+}
+
+.plan-breakpoint {
+  margin: 0 auto;
+  margin-top: 100px;
+  width: 1222px;
+  height: 4px;
+  background-color: #759f5c;
+}
+
+.grid-view {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-self: baseline;
+}
+
+.grid-section-a {
+  margin: 70px 80px 50px 80px;
+}
+
+.grid-section-b {
+  margin: 70px 80px 50px 80px;
+}
+
+.grid-section-c {
+  margin: 70px 80px 50px 80px;
+}
+
+.grid-breakpoint {
+  margin-top: 40px;
+  height: 300px;
+  border-left: 4px solid #759f5c;
+
+}
+
+.grid-icons {
+  font-size: 43px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.grid-text {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.grid-leaf-icon {
+  margin-left: 5px;
+  width: 57px;
+  height: 57px;
+}
+
+.clock-icon {
+  width: 100px;
+}

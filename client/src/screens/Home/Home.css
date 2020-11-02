@@ -1,0 +1,232 @@
+.homepage {
+  margin: 0 auto;
+}
+.homepage-header {
+  background-image: linear-gradient(
+  rgba(0, 0, 0, 0.5),
+  rgba(0, 0, 0, 0.5)), url("../../Assets/Images/Hi-Res/root_header_hi_res.png");
+  background-size: cover;
+  padding: 50px;
+  background-position: center;
+  height: 961px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.homepage-root-logo {
+  margin-top: 125px;
+  width: 900px;
+}
+
+.homepage-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 48px;
+}
+
+.homepage-header-text-container {
+  margin-top: 65px;
+}
+
+.homepage-news-container {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+.homepage-subtitle-a {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  width: 550px;
+  margin-right: 5%;
+}
+
+.homepage-subtitle-b {
+  font-family: 'Montserrat', sans-serif;
+  width: 550px;
+  font-size: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 10px;
+}
+
+.homepage-subtitle-b-link {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.homepage-subtitle-b:hover {
+  font-weight: bold;
+  border-bottom: solid 2px white;
+}
+
+.header-line {
+  width: 1204px;
+  height: 2px;
+  background-color: white;
+}
+
+
+.homepage-header-navbar {
+  display: flex;
+  margin-top: 50px;
+}
+
+.homepage-button {
+  width: 391px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  height: 81px;
+  background-color: #749f5c;
+  border-style: none;
+  border-radius: 45px;
+  font-size: 24px;
+  text-align: center;
+  color: white;
+  margin: 15px;
+}
+
+.homepage-button:hover {
+  cursor: pointer;
+  text-shadow: 2px 2px 5px rgb(54, 54, 54);
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.button-text {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.homepage-body {
+  margin: 0 auto;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+} 
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.policies-section {
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)), url("../../Assets/Images/Hi-Res/chicago_citiypolicies_hi_res.png");
+  background-position-y: 45%;
+  width: 796px;
+  height: 381px;
+  background-size: cover;
+  color: white;
+  text-align: left;
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.policies-text {
+  position: absolute;
+  bottom: 0px;
+  font-size: 24px;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.policies-text-headline {
+  font-size: 48px;
+  margin-bottom: 0px;
+}
+
+.climate-impact-section {
+  width: 386px;
+  height: 547px;
+  margin-left: 34px;
+  background-color: #e8e4d9;
+  font-family: 'Montserrat', sans-serif;
+  color: #3d3d3d;
+}
+
+.climate-impact-header {
+  font-size: 30px;
+  font-weight: bold;
+  padding-left: 12px;
+  padding-top: 10px;
+}
+
+.climate-impact-img {
+  width: 386px;
+  height: 381px;
+  background-image: url("../../Assets/Images/Hi-Res/root_desktop_hi_res.png");
+  background-size: cover;
+}
+
+.leaf-icon {
+  width: 65px;
+  height: 65px;
+  padding: 7px;
+}
+
+.climate-impact-text {
+  font-size: 24px;
+  padding: 18px 68px 16px 12px;
+}
+
+.climate-link{
+  text-decoration: none;
+  width: 386px;
+}
+
+.community-advocacy-section {
+  background-color: #3d3d3d;
+  height: 149px;
+  color: white;
+  text-align: left; 
+  display: flex;
+  width: 794px;
+  margin-top: 18px;
+}
+
+.community-a {
+  width: 318px;
+  padding: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+}
+
+.community-a-title {
+  position: absolute;
+  width: 318px;
+}
+
+.community-icon {
+  position: relative;
+  align-self: flex-end;
+  margin-top: 10%;
+  width: 120px;
+  height: 120px;
+}
+
+.community-b {
+  width: 478px;
+  background-image: linear-gradient(
+    rgba(122, 121, 121, 0.342),
+    rgba(122, 121, 121, 0.342)), url("../../Assets/Images/Hi-Res/molly_profile_community_hi_res.png");
+    background-position-y: 45%;
+    background-size: cover;
+}
+
+.community-advocacy-img {
+  width: 478px;
+  object-fit: contain;
+}
