@@ -12,7 +12,10 @@ function PlanRoute(props) {
       <div className="plan-route-page">
         <div className="plan-form-container">
           <div className="column-a">
-            <LogoBanner title="Plan Your Route"/>
+            <div className="breadcrumb-plan-container">
+              <LogoBanner title="Plan Your Route" />
+            </div>
+            
           <form className="plan-form">
             <input className="plan-input" placeholder="Current Location"></input>
             <input className="plan-input" placeholder="The Metropolitan Museum of Art (MET)"></input>
