@@ -33,7 +33,7 @@ a:hover{
 }
 
 img {
-  width: 200px;
+  width: 360px;
   margin: 0 auto;
   padding: 50px;
 }

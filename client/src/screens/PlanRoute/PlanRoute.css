@@ -16,6 +16,10 @@
   align-content: left;
 }
 
+.breadcrumb-plan-container {
+  margin-left: -8.5vw;
+}
+
 .plan-form {
   display: flex;
   flex-direction: column;
