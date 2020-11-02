@@ -42,7 +42,7 @@ export default function TransportationTypes() {
         <div className="title-list">
           <div className="transportation-types-parent">
             <span className="edit-icon-link" >
-              <Link to="/manage-transportation-types"><p id="edit-icon-text">Personalize</p> </Link>
+            <p id="edit-icon-text"><Link to="/manage-transportation-types" id="edit-icon-link">Personalize </Link></p>
               <Link to="/manage-transportation-types">
                 <img className="edit-icon" alt="Edit Icon" src={Icon} /></Link>
             </span>

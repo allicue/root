@@ -40,7 +40,9 @@
   margin: 60px 0 -10px 8vw;
 }
 
-#edit-icon-text {
+#edit-icon-link {
+  text-decoration: none;
+  color: #749f5c;
   font-size: 18px;
 }
 
