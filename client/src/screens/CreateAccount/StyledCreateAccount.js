@@ -47,10 +47,12 @@ a {
 
   .user-picture {
   background: #c4c4c4;
+  border: 2px solid #c4c4c4;
   width: 120px;
   height: 120px;
   border-radius: 50%;
   }
+
 
   .user-picture:hover{
     cursor: pointer;
