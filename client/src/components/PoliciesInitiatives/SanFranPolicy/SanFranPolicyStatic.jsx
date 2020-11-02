@@ -1,28 +1,24 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import StyledSanFran from "./StyledSanFran";
-import LogoBanner from '../../../components/shared/LogoBanner/LogoBanner'
+import LogoBanner from "../../../components/shared/LogoBanner/LogoBanner";
 
 function SanFranPolicyStatic() {
   return (
     <>
       <StyledSanFran>
-        
-        {/* <div className="top-container"> */}
-          <div className="top-left-container">
-            <LogoBanner title ="San Fransisco"/>
-          </div>
-          <div className="top-right-container">
-         <div className="input-container">
+        <div className="top-left-container">
+          <LogoBanner title="San Fransisco" />
+        </div>
+        <div className="top-right-container">
+          <div className="input-container">
             <p className="enter-location">Or enter your location:</p>
             <input
               className="top-right-input"
               type="text"
               placeholder="Zipcode or City, State"
             />
-            </div>
           </div>
-        {/* </div> */}
+        </div>
         <div className="middle-container">
           <div className="content-container">
             <img

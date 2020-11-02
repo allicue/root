@@ -17,7 +17,7 @@ function Home(props) {
           <h2 className="homepage-subtitle">GREEN TRANSPORT</h2>
           <div className="homepage-news-container">
             <p className="homepage-subtitle-a">Articles, News and Inspiration For You</p>
-            <a className="homepage-subtitle-b-link" target="_blank" href="https://www.gov.ca.gov/2020/09/23/governor-newsom-announces-california-will-phase-out-gasoline-powered-cars-drastically-reduce-demand-for-fossil-fuel-in-californias-fight-against-climate-change/">
+            <a className="homepage-subtitle-b-link" rel="noreferrer" target="_blank" href="https://www.gov.ca.gov/2020/09/23/governor-newsom-announces-california-will-phase-out-gasoline-powered-cars-drastically-reduce-demand-for-fossil-fuel-in-californias-fight-against-climate-change/">
               <p className="homepage-subtitle-b">California Will Phase Out Gasoline-Powered Cars in <br></br>Fight Against Climate Change </p>
             </a>
           </div>
@@ -31,7 +31,6 @@ function Home(props) {
       </div>
 
       <div className="homepage-body">
-        {/* <div className="row"> */}
           <div className="column">
           <Link to="/policies-and-initiatives">
             <section className="policies-section">
@@ -58,7 +57,6 @@ function Home(props) {
               </section>
             </Link>
           </div>
-        {/* </div> */}
       </div>
       
 
