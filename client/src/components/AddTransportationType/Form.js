@@ -5,7 +5,7 @@ display: flex;
 flex-flow: column nowrap;
 align-items: center;
 /* margin: 0 auto; */
-margin-top: 40px;
+margin-top: 103px;
 
 label {
 font-family: 'Monsterrat', sans serif;
@@ -101,7 +101,10 @@ div {
 }
 
 .description {
-  margin-right: 10px;
+  margin-right: -70px;
+  position: relative;
+  left: -70px;
+  top: -15px;
 }
 button:hover {
   cursor: pointer;
