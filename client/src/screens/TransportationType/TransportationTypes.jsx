@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Icon from "../../Assets/Icons/ROOT_Menu_Settings.svg"
+import Leaf from '../../Assets/Icons/ROOT_Leaf.png'
 import Layout from '../../components/shared/Layout/Layout'
 import LogoBanner from '../../components/shared/LogoBanner/LogoBanner'
 import TransportationType from '../../components/TransportationType/TransportationType'
@@ -8,36 +9,44 @@ import './TransportationTypes.css'
 import { getTransportationTypes } from '../../services/transportationTypes'
 
 export default function TransportationTypes() {
-  const [transportationTypes, setTransportationTypes] = useState([])
+  const [transportationTypes, setTransportationTypes] = useState([]);
+  const [loaded, setLoaded] = useState(false);
 
 
   useEffect(() => {
     const getData = async () => {
-      const types = await getTransportationTypes()
-      console.log(types)
-      setTransportationTypes(types)
+      const types = await getTransportationTypes();
+      setTransportationTypes(types);
+      setLoaded(true);
     }
-    getData()
-  }, [])
+    getData();
+  }, []);
 
   const TYPES = transportationTypes.map(item =>
     <TransportationType title={item.title.toUpperCase()} imgURL={item.imgURL} description={item.description} />
-  )
+  );
+
+  if (!loaded) {
+    return <div className="loading">
+      <h1 >Loading</h1>
+      <img className="leaf" src={Leaf} alt="leaf" />
+      <img className="leaf" src={Leaf} alt="leaf" />
+      <img className="leaf" src={Leaf} alt="leaf" />
+    </div>
+  };
 
   return (
     <Layout >
       <LogoBanner title="Climate Impact By Transportation Type" />
-
       <div className="transportation-types-main">
         <div className="title-list">
           <div className="transportation-types-parent">
-          <span className="edit-icon-link" >
-         <Link to="/manage-transportation-types"><p id="edit-icon-text">Personalize</p> </Link>
-        <Link to="/manage-transportation-types">
-        <img className="edit-icon" alt="Edit Icon" src={Icon} /></Link>
-      </span>
+            <span className="edit-icon-link" >
+              <Link to="/manage-transportation-types"><p id="edit-icon-text">Personalize</p> </Link>
+              <Link to="/manage-transportation-types">
+                <img className="edit-icon" alt="Edit Icon" src={Icon} /></Link>
+            </span>
             <div className="transportation-types">{TYPES}</div>
-            
           </div>
         </div>
         <div className="green-news">
@@ -64,5 +73,5 @@ export default function TransportationTypes() {
         </div>
       </div>
     </Layout>
-  )
-}
+  );
+};
