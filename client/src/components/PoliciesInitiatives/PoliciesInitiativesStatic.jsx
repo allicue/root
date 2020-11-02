@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Styled from "./Styled";
+import StyledPoliciesInitiatives from "./StyledPoliciesInitiatives";
 import LogoBanner from '../../components/shared/LogoBanner/LogoBanner'
 
 function PoliciesInitiativesStatic() {
   return (
     <>
-      <Styled>
+      <StyledPoliciesInitiatives>
         <div className="top-left-container">
           <LogoBanner title="Policies + Initiatives" />
         </div>
@@ -30,7 +30,7 @@ function PoliciesInitiativesStatic() {
               />
               <Link
                 className="image-text"
-                to="/policies-and-initiatives/san-fransisco"
+                to="/san-fransisco"
               >
                 SAN FRANSISCO
               </Link>
@@ -119,7 +119,7 @@ function PoliciesInitiativesStatic() {
             </div>
           </div>
         </div>
-      </Styled>
+      </StyledPoliciesInitiatives>
     </>
   );
 }
