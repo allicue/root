@@ -4,7 +4,6 @@ const Form = styled.form`
 display: flex;
 flex-flow: column nowrap;
 align-items: center;
-/* margin: 0 auto; */
 margin-top: 103px;
 
 label {
@@ -15,6 +14,9 @@ font-weight: bold;
 text-align: center;
 margin: 36px 44px;
 text-transform: uppercase;
+}
+button:focus{
+  outline: none;
 }
 
 input {
@@ -97,7 +99,6 @@ div {
   text-align: center;
   color: white;
   margin: 15px;
-  /* box-shadow: 2px 3px 4px 1px #999; */
 }
 
 .description {
@@ -110,7 +111,6 @@ button:hover {
   cursor: pointer;
   text-shadow: 2px 2px 5px rgb(54, 54, 54);
   box-shadow: 2px 4px 4px 1px #999;
-
 }
 `
 

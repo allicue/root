@@ -5,7 +5,6 @@ const Form = styled.form`
   flex-flow: column nowrap;
   align-items: flex-start;
   margin: 0 auto;
-  /* margin-top: 90px; */
 
   label {
     font-family: "Monsterrat", sans serif;
@@ -19,24 +18,20 @@ const Form = styled.form`
   }
 
   .username {
-    /* margin-right: 140px; */
     margin-right: 10px;
     left: -20px;
   }
 
   .image {
-    /* margin-right: 130px; */
     text-align: center;
     left: 100px;
   }
 
   .email-label {
     right: 20px;
-    /* margin-left: 130px; */
   }
 
   .password-label {
-    /* margin-right: 85px; */
     margin-right: -50px;
     left: -70px;
   }
@@ -199,13 +194,15 @@ const Form = styled.form`
       margin: 0 auto;
       margin-top: 20px;
       right: 0%;
+      outline: none;
     }
+
     .bottom-container {
       position: relative;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-     left: 0;
+      left: 0;
     }
   }
 

@@ -3,7 +3,7 @@ import axios from 'axios'
 let apiUrl
 
 const apiUrls = {
-  production: '',  // we will have to put the heroku url there later. for example https://root-api.herokuapp.com/api
+  production: '',  
   development: 'http://localhost:3000/api'
 }
 
