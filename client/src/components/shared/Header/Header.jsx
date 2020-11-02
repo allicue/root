@@ -21,7 +21,7 @@ function Header() {
       <Link to="/policies-and-initiatives" className="link-polices">POLICIES + INITIATIVES</Link>
       </div>
       <div className="header-community">
-        <Link className="link-community">COMMUNITY + <br></br> ADVOCACY</Link>
+        <Link to="/" className="link-community">COMMUNITY + <br></br> ADVOCACY</Link>
       </div>
       <div className="header-account">
         <Link to="create-your-account" className="link-account">ACCOUNT</Link>

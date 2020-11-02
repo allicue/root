@@ -48,8 +48,8 @@ function Footer() {
             <p className="info-email">Join our community for news, tips, and advocacy information</p>
             <form className="email">
               <div className="email-container">
-                <input type="text" value="email address" className="email-text" />
-                <input type="submit" value="Sign Up" className="email-submit" />
+                <input type="text" placeholder="email address" className="email-text" />
+                <button type="submit" className="email-submit">Sign Up</button>
               </div>
             </form>
             <div className="phone-number-box">
