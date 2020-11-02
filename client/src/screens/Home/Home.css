@@ -1,3 +1,6 @@
+.homepage {
+  margin: 0 auto;
+}
 .homepage-header {
   background-image: linear-gradient(
   rgba(0, 0, 0, 0.5),
@@ -97,10 +100,10 @@
 }
 
 .homepage-body {
-  width: 85%;
   margin: 0 auto;
   margin-top: 30px;
   display: flex;
+  justify-content: center;
 }
 
 .row {
@@ -108,17 +111,11 @@
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-}
-
-div.column {
-  width: fit-content;
-}
+} 
 
 .column {
   display: flex;
   flex-direction: column;
-  flex-basis: 100%;
-  flex: 1;
 }
 
 .policies-section {

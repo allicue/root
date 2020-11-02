@@ -31,7 +31,7 @@ function Home(props) {
       </div>
 
       <div className="homepage-body">
-        <div className="row">
+        {/* <div className="row"> */}
           <div className="column">
           <Link to="/policies-and-initiatives">
             <section className="policies-section">
@@ -58,7 +58,7 @@ function Home(props) {
               </section>
             </Link>
           </div>
-        </div>
+        {/* </div> */}
       </div>
       
 
