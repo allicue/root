@@ -16,7 +16,7 @@ function AddTransportationType() {
         </div>
         <div className="middle-container">
            <div className="picture-container">
-            <h1 className="user-picture"></h1>
+            <div className="user-picture"></div>
               <p className="add-image">Add<br />image</p>
               </div>
             <CreateAccountForm />
