@@ -24,7 +24,7 @@ function Home(props) {
         </div>
         <hr></hr>
         <nav className="homepage-header-navbar">
-          <Link to=""><button className="homepage-button"><p className="button-text">Plan Your Route</p></button></Link>
+          <Link to="/plan-your-route"><button className="homepage-button"><p className="button-text">Plan Your Route</p></button></Link>
           <Link to="/transportation-types"><button className="homepage-button"><p className="button-text">Climate Impact By Transportation Type</p></button></Link>
           <Link to="/policies-and-initiatives"><button className="homepage-button"><p className="button-text">Transportation <br></br>Policies + Initiatives</p></button></Link>
         </nav>
