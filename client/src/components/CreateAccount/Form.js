@@ -221,10 +221,6 @@ const Form = styled.form`
       right: 4.6%;
       margin: 0 auto;
     }
-    .bottons{
-      right: 0%; 
-      margin: 0 auto;
-    }
   }
 `;
 
