@@ -1,51 +1,33 @@
 import styled from "styled-components";
 
 let StyledDiv = styled.div`
-  .top-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 33px;
-  }
-
   a {
     text-decoration: none;
     color: #3d3d3d;
   }
+
+  .title {
+    width: 1000px;
+  }
   .top-left-container {
-    margin-left: -40px;
+    margin-left: -1.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 40px;
   }
 
   .top-right-container {
-    margin-top: 310px;
-  }
-
-  .page-direction {
-    margin-left: 20px;
-    width: 189px;
-    height: 51px;
-    font-family: "Montserrat", sans-serif;
-    font-size: 12px;
-    font-weight: bold;
-    text-align: center;
-    color: #3d3d3d;
-  }
-
-  .page-direction:hover {
-    cursor: default;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: -80px;
+    width: 92vw;
   }
 
   .title {
-    font-family: "Montserrat", sans-serif;
-    font-weight: bold;
-    text-align: center;
-    color: #3d3d3d;
-    margin-left: 28px;
-    font-size: 48px;
-  }
-  .title:hover {
-    cursor: default;
+    display: flex;
+    flex-direction: row;
   }
 
   .root-logo {
@@ -178,10 +160,19 @@ let StyledDiv = styled.div`
       margin-top: 10px;
     }
 
+    .root-logo {
+      width: 400px;
+    }
     .middle-container {
       display: flex;
       flex-flow: row nowrap;
       margin: 20px;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .title{
+      font-size: 25px;
+      margin: 0 auto;
     }
   }
 `;

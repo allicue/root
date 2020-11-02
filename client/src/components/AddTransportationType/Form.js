@@ -5,6 +5,7 @@ display: flex;
 flex-flow: column nowrap;
 align-items: center;
 /* margin: 0 auto; */
+margin-top: 40px;
 
 label {
 font-family: 'Monsterrat', sans serif;
