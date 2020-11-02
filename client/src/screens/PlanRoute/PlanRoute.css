@@ -4,6 +4,18 @@
   color: #3d3d3d;
 }
 
+
+.plan-form-container {
+  display: flex;
+  justify-content: center;
+}
+
+.column-a {
+  display: flex;
+  flex-direction: column;
+  align-content: left;
+}
+
 .plan-form {
   display: flex;
   flex-direction: column;
@@ -13,7 +25,7 @@
 .plan-input {
   border: solid .5px black;
   border-radius: 30px;
-  width: 599px;
+  width: 550px;
   height: 76.3px;
   font-family: Montserrat;
   font-size: 24px;
@@ -23,7 +35,7 @@
 }
 
 .plan-button {
-  width: 620px;  
+  width: 585px;  
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   height: 81px;
@@ -33,6 +45,16 @@
   font-size: 24px;
   text-align: center;
   color: white;
+}
+
+.plan-button:hover {
+  cursor: pointer;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.world-image {
+  width: 590px;
+  margin-top: 300px;
 }
 
 .plan-breakpoint {
@@ -51,17 +73,22 @@
 }
 
 .grid-section-a {
-  margin: 50px 40px 50px 40px;
-  padding: 30px;
-  border-right: 2px solid #759f5c;
+  margin: 70px 80px 50px 80px;
 }
 
 .grid-section-b {
-  margin: 50px 40px 50px 40px;
+  margin: 70px 80px 50px 80px;
 }
 
 .grid-section-c {
-  margin: 50px 40px 50px 40px;
+  margin: 70px 80px 50px 80px;
+}
+
+.grid-breakpoint {
+  margin-top: 40px;
+  height: 300px;
+  border-left: 4px solid #759f5c;
+
 }
 
 .grid-icons {
@@ -76,7 +103,7 @@
 .grid-text {
   text-align: center;
   font-size: 36px;
-  font-weight: 100;
+  font-weight: 500;
 }
 
 .grid-leaf-icon {
