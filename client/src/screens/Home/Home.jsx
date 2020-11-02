@@ -22,7 +22,7 @@ function Home(props) {
             </a>
           </div>
         </div>
-        <hr></hr>
+        <hr className='header-line'></hr>
         <nav className="homepage-header-navbar">
           <Link to="/plan-your-route"><button className="homepage-button"><p className="button-text">Plan Your Route</p></button></Link>
           <Link to="/transportation-types"><button className="homepage-button"><p className="button-text">Climate Impact By Transportation Type</p></button></Link>
@@ -31,7 +31,7 @@ function Home(props) {
       </div>
 
       <div className="homepage-body">
-        <div className="row">
+        {/* <div className="row"> */}
           <div className="column">
           <Link to="/policies-and-initiatives">
             <section className="policies-section">
@@ -58,7 +58,7 @@ function Home(props) {
               </section>
             </Link>
           </div>
-        </div>
+        {/* </div> */}
       </div>
       
 
