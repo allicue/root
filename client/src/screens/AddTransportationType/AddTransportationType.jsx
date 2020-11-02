@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import AddTransportationTypeForm from '../../components/AddTransportationType/AddTransportationTypeForm'
 import StyledDiv from './StyledAddTransportationType.js'
 import Layout from '../../components/shared/Layout/Layout'
