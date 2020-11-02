@@ -9,16 +9,16 @@ import { getTransportationTypes } from '../../services/transportationTypes'
 
 export default function ManageTransportationTypes() { 
 
-  const [updated, setUpdated] = useState(false)
-  const [transportationTypes, setTransportationTypes] = useState([])
+  const [updated, setUpdated] = useState(false);
+  const [transportationTypes, setTransportationTypes] = useState([]);
 
   useEffect(() => {
     const getData = async () => {
-      const types = await getTransportationTypes()
-      setTransportationTypes(types)
+      const types = await getTransportationTypes();
+      setTransportationTypes(types);
     }
-    getData()
-  }, [updated])
+    getData();
+  }, [updated]);
 
   const UPDATETYPES = transportationTypes.map(item =>
     <EditTransportationType
@@ -36,12 +36,12 @@ export default function ManageTransportationTypes() {
       <LogoBanner title="Climate Impact By Transportation Type - Manage Page" />
       <span className="add-icon-link" >
         <Link to="/add-transportation-type">
-          <img className="add-icon" alt="Edit Icon" src={Icon}/></Link>
-        <p id="add-icon-text">Missing something? Add your favorite mode of transportation <Link to="/add-transportation-type">here </Link></p>
+          <img className="add-icon" alt="Edit Icon" src={Icon} /></Link>
+        <p id="add-icon-text">Missing something? Add your favorite mode of transportation <Link id="add-link" to="/add-transportation-type">here </Link></p>
       </span>
       <div className="manage-parent" >
-            <div className="edit-transportation-types">{UPDATETYPES}</div>
+        <div className="edit-transportation-types">{UPDATETYPES}</div>
       </div>
     </Layout>
-  )
-}
+  );
+};
