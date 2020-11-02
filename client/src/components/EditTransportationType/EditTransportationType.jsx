@@ -18,7 +18,7 @@ export default function EditTransportationType(props) {
       setTransportationType(type)
     }
     fetchType()
-  }, [])
+  }, [props.id])
 
   const handleChange = (e) => {
     const { name, value } = e.target
