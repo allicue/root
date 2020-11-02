@@ -17,6 +17,12 @@ const Form = styled.form`
     position: relative;
   }
 
+  .picture-container{
+margin:0 auto;
+margin-bottom: 50px;
+left: 0%;
+}
+
   .username {
     margin-right: 10px;
     left: -20px;
@@ -169,9 +175,7 @@ const Form = styled.form`
     align-items: center;
   }
 
-  /* label{
-  margin-left: 50px;
-} */
+
 
   @media screen and (max-width: 768px) {
     .image,
