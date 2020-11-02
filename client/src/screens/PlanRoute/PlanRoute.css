@@ -39,7 +39,7 @@
 }
 
 .plan-button {
-  width: 585px;  
+  width: 555px;  
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   height: 81px;
@@ -65,7 +65,7 @@
   margin: 0 auto;
   margin-top: 100px;
   width: 1222px;
-  height: 2px;
+  height: 4px;
   background-color: #759f5c;
 }
 
