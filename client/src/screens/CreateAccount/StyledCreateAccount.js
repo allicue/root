@@ -17,20 +17,10 @@ a {
   flex-direction: row;
 }
 
-
-.title {
-  font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-  text-align: left;
-  color: #3d3d3d;
-  margin-left: 28px;
-  font-size: 48px;
-  width: 700px;
+.title{
+  white-space: nowrap;
 }
 
-.title:hover {
-  cursor: default;
-}
 
 .picture-container{
   display: flex;
@@ -129,6 +119,7 @@ font-weight: 500;
   }
   .title{
     width:400px;
+    white-space: pre-wrap;
   }
 }
 
@@ -138,7 +129,9 @@ font-weight: 500;
     flex-flow: column wrap;
     left: 0;
     /* margin-top: 33px; */
+ 
   }
+
   .logo-title-container{
   }
 .picture-container{
