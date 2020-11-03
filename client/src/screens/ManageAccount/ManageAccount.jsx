@@ -33,7 +33,7 @@ export default function ManageAccount(props) {
           </div>
           <form className="manage-account-form">
             <div className="inline-input-field">
-              <label htmlFor="name">NAME</label>
+              <label className="manage-label" htmlFor="name">NAME</label>
               <input
                 className="manage-account-input"
                 type="text"
@@ -54,25 +54,28 @@ export default function ManageAccount(props) {
                 value={user.email}
                 placeholder="Enter Email Address"
                 required
-              />
+                />
               <button className="edit-toggle">Edit</button>
+
             </div>
             <div className="inline-input-field">
+              <div id="password-left">
               <label htmlFor="password">PASSWORD</label>
               <input
                 className="manage-account-input"
+                id="password-manage-account"
                 type="password"
                 name="password"
                 value={user.password}
                 onChange={(e) =>  setUser(e.target.value)}
                 placeholder="Enter Password"
                 required
-              />
+                />
+                </div>
               <button className="edit-toggle">Edit</button>
             </div>
             <div className="inline-input-field">
-
-              <label htmlFor="zipcode">ZIP CODE</label>
+              <label className="label-manage-account"  htmlFor="zipcode" id="zip-code">ZIP CODE</label>
               <input
                 className="manage-account-input"
                 type="text"

@@ -35,6 +35,25 @@
   /* background: yellow; */
 }
 
+#password-manage-account::placeholder {
+  font-size: 18px;
+}
+
+#zip-code {
+  min-width: fit-content;
+}
+
+#password-manage-account {
+  /* max-width: 64%; */
+  font-size: 32px;
+}
+
+#password-left {
+  display: flex;
+  flex-direction: row;
+ align-items: center;
+}
+
 .manage-account-input {
   width: 500px;
   height: 52px;
@@ -49,9 +68,14 @@
   margin-left: 20px;
 }
 
+.input-field-bottom {
+  display: flex;
+   }
+
 .inline-input-field {
-  display: inline;
+  display: flex;
   font-family: 'Montserrat', sans-serif;
+  align-items: center;
   font-size: 20px;
   font-weight: 700;
   margin-top: 15px;
@@ -95,4 +119,51 @@
 
 #delete-account {
 background-color: #e21a1a;
+}
+
+@media only screen and (max-width: 768px) {
+  .user-image-parent {
+    margin: initial;
+    padding: initial;
+  }
+
+ .inline-input-field {
+   display: flex;
+   justify-content: space-between;
+   max-width: 100vw;
+   min-width: 100vw;
+   background-color: rgba(232, 228, 217, 0.9);
+  padding: 5px 30px 5px 25px ;
+  margin-top: 10px;
+ } 
+
+ .label-manage-account {
+   min-width: fit-content;
+ }
+
+ .manage-account-form {
+   width: 100vw;
+   min-width: initial;
+ }
+
+ .edit-buttons-container {
+  align-items: center;
+  margin-top: 5px;
+ }
+
+ .manage-account-input {
+  border: none;
+  box-shadow: none;
+  background-color: initial;
+ }
+
+ .changes-button {
+   margin-left: initial;
+ }
+
+ #password-manage-account {
+   max-width: 40vw;
+ }
+
+
 }
