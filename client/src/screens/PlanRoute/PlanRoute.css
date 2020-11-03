@@ -59,7 +59,7 @@
 
 .world-image {
   width: 590px;
-  margin-top: 300px;
+  margin: 300px 40px 0px 40px;
 }
 
 .plan-breakpoint {
@@ -117,7 +117,15 @@
   display: none;
 }
 
+.plan-input-b {
+  display: none;
+}
+
 .mobile-breakpoint {
+  display: none;
+}
+
+.location-icon {
   display: none;
 }
 
@@ -130,7 +138,7 @@
   }
 
   .plan-header-mobile {
-    margin-top: 70px;
+    margin-top: 90px;
     display: flex;
     font-size: 24px;
   }
@@ -156,6 +164,23 @@
     padding-left: 18px;
     margin-bottom: 10px;
     border: none;
+  }
+
+  .input-field-container {
+    position: relative;
+  }
+
+  .location-icon {
+    display: flex;
+    position: absolute;
+  }
+
+  .plan-input-a {
+    display: none;
+  }
+
+  .plan-input-b {
+    display: flex;
   }
 
   .plan-form {
