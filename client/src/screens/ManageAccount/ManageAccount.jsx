@@ -22,14 +22,14 @@ export default function ManageAccount(props) {
     fetchUser(user);
   }, []);
 
-
   return (
     <div>
       <Layout>
         <LogoBanner title="Manage Your Account" />
         <div className="manage-account-main">
           <div className="user-image-parent">
-          <img className="user-photo" src={user.imgURL} />
+            <img className="user-photo" src={user.imgURL} />
+            <p>Edit</p>
           </div>
           <form className="manage-account-form">
             <div className="inline-input-field">
@@ -38,9 +38,11 @@ export default function ManageAccount(props) {
                 className="manage-account-input"
                 type="text"
                 name="name"
+                value={user.name}
                 placeholder="Enter Username"
                 required
               />
+              <button className="edit-toggle">Edit</button>
             </div>
             <div
               className="inline-input-field">
@@ -49,20 +51,24 @@ export default function ManageAccount(props) {
                 className="manage-account-input"
                 type="text"
                 name="email"
+                value={user.email}
                 placeholder="Enter Email Address"
                 required
               />
+              <button className="edit-toggle">Edit</button>
             </div>
             <div className="inline-input-field">
-
               <label htmlFor="password">PASSWORD</label>
               <input
                 className="manage-account-input"
                 type="password"
                 name="password"
+                value={user.password}
+                onChange={(e) =>  setUser(e.target.value)}
                 placeholder="Enter Password"
                 required
               />
+              <button className="edit-toggle">Edit</button>
             </div>
             <div className="inline-input-field">
 
@@ -70,10 +76,12 @@ export default function ManageAccount(props) {
               <input
                 className="manage-account-input"
                 type="text"
+                value={user.zipcode}
                 name="zipcode"
                 placeholder="enter Zip Code"
                 required
               />
+              <button className="edit-toggle">Edit</button>
             </div>
             {showImageInput ?
               <div className="inline-input-field">
@@ -82,13 +90,15 @@ export default function ManageAccount(props) {
                   className="manage-account-input"
                   type="text"
                   name="imgURL"
+                  value={user.imgURL}
                   placeholder="enter Zip Code"
                   required
                 />
+                <button className="edit-toggle">Edit</button>
               </div> : <></>}
-            <div className="buttons">
-              <button type="submit" className="save-changes">SAVE CHANGES</button>
-              <button className="delete-button">DELETE ACCOUNT</button>
+            <div className="edit-buttons-container">
+              <button type="submit" className="changes-button" id="save-changes">SAVE CHANGES</button>
+              <button className="changes-button" id="delete-account">DELETE ACCOUNT</button>
             </div>
           </form>
         </div>
