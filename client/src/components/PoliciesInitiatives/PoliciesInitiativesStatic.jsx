@@ -10,7 +10,8 @@ function PoliciesInitiativesStatic() {
         <div className="top-left-container">
           <LogoBanner title="Policies + Initiatives" />
         </div>
-          <div className="top-right-container">
+        <div className="wrapper">
+        <div className="top-right-container">
            <div className="input-container">
           <p className="enter-location">Or enter your location:</p>
             <input
@@ -20,6 +21,7 @@ function PoliciesInitiativesStatic() {
             />
             </div>
           </div>
+       <div className="middle-wrapper">
         <div className="middle-container">
           <div className="middle-left">
             <div className="content-container">
@@ -32,7 +34,7 @@ function PoliciesInitiativesStatic() {
                 className="image-text"
                 to="/san-fransisco"
               >
-                SAN FRANSISCO
+                SAN FRANCISCO 
               </Link>
               <div className="box-text-container">
                 <p className="box-text">Commuter Benefits Ordinance </p>{" "}
@@ -68,7 +70,7 @@ function PoliciesInitiativesStatic() {
                 <p className="box-text">Lorem ipsum dolor sir amet </p>{" "}
                 <p className="box-text"> Ut wisi enim ad </p>{" "}
                 <p className="box-text"> Duis autem vel eum</p>{" "}
-                <p className="box-text-small">California EPA ></p>
+                <p className="box-text-small">Oregon EPA ></p>
               </div>
             </div>
           </div>
@@ -84,7 +86,7 @@ function PoliciesInitiativesStatic() {
                 <p className="box-text">Lorem ipsum dolor sir amet </p>{" "}
                 <p className="box-text"> Ut wisi enim ad </p>{" "}
                 <p className="box-text"> Duis autem vel eum</p>{" "}
-                <p className="box-text-small">California EPA ></p>
+                <p className="box-text-small">Washington EPA ></p>
               </div>
             </div>
 
@@ -99,7 +101,7 @@ function PoliciesInitiativesStatic() {
                 <p className="box-text">Lorem ipsum dolor sir amet </p>{" "}
                 <p className="box-text"> Ut wisi enim ad </p>{" "}
                 <p className="box-text"> Duis autem vel eum</p>{" "}
-                <p className="box-text-small">California EPA ></p>
+                <p className="box-text-small">New York EPA ></p>
               </div>
             </div>
 
@@ -114,11 +116,13 @@ function PoliciesInitiativesStatic() {
                 <p className="box-text">Lorem ipsum dolor sir amet </p>{" "}
                 <p className="box-text"> Ut wisi enim ad </p>{" "}
                 <p className="box-text"> Duis autem vel eum</p>{" "}
-                <p className="box-text-small">California EPA ></p>
+                <p className="box-text-small">Illinois EPA ></p>
               </div>
             </div>
           </div>
         </div>
+        </div>
+        </div>  
       </StyledPoliciesInitiatives>
     </>
   );

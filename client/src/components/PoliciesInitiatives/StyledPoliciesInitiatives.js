@@ -8,7 +8,10 @@ const StyledPoliciesInitiatives = styled.div`
     align-items: center;
     margin-top: 33px;
   }
-
+.wrapper{
+  display: flex;
+  flex-direction: column;
+}
   a {
     text-decoration: none;
     color: #3d3d3d;
@@ -204,6 +207,18 @@ const StyledPoliciesInitiatives = styled.div`
       margin: 20px;
     }
   }
+
+  @media screen and (max-width: 500px) {
+    .title {
+    display: flex;
+    flex-direction: column;
+  }
+  .wrapper{
+    display: flex;
+    flex-direction: column-reverse;
+}
+  }
+
   @media screen and (max-width: 600px) {
   .content-image {
       max-width: 200px;
@@ -221,6 +236,7 @@ const StyledPoliciesInitiatives = styled.div`
     .logo-title-container{
     display: inline-block;
     }
+  
   }
 `;
 

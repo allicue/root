@@ -5,12 +5,7 @@ const Ul = styled.ul`
   display: flex;
   justify-content: center;
   align-items: center;
-
-  ${'' /* transition: ${() => {
-    const menu = document.getElementById("menu");
-    const width = menu?.clientWidth;
-    return width < 500 ? "transform 0.4s ease-in-out" : "none";
-  }}; */}
+  
   li {
     text-transform: uppercase;
   }
