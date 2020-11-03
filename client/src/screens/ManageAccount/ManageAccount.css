@@ -66,7 +66,7 @@
   text-indent: 20px;
   box-shadow: 2px 2px 4px 1px #999;
   margin-left: 20px;
-  border-radius: initial;
+
   /* color: rgb(117, 159, 92); */
 }
 
@@ -161,6 +161,7 @@ background-color: #e21a1a;
   border: none;
   box-shadow: none;
   background-color: initial;
+  border-radius: initial;
  }
 
  .changes-button {
