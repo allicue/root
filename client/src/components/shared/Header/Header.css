@@ -126,14 +126,86 @@
 .burger-image {
   display: none;
 }
-
+.root-image{
+  display: none;
+  max-height: 55px;
+  margin-bottom: 10px;
+}
+.root-image2{
+  display:none;
+  max-height: 55px;
+  /* max-width: 300px; */
+  margin-left: 250px;
+  position: fixed;
+  top: 10px;
+}
+.profile-pic{
+  display: none;
+}
+.userpic-container{
+  display: flex;
+  margin-right: 20px;
+}
+.root-image-container{
+  display: flex;
+  margin-left: 250px;
+}
 @media (max-width: 768px) {
   .header-image {
     display: none;
   }
+  .header{
+    justify-content: space-between;
+  }
+  
+  .profile-pic{
+    display: flex;
+    right: 0;
+    max-width: 50px;
+    background-color: #999;
+    border-radius: 50%;
+  }
+  .root-image, .root-image2{
+    display: block;
+    padding: 1px;
+  }
+.header{
+  background-color: #f2f2f2;
+  height: 9vh;
+}
   .burger-image {
     display: flex;
-    width: 50px;
+    max-width: 50px;
+    min-width: 50px;
     position: relative;
+    right: 20px;
+  }
+  .header-home {
+    margin-left: -44px;
+  }
+  .link-home{
+    font-weight: 500;
+  }
+  .header-plan {
+    margin-left: -15px;
+  }
+  .header-transport {
+    margin-left: 20px;
+  }
+  .header-polices {
+    position: relative;
+    right: -20px;
+  }
+  .header-community {
+    position: relative;
+    right: -17.5px;
+  }
+  .header-account {
+    position: relative;
+    right: 29px;
+  }
+  #route-image {
+    margin-top: -20px;
+    align-items: center;
   }
 }

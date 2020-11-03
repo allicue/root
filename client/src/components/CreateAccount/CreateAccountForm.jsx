@@ -38,7 +38,8 @@ function CreateAccountForm(props) {
   };
 
   if (isCreated) {
-    return <Redirect to={"/transportation-types"} />;
+    alert(`Welcome to ROOT, ${user.name}!`)
+    return <Redirect to={"/"} />;
   }
 
   return (

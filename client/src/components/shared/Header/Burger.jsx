@@ -22,8 +22,6 @@ const StyledBurger = styled.div`
     background-color: #3d3d3d;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     border-radius: 10px;
-    transform-origin: 1px;
-    transition: all 0.3s linear;
   }
 `;
 
@@ -37,7 +35,7 @@ const Burger = () => {
         <div />
         <div />
       </StyledBurger>
-      <Header open={open}/>
+      <Header open={open} setOpen={setOpen}/>
     </>
   )
 }
