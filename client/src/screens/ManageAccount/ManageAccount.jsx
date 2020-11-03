@@ -10,6 +10,7 @@ export default function ManageAccount(props) {
   const [updatePassword, setUpdatePassword] = useState(false)
   const [updateZipCode, setUpdateZipCode] = useState(false)
   const [updateImgUrl, setUpdateImgUrl] = useState(false)
+  const selectedColor = { backgroundColor: "rgba(117, 159, 92, .5)" }
 
   const [updated, setUpdated] = useState(false)
   
@@ -22,6 +23,8 @@ export default function ManageAccount(props) {
     zipcode:''
   });
 
+  // Temporary ID to test CRUD 
+  // Will take signedInUser.id state when user sign-in is implemented
   let tempID = "5fa0749a80028c20b7bdac29"
 
 
@@ -47,14 +50,21 @@ export default function ManageAccount(props) {
     setUpdated(!updated)
   }
 
+  const handleImageSelect = () => {
+    setShowImageInput(!showImageInput)
+    if (showImageInput === true) {
+      setUpdateImgUrl(false)
+    }
+  }
+
   return (
     <div>
       <Layout>
         <LogoBanner title="Manage Your Account" />
         <div className="manage-account-main">
           <div className="user-image-parent">
-            <img className="user-photo" src={user.imgURL} />
-            <p onClick={() => setShowImageInput(!showImageInput)}>Edit</p>
+            <img className="user-photo" src ={ user.imgURL } />
+            <p className="toggle-input-img" onClick={handleImageSelect}>Edit</p>
           </div>
           <form className="manage-account-form" onSubmit={handleSubmit}>
             <div className="inline-input-field">
@@ -65,7 +75,7 @@ export default function ManageAccount(props) {
                 name="name"
                 value={user.name}
                 onChange={updateName ? handleChange : null}
-                style={updateName ? {backgroundColor: "rgba(117, 159, 92, .5)"} : null}
+                style={updateName ? selectedColor : null}
                 placeholder="Enter Username"
                 required
               />
@@ -80,13 +90,12 @@ export default function ManageAccount(props) {
                 name="email"
                 value={user.email}
                 onChange={updateEmail ? handleChange : null}
-                style={updateEmail ? {backgroundColor: "rgba(117, 159, 92, .5)"} : null}
+                style={updateEmail ? selectedColor : null}
                 placeholder="Enter Email Address"
                 required
               
                 />
               <button onClick={() => setUpdateEmail(!updateEmail)} className="edit-toggle">Edit</button>
-
             </div>
             <div className="inline-input-field">
               <div id="password-left">
@@ -98,7 +107,7 @@ export default function ManageAccount(props) {
                 name="password"
                 value={user.password}
                 onChange={updatePassword ? handleChange : null}
-                style={updatePassword ? {backgroundColor: "rgba(117, 159, 92, .5)"} : null}
+                style={updatePassword ? selectedColor : null}
                 placeholder="Enter Password"
                 required
                 />
@@ -112,7 +121,7 @@ export default function ManageAccount(props) {
                 type="text"
                 value={user.zipcode}
                 onChange={updateZipCode ? handleChange : null}
-                style={updateZipCode ? {backgroundColor: "rgba(117, 159, 92, .5)"} : null}
+                style={updateZipCode ? selectedColor : null}
                 name="zipcode"
                 placeholder="enter Zip Code"
                 required
@@ -128,7 +137,7 @@ export default function ManageAccount(props) {
                   name="imgURL"
                   value={user.imgURL}
                   onChange={updateImgUrl ? handleChange : null}
-                  style={updateImgUrl ? {backgroundColor: "rgba(117, 159, 92, .5)"} : null}
+                  style={updateImgUrl ? selectedColor: null}
                   placeholder="enter Zip Code"
                   required
                 />
@@ -136,7 +145,7 @@ export default function ManageAccount(props) {
               </div> : <></>}
             <div className="edit-buttons-container">
               <button type="submit" className="changes-button" id="save-changes">SAVE CHANGES</button>
-              <button  className="changes-button" id="delete-account">DELETE ACCOUNT</button>
+              <button className="changes-button" id="delete-account">DELETE ACCOUNT</button>
             </div>
           </form>
         </div>
