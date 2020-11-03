@@ -66,6 +66,12 @@
   text-indent: 20px;
   box-shadow: 2px 2px 4px 1px #999;
   margin-left: 20px;
+  border-radius: initial;
+  /* color: rgb(117, 159, 92); */
+}
+
+.manage-account-input:focus {
+  outline: none;
 }
 
 .input-field-bottom {
