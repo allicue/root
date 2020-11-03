@@ -7,8 +7,9 @@ function SanFranPolicyStatic() {
     <>
       <StyledSanFran>
         <div className="top-left-container">
-          <LogoBanner title="San Fransisco" />
+          <LogoBanner title="San Francisco" />
         </div>
+        <div className="wrapper">
         <div className="top-right-container">
           <div className="input-container">
             <p className="enter-location">Or enter your location:</p>
@@ -19,7 +20,8 @@ function SanFranPolicyStatic() {
             />
           </div>
         </div>
-        <div className="middle-container">
+        <div className="middle-wrapper">
+          <div className="middle-container">
           <div className="content-container">
             <img
               className="content-image"
@@ -91,6 +93,8 @@ function SanFranPolicyStatic() {
               </p>
             </div>
           </div>
+        </div>
+        </div>
         </div>
       </StyledSanFran>
     </>
