@@ -23,9 +23,15 @@
 
 .user-photo {
   width: 132px;
+  height: 132px;
   border-radius: 50%;
   margin-bottom: 15px;
 }
+
+.toggle-input-img {
+  cursor: default;
+}
+
 
 .manage-account-form {
   display: flex;
@@ -66,8 +72,6 @@
   text-indent: 20px;
   box-shadow: 2px 2px 4px 1px #999;
   margin-left: 20px;
-
-  /* color: rgb(117, 159, 92); */
 }
 
 .manage-account-input:focus {
@@ -93,6 +97,10 @@
   margin-left: 15px;
   font-size: 20px;
   font-family: 'Montserrat', sans-serif;
+}
+
+.edit-toggle:focus {
+  outline: none;
 }
 
 .edit-buttons-container {
