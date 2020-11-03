@@ -17,11 +17,11 @@ const Form = styled.form`
     position: relative;
   }
 
-  .picture-container{
-margin:0 auto;
-margin-bottom: 50px;
-left: 0%;
-}
+  .picture-container {
+    margin: 0 auto;
+    margin-bottom: 50px;
+    left: 0%;
+  }
 
   .username {
     margin-right: 10px;
@@ -102,7 +102,15 @@ left: 0%;
     text-align: center;
     margin-top: 81px;
   }
-
+.already{
+  display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: "Monsterrat", sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+}
   span {
     color: #82a1ab;
   }
@@ -133,6 +141,7 @@ left: 0%;
     color: white;
     margin: 15px;
     box-shadow: 2px 2px 4px 1px #999;
+    text-transform: uppercase;
   }
 
   .take-me-back {
@@ -174,8 +183,6 @@ left: 0%;
     right: 30%;
     align-items: center;
   }
-
-
 
   @media screen and (max-width: 768px) {
     .image,
@@ -221,6 +228,27 @@ left: 0%;
       align-items: center;
       right: 4.6%;
       margin: 0 auto;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .account-input {
+      background-color: rgba(196, 196, 196, 0.8);
+      border: none;
+      box-shadow: none;
+    }
+    .image,
+    .username,
+    .email-label,
+    .password-label,
+    .zipcode-label {
+      display: none;
+    }
+    .take-me-back{
+      display: none;
+    }
+    .create-button{
+      box-shadow: none;
+      text-transform: capitalize;
     }
   }
 `;
