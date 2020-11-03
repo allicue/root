@@ -205,6 +205,17 @@ const StyledSanFran = styled.div`
           font-size: 38px;
         }
   }
+  @media screen and (max-width: 500px){
+    .title {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .wrapper{
+    display: flex;
+    flex-direction: column-reverse;
+}
+  }
 `;
 
 export default StyledSanFran;
