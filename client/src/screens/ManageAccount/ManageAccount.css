@@ -1,0 +1,184 @@
+.manage-account-main {
+  /* background-color: cyan; */
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-evenly; */
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 40px;
+  width: 80vw;
+  margin-top: 5vw;;
+}
+
+.user-image-parent {
+  /* background: lightgreen; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  margin: 0 100px 50px 80px;
+  padding-top: 40px;
+}
+
+.user-photo {
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.toggle-input-img {
+  cursor: default;
+}
+
+
+.manage-account-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  min-width: 670px;
+  /* background: yellow; */
+}
+
+#password-manage-account::placeholder {
+  font-size: 18px;
+}
+
+#zip-code {
+  min-width: fit-content;
+}
+
+#password-manage-account {
+  /* max-width: 64%; */
+  font-size: 32px;
+}
+
+#password-left {
+  display: flex;
+  flex-direction: row;
+ align-items: center;
+}
+
+.manage-account-input {
+  width: 500px;
+  height: 52px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 30px;
+  border: solid 1px #3d3d3d;
+  background-color: #ffffff;
+  text-indent: 20px;
+  box-shadow: 2px 2px 4px 1px #999;
+  margin-left: 20px;
+}
+
+.manage-account-input:focus {
+  outline: none;
+}
+
+.input-field-bottom {
+  display: flex;
+   }
+
+.inline-input-field {
+  display: flex;
+  font-family: 'Montserrat', sans-serif;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+.edit-toggle {
+  background: none;
+  border: none;
+  margin-left: 15px;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.edit-toggle:focus {
+  outline: none;
+}
+
+.edit-buttons-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.changes-button {
+  width: 250px;
+  margin-left: 40%;
+  margin-top: 15px;
+  min-width: 110px;
+  padding: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  height: 50px;
+  border-style: none;
+  border-radius: 45px;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+#save-changes {
+  background-color: #749f5c;
+}
+
+#delete-account {
+background-color: #e21a1a;
+}
+
+@media only screen and (max-width: 768px) {
+  .user-image-parent {
+    margin: initial;
+    padding: initial;
+  }
+
+ .inline-input-field {
+   display: flex;
+   justify-content: space-between;
+   max-width: 100vw;
+   min-width: 100vw;
+   background-color: rgba(232, 228, 217, 0.9);
+  padding: 5px 30px 5px 25px ;
+  margin-top: 10px;
+ } 
+
+ .label-manage-account {
+   min-width: fit-content;
+ }
+
+ .manage-account-form {
+   width: 100vw;
+   min-width: initial;
+ }
+
+ .edit-buttons-container {
+  align-items: center;
+  margin-top: 5px;
+ }
+
+ .manage-account-input {
+  border: none;
+  box-shadow: none;
+  background-color: initial;
+  border-radius: initial;
+ }
+
+ .changes-button {
+   margin-left: initial;
+ }
+
+ #password-manage-account {
+   max-width: 40vw;
+ }
+
+
+}
