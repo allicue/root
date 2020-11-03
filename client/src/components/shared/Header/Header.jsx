@@ -5,6 +5,7 @@ import "./Header.css"
 function Header() {
   return (
     <header className="header">
+    <div className="menu">
       <div className="header-home">
         <Link to="/" className="link-home">HOME</Link>
       </div>
@@ -25,7 +26,10 @@ function Header() {
       </div>
       <div className="header-account">
         <Link to="create-your-account" className="link-account">ACCOUNT</Link>
-      </div> 
+        </div> 
+      </div>
+      <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
     </header>
   )
 }

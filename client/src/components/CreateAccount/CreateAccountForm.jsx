@@ -47,7 +47,7 @@ function CreateAccountForm(props) {
         {props.imagePreview === "" ? (
           <div className="user-picture"> </div>
         ) : (
-          <ImagePreview src={props.imagePreview} alt="Profile Image" />
+          <ImagePreview src={props.imagePreview} alt="Error: Invalid Image URL" />
         )}
         <p
           className="add-image"

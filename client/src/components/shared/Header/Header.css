@@ -1,4 +1,4 @@
-.header{
+.header {
   display: flex;
   justify-content: space-evenly;
   text-align: center;
@@ -10,13 +10,22 @@
   height: 120px;
   z-index: 999;
 }
-.header-home{
- display: flex;
- margin-left: 100px;
- margin-right: 50px;
+
+
+
+.menu {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-.link-home{
+.header-home {
+  display: flex;
+  margin-left: 100px;
+  margin-right: 50px;
+}
+
+.link-home {
   display: flex;
   font-family: Montserrat, Semi bold;
   font-size: 16px;
@@ -26,30 +35,30 @@
   margin-top: 25px;
 }
 
-.header-plan{
+.header-plan {
   display: flex;
   font-family: Montserrat, Semi bold;
   font-size: 16px;
   font-weight: 700;
   color: #3d3d3d;
- }
+}
 
- .link-plan{
+.link-plan {
   display: flex;
   margin-top: 25px;
   color: #3d3d3d;
   text-decoration: none;
 }
 
- .header-transport{
+.header-transport {
   display: flex;
   font-family: Montserrat, Semi bold;
   font-size: 16px;
   font-weight: 700;
   color: #3d3d3d;
- }
+}
 
- .link-transport{
+.link-transport {
   display: flex;
   color: #3d3d3d;
   text-decoration: none;
@@ -57,12 +66,12 @@
   min-width: 183px;
 }
 
- .header-image{
+.header-image {
   height: 100px;
   width: 100px;
- }
- 
- .header-polices{
+}
+
+.header-polices {
   display: flex;
   font-family: Montserrat, Semi bold;
   font-size: 16px;
@@ -70,39 +79,39 @@
   color: #3d3d3d;
   margin-left: 35px;
   margin-right: 65px;
- }
+}
 
- .link-polices{
+.link-polices {
   display: flex;
   color: #3d3d3d;
   text-decoration: none;
   margin-top: 25px;
 }
 
- .header-community{
+.header-community {
   display: flex;
   font-family: Montserrat, Semi bold;
   font-size: 16px;
   font-weight: 700;
   color: #3d3d3d;
- }
+}
 
- .link-community{
+.link-community {
   display: flex;
   color: #3d3d3d;
   text-decoration: none;
   margin-top: 25px;
 }
 
- .header-account{
+.header-account {
   display: flex;
   font-family: Montserrat, Semi bold;
   font-size: 16px;
   font-weight: 700;
   color: #3d3d3d;
- }
+}
 
- .link-account{
+.link-account {
   display: flex;
   color: #3d3d3d;
   text-decoration: none;
@@ -110,4 +119,88 @@
   margin-left: 100px;
   margin-right: 50px;
 }
+
+
+
+
+
+.header .menu-icon {
+  cursor: pointer;
+  padding: 28px 20px;
+  position: fixed;
+  user-select: none;
+}
+
+.menu-icon{
+  display: none;
+}
+
+.header .menu-icon .nav-icon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .nav-icon:before,
+.header .menu-icon .nav-icon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .nav-icon:before {
+  top: 5px;
+}
+
+
+.header .menu-icon .nav-icon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon:before {
+  transform: rotate(-45deg);
+  top:0;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon:after {
+  transform: rotate(45deg);
+  top:0;
+}
+
+
+
+ @media screen and (max-width: 768px) {
+  .header {
+    background-color: #f2f2f2;
+  }
+  .menu{
+    display: none;
+  }
+  .menu-icon {
+    display: block;
+    position: fixed;
+    left: 0;
+  }
+} 
 
