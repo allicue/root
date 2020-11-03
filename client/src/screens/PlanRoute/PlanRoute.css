@@ -119,3 +119,84 @@
 .clock-icon {
   width: 100px;
 }
+
+.plan-header-mobile {
+  display: none;
+}
+
+/* MOBILE BREAKPOINT */
+@media screen and (max-width: 500px) {
+
+  .breadcrumb-plan-container {
+    display: none;
+    text-align: center;
+  }
+
+  .plan-header-mobile {
+    margin-top: 70px;
+    display: flex;
+    font-size: 24px;
+  }
+
+  .column-a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: tan;
+  }
+  
+  .column-b {
+    display: none;
+  }
+  
+  .plan-input {
+    border: solid .5px black;
+    width: 234px;
+    height: 33px;
+    font-size: 12px;
+    padding-left: 18px;
+    margin-bottom: 10px;
+    border: none;
+  }
+
+  .plan-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .plan-button {
+    width: 232px;
+    height: 28.2px;
+    border-radius: 30px;
+    font-size: 12px;
+  }
+  
+  .plan-breakpoint {
+    display: none;
+  }
+
+  .grid-view {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .grid-text {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .grid-icons {
+    font-size: 30px;
+  }
+
+  .grid-leaf-icon {
+    margin-left: 5px;
+    width: 35px;
+    height: 35px;
+  }  
+
+}

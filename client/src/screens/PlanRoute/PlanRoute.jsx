@@ -15,6 +15,8 @@ function PlanRoute(props) {
             <div className="breadcrumb-plan-container">
               <LogoBanner title="Plan Your Route" />
             </div>
+
+            <div className="plan-header-mobile">Plan Your Route</div>
             
           <form className="plan-form">
             <input className="plan-input" placeholder="Current Location"></input>
