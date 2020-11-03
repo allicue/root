@@ -11,8 +11,6 @@
   z-index: 999;
 }
 
-
-
 .menu {
   display: flex;
   justify-content: space-evenly;
@@ -33,6 +31,7 @@
   color: #3d3d3d;
   text-decoration: none;
   margin-top: 25px;
+  align-items: center;
 }
 
 .header-plan {
@@ -64,6 +63,7 @@
   text-decoration: none;
   margin-top: 25px;
   min-width: 183px;
+  align-items: center;
 }
 
 .header-image {
@@ -86,6 +86,7 @@
   color: #3d3d3d;
   text-decoration: none;
   margin-top: 25px;
+  align-items: center;
 }
 
 .header-community {
@@ -101,6 +102,7 @@
   color: #3d3d3d;
   text-decoration: none;
   margin-top: 25px;
+  align-items: center;
 }
 
 .header-account {
@@ -118,5 +120,20 @@
   margin-top: 25px;
   margin-left: 100px;
   margin-right: 50px;
+  align-items: center;
 }
 
+.burger-image {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .header-image {
+    display: none;
+  }
+  .burger-image {
+    display: flex;
+    width: 50px;
+    position: relative;
+  }
+}
