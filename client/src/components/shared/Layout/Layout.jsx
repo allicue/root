@@ -1,11 +1,10 @@
 import React from 'react'
 import './Layout.css'
-import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
-
+import Burger from '../Header/Burger'
 const Layout = (props) => (
     <div className='layout'>
-        <Header />
+    <Burger />
         <div className="layout-children">
             {props.children}
         </div>

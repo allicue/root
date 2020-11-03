@@ -1,4 +1,4 @@
-.header{
+.header {
   display: flex;
   justify-content: space-evenly;
   text-align: center;
@@ -10,13 +10,20 @@
   height: 120px;
   z-index: 999;
 }
-.header-home{
- display: flex;
- margin-left: 100px;
- margin-right: 50px;
+
+.menu {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-.link-home{
+.header-home {
+  display: flex;
+  margin-left: 100px;
+  margin-right: 50px;
+}
+
+.link-home {
   display: flex;
   font-family: Montserrat, Semi bold;
   font-size: 16px;
@@ -24,45 +31,47 @@
   color: #3d3d3d;
   text-decoration: none;
   margin-top: 25px;
+  align-items: center;
 }
 
-.header-plan{
+.header-plan {
   display: flex;
   font-family: Montserrat, Semi bold;
   font-size: 16px;
   font-weight: 700;
   color: #3d3d3d;
- }
+}
 
- .link-plan{
+.link-plan {
   display: flex;
   margin-top: 25px;
   color: #3d3d3d;
   text-decoration: none;
 }
 
- .header-transport{
+.header-transport {
   display: flex;
   font-family: Montserrat, Semi bold;
   font-size: 16px;
   font-weight: 700;
   color: #3d3d3d;
- }
+}
 
- .link-transport{
+.link-transport {
   display: flex;
   color: #3d3d3d;
   text-decoration: none;
   margin-top: 25px;
   min-width: 183px;
+  align-items: center;
 }
 
- .header-image{
+.header-image {
   height: 100px;
   width: 100px;
- }
- 
- .header-polices{
+}
+
+.header-polices {
   display: flex;
   font-family: Montserrat, Semi bold;
   font-size: 16px;
@@ -70,44 +79,133 @@
   color: #3d3d3d;
   margin-left: 35px;
   margin-right: 65px;
- }
+}
 
- .link-polices{
+.link-polices {
   display: flex;
   color: #3d3d3d;
   text-decoration: none;
   margin-top: 25px;
+  align-items: center;
 }
 
- .header-community{
+.header-community {
   display: flex;
   font-family: Montserrat, Semi bold;
   font-size: 16px;
   font-weight: 700;
   color: #3d3d3d;
- }
+}
 
- .link-community{
+.link-community {
   display: flex;
   color: #3d3d3d;
   text-decoration: none;
   margin-top: 25px;
+  align-items: center;
 }
 
- .header-account{
+.header-account {
   display: flex;
   font-family: Montserrat, Semi bold;
   font-size: 16px;
   font-weight: 700;
   color: #3d3d3d;
- }
+}
 
- .link-account{
+.link-account {
   display: flex;
   color: #3d3d3d;
   text-decoration: none;
   margin-top: 25px;
   margin-left: 100px;
   margin-right: 50px;
+  align-items: center;
 }
 
+.burger-image {
+  display: none;
+}
+.root-image{
+  display: none;
+  max-height: 55px;
+  margin-bottom: 10px;
+}
+.root-image2{
+  display:none;
+  max-height: 55px;
+  /* max-width: 300px; */
+  margin-left: 250px;
+  position: fixed;
+  top: 10px;
+}
+.profile-pic{
+  display: none;
+}
+.userpic-container{
+  display: flex;
+  margin-right: 20px;
+}
+.root-image-container{
+  display: flex;
+  margin-left: 250px;
+}
+@media (max-width: 768px) {
+  .header-image {
+    display: none;
+  }
+  .header{
+    justify-content: space-between;
+  }
+  
+  .profile-pic{
+    display: flex;
+    right: 0;
+    max-width: 50px;
+    background-color: #999;
+    border-radius: 50%;
+  }
+  .root-image, .root-image2{
+    display: block;
+    padding: 1px;
+  }
+.header{
+  background-color: #f2f2f2;
+  height: 9vh;
+}
+  .burger-image {
+    display: flex;
+    max-width: 50px;
+    min-width: 50px;
+    position: relative;
+    right: 20px;
+  }
+  .header-home {
+    margin-left: -44px;
+  }
+  .link-home{
+    font-weight: 500;
+  }
+  .header-plan {
+    margin-left: -15px;
+  }
+  .header-transport {
+    margin-left: 20px;
+  }
+  .header-polices {
+    position: relative;
+    right: -20px;
+  }
+  .header-community {
+    position: relative;
+    right: -17.5px;
+  }
+  .header-account {
+    position: relative;
+    right: 29px;
+  }
+  #route-image {
+    margin-top: -20px;
+    align-items: center;
+  }
+}

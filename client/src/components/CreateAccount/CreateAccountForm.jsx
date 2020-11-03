@@ -38,7 +38,8 @@ function CreateAccountForm(props) {
   };
 
   if (isCreated) {
-    return <Redirect to={"/transportation-types"} />;
+    alert(`Welcome to ROOT, ${user.name}!`)
+    return <Redirect to={"/"} />;
   }
 
   return (
@@ -47,7 +48,7 @@ function CreateAccountForm(props) {
         {props.imagePreview === "" ? (
           <div className="user-picture"> </div>
         ) : (
-          <ImagePreview src={props.imagePreview} alt="Profile Image" />
+          <ImagePreview src={props.imagePreview} alt="Error: Invalid Image URL" />
         )}
         <p
           className="add-image"
