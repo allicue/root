@@ -5,16 +5,10 @@ import { updateUser, deleteUser, getUser } from '../../services/users';
 import './ManageAccount.css';
 
 export default function ManageAccount(props) {
-  const [updateName, setUpdateName] = useState(false)
-  const [updateEmail, setUpdateEmail] = useState(false)
-  const [updatePassword, setUpdatePassword] = useState(false)
-  const [updateZipCode, setUpdateZipCode] = useState(false)
-  const [updateImgUrl, setUpdateImgUrl] = useState(false)
-  const selectedColor = { backgroundColor: "rgba(117, 159, 92, .5)" }
-
   const [updated, setUpdated] = useState(false)
   
   const [showImageInput, setShowImageInput] = useState(false)
+
   const [user, setUser] = useState({
     name: '',
     email:'',
@@ -52,10 +46,9 @@ export default function ManageAccount(props) {
 
   const handleImageSelect = () => {
     setShowImageInput(!showImageInput)
-    if (showImageInput === true) {
-      setUpdateImgUrl(false)
-    }
   }
+
+  const selectedColor = { backgroundColor: "rgba(117, 159, 92, .5)" }
 
   return (
     <div>
@@ -74,12 +67,10 @@ export default function ManageAccount(props) {
                 type="text"
                 name="name"
                 value={user.name}
-                onChange={updateName ? handleChange : null}
-                style={updateName ? selectedColor : null}
+                onChange={handleChange}
                 placeholder="Enter Username"
                 required
               />
-              <button onClick={() => setUpdateName(!updateName)} className="edit-toggle">Edit</button>
             </div>
             <div
               className="inline-input-field">
@@ -89,13 +80,11 @@ export default function ManageAccount(props) {
                 type="text"
                 name="email"
                 value={user.email}
-                onChange={updateEmail ? handleChange : null}
-                style={updateEmail ? selectedColor : null}
+                onChange={handleChange}
                 placeholder="Enter Email Address"
                 required
               
                 />
-              <button onClick={() => setUpdateEmail(!updateEmail)} className="edit-toggle">Edit</button>
             </div>
             <div className="inline-input-field">
               <div id="password-left">
@@ -106,13 +95,11 @@ export default function ManageAccount(props) {
                 type="password"
                 name="password"
                 value={user.password}
-                onChange={updatePassword ? handleChange : null}
-                style={updatePassword ? selectedColor : null}
+                onChange={handleChange}
                 placeholder="Enter Password"
                 required
                 />
                 </div>
-              <button onClick={() => setUpdatePassword(!updatePassword)}className="edit-toggle">Edit</button>
             </div>
             <div className="inline-input-field">
               <label className="label-manage-account"  htmlFor="zipcode" id="zip-code">ZIP CODE</label>
@@ -120,13 +107,11 @@ export default function ManageAccount(props) {
                 className="manage-account-input"
                 type="text"
                 value={user.zipcode}
-                onChange={updateZipCode ? handleChange : null}
-                style={updateZipCode ? selectedColor : null}
+                onChange={handleChange}
                 name="zipcode"
                 placeholder="enter Zip Code"
                 required
               />
-              <button onClick={() => setUpdateZipCode(!updateZipCode)}className="edit-toggle">Edit</button>
             </div>
             {showImageInput ?
               <div className="inline-input-field">
@@ -136,12 +121,10 @@ export default function ManageAccount(props) {
                   type="text"
                   name="imgURL"
                   value={user.imgURL}
-                  onChange={updateImgUrl ? handleChange : null}
-                  style={updateImgUrl ? selectedColor: null}
+                  onChange={handleChange}
                   placeholder="enter Zip Code"
                   required
                 />
-                <button onClick={() => setUpdateImgUrl(!updateImgUrl)} className="edit-toggle">Edit</button>
               </div> : <></>}
             <div className="edit-buttons-container">
               <button type="submit" className="changes-button" id="save-changes">SAVE CHANGES</button>
