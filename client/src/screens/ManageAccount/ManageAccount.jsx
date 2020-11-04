@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import DeleteAccountConfirm from './DeleteAccountConfirm/DeleteAccountConfirm'
 import Layout from '../../components/shared/Layout/Layout';
 import LogoBanner from '../../components/shared/LogoBanner/LogoBanner';
 import { updateUser, deleteUser, getUser } from '../../services/users';
@@ -6,9 +7,8 @@ import './ManageAccount.css';
 
 export default function ManageAccount(props) {
   const [updated, setUpdated] = useState(false)
-  
   const [showImageInput, setShowImageInput] = useState(false)
-
+  const [deleteConfirm, setDeleteConfirm] = useState(false)
   const [user, setUser] = useState({
     name: '',
     email:'',
@@ -44,17 +44,21 @@ export default function ManageAccount(props) {
     setUpdated(!updated)
   }
 
+  const handleClick = (e) => {
+    e.preventDefault();
+    setDeleteConfirm(!deleteConfirm)
+  }
+
   const handleImageSelect = () => {
     setShowImageInput(!showImageInput)
   }
-
-  const selectedColor = { backgroundColor: "rgba(117, 159, 92, .5)" }
 
   return (
     <div>
       <Layout>
         <LogoBanner title="Manage Your Account" />
         <div className="manage-account-main">
+          {deleteConfirm ? <DeleteAccountConfirm id={tempID} setDeleteConfirm={setDeleteConfirm}/> : <></>}
           <div className="user-image-parent">
             <img className="user-photo" src ={ user.imgURL } />
             <p className="toggle-input-img" onClick={handleImageSelect}>Edit</p>
@@ -128,7 +132,7 @@ export default function ManageAccount(props) {
               </div> : <></>}
             <div className="edit-buttons-container">
               <button type="submit" className="changes-button" id="save-changes">SAVE CHANGES</button>
-              <button className="changes-button" id="delete-account">DELETE ACCOUNT</button>
+              <button onClick={handleClick}className="changes-button" id="delete-account">DELETE ACCOUNT</button>
             </div>
           </form>
         </div>
