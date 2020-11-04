@@ -24,7 +24,7 @@ const Form = styled.form`
   }
 
   .username {
-    margin-right: 10px;
+    margin-right: 20px;
     left: -20px;
   }
 
@@ -35,6 +35,8 @@ const Form = styled.form`
 
   .email-label {
     right: 20px;
+    margin-right: 20px;
+
   }
 
   .password-label {
@@ -42,10 +44,15 @@ const Form = styled.form`
     left: -70px;
   }
 
+  .image-label {
+    margin-right: -40px;
+    left: -70px;
+  }
   .zipcode-label {
-    margin-right: -30px;
+    margin-right: -20px;
     left: -50px;
   }
+
   .account-input {
     width: 409px;
     height: 52px;
