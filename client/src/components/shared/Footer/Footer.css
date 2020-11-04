@@ -194,6 +194,11 @@
 /* MOBILE BREAKPOINT */
 @media screen and (max-width: 500px) {
 
+  /* .footer {
+    display: flex;
+    justify-content: center;
+  } */
+
   .parent-links {
     display: flex;
     flex-flow: wrap;
@@ -202,17 +207,27 @@
   }
 
   .footer-root {
-    /* display: flex; */
+    display: flex;
+    width: 150px;
+    margin-left: 0px;
   }
 
   .footer-social {
     width: 100%;
     margin-left: 0px;
     min-width: 0px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 50px 0px 50px;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    background-color: #f2f2f2;
+    height: 40px;
   }
 
   .link-social{
-    width: 50px;
+    width: 60px;
   }
 
 }
