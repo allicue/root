@@ -36,6 +36,7 @@
   font-weight: 500;
   padding-left: 28px;
   margin-bottom: 20px;
+  outline: none;
 }
 
 .plan-button {
@@ -49,6 +50,7 @@
   font-size: 24px;
   text-align: center;
   color: white;
+  text-transform: uppercase;
 }
 
 .plan-button:hover {
@@ -58,7 +60,7 @@
 
 .world-image {
   width: 590px;
-  margin-top: 300px;
+  margin: 300px 40px 0px 40px;
 }
 
 .plan-breakpoint {
@@ -76,15 +78,7 @@
   align-self: baseline;
 }
 
-.grid-section-a {
-  margin: 70px 80px 50px 80px;
-}
-
-.grid-section-b {
-  margin: 70px 80px 50px 80px;
-}
-
-.grid-section-c {
+.grid-section {
   margin: 70px 80px 50px 80px;
 }
 
@@ -118,4 +112,150 @@
 
 .clock-icon {
   width: 100px;
+}
+
+.plan-header-mobile {
+  display: none;
+}
+
+.plan-input-b {
+  display: none;
+}
+
+.mobile-breakpoint {
+  display: none;
+}
+
+.location-icon {
+  display: none;
+}
+
+/* MOBILE BREAKPOINT */
+@media screen and (max-width: 500px) {
+
+  .breadcrumb-plan-container {
+    display: none;
+    text-align: center;
+  }
+
+  .plan-header-mobile {
+    margin-top: 90px;
+    display: flex;
+    font-size: 24px;
+  }
+
+  .column-a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #e8e4d9;
+    width: 100%;
+  }
+  
+  .column-b {
+    display: none;
+  }
+  
+  .plan-input {
+    border: solid .5px black;
+    width: 234px;
+    height: 33px;
+    font-size: 12px;
+    padding-left: 18px;
+    margin-bottom: 10px;
+    border: none;
+  }
+
+  .input-field-container {
+    width: 234px; 
+    background-color: white;
+    border-radius: 30px;
+    height: 33px;
+    margin-bottom: 10px;
+    display: flex;
+  }
+
+  #current-location-field {
+    width: 180px;
+  }
+
+  .location-icon {
+    display: flex;
+    align-self: center;
+    justify-content: flex-end;
+    width: 70px;
+    height: 70px;
+  }
+
+  .plan-input-a {
+    display: none;
+  }
+
+  .plan-input-b {
+    display: flex;
+  }
+
+  .plan-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .plan-button {
+    width: 232px;
+    height: 28.2px;
+    border-radius: 30px;
+    font-size: 12px;
+    margin-bottom: 10px;
+    text-transform: none;
+  }
+  
+  .plan-breakpoint {
+    display: none;
+  }
+
+  .grid-view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .grid-text {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .grid-icons {
+    font-size: 30px;
+    height: 65px;
+  }
+
+  .grid-leaf-icon {
+    margin-left: 3px;
+    width: 35px;
+    height: 35px;
+  }  
+
+  .grid-section {
+    margin: 25px 0px 25px 0px;
+  }
+
+  .grid-breakpoint {
+    display: none;
+  }
+
+  .mobile-breakpoint {
+    display: flex;
+    background-color: #82a1ab;
+    border: #82a1ab;
+    width: 200px;
+    height: 1px;
+  }
+
+  .break {
+    display: none;
+  }
 }
