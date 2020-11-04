@@ -134,7 +134,7 @@ function CreateAccountForm(props) {
         </div>
 
         <div>
-          <label className="password-label" for="imgURL">
+          <label className="image-label" for="imgURL">
             IMAGE URL
           </label>
           <input

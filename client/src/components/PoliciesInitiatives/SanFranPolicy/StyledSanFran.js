@@ -57,7 +57,7 @@ const StyledSanFran = styled.div`
   }
 
   input::placeholder {
-    font-family: "Monsterrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 16px;
     font-weight: 500;
     text-align: left;
@@ -104,7 +104,7 @@ const StyledSanFran = styled.div`
   }
 
   .box-text {
-    font-family: "Monsterrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
     display: flex;
     flex-direction: column;
     font-size: 16px;
@@ -115,7 +115,7 @@ const StyledSanFran = styled.div`
   }
 
   .box-text-title {
-    font-family: "Monsterrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 27px;
     font-weight: bold;
     text-align: left;
@@ -137,7 +137,7 @@ const StyledSanFran = styled.div`
 
   .image-text {
     position: absolute;
-    font-family: "Monsterrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 27px;
     font-weight: bold;
     text-align: center;
@@ -209,7 +209,8 @@ const StyledSanFran = styled.div`
     .title {
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    margin-left: -50px;
   }
   .wrapper{
     display: flex;

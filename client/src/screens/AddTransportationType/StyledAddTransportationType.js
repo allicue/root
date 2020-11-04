@@ -67,7 +67,7 @@ let StyledDiv = styled.div`
   }
 
   .box-text {
-    font-family: "Monsterrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 24px;
     font-weight: 500;
     text-align: left;
@@ -82,7 +82,7 @@ let StyledDiv = styled.div`
   }
 
   .box-text-small {
-    font-family: "Monsterrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 16px;
     font-weight: 500;
     font-style: italic;
@@ -103,7 +103,7 @@ let StyledDiv = styled.div`
 
   .image-text {
     position: absolute;
-    font-family: "Monsterrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 27px;
     font-weight: bold;
     text-align: center;

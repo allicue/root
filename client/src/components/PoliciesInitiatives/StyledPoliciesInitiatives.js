@@ -62,7 +62,7 @@ const StyledPoliciesInitiatives = styled.div`
   }
 
   input::placeholder {
-    font-family: "Monsterrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 16px;
     font-weight: 500;
     text-align: left;
@@ -85,9 +85,6 @@ const StyledPoliciesInitiatives = styled.div`
   .enter-location:hover {
     cursor: default;
   }
-  img:hover {
-    cursor: pointer;
-  }
 
   .content-image {
     width: 288px;
@@ -95,6 +92,10 @@ const StyledPoliciesInitiatives = styled.div`
     filter: contrast(70%) brightness(92%);
   }
 
+  .content-image:hover {
+    filter: contrast(90%) brightness(70%);
+    cursor: pointer;
+  }
   .box-text-container {
     width: 287px;
     height: 256px;
@@ -104,8 +105,8 @@ const StyledPoliciesInitiatives = styled.div`
   }
 
   .box-text {
-    font-family: "Monsterrat", sans-serif;
-    font-size: 24px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 21.5px;
     font-weight: 500;
     text-align: left;
     color: #3d3d3d;
@@ -113,13 +114,24 @@ const StyledPoliciesInitiatives = styled.div`
     margin: 29px 19px 29px 22px;
   }
 
+  
+  .box-text1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 21.5px;
+    font-weight: 500;
+    text-align: left;
+    color: #3d3d3d;
+    display: flex;
+    margin: 25px 19px 15px 22px;
+  }
+
   .box-text:hover {
-    cursor: pointer;
-    transform: translate(0.5px);
+    /* cursor: pointer; */
+    /* transform: translate(0.5px); */
   }
 
   .box-text-small {
-    font-family: "Monsterrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 16px;
     font-weight: 500;
     font-style: italic;
@@ -129,7 +141,7 @@ const StyledPoliciesInitiatives = styled.div`
 
   .box-text-small:hover {
     cursor: pointer;
-    transform: translate(0.5px);
+    /* transform: translate(0.5px); */
   }
 
   .content-container {
@@ -141,7 +153,7 @@ const StyledPoliciesInitiatives = styled.div`
 
   .image-text {
     position: absolute;
-    font-family: "Monsterrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 27px;
     font-weight: bold;
     text-align: center;

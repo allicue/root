@@ -12,10 +12,12 @@ function Header({ open, setOpen }) {
       window.removeEventListener("resize", onResize);
     };
   }, []);
-useEffect(() => {
-  open ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'auto'
-}, [open])
-  
+  useEffect(() => {
+    open
+      ? (document.body.style.overflow = "hidden")
+      : (document.body.style.overflow = "auto");
+  }, [open]);
+
   return (
     <header className="header">
       <Link to="/">
@@ -40,13 +42,13 @@ useEffect(() => {
       <Ul id="menu" className="menu" open={open}>
         <div className="header-home">
           <li>
-            <Link to="/" className="link-home" onClick={() => setOpen(!open)}>
+            <Link to="/" className="link-home">
               <img
                 className="burger-image home"
                 src="https://i.imgur.com/SqphJvM.png"
                 alt="Home Icon"
               />
-              Home
+              <div className="header-span"> Home </div>
             </Link>
           </li>
         </div>
@@ -63,23 +65,22 @@ useEffect(() => {
                 src="https://i.imgur.com/HcSft8t.png"
                 alt="Plan Your Route Icon"
               />
-              Plan Your Route
+              <div className="header-span"> Plan Your Route </div>
             </Link>
           </li>
         </div>
         <div className="header-transport">
           <li>
-            <Link
-              to="/transportation-types"
-              className="link-transport"
-              onClick={() => setOpen(!open)}
-            >
+            <Link to="/transportation-types" className="link-transport">
               <img
                 className="burger-image leaf"
                 src="https://i.imgur.com/aqpyzDP.png"
                 alt="Leaf Icon"
               />
-              Climate Impact By <br></br> Transportation Type
+              <div className="header-span">
+                {" "}
+                Climate Impact By <br></br> Transportation Type{" "}
+              </div>
             </Link>
           </li>
         </div>
@@ -92,27 +93,19 @@ useEffect(() => {
         </div>
         <div className="header-polices">
           <li>
-            <Link
-              to="/policies-and-initiatives"
-              className="link-polices"
-              onClick={() => setOpen(!open)}
-            >
+            <Link to="/policies-and-initiatives" className="link-polices">
               <img
                 className="burger-image leaf"
                 src="https://i.imgur.com/g8kmLXl.png"
                 alt="Map Icon"
               />
-              Policies + Initiatives
+              <div className="header-span"> Policies + Initiatives </div>
             </Link>
           </li>
         </div>
         <div className="header-community">
           <li>
-            <Link
-              to="/"
-              className="link-community"
-              onClick={() => setOpen(!open)}
-            >
+            <Link to="/" className="link-community">
               <img
                 className="burger-image leaf"
                 src="https://i.imgur.com/FOYG4Tk.png"
@@ -120,10 +113,16 @@ useEffect(() => {
               />
               {!open ? (
                 <>
-                  Community + <br></br> Advocacy
+                  <div className="header-span">
+                    {" "}
+                    Community <br></br> + Advocacy{" "}
+                  </div>
                 </>
               ) : (
-                <>Community/Advocacy</>
+                <div className="header-span">
+                  {" "}
+                  <>Community/Advocacy</>{" "}
+                </div>
               )}
             </Link>
           </li>
@@ -131,25 +130,17 @@ useEffect(() => {
         <div className="header-account">
           <li>
             {!open ? (
-              <Link
-                to="create-your-account"
-                className="link-account"
-                onClick={() => setOpen(!open)}
-              >
-                Account
+              <Link to="create-your-account" className="link-account">
+                <div className="header-span"> Account </div>
               </Link>
             ) : (
-              <Link
-                to="manage-your-account"
-                className="link-account"
-                onClick={() => setOpen(!open)}
-              >
+              <Link to="manage-your-account" className="link-account">
                 <img
                   className="burger-image manage-account"
                   src="https://i.imgur.com/rHmqcSX.png"
                   alt="Manage Your Account Icon"
                 />
-                Manage Account
+                <div className="header-span"> Manage Account </div>
               </Link>
             )}
           </li>

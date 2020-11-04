@@ -7,7 +7,7 @@ const Form = styled.form`
   margin: 0 auto;
 
   label {
-    font-family: "Monsterrat", sans serif;
+    font-family: "Montserrat", sans serif;
     color: #3d3d3d;
     font-size: 24px;
     font-weight: bold;
@@ -24,7 +24,7 @@ const Form = styled.form`
   }
 
   .username {
-    margin-right: 10px;
+    margin-right: 20px;
     left: -20px;
   }
 
@@ -35,6 +35,8 @@ const Form = styled.form`
 
   .email-label {
     right: 20px;
+    margin-right: 20px;
+
   }
 
   .password-label {
@@ -42,10 +44,15 @@ const Form = styled.form`
     left: -70px;
   }
 
+  .image-label {
+    margin-right: -40px;
+    left: -70px;
+  }
   .zipcode-label {
-    margin-right: -30px;
+    margin-right: -20px;
     left: -50px;
   }
+
   .account-input {
     width: 409px;
     height: 52px;
@@ -70,7 +77,7 @@ const Form = styled.form`
   }
 
   input::placeholder {
-    font-family: "Monsterrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 16px;
     font-weight: 500;
     text-align: left;
@@ -96,7 +103,7 @@ const Form = styled.form`
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-family: "Monsterrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 24px;
     font-weight: 500;
     text-align: center;
@@ -106,7 +113,7 @@ const Form = styled.form`
   display: flex;
     flex-direction: row;
     align-items: center;
-    font-family: "Monsterrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 24px;
     font-weight: 500;
     text-align: center;
@@ -128,7 +135,7 @@ const Form = styled.form`
     cursor: pointer;
   }
   .create-button {
-    font-family: "Monsterrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 24px;
     font-weight: bold;
     border: none;
@@ -145,7 +152,7 @@ const Form = styled.form`
   }
 
   .take-me-back {
-    font-family: "Monsterrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 24px;
     font-weight: bold;
     border: none;

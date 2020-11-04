@@ -7,7 +7,7 @@ align-items: center;
 margin-top: 103px;
 
 label {
-font-family: 'Monsterrat', sans serif;
+font-family: 'Montserrat', sans serif;
 color: #3d3d3d;
 font-size: 24px;
 font-weight: bold;
@@ -59,7 +59,7 @@ textarea{
 }
 
 textarea::placeholder {
-  font-family: "Monsterrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   font-weight: 500;
   color: #3d3d3d;
@@ -70,7 +70,7 @@ textarea:focus {
 }
 
 input::placeholder {
-  font-family: "Monsterrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   font-weight: 500;
   text-align: left;
@@ -87,7 +87,7 @@ div {
 }
 
   button {
-  font-family: "Monsterrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 24px;
   font-weight: bold;
   border: none;

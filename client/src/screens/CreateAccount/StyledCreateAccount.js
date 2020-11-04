@@ -50,7 +50,7 @@ a {
 
 /* .add-image {
 text-align: center;
-font-family: 'Monsterrat', sans-serif;
+font-family: 'Montserrat', sans-serif;
 color: #3d3d3d;
 width: 200px;
 margin-top: 125px;
