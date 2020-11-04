@@ -209,7 +209,8 @@ const StyledSanFran = styled.div`
     .title {
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    margin-left: -50px;
   }
   .wrapper{
     display: flex;
