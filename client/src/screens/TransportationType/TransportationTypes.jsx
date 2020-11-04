@@ -23,7 +23,7 @@ export default function TransportationTypes() {
   }, []);
 
   const TYPES = transportationTypes.map(item =>
-    <TransportationType title={item.title.toUpperCase()} imgURL={item.imgURL} description={item.description} key={item._id}/>
+    <TransportationType title={item.title} imgURL={item.imgURL} description={item.description} key={item._id}/>
   );
 
   if (!loaded) {
