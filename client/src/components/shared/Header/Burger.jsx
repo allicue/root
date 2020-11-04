@@ -11,6 +11,10 @@ const StyledBurger = styled.div`
   display: none;
   left: 0;
   margin-left: 20px;
+  &:hover{
+    cursor: pointer;
+  }
+  
   @media (max-width: 500px) {
     display: flex;
     justify-content: space-around;
