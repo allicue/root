@@ -376,13 +376,13 @@
     width: 70%;
     margin: 0 auto;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     flex-flow: wrap;
     font-family: 'Montserrat', sans-serif;
   }
 
-  .column {
-    width: 50%;
+  .footer-column {
+    /* width: 50%; */
     display: flex;
     flex-direction: column;
   }
