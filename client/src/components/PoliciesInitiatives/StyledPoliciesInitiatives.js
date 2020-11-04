@@ -85,9 +85,6 @@ const StyledPoliciesInitiatives = styled.div`
   .enter-location:hover {
     cursor: default;
   }
-  img:hover {
-    cursor: pointer;
-  }
 
   .content-image {
     width: 288px;
@@ -96,7 +93,8 @@ const StyledPoliciesInitiatives = styled.div`
   }
 
   .content-image:hover {
-    filter: contrast(90%) brightness(70%  )
+    filter: contrast(90%) brightness(70%);
+    cursor: pointer;
   }
   .box-text-container {
     width: 287px;

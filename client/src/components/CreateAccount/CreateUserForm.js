@@ -7,7 +7,7 @@ const Form = styled.form`
   margin: 0 auto;
 
   label {
-    font-family: "Monsterrat", sans serif;
+    font-family: "Montserrat", sans serif;
     color: #3d3d3d;
     font-size: 24px;
     font-weight: bold;
