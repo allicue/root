@@ -16,6 +16,7 @@ function Login(props) {
         </div>
         <div className="login-form-parent">
           <form className="login-form">
+            <div className="name-parent">
             <label className="username">
               Username:
             </label>
@@ -25,7 +26,9 @@ function Login(props) {
               placeholder="Username"
               required
               autoFocus
-            />
+              />
+            </div>
+            <div className="password-parent">
             <label className="password">
               Password:
             </label>
@@ -34,15 +37,15 @@ function Login(props) {
               name="password"
               placeholder="Password"
               required
-            /> 
+              />
+            </div>
           </form>
         </div>
           <div className="login-div-button">
-            <button className="login-button">Log in</button>
+            <button className="login-button"><Link to="/" className="button-link">Log in</Link></button>
           </div>
         <div className="login-create">
-          <p>Don't have an account?</p>
-          <Link to="/create-your-account">Register</Link>
+          <p>Don't have an account? <Link to="/create-your-account" className="link-register">Register</Link></p>
         </div>
     </div>
   </Layout>

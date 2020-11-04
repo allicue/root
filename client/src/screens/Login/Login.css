@@ -1,17 +1,23 @@
+
+
 .login-logo{
   display: flex;
   justify-content: space-evenly;
 }
 
 .login-root{
-  display: flex;
+  margin-top: 150px;
   width: 350px;
-  height: 350px;
 }
 
 .login-div{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+.login-sign{
+  font-weight: 400;
 }
 
 .login-form-parent{
@@ -20,37 +26,97 @@
   align-content: space-between;
 }
 
-.login-form{
-
+.name-parent{
+  margin-bottom: 10px;
 }
 
 .username{
-
-}
-
-.login-name{
-
+  font-family: "Monsterrat",sans serif;
+    color: #3d3d3d;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin: 36px auto;
+    text-transform: uppercase;
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 .password{
+  font-family: "Monsterrat",sans serif;
+    color: #3d3d3d;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin: 36px auto;
+    text-transform: uppercase;
+    margin-right: 10px;
+}
 
+.login-form{
+  display: inline-flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.login-name{
+ border: none;
+ background-color: lightgray;
+ width: 409px;
+ height: 52px;
+ border-radius: 25px;
+ border: solid 1px #3d3d3d;
+ background-color: #ffffff;
+ text-indent: 20px;
+ box-shadow: 2px 2px 4px 1px #999;
+ margin-bottom: 10px;
 }
 
 .login-password{
- 
+  border: none;
+  background-color: lightgray;
+  width: 409px;
+  height: 52px;
+  border-radius: 25px;
+  border: solid 1px #3d3d3d;
+  background-color: #ffffff;
+  text-indent: 20px;
+  box-shadow: 2px 2px 4px 1px #999;
 }
 
 .login-div-button{
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .login-button{
+  border: none;
+  height: 40px;
+  width: 250px;
+  border-radius: 25px;
+  background-color: #749f5c;
+  border: solid 1px #3d3d3d;
+  box-shadow: 2px 2px 4px 1px #999;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
 
+.button-link{
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
 }
 
 .login-create{
+  margin-top: 10px;
+  flex-direction: row;
   justify-content: space-evenly;
   text-align: center;
   align-items: center;
   align-content: center;
+}
+
+.link-register{
+  text-decoration: none;
+  color: #749f5c;
 }
