@@ -176,9 +176,9 @@ align-items: space-between;
 
 @media screen and (max-width: 600px) {
   .edit-transportation-type {
-    min-width: 90vw;
-    width: 95vw;
-    margin: 10px;
+    min-width: 98vw;
+    /* width: 95vw; */
+    margin: 15px;
     padding: 5px;
     /* background: red; */
   }
@@ -224,12 +224,8 @@ align-items: space-between;
 .form-right-div {
   flex-direction: row;
   flex-wrap: nowrap;
-  /* justify-content: center; */
-  /* align-items: space-between; */
   justify-content: space-between;
   width: initial;
-  /* min-width: 100%; */
-  background: yellow;
   min-width: 75%;
   height: fit-content;
   }
@@ -245,22 +241,32 @@ align-items: space-between;
   align-items: center;
   min-width: 175px;
   /* max-width: 90%; */
+  margin-top: 5px;
   margin-left: 0;
   background: none;
   }
   
 .edit-description {
-  font-size: 16px;
-  line-height: 30px;
-  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
   padding: 0;
   font-family: Montserrat;
-  width: 100%;
+  /* width: 100%; */
+  min-width: 200px;
 }
 
   .mobile-edit-title {
     display: block;
     border: none;
+    font-weight: 700;
+    width: fit-content;
+    padding: 2px 0 2px 0;
+  }
+
+  .mobile-edit-title:focus {
+    outline: none;
+    background-color: rgba(116, 159, 92, .5); 
   }
 
   .edit-form-submit, .reset, .delete {
@@ -284,8 +290,8 @@ align-items: space-between;
   }
 
   .edit-image-link {
-    width: 45%;
-    max-width: 200px;
+    width: 100%;
+    max-width: 70vw;
     min-width: 50vw;
     height: 25px;
     margin: initial;
@@ -293,7 +299,7 @@ align-items: space-between;
   }
 
   .input-image {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .edit-image-link:focus {
