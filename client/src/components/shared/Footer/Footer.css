@@ -34,6 +34,7 @@
 
 .page-links{
   display: flex;
+  flex-flow: wrap;
   width: 90%;
   margin: 0 auto;
   justify-content: space-evenly;
@@ -188,4 +189,226 @@
   text-align: center;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
+}
+
+.mobile-footer-line {
+  display: none;
+}
+
+.phone-number-box-mobile {
+  display: none;
+}
+
+.footer-social-static-mobile {
+  display: none;
+}
+
+/* MOBILE BREAKPOINT */
+@media screen and (max-width: 500px) {
+
+  .footer {
+    width: 100%;
+    color:#3d3d3d;
+  }
+
+  .parent-links {
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .footer-root {
+    display: flex;
+    width: 150px;
+    margin-left: 0px;
+  }
+
+  .root-logo {
+    margin-left: 0%;
+  }
+
+  .footer-social {
+    width: 100%;
+    margin-left: 0px;
+    min-width: 0px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 50px 0px 50px;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    background-color: #f2f2f2;
+    height: 35px;
+    z-index: 999;
+  }
+
+  .footer-social-static-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+  }
+
+  .link-social{
+    width: 60px;
+  }
+
+  .page-links{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    justify-content: center;
+  }
+
+  .link-bar {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .footer-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 0px;
+    width: 100%;
+  }
+
+  .message-parent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .message-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .message-commit{
+    font-size: 12px;
+    text-align: center;
+    font-weight: 500;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    width: 70%;
+  }
+  
+  .message-mission{
+    font-size: 11px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    width: 70%;
+  }
+
+  .leaf-parent {
+    margin: -10px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .message-leaf {
+    width: 50px;
+    height: 50px;
+    transform: rotate(230deg);
+  }
+  
+  .footer-line {
+    display: none;
+  }
+  .mobile-footer-line {
+    display: flex;
+    width: 80%;
+    height: 1px;
+    border: 0 none;
+    margin: 0 auto;
+    background-color:#555;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .contact-div{
+    display: flex;
+    text-align: center;
+    width: 100%;
+  }
+
+  .info-div {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .info-email{
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  form.email {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .address-parent{
+    margin-bottom: 80px;
+    font-size: 9px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .phone-number-box{
+    display: none;
+  }
+
+  .address{
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .footer-map {
+    order: 5;
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .column {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .column-b {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+  }
+
+  .link-sitemap {
+    font-size: 12px;
+    padding-bottom: 5px;
+  }
+
+  .phone-number-box-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    width: 125px;
+    height: 34px;
+    background-color: #759f5c;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+
 }

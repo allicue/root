@@ -28,11 +28,25 @@ function Footer() {
         <Link className="link-bar">STAY CONNECTED</Link>
       </div>
       <hr className="footer-line"></hr>
+      <hr className="mobile-footer-line"></hr>
+        <div className="footer-social-static-mobile">
+            <Link to="/"><img src={twitter} alt="twitter logo" className="link-social" /></Link>
+            <Link><img src={instagram} alt="instagram logo" className="link-social" /></Link>
+            <Link><img src={community} alt="community logo" className="link-social" /></Link>
+          </div>
+      <hr className="mobile-footer-line"></hr>
       <div className="footer-bottom">
         <div className="footer-map">
-          <Link className="link-sitemap">Sitemap</Link>
-          <Link className="link-sitemap">Privacy Policy</Link>
-          <Link className="link-sitemap">Careers</Link>
+          <div className="column">
+            <Link className="link-sitemap">Sitemap</Link>
+            <Link className="link-sitemap">Privacy Policy</Link>
+            <Link className="link-sitemap">Careers</Link>
+          </div>
+          <div className="column column-b">
+            <div className="phone-number-box-mobile">
+              <small id="phone-number-box-mobile">1 (327) 496-6765</small>
+            </div>
+          </div>
         </div>
         <div className="message-parent">
           <div className="message-container">
@@ -43,6 +57,7 @@ function Footer() {
           </div>
           <p className="message-mission">ROOT is committed to supporting the community of sustainable minded warriors working to support a more sustainable lifestyle.</p>
         </div>
+        <hr className="mobile-footer-line"></hr>
         <div className="contact-div">
           <div className="info-div">
             <p className="info-email">Join our community for news, tips, and advocacy information</p>
@@ -52,6 +67,7 @@ function Footer() {
                 <button type="submit" className="email-submit">Sign Up</button>
               </div>
             </form>
+            <hr className="mobile-footer-line"></hr>
             <div className="phone-number-box">
               <small id="phone-number-box">1 (327) 496-6765</small>
             </div>
