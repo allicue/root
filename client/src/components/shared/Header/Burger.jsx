@@ -21,11 +21,10 @@ const StyledBurger = styled.div`
     flex-flow: column nowrap;
   }
   div {
-    width: 2rem;
-    height: 0.25rem;
+    width: 2.4rem;
+    height: 0.20rem;
     background-color: #3d3d3d;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
+    /* box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25); */
   }
 `;
 
