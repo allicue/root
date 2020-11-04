@@ -21,8 +21,8 @@ function PlanRoute(props) {
             
             <form className="plan-form">
               <div className="input-field-container">
-                <input className="plan-input" placeholder="Current Location"></input>
-                {/* <img src={MapPin} className="location-icon" alt="map-pin" /> */}
+                <input className="plan-input" id="current-location-field" placeholder="Current Location"></input>
+                <img src={MapPin} className="location-icon" alt="map-pin" />
               </div>
 
             <input className="plan-input plan-input-a" placeholder="The Metropolitan Museum of Art (MET)"></input>

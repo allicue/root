@@ -36,6 +36,7 @@
   font-weight: 500;
   padding-left: 28px;
   margin-bottom: 20px;
+  outline: none;
 }
 
 .plan-button {
@@ -167,12 +168,24 @@
   }
 
   .input-field-container {
-    position: relative;
+    width: 234px; 
+    background-color: white;
+    border-radius: 30px;
+    height: 33px;
+    margin-bottom: 10px;
+    display: flex;
+  }
+
+  #current-location-field {
+    width: 180px;
   }
 
   .location-icon {
     display: flex;
-    position: absolute;
+    align-self: center;
+    justify-content: flex-end;
+    width: 70px;
+    height: 70px;
   }
 
   .plan-input-a {
