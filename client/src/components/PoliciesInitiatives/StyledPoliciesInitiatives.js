@@ -62,7 +62,7 @@ const StyledPoliciesInitiatives = styled.div`
   }
 
   input::placeholder {
-    font-family: "Monsterrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 16px;
     font-weight: 500;
     text-align: left;
@@ -105,7 +105,7 @@ const StyledPoliciesInitiatives = styled.div`
   }
 
   .box-text {
-    font-family: "Monsterrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 24px;
     font-weight: 500;
     text-align: left;
@@ -120,7 +120,7 @@ const StyledPoliciesInitiatives = styled.div`
   }
 
   .box-text-small {
-    font-family: "Monsterrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 16px;
     font-weight: 500;
     font-style: italic;
@@ -142,7 +142,7 @@ const StyledPoliciesInitiatives = styled.div`
 
   .image-text {
     position: absolute;
-    font-family: "Monsterrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 27px;
     font-weight: bold;
     text-align: center;

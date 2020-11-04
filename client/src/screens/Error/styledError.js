@@ -3,7 +3,7 @@ import styled from "styled-components";
 const StyledError = styled.div`
 display: flex;
 flex-direction: column;
-font-family: 'Monsterrat', sans serif;
+font-family: 'Montserrat', sans serif;
 color: #3d3d3d;
 font-size: 24px;
 font-weight: bold;
@@ -16,7 +16,7 @@ a {
   color: #749f5c;
   font-size: 36px;
   font-weight: normal;
-  font-family: 'Monsterrat', sans serif;
+  font-family: 'Montserrat', sans serif;
 }
 
 h1:hover{

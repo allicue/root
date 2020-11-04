@@ -70,7 +70,7 @@ const Form = styled.form`
   }
 
   input::placeholder {
-    font-family: "Monsterrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 16px;
     font-weight: 500;
     text-align: left;
@@ -96,7 +96,7 @@ const Form = styled.form`
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-family: "Monsterrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 24px;
     font-weight: 500;
     text-align: center;
@@ -106,7 +106,7 @@ const Form = styled.form`
   display: flex;
     flex-direction: row;
     align-items: center;
-    font-family: "Monsterrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 24px;
     font-weight: 500;
     text-align: center;
@@ -128,7 +128,7 @@ const Form = styled.form`
     cursor: pointer;
   }
   .create-button {
-    font-family: "Monsterrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 24px;
     font-weight: bold;
     border: none;
@@ -145,7 +145,7 @@ const Form = styled.form`
   }
 
   .take-me-back {
-    font-family: "Monsterrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 24px;
     font-weight: bold;
     border: none;
