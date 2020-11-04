@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
-import Header from './Header';
+import React, { useState } from "react";
+import styled from "styled-components";
+import Header from "./Header";
 
 const StyledBurger = styled.div`
   width: 2rem;
@@ -11,10 +11,12 @@ const StyledBurger = styled.div`
   display: none;
   left: 0;
   margin-left: 20px;
-  &:hover{
-    cursor: pointer;
-  }
   
+  &:hover {
+    cursor: pointer;
+    /* box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25); */
+  }
+
   @media (max-width: 500px) {
     display: flex;
     justify-content: space-around;
@@ -22,15 +24,14 @@ const StyledBurger = styled.div`
   }
   div {
     width: 2.4rem;
-    height: 0.20rem;
+    height: 0.2rem;
     background-color: #3d3d3d;
-    /* box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25); */
   }
 `;
 
 const Burger = () => {
-  const [open, setOpen] = useState(false)
-  
+  const [open, setOpen] = useState(false);
+
   return (
     <>
       <StyledBurger open={open} onClick={() => setOpen(!open)}>
@@ -38,8 +39,8 @@ const Burger = () => {
         <div />
         <div />
       </StyledBurger>
-      <Header open={open} setOpen={setOpen}/>
+      <Header open={open} setOpen={setOpen} />
     </>
-  )
-}
-export default Burger
+  );
+};
+export default Burger;
