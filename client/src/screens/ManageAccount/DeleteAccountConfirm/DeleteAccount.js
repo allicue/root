@@ -44,6 +44,15 @@ const Styled = styled.div`
     position: relative;
   }
 
+  .confirm-button:focus {
+    outline: none;
+  }
+
+  .confirm-button:hover {
+    box-shadow: 2px 2px 4px 1px #999;
+    text-shadow: 2px 2px 5px rgb(54, 54, 54);
+  }
+
   h4 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
