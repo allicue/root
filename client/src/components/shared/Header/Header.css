@@ -175,6 +175,7 @@
   .root-image {
     display: block;
     padding: 1px;
+    margin-top: 10px;
   }
 .header{
   background-color: #f2f2f2;
