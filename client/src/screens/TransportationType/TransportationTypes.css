@@ -110,6 +110,14 @@
 }
 
 @media screen and (max-width: 600px) {
+  .loading {
+    font-size: 20px;
+  }
+
+  .leaf {
+    width: 30px;
+  }
+
   .transportation-types-main {
     max-width: 100vw;
     width: 96vw;

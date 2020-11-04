@@ -1,0 +1,126 @@
+
+
+.login-logo{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.login-root{
+  margin-top: 150px;
+  width: 350px;
+}
+
+.login-div{
+  font-family: "montserrat",sans serif;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+.login-sign{
+  font-weight: 400;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.login-form-parent{
+  justify-content: space-around;
+  text-align: center;
+  align-content: space-between;
+}
+
+.name-parent{
+  margin-bottom: 10px;
+}
+
+.username{
+  font-family: "montserrat",sans serif;
+    color: #3d3d3d;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin: 36px auto;
+    text-transform: uppercase;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.password{
+  font-family: "montserrat",sans serif;
+    color: #3d3d3d;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin: 36px auto;
+    text-transform: uppercase;
+    margin-right: 10px;
+}
+
+.login-form{
+  display: inline-flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.login-name{
+ border: none;
+ background-color: lightgray;
+ width: 409px;
+ height: 52px;
+ border-radius: 25px;
+ border: solid 1px #3d3d3d;
+ background-color: #ffffff;
+ text-indent: 20px;
+ box-shadow: 2px 2px 4px 1px #999;
+ margin-bottom: 10px;
+}
+
+.login-password{
+  border: none;
+  background-color: lightgray;
+  width: 409px;
+  height: 52px;
+  border-radius: 25px;
+  border: solid 1px #3d3d3d;
+  background-color: #ffffff;
+  text-indent: 20px;
+  box-shadow: 2px 2px 4px 1px #999;
+}
+
+.login-div-button{
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.login-button{
+  border: none;
+  height: 40px;
+  width: 250px;
+  border-radius: 25px;
+  background-color: #749f5c;
+  border: solid 1px #3d3d3d;
+  box-shadow: 2px 2px 4px 1px #999;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.button-link{
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+
+.login-create{
+  margin-top: 10px;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+}
+
+.link-register{
+  font-family: "montserrat",sans serif;
+  text-decoration: none;
+  color: #749f5c;
+}

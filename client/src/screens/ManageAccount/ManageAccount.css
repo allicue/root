@@ -76,6 +76,7 @@
 
 .manage-account-input:focus {
   outline: none;
+  background-color: rgba(117, 159, 92, .5);
 }
 
 .input-field-bottom {

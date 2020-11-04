@@ -11,6 +11,8 @@ import Error from './screens/Error/Error'
 import CreateAccount from './screens/CreateAccount/CreateAccount'
 import ManageAccount from './screens/ManageAccount/ManageAccount';
 import Sad from './screens/SadToSeeYouGo/:(.jsx'
+import Login from './screens/Login/Login';
+
 
 function App() {
   return (
@@ -26,6 +28,7 @@ function App() {
         <Route path='/create-your-account' exact component={CreateAccount} />
         <Route path='/sad-to-see-you-go' exact component={Sad} />
         <Route path='/manage-your-account' component={ManageAccount} />
+        <Route path="/login" component={Login}/>
         <Route component={Error} /> {/* keep this the lowest route */}
       </Switch>
     </div>
