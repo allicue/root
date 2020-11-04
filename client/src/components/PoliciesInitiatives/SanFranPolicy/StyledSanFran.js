@@ -101,6 +101,7 @@ const StyledSanFran = styled.div`
     padding-top: 1px;
     padding-bottom: 20px;
     align-items: center;
+    overflow-y: scroll; 
   }
 
   .box-text {
@@ -165,9 +166,6 @@ const StyledSanFran = styled.div`
 
   @media screen and (max-width: 768px) {
 
-    .content-container{
-      text-overflow: scroll;
-    }
 
     .content-image{
       max-width: 70vw;
@@ -188,7 +186,7 @@ const StyledSanFran = styled.div`
     }
 
     .box-text{
-      display: none;
+      margin-top: -20px;
     }
 
     .top-right-container {
