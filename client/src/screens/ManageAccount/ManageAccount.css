@@ -127,6 +127,15 @@
   position: relative;
 }
 
+.changes-button:focus {
+  outline: none;
+}
+
+.changes-button:hover {
+  box-shadow: 2px 2px 4px 1px #999;
+  text-shadow: 2px 2px 5px rgb(54, 54, 54);
+}
+
 #save-changes {
   background-color: #749f5c;
 }
@@ -174,6 +183,7 @@ background-color: #e21a1a;
  .changes-button {
    margin-left: initial;
  }
+
 
  #password-manage-account {
    max-width: 40vw;

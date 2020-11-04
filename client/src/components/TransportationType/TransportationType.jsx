@@ -13,7 +13,7 @@ export default function TransportationType(props) {
     background-position: center;
   }
 
-  @media screen and (max-width:500px) {
+  @media screen and (max-width:600px) {
     .title-container {
       min-width: 60px;
       height: 60px;

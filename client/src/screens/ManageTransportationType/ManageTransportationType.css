@@ -32,3 +32,15 @@
 .edit-transportation-types {
   min-width: 900px;
 }
+
+@media screen and (max-width: 600px) {
+  .manage-parent {
+    min-width: 100vw;
+  }
+
+  .edit-transportation-types {
+    min-width: 100vw;
+  }
+
+
+}
