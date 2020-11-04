@@ -1,0 +1,56 @@
+.login-logo{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.login-root{
+  display: flex;
+  width: 350px;
+  height: 350px;
+}
+
+.login-div{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.login-form-parent{
+  justify-content: space-around;
+  text-align: center;
+  align-content: space-between;
+}
+
+.login-form{
+
+}
+
+.username{
+
+}
+
+.login-name{
+
+}
+
+.password{
+
+}
+
+.login-password{
+ 
+}
+
+.login-div-button{
+  text-align: center;
+}
+
+.login-button{
+
+}
+
+.login-create{
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+}
