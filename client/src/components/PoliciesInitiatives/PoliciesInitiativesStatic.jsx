@@ -76,12 +76,12 @@ function PoliciesInitiativesStatic() {
           </div>
           <div className="middle-right">
             <div className="content-container">
-              <img
+             <img
                 className="content-image"
                 src="https://i.ibb.co/Rcy7c1S/seattle-citiypolicies-hi-res.png"
                 alt="Seattle"
               />
-              <h1 className="image-text">SEATTLE</h1>
+                    <h1 className="image-text">SEATTLE</h1>
               <div className="box-text-container">
                 <p className="box-text">Lorem ipsum dolor sir amet </p>{" "}
                 <p className="box-text"> Ut wisi enim ad </p>{" "}

@@ -95,6 +95,9 @@ const StyledPoliciesInitiatives = styled.div`
     filter: contrast(70%) brightness(92%);
   }
 
+  .content-image:hover {
+    filter: contrast(90%) brightness(70%  )
+  }
   .box-text-container {
     width: 287px;
     height: 256px;
@@ -114,8 +117,8 @@ const StyledPoliciesInitiatives = styled.div`
   }
 
   .box-text:hover {
-    cursor: pointer;
-    transform: translate(0.5px);
+    /* cursor: pointer; */
+    /* transform: translate(0.5px); */
   }
 
   .box-text-small {
@@ -129,7 +132,7 @@ const StyledPoliciesInitiatives = styled.div`
 
   .box-text-small:hover {
     cursor: pointer;
-    transform: translate(0.5px);
+    /* transform: translate(0.5px); */
   }
 
   .content-container {
