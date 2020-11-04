@@ -10,6 +10,7 @@ import PlanRoute from './screens/PlanRoute/PlanRoute';
 import Error from './screens/Error/Error'
 import CreateAccount from './screens/CreateAccount/CreateAccount'
 import ManageAccount from './screens/ManageAccount/ManageAccount';
+import Login from './screens/Login/Login';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route exact path='/plan-your-route' component={PlanRoute} />
         <Route path='/create-your-account' exact component={CreateAccount} />
         <Route path='/manage-your-account' component={ManageAccount} />
+        <Route path="/login" component={Login}/>
         <Route component={Error} /> {/* keep this the lowest route */}
       </Switch>
     </div>
