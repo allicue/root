@@ -145,7 +145,7 @@
 background-color: #e21a1a;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 500px) {
   .user-image-parent {
     margin: initial;
     padding: initial;

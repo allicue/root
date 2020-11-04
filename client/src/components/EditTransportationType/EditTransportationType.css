@@ -174,7 +174,7 @@ align-items: space-between;
 
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
   .edit-transportation-type {
     min-width: 98vw;
     /* width: 95vw; */
