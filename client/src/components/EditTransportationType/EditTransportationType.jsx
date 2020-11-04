@@ -47,6 +47,8 @@ export default function EditTransportationType(props) {
   return (
     <div className="edit-transportation-type" >
       <form onSubmit={handleSubmit}>
+
+        {/* Need to refactor entire stylesheet eliminating either main-div or edit-top */}
         <div className="main-div-contents">
           <div className="edit-top-container">
             <div className="edit-title-left-div">
@@ -55,30 +57,42 @@ export default function EditTransportationType(props) {
                 <textarea
                   className="edit-title"
                   placeholder="Mode of Transportation"
-                  value={transportationType.title.toUpperCase()}
+                  value={transportationType.title}
                   name="title"
                   required
                   onChange={handleChange}
                 />
               </div>
             </div>
-            <div className="edit-description-container">
-              <textarea
-                className="edit-description"
-                placeholder="Climate Impact"
-                value={transportationType.description}
-                name="description"
-                required
-                onChange={handleChange}
-              />
-            </div>
-            <div className="buttons">
-              <button className="delete" onClick={handleDelete}>Remove</button>
-              <button className="edit-form-submit" type="submit" >Save</button>
+            <div className="form-right-div">
+              <div className="title-description-edit">
+                <input
+                  type="text"
+                  className="mobile-edit-title"
+                  placeholder="Mode of Transportation"
+                  value={transportationType.title}
+                  name="title"
+                  required
+                  onChange={handleChange}
+                />
+                <div className="edit-description-container">
+                  <textarea
+                    className="edit-description"
+                    placeholder="Climate Impact"
+                    value={transportationType.description}
+                    name="description"
+                    required
+                    onChange={handleChange}
+                  />
+                </div>
+              </div>
+              <div className="buttons">
+                <button className="delete" onClick={handleDelete}>Remove</button>
+                <button className="edit-form-submit" type="submit" >Save</button>
+              </div>
             </div>
           </div>
         </div>
-
         <div className="input-image-parent">
           <label className="input-image" htmlFor="imgURL">Image URL: </label>
           <input

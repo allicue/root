@@ -13,6 +13,17 @@ function CreateAccountForm(props) {
     max-height: 120px;
   `;
 
+  const P = styled.p`
+      width: 50%;
+      white-space: wrap;
+      margin: 0 auto;
+
+      @media screen  and (max-width: 500px){
+        width: 100%;
+      white-space: nowrap;
+      }
+  `
+
   const [user, setUser] = useState({
     name: "",
     email: "",
@@ -50,14 +61,15 @@ function CreateAccountForm(props) {
         ) : (
           <ImagePreview src={props.imagePreview} alt="Error: Invalid Image URL" />
         )}
-        <p
-          className="add-image"
+        <div className="add-image">
+        <P
+          className=""
           onClick={() => props.setImagePreview(user.imgURL)}
         >
-          Preview
-          <br />
-          image
-        </p>
+            Preview
+            image
+        </P>
+        </div>
       </div>
       <Form onSubmit={handleSubmit}>
         <div>
@@ -67,7 +79,7 @@ function CreateAccountForm(props) {
           <input
             className="account-input"
             name="name"
-            placeholder="Enter Username"
+            placeholder="Full Name"
             required
             value={user.name}
             autoFocus
@@ -82,7 +94,7 @@ function CreateAccountForm(props) {
           <input
             className="account-input"
             name="email"
-            placeholder="Enter Email Address"
+            placeholder="Email"
             required
             autoFocus
             value={user.email}
@@ -98,7 +110,7 @@ function CreateAccountForm(props) {
             className="account-input"
             name="password"
             type="password"
-            placeholder="Enter Password"
+            placeholder="Password"
             required
             value={user.password}
             autoFocus
@@ -113,7 +125,7 @@ function CreateAccountForm(props) {
           <input
             className="account-input"
             name="zipcode"
-            placeholder="Enter Zipcode"
+            placeholder="Zip Code"
             required
             autoFocus
             value={user.zipcode}
@@ -128,7 +140,7 @@ function CreateAccountForm(props) {
           <input
             className="account-input"
             name="imgURL"
-            placeholder="Enter Image URL"
+            placeholder="Image URL"
             required
             value={user.imgURL}
             autoFocus
@@ -151,8 +163,11 @@ function CreateAccountForm(props) {
                 value="TAKE ME BACK"
               />
             </Link>
-            <button className="create-button">CREATE ACCOUNT</button>
+            <button className="create-button">Create Account</button>
           </div>
+            <div className="already">
+          <p>  Already have an account? <Link to="/log-in"><span>Log in</span> </Link></p>
+           </div>
         </div>
       </Form>
     </>
