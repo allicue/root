@@ -34,6 +34,7 @@
 
 .page-links{
   display: flex;
+  flex-flow: wrap;
   width: 90%;
   margin: 0 auto;
   justify-content: space-evenly;
@@ -188,4 +189,30 @@
   text-align: center;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
+}
+
+/* MOBILE BREAKPOINT */
+@media screen and (max-width: 500px) {
+
+  .parent-links {
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .footer-root {
+    /* display: flex; */
+  }
+
+  .footer-social {
+    width: 100%;
+    margin-left: 0px;
+    min-width: 0px;
+  }
+
+  .link-social{
+    width: 50px;
+  }
+
 }
