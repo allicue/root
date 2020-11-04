@@ -108,3 +108,34 @@
   background-position: top;
   height: 450px;
 }
+
+@media screen and (max-width: 600px) {
+  .transportation-types-main {
+    max-width: 100vw;
+    width: 96vw;
+    min-width: initial;
+    margin-top: -10px;
+  }
+
+  .edit-icon {
+    width: 30px;
+  }
+
+  .edit-icon-link {
+    width: 100%;
+    height: initial;
+    margin: initial;
+    padding-top: 0;
+  }
+
+  #edit-icon-link {
+    font-size: 13px;
+    width: 100vw;
+  }
+
+  .green-news {
+    display: none;
+  }
+
+
+}
