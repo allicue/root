@@ -106,12 +106,23 @@ const StyledPoliciesInitiatives = styled.div`
 
   .box-text {
     font-family: "Montserrat", sans-serif;
-    font-size: 24px;
+    font-size: 21.5px;
     font-weight: 500;
     text-align: left;
     color: #3d3d3d;
     display: flex;
     margin: 29px 19px 29px 22px;
+  }
+
+  
+  .box-text1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 21.5px;
+    font-weight: 500;
+    text-align: left;
+    color: #3d3d3d;
+    display: flex;
+    margin: 25px 19px 15px 22px;
   }
 
   .box-text:hover {

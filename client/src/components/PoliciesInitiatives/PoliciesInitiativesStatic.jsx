@@ -37,9 +37,9 @@ function PoliciesInitiativesStatic() {
                 SAN FRANCISCO 
               </Link>
               <div className="box-text-container">
-                <p className="box-text">Commuter Benefits Ordinance </p>{" "}
-                <p className="box-text"> Tenant Bicycle Parking </p>{" "}
-                <p className="box-text"> Congestion Pricing</p>{" "}
+                <p className="box-text1">Commuter Benefits Ordinance </p>{" "}
+                <p className="box-text1"> Tenant Bicycle Parking </p>{" "}
+                <p className="box-text1"> Congestion Pricing</p>{" "}
                 <p className="box-text-small">California EPA ></p>{" "}
               </div>
             </div>
