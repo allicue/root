@@ -8,7 +8,7 @@ import Leaf from '../../Assets/Icons/ROOT_Leaf.png'
 import './ManageTransportationType.css'
 import { getTransportationTypes } from '../../services/transportationTypes'
 
-export default function ManageTransportationTypes() { 
+export default function ManageTransportationTypes() {
   const [loaded, setLoaded] = useState(false);
   const [updated, setUpdated] = useState(false);
   const [transportationTypes, setTransportationTypes] = useState([]);
