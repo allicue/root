@@ -57,7 +57,6 @@ function Header({ open, setOpen }) {
             <Link
               to="/plan-your-route"
               className="link-plan"
-              onClick={() => setOpen(!open)}
             >
               <img
                 className="burger-image route"
