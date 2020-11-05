@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Home from './screens/Home/Home';
 import PoliciesInitiatives from './screens/PoliciesInitiatives/PoliciesInitiatives';
@@ -12,11 +12,15 @@ import CreateAccount from './screens/CreateAccount/CreateAccount'
 import ManageAccount from './screens/ManageAccount/ManageAccount';
 import Sad from './screens/SadToSeeYouGo/:(.jsx'
 import Login from './screens/Login/Login';
+import Burger from './components/shared/Header/Burger'
 
 
 function App() {
+  const [loggedInUser, setLoggedInUser] = useState({})
+
   return (
     <div>
+      <Burger loggedInUser={loggedInUser} />
       <Switch>
         <Route exact path='/policies-and-initiatives' component={PoliciesInitiatives} />
         <Route exact path='/san-fransisco' component={SanFranPolicy} />
@@ -27,8 +31,12 @@ function App() {
         <Route exact path='/plan-your-route' component={PlanRoute} />
         <Route path='/create-your-account' exact component={CreateAccount} />
         <Route path='/sad-to-see-you-go' exact component={Sad} />
-        <Route path='/manage-your-account' component={ManageAccount} />
-        <Route path="/login" component={Login}/>
+        <Route path='/manage-your-account' >
+          <ManageAccount loggedInUser={loggedInUser} />
+        </Route>
+        <Route path="/login" >
+          <Login loggedInUser={loggedInUser} setLoggedInUser={setLoggedInUser} />
+        </Route>
         <Route component={Error} /> {/* keep this the lowest route */}
       </Switch>
     </div>

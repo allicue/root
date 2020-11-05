@@ -29,8 +29,10 @@ const StyledBurger = styled.div`
   }
 `;
 
-const Burger = () => {
+function Burger({ loggedInUser }) {
   const [open, setOpen] = useState(false);
+
+  // console.log(ploggedInUser)
 
   return (
     <>
@@ -39,7 +41,9 @@ const Burger = () => {
         <div />
         <div />
       </StyledBurger>
-      <Header open={open} setOpen={setOpen} />
+      {loggedInUser &&
+        <Header loggedInUser={loggedInUser} open={open} setOpen={setOpen} />
+      }
     </>
   );
 };
