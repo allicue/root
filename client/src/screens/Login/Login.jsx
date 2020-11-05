@@ -1,11 +1,13 @@
-import React, { useState } from "react"
+import React, { useState, useContext } from "react"
 import { Link, Redirect } from "react-router-dom"
 import { getUserEmail } from '../../services/users';
 import Layout from "../../../src/components/shared/Layout/Layout"
 import footerroot from "../../Assets/Icons/ROOT_Logo_Primary.svg"
 import "./Login.css"
+import { LoggedInUserContext } from '../../components/LoggedInUser/LoggedInUserContext'
 
-function Login(props) {
+function Login() {
+  const [loggedInuser, setLoggedInUser] = useContext(LoggedInUserContext)
   const [userInfo, setUserInfo] = useState({
     email: "",
     password: "",
@@ -23,6 +25,8 @@ function Login(props) {
     let user = userInfo.email
     let response = await getUserEmail(user)
     console.log(response)
+    setLoggedInUser(response)
+    setLoggedIn(true)
 
     // try {
     //   if (userInfo.password === response.password) {
@@ -42,7 +46,7 @@ function Login(props) {
       else if (user != response.email && userInfo.password != response.password) {
       alert("Username and/or password does not match")
     } else {
-      props.setLoggedInUser(response)
+     setLoggedInUser(response)
       setLoggedIn(true)
     } 
   }
