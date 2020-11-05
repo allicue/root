@@ -4,7 +4,7 @@ import "./Header.css";
 import Ul from "./Ul";
 import { onResize } from "../../../utils/helpers";
 
-function Header({ open, setOpen }) {
+function Header({ open, setOpen, loggedInUser }) {
   useEffect(() => {
     onResize();
     window.addEventListener("resize", onResize);
@@ -34,7 +34,7 @@ function Header({ open, setOpen }) {
           {" "}
           <img
             className="profile-pic"
-            src="https://lh3.googleusercontent.com/proxy/-hVC0cG5KGGTG98_3Brdbg6RsCaKK6_WO5zCDkfjT1GQe9eMNMWkoOB1x5twwxPwveV5FO74p8sl0AJokN-_nE53Vkwz0x0OJkx4Njs3JiM"
+            src={loggedInUser?.imgURL}
             alt="User"
           />
         </Link>

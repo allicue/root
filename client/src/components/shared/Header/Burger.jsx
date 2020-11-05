@@ -29,7 +29,7 @@ const StyledBurger = styled.div`
   }
 `;
 
-const Burger = () => {
+function Burger (props) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -39,7 +39,7 @@ const Burger = () => {
         <div />
         <div />
       </StyledBurger>
-      <Header open={open} setOpen={setOpen} />
+      <Header loggedInUser={props.loggedInUser} open={open} setOpen={setOpen} />
     </>
   );
 };
