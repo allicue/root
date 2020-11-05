@@ -1,11 +1,13 @@
-import React, { useState } from "react"
+import React, { useState, useContext } from "react"
 import { Link, Redirect } from "react-router-dom"
 import { getUserEmail } from '../../services/users';
 import Layout from "../../../src/components/shared/Layout/Layout"
 import footerroot from "../../Assets/Icons/ROOT_Logo_Primary.svg"
 import "./Login.css"
+import { LoggedInUserContext } from '../../components/LoggedInUser/LoggedInUserContext'
 
-function Login(props) {
+function Login() {
+  const [loggedInuser, setLoggedInUser] = useContext(LoggedInUserContext)
   const [userInfo, setUserInfo] = useState({
     email: "",
     password: "",
@@ -22,7 +24,7 @@ function Login(props) {
     e.preventDefault();
     let response = await getUserEmail(userInfo.email)
     console.log(response)
-    props.setLoggedInUser(response)
+    setLoggedInUser(response)
     setLoggedIn(true)
   }
 
