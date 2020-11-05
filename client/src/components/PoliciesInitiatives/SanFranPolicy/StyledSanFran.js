@@ -7,7 +7,7 @@ const StyledSanFran = styled.div`
     text-decoration: none;
     color: #3d3d3d;
   }
-  
+
 .title{
   width: 1000px;
 }
@@ -66,6 +66,13 @@ const StyledSanFran = styled.div`
 
   input:focus {
     outline: none;
+  }
+
+  .in-works{
+    display:none;
+  }
+  .get-involved{
+    display: none;
   }
 
   .enter-location {
@@ -163,7 +170,12 @@ const StyledSanFran = styled.div`
     margin-bottom: 118px;
     justify-content: center;
   }
-
+  .box-text-mobile{
+  display: none;
+}
+.mobile-image{
+  display: none;
+}
   @media screen and (max-width: 768px) {
 
 
@@ -198,22 +210,88 @@ const StyledSanFran = styled.div`
       display: flex;
       margin: 20px;
     }
-        .title{
-          width: 600px;
-          font-size: 38px;
-        }
+      
   }
   @media screen and (max-width: 500px){
     .title {
     display: flex;
     flex-direction: column;
-    /* margin: 0 auto; */
-    margin-left: -50px;
+    width: 110vw;
+          font-size: 38px;
+          margin: 0 auto;
   }
+  .in-works{
+    display: flex;
+    font-family: Montserrat, sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-bottom: 2px solid rgb(129, 161, 171);
+    margin: 0 2rem;
+  }
+
+  .get-involved{
+    display: flex;
+    font-family: Montserrat, sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-bottom: 2px solid rgb(129, 161, 171);
+    margin-right: auto;
+    margin-left: 8px;
+  }
+  .mobile-image{
+    display: flex;
+    max-width: 4rem;
+    max-height: 4rem;
+    min-width: 4rem;
+    min-height: 4rem;
+    margin-right: 2px;
+    margin-left: -10px;
+    margin-top: 1.5rem;
+  }
+
+
+
+  .box-text-title{
+    text-transform: capitalize;
+    font-size: 15px;
+    white-space: nowrap;
+    margin: 5px auto;
+  }
+
   .wrapper{
     display: flex;
     flex-direction: column-reverse;
 }
+.box-text-container{
+  background: #fff;
+  overflow-y: elipsis;
+  flex-direction: row;
+  overflow: initial;
+  overflow-y: initial;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+.box-text{
+  display: none;
+}
+.box-text-mobile{
+  display: flex;
+  color: #3d3d3d;
+  margin-top: 10px;
+}
+
+.content-container {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 16px 19px 16px 19px;
+  }
+ 
+  .content-image{
+    display: none;
+  }
+  .input-container{
+    display: none;
+  }
   }
 `;
 
