@@ -1,10 +1,23 @@
-import React from "react"
-import { Link } from "react-router-dom"
+import React, {useState} from "react"
+import { Link, Redirect } from "react-router-dom"
 import Layout from "../../../src/components/shared/Layout/Layout"
 import footerroot from "../../Assets/Icons/ROOT_Logo_Primary.svg"
 import "./Login.css"
 
 function Login(props) {
+  const [loggedIn, setLoggedIn] = useState(false)
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    props.setLoggedInUser(true)
+    setLoggedIn(true)
+  }
+  
+  if (loggedIn) {
+    return <Redirect to={"/"} />;
+  }
+
+
   return (
   <Layout>
     <div className="login-body">
@@ -15,7 +28,7 @@ function Login(props) {
           <h1 className="login-sign">Sign in</h1>
         </div>
         <div className="login-form-parent">
-          <form className="login-form">
+          <form className="login-form" onSubmit={handleSubmit}>
             <div className="name-parent">
             <label className="username">
               Username:
@@ -42,7 +55,7 @@ function Login(props) {
           </form>
         </div>
           <div className="login-div-button">
-            <button className="login-button"><Link to="/" className="button-link">Log in</Link></button>
+            <button type="submit" className="login-button">Log in</button>
           </div>
         <div className="login-create">
           <p>Don't have an account? <Link to="/create-your-account" className="link-register">Register</Link></p>

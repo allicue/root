@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Home from './screens/Home/Home';
 import PoliciesInitiatives from './screens/PoliciesInitiatives/PoliciesInitiatives';
@@ -15,6 +15,8 @@ import Login from './screens/Login/Login';
 
 
 function App() {
+const [loggedInUser, setLoggedInUser] = useState({})
+
   return (
     <div>
       <Switch>
@@ -28,7 +30,7 @@ function App() {
         <Route path='/create-your-account' exact component={CreateAccount} />
         <Route path='/sad-to-see-you-go' exact component={Sad} />
         <Route path='/manage-your-account' component={ManageAccount} />
-        <Route path="/login" component={Login}/>
+        <Route path="/login" component={Login} loggedInUser={loggedInUser} setLoggedInUser={setLoggedInUser}/>
         <Route component={Error} /> {/* keep this the lowest route */}
       </Switch>
     </div>
