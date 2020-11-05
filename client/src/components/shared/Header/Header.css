@@ -1,15 +1,14 @@
 .header {
-  display: flex;
-  justify-content: space-evenly;
-  text-align: center;
-  align-items: center;
-  align-content: center;
+  margin: 0;
   position: fixed;
   background-color: #e8e4d9;
   width: 100%;
   height: 120px;
-  z-index: 999;
+  z-index: 1;
   top: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  min-width: 100%;
 }
 
 .header-span:hover{
@@ -36,49 +35,31 @@
   align-content: center;
 }
 
-.link-home {
+.header-link-container {
   display: flex;
-  font-family: Montserrat, Semi bold;
+  /* margin: 10px; */
+}
+
+.header-link {
+  display: flex;
   font-size: 16px;
-  font-weight: 700;
+  font-family: Montserrat, Semi bold;
+  font-weight: 600;
   color: #3d3d3d;
   text-decoration: none;
-  margin-top: 25px;
+  /* margin-top: 25px; */
   align-items: center;
+  max-width: 240px;
+  padding: 20px;
 }
 
-.header-plan {
+#header-transport {
   display: flex;
-  font-family: Montserrat, Semi bold;
-  font-size: 16px;
-  font-weight: 700;
-  color: #3d3d3d;
 }
 
-.link-plan {
-  display: flex;
-  margin-top: 25px;
-  color: #3d3d3d;
-  text-decoration: none;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-.header-transport {
-  display: flex;
-  font-family: Montserrat, Semi bold;
-  font-size: 16px;
-  font-weight: 700;
-  color: #3d3d3d;
-}
-
-.link-transport {
-  display: flex;
-  color: #3d3d3d;
-  text-decoration: none;
-  margin-top: 25px;
+#link-transport {
   min-width: 183px;
-  align-items: center;
+  max-width: 250px;
 }
 
 .header-image {
@@ -86,70 +67,17 @@
   width: 100px;
 }
 
-.header-polices {
-  display: flex;
-  font-family: Montserrat, Semi bold;
-  font-size: 16px;
-  font-weight: 700;
-  color: #3d3d3d;
-  margin-left: 35px;
-  margin-right: 65px;
-}
-
-.link-polices {
-  display: flex;
-  color: #3d3d3d;
-  text-decoration: none;
-  margin-top: 25px;
-  align-items: center;
-}
-
-.header-community {
-  display: flex;
-  font-family: Montserrat, Semi bold;
-  font-size: 16px;
-  font-weight: 700;
-  color: #3d3d3d;
-}
-
-.link-community {
-  display: flex;
-  color: #3d3d3d;
-  text-decoration: none;
-  margin-top: 25px;
-  align-items: center;
-}
-
-.header-account {
-  display: flex;
-  font-family: Montserrat, Semi bold;
-  font-size: 16px;
-  font-weight: 700;
-  color: #3d3d3d;
-}
-
-.link-account {
-  display: flex;
-  color: #3d3d3d;
-  text-decoration: none;
-  margin-top: 25px;
-  margin-left: 100px;
-  margin-right: 50px;
-  align-items: center;
-}
-
 .burger-image {
   display: none;
 }
 .root-image{
   display: none;
-  max-height: 55px;
-  margin-bottom: 10px;
+  max-height: 45px;
 }
 .root-image2{
   display:none;
   max-height: 55px;
-  /* max-width: 300px; */
+  max-width: 300px;
   margin-left: 250px;
   position: fixed;
   top: 10px;
@@ -158,18 +86,22 @@
   display: none;
 }
 .userpic-container{
-  display: flex;
-  margin-right: 20px;
+  /* display: flex; */
+  /* margin-right: 20px; */
+  position: fixed;
+  top: 17px;
+  right: 5px;
 }
 .root-image-container{
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 100px;
-  margin-right: 20px;
-  /* left: 100%; */
 }
 @media (max-width: 500px) {
+.header {
+  padding: initial;
+}
+
   .header-image {
     display: none;
   }
@@ -177,7 +109,7 @@
     margin-top: -80px;
     margin-right: 90px;
   }
-  .link-plan{
+  #link-plan{
     padding: 0;
   }
 
@@ -199,9 +131,20 @@
     border-radius:10px;
   }
 
+
+  .header-link {
+    /* display: block; */
+    font-size: 16px;
+    font-family: Montserrat, Semi bold;
+    font-weight: 600;
+    color: #3d3d3d;
+    text-decoration: none;
+    max-width: 210px;
+    padding: initial;
+  }
+
   .profile-pic{
     display: flex;
-    right: 0;
     max-width: 50px;
     background-color: #999;
     border-radius: 50%;
@@ -224,20 +167,20 @@
     right: 20px;
   }
 
-  .link-home{
+  #link-home{
     font-weight: 500;
   }
-  .header-plan {
+  #header-plan {
     margin-left: -15px;
   }
-  .header-transport {
+  #header-transport {
     margin-left: 20px;
   }
-  .header-polices {
+  #header-polices {
     position: relative;
     right: -20px;
   }
-  .header-community {
+  #header-community {
     position: relative;
     right: -17.5px;
   }
