@@ -41,18 +41,11 @@
   /* background: yellow; */
 }
 
-#password-manage-account::placeholder {
-  font-size: 18px;
-}
 
 #zip-code {
   min-width: fit-content;
 }
 
-#password-manage-account {
-  /* max-width: 64%; */
-  font-size: 32px;
-}
 
 #password-left {
   display: flex;

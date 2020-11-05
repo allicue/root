@@ -72,7 +72,6 @@ export default function ManageAccount(props) {
                 name="name"
                 value={user.name}
                 onChange={handleChange}
-                placeholder="Enter Username"
                 required
               />
             </div>
@@ -85,7 +84,6 @@ export default function ManageAccount(props) {
                 name="email"
                 value={user.email}
                 onChange={handleChange}
-                placeholder="Enter Email Address"
                 required
               
                 />
@@ -100,7 +98,6 @@ export default function ManageAccount(props) {
                 name="password"
                 value={user.password}
                 onChange={handleChange}
-                placeholder="Enter Password"
                 required
                 />
                 </div>
@@ -113,7 +110,6 @@ export default function ManageAccount(props) {
                 value={user.zipcode}
                 onChange={handleChange}
                 name="zipcode"
-                placeholder="enter Zip Code"
                 required
               />
             </div>
@@ -126,7 +122,6 @@ export default function ManageAccount(props) {
                   name="imgURL"
                   value={user.imgURL}
                   onChange={handleChange}
-                  placeholder="enter Zip Code"
                   required
                 />
               </div> : <></>}
