@@ -52,11 +52,10 @@
   font-family: Montserrat, Semi bold;
   font-size: 16px;
   font-weight: 700;
-  color: #3d3d3d;
 }
 
 .link-plan {
-  display: flex;
+display: flex;
   margin-top: 25px;
   color: #3d3d3d;
   text-decoration: none;
@@ -173,12 +172,14 @@
   .header-image {
     display: none;
   }
+  
   .header-home{
-    margin-top: -80px;
+    margin-top: -250px;
     margin-right: 90px;
   }
   .link-plan{
-    padding: 0;
+    /* padding: 0; */
+    display: inline;
   }
 
   .header-span:active{
@@ -220,8 +221,9 @@
     display: flex;
     max-width: 50px;
     min-width: 50px;
-    position: relative;
-    right: 20px;
+    position: fixed;
+    left: 17%;
+    margin-right: 10px;
   }
 
   .link-home{
@@ -229,6 +231,7 @@
   }
   .header-plan {
     margin-left: -15px;
+    margin-bottom: -30px
   }
   .header-transport {
     margin-left: 20px;
