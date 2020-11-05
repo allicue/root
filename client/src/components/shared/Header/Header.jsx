@@ -31,10 +31,9 @@ function Header({ open, setOpen, loggedInUser }) {
       </div>
       <div className="userpic-container">
         <Link to="/manage-your-account">
-          {" "}
           <img
             className="profile-pic"
-            src={loggedInUser?.imgURL}
+            src={loggedInUser.imgURL}
             alt="User"
           />
         </Link>

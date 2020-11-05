@@ -20,11 +20,8 @@ function App() {
 
   return (
     <div>
-
+      <Burger loggedInUser={loggedInUser} />
       <Switch>
-        <Route exact path='/fjdahslfghadklughflu'>
-          <Burger loggedInUser={loggedInUser} />
-        </Route>
         <Route exact path='/policies-and-initiatives' component={PoliciesInitiatives} />
         <Route exact path='/san-fransisco' component={SanFranPolicy} />
         <Route exact path="/" component={Home} />
