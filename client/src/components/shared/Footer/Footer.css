@@ -95,6 +95,7 @@
   text-decoration: none;
   padding-bottom: 18px;
   font-weight: 500;
+  display: flex;
 }
 
 .message-parent{
@@ -206,7 +207,7 @@
 /* MOBILE BREAKPOINT */
 @media screen and (max-width: 500px) {
 
-  .footer {
+  footer {
     width: 100%;
     color:#3d3d3d;
   }
@@ -259,6 +260,7 @@
     flex-direction: column;
     margin-top: 20px;
     justify-content: center;
+    width: 100%;
   }
 
   .link-bar {
@@ -376,7 +378,8 @@
     width: 70%;
     margin: 0 auto;
     display: flex;
-    justify-content: left;
+    flex-direction: column;
+    justify-content: space-between;
     flex-flow: wrap;
     font-family: 'Montserrat', sans-serif;
   }
@@ -386,7 +389,7 @@
     flex-direction: column;
   }
 
-  .column-b {
+  .footer-column-b {
     display: flex;
     justify-content: space-around;
     align-items: flex-end;

@@ -42,7 +42,7 @@ function Footer() {
             <Link className="link-sitemap">Privacy Policy</Link>
             <Link className="link-sitemap">Careers</Link>
           </div>
-          <div className="footer-column column-b">
+          <div className="footer-column footer-column-b">
             <div className="phone-number-box-mobile">
               <small id="phone-number-box-mobile">1 (327) 496-6765</small>
             </div>
