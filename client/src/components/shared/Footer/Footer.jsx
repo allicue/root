@@ -51,9 +51,6 @@ function Footer() {
         <div className="message-parent">
           <div className="message-container">
             <p className="message-commit">COMMITTED TO OUR SUSTAINABLE FOCUSED COMMUNITY</p>
-            <div className="leaf-parent">
-              <img src={Leaf} alt="leaf logo" className="message-leaf" />
-            </div>
           </div>
           <p className="message-mission">ROOT is committed to supporting the community of sustainable minded warriors working to support a more sustainable lifestyle.</p>
         </div>
