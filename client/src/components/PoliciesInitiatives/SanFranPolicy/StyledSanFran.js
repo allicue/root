@@ -106,10 +106,9 @@ const StyledSanFran = styled.div`
     align-items: center;
     overflow-y: scroll;
   }
-.box-text-container::-webkit-scrollbar{
-  display: none;
-}
-
+  .box-text-container::-webkit-scrollbar {
+    display: none;
+  }
   .box-text {
     font-family: "Montserrat", sans-serif;
     display: flex;
@@ -251,7 +250,15 @@ const StyledSanFran = styled.div`
       white-space: nowrap;
       margin: 5px auto;
     }
-
+    span{
+      display: flex;
+      color: #3d3d3d;
+      margin-top: 10px;
+      white-space: nowrap;
+        }    
+        span:hover{
+      cursor: pointer;
+    }
     .wrapper {
       display: flex;
       flex-direction: column-reverse;

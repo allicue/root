@@ -87,8 +87,8 @@ function SanFranPolicyStatic() {
                   <p className="box-text-mobile">
                     Owners of commercial buildings must either provide secure
                     bicycle parking or allow tenants to bringtheir bicycles into
-                    the building. Read more >
-                  </p>
+                    the building.
+                  </p> <span>Read more ></span>
                 </div>
               </div>
 
@@ -121,8 +121,7 @@ function SanFranPolicyStatic() {
                   <p className="box-text-mobile">
                     Supports the evaluation of congestion pricing to develop
                     environmentally beneficial congestion management programs.
-                    Read more >
-                  </p>
+                  </p><span>Read more ></span>
                 </div>
               </div>
             <p className="get-involved">Get Involved</p>
@@ -154,8 +153,8 @@ function SanFranPolicyStatic() {
                 </p>
                 <p className="box-text-mobile">
                   Urge San Francisco's Retirement Board to stop supporting
-                  Occidental Petroleum. Read more >
-                </p>
+                  Occidental Petroleum. 
+                </p><span>Read more ></span>
               </div>
             </div>
             </div>
