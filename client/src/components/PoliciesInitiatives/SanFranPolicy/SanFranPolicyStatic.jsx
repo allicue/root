@@ -125,7 +125,7 @@ function SanFranPolicyStatic() {
                 </div>
               </div>
             <p className="get-involved">Get Involved</p>
-            <div className="content-container">
+            <div className="content-container-mobile">
             <img
                 className="content-image"
                 src="https://i.imgur.com/bgRDJbf.jpg"

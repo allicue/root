@@ -90,9 +90,10 @@ const StyledSanFran = styled.div`
   }
 
   .content-image {
-    width: 1204px;
+    width: 1202px;
     height: 319px;
     max-width: 83.5vw;
+    object-fit: fill;
   }
 
   .box-text-container {
@@ -141,6 +142,11 @@ const StyledSanFran = styled.div`
     margin: 16px 19px 16px 19px;
   }
 
+  .content-container-mobile {
+    display: none;
+    flex-flow: column nowrap;
+    margin: 16px 19px 16px 19px;
+  }
   .image-text {
     position: absolute;
     font-family: "Montserrat", sans-serif;
@@ -215,6 +221,7 @@ const StyledSanFran = styled.div`
       font-size: 24px;
       margin: 0 auto;
     }
+
     .in-works {
       display: flex;
       font-family: Montserrat, sans-serif;
@@ -233,6 +240,7 @@ const StyledSanFran = styled.div`
       margin-right: auto;
       margin-left: 8px;
     }
+
     .mobile-image {
       display: flex;
       max-width: 4rem;
@@ -250,22 +258,26 @@ const StyledSanFran = styled.div`
       white-space: nowrap;
       margin: 5px auto;
     }
+
     span {
       display: flex;
       color: #3d3d3d;
       margin-top: 10px;
       white-space: nowrap;
     }
+
     span:hover {
       cursor: pointer;
       text-decoration: underline;
       text-decoration-color: #759f5c;
       text-decoration-thickness: 0.1rem;
     }
+
     .wrapper {
       display: flex;
       flex-direction: column-reverse;
     }
+
     .box-text-container {
       background: #fff;
       overflow-y: elipsis;
@@ -275,9 +287,11 @@ const StyledSanFran = styled.div`
       margin-bottom: 20px;
       margin-left: 20px;
     }
+
     .box-text {
       display: none;
     }
+
     .box-text-mobile {
       display: flex;
       color: #3d3d3d;
@@ -290,9 +304,16 @@ const StyledSanFran = styled.div`
       margin: 16px 19px 16px 19px;
     }
 
+    .content-container-mobile {
+      display: flex;
+      flex-flow: row nowrap;
+      margin: 16px 19px 16px 19px;
+    }
+
     .content-image {
       display: none;
     }
+
     .input-container {
       display: none;
     }

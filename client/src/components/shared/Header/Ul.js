@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const Ul = styled.ul`
   list-style: none;
@@ -6,11 +6,11 @@ const Ul = styled.ul`
   align-items: space-evenly;
   justify-content: space-evenly;
   align-items: center;
-  
+
   li {
     text-transform: uppercase;
   }
-  
+
   @media (max-width: 500px) {
     flex-flow: column nowrap;
     background-color: #e8e4d9;
