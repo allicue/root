@@ -1,14 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import DeleteAccountConfirm from './DeleteAccountConfirm/DeleteAccountConfirm'
 import Layout from '../../components/shared/Layout/Layout';
 import LogoBanner from '../../components/shared/LogoBanner/LogoBanner';
 import { updateUser, deleteUser, getUser } from '../../services/users';
+import { LoggedInUserContext } from '../../components/LoggedInUser/LoggedInUserContext'
 import './ManageAccount.css';
 
 export default function ManageAccount(props) {
   const [updated, setUpdated] = useState(false)
   const [showImageInput, setShowImageInput] = useState(false)
   const [deleteConfirm, setDeleteConfirm] = useState(false)
+  const [loggedInUser] = useContext(LoggedInUserContext)
+
+
   const [user, setUser] = useState({
     name: '',
     email:'',
@@ -18,13 +22,13 @@ export default function ManageAccount(props) {
   });
 
   // Temporary ID to test CRUD 
-  // Will take signedInUser.id state when user sign-in is implemented
-  let tempID = "5fa0ccb0866ce63d74fd66d1"
+  // Will take signedInUser._id state when user sign-in is implemented
+  let userID = loggedInUser._id
 
 
   useEffect(() => {
     const fetchUser = async () => {
-      const user = await getUser(tempID);
+      const user = await getUser(userID);
       setUser(user)
     }
     fetchUser(user);
@@ -40,7 +44,7 @@ export default function ManageAccount(props) {
 
   const handleSubmit = async (e) => {
     e.preventDefault(); 
-    await updateUser(tempID, user)
+    await updateUser(userID, user)
     setUpdated(!updated)
   }
 
@@ -58,7 +62,7 @@ export default function ManageAccount(props) {
       <Layout>
         <LogoBanner title="Manage Your Account" />
         <div className="manage-account-main">
-          {deleteConfirm ? <DeleteAccountConfirm id={tempID} setDeleteConfirm={setDeleteConfirm}/> : <></>}
+          {deleteConfirm ? <DeleteAccountConfirm id={userID} setDeleteConfirm={setDeleteConfirm}/> : <></>}
           <div className="user-image-parent">
             <img className="user-photo" src ={ user.imgURL } />
             <p className="toggle-input-img" onClick={handleImageSelect}>Edit</p>

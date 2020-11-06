@@ -1,10 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 import Ul from "./Ul";
 import { onResize } from "../../../utils/helpers";
+import { LoggedInUserContext } from '../../LoggedInUser/LoggedInUserContext'
 
-function Header({ open, setOpen, loggedInUser }) {
+function Header({ open, setOpen }) {
+  const [loggedInUser] = useContext(LoggedInUserContext)
+
   useEffect(() => {
     onResize();
     window.addEventListener("resize", onResize);
@@ -33,7 +36,7 @@ function Header({ open, setOpen, loggedInUser }) {
         <Link to="/manage-your-account">
           <img
             className="profile-pic"
-            src={loggedInUser.imgURL}
+            src={loggedInUser?.imgURL}
             alt="User"
           />
         </Link>
