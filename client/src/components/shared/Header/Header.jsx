@@ -167,7 +167,13 @@ function Header({ open, setOpen }) {
                 className="header-link"
                 id="link-account"
               >
-                <div id="header-span"> Account </div>
+                <div className="dropdown-container" id="header-span"> 
+                  <button>Account</button>
+                  <div className='menu'>
+                    <Link to="login">LOGIN/ REGISTER</Link>
+                    <Link to="manage-your-account">MANAGE ACCOUNT</Link>
+                  </div>
+                </div>
               </Link>
             ) : (
               <Link
