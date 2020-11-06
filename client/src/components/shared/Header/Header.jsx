@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from "react";
+import React, { useEffect, useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 import Ul from "./Ul";
@@ -20,6 +20,10 @@ function Header({ open, setOpen }) {
       ? (document.body.style.overflow = "hidden")
       : (document.body.style.overflow = "auto");
   }, [open]);
+
+  //DROPDOWN CODE//
+  const [openDropdown, setOpenDropdown] = useState(false)
+  const handleMouseOver = () => setOpenDropdown(!openDropdown)
 
   return (
     <header className="header">
@@ -167,10 +171,20 @@ function Header({ open, setOpen }) {
                 className="header-link"
                 id="link-account"
               >
-                <div id="header-span"> Account </div>
+                <div className="dropdown-container" id="header-span"> 
+                  <Link className="header-link header-span" id='header-account-link' onMouseOver={handleMouseOver}>Account</Link>
+                  {openDropdown ?
+                    <div className='dropdownmenu'>
+                    <Link className="dropdown-item header-span" to="login">LOGIN/ REGISTER</Link>
+                    <Link className="dropdown-item header-span" to="manage-your-account">MANAGE ACCOUNT</Link>
+                  </div>
+                  :
+                  <></>
+                  }
+                </div>
               </Link>
             ) : (
-              <Link
+              < Link
                 to="manage-your-account"
                 className="header-link"
                 id="link-account"
@@ -179,9 +193,10 @@ function Header({ open, setOpen }) {
                   className="burger-image manage-account"
                   src="https://i.imgur.com/rHmqcSX.png"
                   alt="Manage Your Account Icon"
-                />
+                  />
+                  
                 <div id="header-span"> Manage Account </div>
-              </Link>
+              </Link> 
             )}
           </li>
         </div>

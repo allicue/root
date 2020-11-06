@@ -36,7 +36,6 @@ const Form = styled.form`
   .email-label {
     right: 20px;
     margin-right: 20px;
-
   }
 
   .password-label {
@@ -109,20 +108,23 @@ const Form = styled.form`
     text-align: center;
     margin-top: 81px;
   }
-.already{
-  display: flex;
+  .already {
+    display: flex;
     flex-direction: row;
     align-items: center;
     font-family: "Montserrat", sans-serif;
     font-size: 24px;
     font-weight: 500;
     text-align: center;
-}
+  }
   span {
     color: #82a1ab;
   }
   span:hover {
     cursor: pointer;
+    text-decoration: underline;
+    text-decoration-color: #82a1ab;
+    text-decoration-thickness: 0.099rem;
   }
   .checkbox {
     width: 40px;
@@ -247,13 +249,15 @@ const Form = styled.form`
     .username,
     .email-label,
     .password-label,
-    .zipcode-label {
+    .zipcode-label,
+    .image-label {
       display: none;
     }
-    .take-me-back{
+
+    .take-me-back {
       display: none;
     }
-    .create-button{
+    .create-button {
       box-shadow: none;
       text-transform: capitalize;
     }
