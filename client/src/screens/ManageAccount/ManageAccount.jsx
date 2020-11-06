@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
+import {Redirect} from 'react-router-dom'
 import DeleteAccountConfirm from './DeleteAccountConfirm/DeleteAccountConfirm'
 import Layout from '../../components/shared/Layout/Layout';
 import LogoBanner from '../../components/shared/LogoBanner/LogoBanner';
@@ -9,6 +10,7 @@ import './ManageAccount.css';
 export default function ManageAccount(props) {
   const [updated, setUpdated] = useState(false)
   const [showImageInput, setShowImageInput] = useState(false)
+  const [managed, setManaged] = useState(false)
   const [deleteConfirm, setDeleteConfirm] = useState(false)
   const [loggedInUser] = useContext(LoggedInUserContext)
 
@@ -42,6 +44,7 @@ export default function ManageAccount(props) {
     e.preventDefault(); 
     await updateUser(userID, user)
     setUpdated(!updated)
+    setManaged(true)
   }
 
   const handleClick = (e) => {
@@ -51,6 +54,10 @@ export default function ManageAccount(props) {
 
   const handleImageSelect = () => {
     setShowImageInput(!showImageInput)
+  }
+
+  if (managed) {
+    return <Redirect to={"/profile"} />
   }
 
   return (
@@ -65,7 +72,7 @@ export default function ManageAccount(props) {
           </div>
           <form className="manage-account-form" onSubmit={handleSubmit}>
             <div className="inline-input-field">
-              <label className="manage-label" htmlFor="name">NAME</label>
+              <label className="label-manage-account" htmlFor="name">Name</label>
               <input
                 className="manage-account-input"
                 type="text"
@@ -77,7 +84,7 @@ export default function ManageAccount(props) {
             </div>
             <div
               className="inline-input-field">
-              <label htmlFor="email">EMAIL</label>
+              <label  className="label-manage-account" htmlFor="email">Email</label>
               <input
                 className="manage-account-input"
                 type="text"
@@ -89,8 +96,8 @@ export default function ManageAccount(props) {
                 />
             </div>
             <div className="inline-input-field">
-              <div id="password-left">
-              <label htmlFor="password">PASSWORD</label>
+              
+              <label  className="label-manage-account" htmlFor="password">PASSWORD</label>
               <input
                 className="manage-account-input"
                 id="password-manage-account"
@@ -100,10 +107,10 @@ export default function ManageAccount(props) {
                 onChange={handleChange}
                 required
                 />
-                </div>
+            
             </div>
             <div className="inline-input-field">
-              <label className="label-manage-account"  htmlFor="zipcode" id="zip-code">ZIP CODE</label>
+              <label className="label-manage-account"  htmlFor="zipcode" id="zip-code">Zip Code</label>
               <input
                 className="manage-account-input"
                 type="text"
@@ -115,7 +122,7 @@ export default function ManageAccount(props) {
             </div>
             {showImageInput ?
               <div className="inline-input-field">
-                <label htmlFor="imgURL">IMAGE URL</label>
+                <label className="label-manage-account" htmlFor="imgURL">Image URL</label>
                 <input
                   className="manage-account-input"
                   type="text"
@@ -126,8 +133,8 @@ export default function ManageAccount(props) {
                 />
               </div> : <></>}
             <div className="edit-buttons-container">
-              <button type="submit" className="changes-button" id="save-changes">SAVE CHANGES</button>
-              <button onClick={handleClick}className="changes-button" id="delete-account">DELETE ACCOUNT</button>
+              <button type="submit" className="changes-button" id="save-changes">Save Changes</button>
+              <button onClick={handleClick}className="changes-button" id="delete-account">Delete Account</button>
             </div>
           </form>
         </div>
