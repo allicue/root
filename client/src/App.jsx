@@ -7,12 +7,13 @@ import ManageTransportationTypes from './screens/ManageTransportationType/Manage
 import AddTransportationType from './screens/AddTransportationType/AddTransportationType.jsx';
 import SanFranPolicy from './screens/SanFranPolicy/SanFranPolicy'
 import PlanRoute from './screens/PlanRoute/PlanRoute';
-import Error from './screens/Error/Error'
-import CreateAccount from './screens/CreateAccount/CreateAccount'
+import Error from './screens/Error/Error';
+import Profile from './screens/Profile/Profile';
+import CreateAccount from './screens/CreateAccount/CreateAccount';
 import ManageAccount from './screens/ManageAccount/ManageAccount';
-import Sad from './screens/SadToSeeYouGo/:(.jsx'
+import Sad from './screens/SadToSeeYouGo/:(.jsx';
 import Login from './screens/Login/Login';
-import { LoggedInUserProvider } from './components/LoggedInUser/LoggedInUserContext'
+import { LoggedInUserProvider } from './components/LoggedInUser/LoggedInUserContext';
 
 
 function App() {
@@ -28,10 +29,10 @@ function App() {
         <Route exact path='/add-transportation-type' component={AddTransportationType} />
         <Route exact path='/plan-your-route' component={PlanRoute} />
         <Route path='/create-your-account' exact component={CreateAccount} />
-        <Route exact path='/sad-to-see-you-go'  component={Sad} />
-        <Route exact path='/manage-your-account'  component={ManageAccount} />
-          
-          <Route path="/login" exact component={Login}/>
+        <Route exact path='/sad-to-see-you-go' component={Sad} />
+        <Route exact path='/manage-your-account' component={ManageAccount} />
+        <Route path='/profile' component={Profile} />
+        <Route path="/login" exact component={Login} />
         <Route component={Error} /> {/* keep this the lowest route */}
       </Switch>
     </LoggedInUserProvider>

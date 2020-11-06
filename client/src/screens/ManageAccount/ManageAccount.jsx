@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
+import {Redirect} from 'react-router-dom'
 import DeleteAccountConfirm from './DeleteAccountConfirm/DeleteAccountConfirm'
 import Layout from '../../components/shared/Layout/Layout';
 import LogoBanner from '../../components/shared/LogoBanner/LogoBanner';
@@ -9,6 +10,7 @@ import './ManageAccount.css';
 export default function ManageAccount(props) {
   const [updated, setUpdated] = useState(false)
   const [showImageInput, setShowImageInput] = useState(false)
+  const [managed, setManaged] = useState(false)
   const [deleteConfirm, setDeleteConfirm] = useState(false)
   const [loggedInUser] = useContext(LoggedInUserContext)
 
@@ -46,6 +48,7 @@ export default function ManageAccount(props) {
     e.preventDefault(); 
     await updateUser(userID, user)
     setUpdated(!updated)
+    setManaged(true)
   }
 
   const handleClick = (e) => {
@@ -55,6 +58,10 @@ export default function ManageAccount(props) {
 
   const handleImageSelect = () => {
     setShowImageInput(!showImageInput)
+  }
+
+  if (managed) {
+    return <Redirect to={"/profile"} />
   }
 
   return (
