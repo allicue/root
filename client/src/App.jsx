@@ -12,6 +12,7 @@ import CreateAccount from './screens/CreateAccount/CreateAccount'
 import ManageAccount from './screens/ManageAccount/ManageAccount';
 import Sad from './screens/SadToSeeYouGo/:(.jsx'
 import Login from './screens/Login/Login';
+import AccountConfirm from './screens/AccountConfirm/AccountConfirm'
 import { LoggedInUserProvider } from './components/LoggedInUser/LoggedInUserContext'
 
 
@@ -20,6 +21,7 @@ function App() {
   return (
     <LoggedInUserProvider>
       <Switch>
+        <Route path='/account-confirm' component={AccountConfirm}/>
         <Route exact path='/policies-and-initiatives' component={PoliciesInitiatives} />
         <Route exact path='/san-fransisco' component={SanFranPolicy} />
         <Route exact path="/" component={Home} />
