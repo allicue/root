@@ -45,7 +45,8 @@ a {
 
   .user-picture:hover{
     cursor: pointer;
-    box-shadow: 2px 2px 2px 2px #999;
+    background: #999;
+    border: 2px solid #999;
     transform: scale(1.000)
   }
 

@@ -44,8 +44,11 @@ const Form = styled.form`
   }
 
   .image-label {
-    margin-right: -40px;
-    left: -70px;
+    /* margin-right: -40px;
+    left: -70px; */
+    margin-right: 20px;
+    left: -15px;
+}
   }
   .zipcode-label {
     margin-right: -20px;

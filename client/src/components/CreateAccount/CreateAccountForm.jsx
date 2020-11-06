@@ -134,12 +134,12 @@ function CreateAccountForm(props) {
 
         <div>
           <label className="image-label" for="imgURL">
-            IMAGE URL
+            IMAGE
           </label>
           <input
             className="account-input"
             name="imgURL"
-            placeholder="Image URL"
+            placeholder="Enter image URL"
             required
             value={user.imgURL}
             autoFocus
