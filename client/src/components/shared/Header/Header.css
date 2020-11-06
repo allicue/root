@@ -71,8 +71,24 @@
 .header-image {
   height: 100px;
   width: 100px;
+
 }
 
+.header-image2 {
+  z-index: 1;
+  height: 100px;
+  width: 100px;
+  position: absolute;
+}
+
+.header-image-user{
+  border-radius: 50%;
+  max-width: 70px;
+  max-height: 70px;
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-left: 15px;
+}
 .burger-image {
   display: none;
 }
@@ -139,6 +155,10 @@
     display: none;
   }
   
+  .header-image-user{
+    display: none;
+  }
+
   .header-home{
     margin-top: -250px;
     margin-right: 90px;
@@ -177,6 +197,7 @@
     max-width: 50px;
     background-color: #999;
     border-radius: 50%;
+    
   }
   .root-image {
     display: block;

@@ -111,7 +111,11 @@ function Header({ open, setOpen }) {
           {Object.keys(loggedInUser).length !== 0 ? (
             <Link to="/manage-your-account">
               <img
-                className="header-image"
+                className="header-image2"
+                src="https://i.imgur.com/gC1ttIE.png"
+              alt="Root Logo Primary"/>
+              <img
+                className="header-image-user"
                 src={loggedInUser?.imgURL}
                 alt="User"
               />
