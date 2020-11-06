@@ -193,8 +193,6 @@ const StyledSanFran = styled.div`
       width: 400px;
     }
 
-
-
     .box-text-container {
       width: 70vw;
       max-height: 20vh;
@@ -242,6 +240,7 @@ const StyledSanFran = styled.div`
       margin-right: auto;
       margin-left: 8px;
     }
+
     .mobile-image {
       display: flex;
       max-width: 4rem;
@@ -259,6 +258,7 @@ const StyledSanFran = styled.div`
       white-space: nowrap;
       margin: 5px auto;
     }
+
     span {
       display: flex;
       color: #3d3d3d;
@@ -272,10 +272,12 @@ const StyledSanFran = styled.div`
       text-decoration-color: #759f5c;
       text-decoration-thickness: 0.1rem;
     }
+
     .wrapper {
       display: flex;
       flex-direction: column-reverse;
     }
+
     .box-text-container {
       background: #fff;
       overflow-y: elipsis;
@@ -285,9 +287,11 @@ const StyledSanFran = styled.div`
       margin-bottom: 20px;
       margin-left: 20px;
     }
+
     .box-text {
       display: none;
     }
+
     .box-text-mobile {
       display: flex;
       color: #3d3d3d;
@@ -300,14 +304,16 @@ const StyledSanFran = styled.div`
       margin: 16px 19px 16px 19px;
     }
 
-    .content-container-mobile{
+    .content-container-mobile {
       display: flex;
       flex-flow: row nowrap;
       margin: 16px 19px 16px 19px;
     }
+
     .content-image {
       display: none;
     }
+
     .input-container {
       display: none;
     }

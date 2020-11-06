@@ -14,15 +14,15 @@ function CreateAccountForm(props) {
   `;
 
   const P = styled.p`
-      width: 50%;
-      white-space: wrap;
-      margin: 0 auto;
+    width: 50%;
+    white-space: wrap;
+    margin: 0 auto;
 
-      @media screen  and (max-width: 500px){
-        width: 100%;
+    @media screen and (max-width: 500px) {
+      width: 100%;
       white-space: nowrap;
-      }
-  `
+    }
+  `;
 
   const [user, setUser] = useState({
     name: "",
@@ -49,7 +49,7 @@ function CreateAccountForm(props) {
   };
 
   if (isCreated) {
-    alert(`Welcome to ROOT, ${user.name}!`)
+    alert(`Welcome to ROOT, ${user.name}!`);
     return <Redirect to={"/"} />;
   }
 
@@ -57,17 +57,22 @@ function CreateAccountForm(props) {
     <>
       <div className="picture-container">
         {props.imagePreview === "" ? (
-          <div onClick={() => props.setImagePreview(user.imgURL)} className="user-picture"> </div>
+          <div
+            onClick={() => props.setImagePreview(user.imgURL)}
+            className="user-picture"
+          >
+            {" "}
+          </div>
         ) : (
-          <ImagePreview src={props.imagePreview} alt="Error: Invalid Image URL" />
+          <ImagePreview
+            src={props.imagePreview}
+            alt="Error: Invalid Image URL"
+          />
         )}
         <div className="add-image">
-        <P
-          onClick={() => props.setImagePreview(user.imgURL)}
-        >
-            Preview
-            image
-        </P>
+          <P onClick={() => props.setImagePreview(user.imgURL)}>
+            Preview image
+          </P>
         </div>
       </div>
       <Form onSubmit={handleSubmit}>
@@ -164,9 +169,15 @@ function CreateAccountForm(props) {
             </Link>
             <button className="create-button">Create Account</button>
           </div>
-            <div className="already">
-          <p>  Already have an account? <Link to="/login"><span>Log in</span> </Link></p>
-           </div>
+          <div className="already">
+            <p>
+              {" "}
+              Already have an account?{" "}
+              <Link to="/login">
+                <span>Log in</span>{" "}
+              </Link>
+            </p>
+          </div>
         </div>
       </Form>
     </>

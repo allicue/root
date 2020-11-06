@@ -44,12 +44,10 @@ const Form = styled.form`
   }
 
   .image-label {
-    /* margin-right: -40px;
-    left: -70px; */
     margin-right: 20px;
     left: -15px;
-}
   }
+
   .zipcode-label {
     margin-right: -20px;
     left: -50px;
@@ -111,6 +109,7 @@ const Form = styled.form`
     text-align: center;
     margin-top: 81px;
   }
+
   .already {
     display: flex;
     flex-direction: row;
@@ -120,30 +119,34 @@ const Form = styled.form`
     font-weight: 500;
     text-align: center;
   }
+
   span {
     color: #82a1ab;
   }
+
   span:hover {
     cursor: pointer;
     text-decoration: underline;
     text-decoration-color: #82a1ab;
     text-decoration-thickness: 0.099rem;
   }
+
   .checkbox {
     width: 33px;
     border-radius: 5px;
     height: 26px;
     margin-right: 14px;
     align-items: center;
-    -moz-appearance:none;
--webkit-appearance:none;
--o-appearance:none;
-border: 1px solid #000000;
-
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -o-appearance: none;
+    border: 1px solid #000000;
   }
+
   .checkbox:hover {
     cursor: pointer;
   }
+
   .create-button {
     font-family: "Montserrat", sans-serif;
     font-size: 24px;
@@ -185,12 +188,12 @@ border: 1px solid #000000;
   .create-button:hover {
     cursor: pointer;
     box-shadow: 2px 3px 4px 1px #999;
-    transform: scale(1.005)
+    transform: scale(1.005);
   }
   .take-me-back:hover {
     box-shadow: 2px 3px 4px 1px #999;
     cursor: pointer;
-    transform: scale(1.005)
+    transform: scale(1.005);
   }
   .bottom-container {
     position: relative;

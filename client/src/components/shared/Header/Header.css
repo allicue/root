@@ -170,7 +170,7 @@
   margin-top: 55px;
   margin-left: -15px;
   /* width: 100%; */
-  
+
   white-space: nowrap;
 }
 
@@ -210,7 +210,6 @@
     position: relative;
   }
 
-  
   .header-image2 {
     display: none;
   }
