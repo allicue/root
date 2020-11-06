@@ -78,6 +78,7 @@
   z-index: 1;
   height: 100px;
   width: 100px;
+  object-fit: contain;
   position: absolute;
 }
 
@@ -85,8 +86,8 @@
   border-radius: 50%;
   max-width: 70px;
   max-height: 70px;
-  margin: 0 auto;
   margin-top: 15px;
+  object-fit: contain;
   margin-left: 15px;
 }
 .burger-image {

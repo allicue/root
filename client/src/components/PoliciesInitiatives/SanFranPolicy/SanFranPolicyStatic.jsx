@@ -53,8 +53,8 @@ function SanFranPolicyStatic() {
                   </p>
                   <p className="box-text-mobile">
                     Requires that all covered employers offer to their covered
-                    employees at least one commuter benefits option. Read more >
-                  </p>
+                    employees at least one commuter benefits option. 
+                  </p> <span className="box-text-mobile">Read more ></span>
                 </div>
               </div>
 
@@ -88,7 +88,7 @@ function SanFranPolicyStatic() {
                     Owners of commercial buildings must either provide secure
                     bicycle parking or allow tenants to bringtheir bicycles into
                     the building.
-                  </p> <span>Read more ></span>
+                  </p> <span className="box-text-mobile">Read more ></span>
                 </div>
               </div>
 
@@ -121,7 +121,7 @@ function SanFranPolicyStatic() {
                   <p className="box-text-mobile">
                     Supports the evaluation of congestion pricing to develop
                     environmentally beneficial congestion management programs.
-                  </p><span>Read more ></span>
+                  </p><span className="box-text-mobile">Read more ></span>
                 </div>
               </div>
             <p className="get-involved">Get Involved</p>
@@ -154,7 +154,7 @@ function SanFranPolicyStatic() {
                 <p className="box-text-mobile">
                   Urge San Francisco's Retirement Board to stop supporting
                   Occidental Petroleum. 
-                </p><span>Read more ></span>
+                </p><span className="box-text-mobile">Read more ></span>
               </div>
             </div>
             </div>
