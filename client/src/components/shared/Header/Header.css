@@ -81,6 +81,7 @@
   display: none;
   max-height: 45px;
 }
+
 .root-image2{
   display:none;
   max-height: 55px;
@@ -89,19 +90,46 @@
   position: fixed;
   top: 10px;
 }
+
 .profile-pic{
   display: none;
 }
+
 .userpic-container{
   position: fixed;
   top: 17px;
   right: 5px;
 }
+
 .root-image-container{
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+.dropdownmenu {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  background-color: white;
+  position: fixed;
+  margin-top: 55px;
+  margin-left: -15px;
+  width: 100%;
+}
+
+.dropdown-item {
+  display: flex;
+  text-decoration: none;
+  color: #3d3d3d;
+  margin: 25px 10px 25px 15px;
+}
+
+#header-account-link:hover {
+  margin-bottom: 0px;
+}
+
+
 @media (max-width: 500px) {
 .header {
   padding: initial;
@@ -141,7 +169,6 @@
   .header-link {
     font-size: 16px;
     text-decoration: none;
-    /* max-width: 210px; */
     padding: initial;
   }
 
