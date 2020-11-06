@@ -9,7 +9,6 @@ const Ul = styled.ul`
   
   li {
     text-transform: uppercase;
-    // HIIII
   }
   
   @media (max-width: 500px) {

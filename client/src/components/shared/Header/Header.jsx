@@ -170,7 +170,7 @@ function Header({ open, setOpen }) {
                 <div id="header-span"> Account </div>
               </Link>
             ) : (
-              <Link
+              < Link
                 to="manage-your-account"
                 className="header-link"
                 id="link-account"
@@ -179,9 +179,10 @@ function Header({ open, setOpen }) {
                   className="burger-image manage-account"
                   src="https://i.imgur.com/rHmqcSX.png"
                   alt="Manage Your Account Icon"
-                />
+                  />
+                  
                 <div id="header-span"> Manage Account </div>
-              </Link>
+              </Link> 
             )}
           </li>
         </div>
