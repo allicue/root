@@ -30,9 +30,8 @@ function App() {
         <Route path='/create-your-account' exact component={CreateAccount} />
         <Route exact path='/sad-to-see-you-go'  component={Sad} />
         <Route exact path='/manage-your-account'  component={ManageAccount} />
-          
           <Route path="/login" exact component={Login}/>
-        <Route component={Error} /> {/* keep this the lowest route */}
+        <Route component={Error} /> 
       </Switch>
     </LoggedInUserProvider>
   );

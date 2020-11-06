@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledError = styled.div`
+const Styled = styled.div`
 display: flex;
 flex-direction: column;
 font-family: 'Montserrat', sans serif;
@@ -55,4 +55,4 @@ img {
 }
 `
 
-export default StyledError;
+export default Styled;
