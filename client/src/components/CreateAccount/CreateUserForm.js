@@ -177,12 +177,12 @@ const Form = styled.form`
   .create-button:hover {
     cursor: pointer;
     box-shadow: 2px 3px 4px 1px #999;
-    text-shadow: 2px 2px 5px rgb(54, 54, 54);
+    transform: scale(1.005)
   }
   .take-me-back:hover {
     box-shadow: 2px 3px 4px 1px #999;
-    text-shadow: 2px 2px 5px #999;
     cursor: pointer;
+    transform: scale(1.005)
   }
   .bottom-container {
     position: relative;
