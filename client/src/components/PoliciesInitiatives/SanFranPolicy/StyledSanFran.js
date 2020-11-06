@@ -250,17 +250,17 @@ const StyledSanFran = styled.div`
       white-space: nowrap;
       margin: 5px auto;
     }
-    span{
+    span {
       display: flex;
       color: #3d3d3d;
       margin-top: 10px;
       white-space: nowrap;
-        }    
-        span:hover{
+    }
+    span:hover {
       cursor: pointer;
       text-decoration: underline;
       text-decoration-color: #759f5c;
-      text-decoration-thickness: 0.100rem;
+      text-decoration-thickness: 0.1rem;
     }
     .wrapper {
       display: flex;
