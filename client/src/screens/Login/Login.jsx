@@ -94,7 +94,7 @@ function Login() {
               />
             </div>
             <div className="login-div-button">
-              <button type="submit" className="login-button">Log in</button>
+              <button type="submit" className="login-button">Log In</button>
             </div>
           </form>
         </div>
