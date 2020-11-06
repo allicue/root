@@ -45,6 +45,8 @@ a {
 
   .user-picture:hover{
     cursor: pointer;
+    box-shadow: 2px 2px 2px 2px #999;
+    transform: scale(1.000)
   }
 
 .add-image{
@@ -52,7 +54,6 @@ a {
 }
 .add-image:hover{
   cursor: pointer;
-  text-shadow: 1px 2px #999;
 }
 
 .middle-container {

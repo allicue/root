@@ -57,13 +57,12 @@ function CreateAccountForm(props) {
     <>
       <div className="picture-container">
         {props.imagePreview === "" ? (
-          <div className="user-picture"> </div>
+          <div onClick={() => props.setImagePreview(user.imgURL)} className="user-picture"> </div>
         ) : (
           <ImagePreview src={props.imagePreview} alt="Error: Invalid Image URL" />
         )}
         <div className="add-image">
         <P
-          className=""
           onClick={() => props.setImagePreview(user.imgURL)}
         >
             Preview
