@@ -130,11 +130,16 @@ const Form = styled.form`
     text-decoration-thickness: 0.099rem;
   }
   .checkbox {
-    width: 40px;
+    width: 33px;
     border-radius: 5px;
-    height: 36px;
+    height: 26px;
     margin-right: 14px;
     align-items: center;
+    -moz-appearance:none;
+-webkit-appearance:none;
+-o-appearance:none;
+border: 1px solid #000000;
+
   }
   .checkbox:hover {
     cursor: pointer;
