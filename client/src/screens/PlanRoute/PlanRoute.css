@@ -4,10 +4,11 @@
   color: #3d3d3d;
 }
 
-
 .plan-form-container {
+  width: 80%;
   display: flex;
-  justify-content: center;
+  margin: 0 auto;
+  justify-content: space-between;
 }
 
 .column-a {
@@ -16,14 +17,24 @@
   align-content: left;
 }
 
+.column-b {
+  display: flex;
+  flex-direction: column;
+  align-content: right;
+}
+
 .breadcrumb-plan-container {
-  margin-left: -8.5vw;
+  margin-left: -10.0vw;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
 
 .plan-form {
   display: flex;
   flex-direction: column;
   margin-top: 50px;
+  margin-left: -10px;
 }
 
 .plan-input {
@@ -136,6 +147,10 @@
   .breadcrumb-plan-container {
     display: none;
     text-align: center;
+  }
+
+  .plan-form-container {
+    width: 100%;
   }
 
   .plan-header-mobile {

@@ -3,6 +3,7 @@ import ClockIcon from '../../Assets/Icons/ROOT_Time.png';
 import LeafIcon from '../../Assets/Icons/ROOT_Leaf.png';
 import LogoBanner from '../../components/shared/LogoBanner/LogoBanner';
 import Layout from '../../components/shared/Layout/Layout';
+import PlanRouteStyled from './PlanRouteStyled';
 import MapPin from '../../Assets/Icons/ROOT_MapPin-17.png';
 import WorldImg from '../../Assets/Images/Hi-Res/Frame_16.png';
 import './PlanRoute.css';
@@ -11,12 +12,15 @@ function PlanRoute(props) {
   return (
     <Layout>
       <div className="plan-route-page">
+      
         <div className="plan-form-container">
           <div className="column-a">
-            <div className="breadcrumb-plan-container">
-              <LogoBanner title="Plan Your Route" />
-            </div>
-
+            <PlanRouteStyled>
+              <div className="breadcrumb-plan-container">
+                <LogoBanner title="Plan Your Route" />
+              </div>
+            </PlanRouteStyled>
+            
             <div className="plan-header-mobile">Plan Your Route</div>
             
             <form className="plan-form">
@@ -25,7 +29,7 @@ function PlanRoute(props) {
                 <img src={MapPin} className="location-icon" alt="map-pin" />
               </div>
 
-            <input className="plan-input plan-input-a" placeholder="The Metropolitan Museum of Art (MET)"></input>
+            <input className="plan-input plan-input-a" placeholder="Destination"></input>
             <input className="plan-input plan-input-b" placeholder="Destination"></input>
             <button className="plan-button">Find my route options!</button>
             </form>
