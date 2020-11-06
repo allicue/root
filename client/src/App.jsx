@@ -10,7 +10,7 @@ import PlanRoute from './screens/PlanRoute/PlanRoute';
 import Error from './screens/Error/Error'
 import CreateAccount from './screens/CreateAccount/CreateAccount'
 import ManageAccount from './screens/ManageAccount/ManageAccount';
-import Sad from './screens/SadToSeeYouGo/:(.jsx'
+import Sad from './screens/SadToSeeYouGo/SadToSeeYouGo'
 import Login from './screens/Login/Login';
 import AccountConfirm from './screens/AccountConfirm/AccountConfirm'
 import { LoggedInUserProvider } from './components/LoggedInUser/LoggedInUserContext'
@@ -32,9 +32,8 @@ function App() {
         <Route path='/create-your-account' exact component={CreateAccount} />
         <Route exact path='/sad-to-see-you-go'  component={Sad} />
         <Route exact path='/manage-your-account'  component={ManageAccount} />
-          
           <Route path="/login" exact component={Login}/>
-        <Route component={Error} /> {/* keep this the lowest route */}
+        <Route component={Error} /> 
       </Switch>
     </LoggedInUserProvider>
   );
