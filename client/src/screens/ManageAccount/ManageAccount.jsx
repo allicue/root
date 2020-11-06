@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import DeleteAccountConfirm from './DeleteAccountConfirm/DeleteAccountConfirm'
 import Layout from '../../components/shared/Layout/Layout';
 import LogoBanner from '../../components/shared/LogoBanner/LogoBanner';
-import { updateUser, deleteUser, getUser } from '../../services/users';
+import { updateUser, getUser } from '../../services/users';
 import { LoggedInUserContext } from '../../components/LoggedInUser/LoggedInUserContext'
 import './ManageAccount.css';
 
@@ -12,7 +12,6 @@ export default function ManageAccount(props) {
   const [deleteConfirm, setDeleteConfirm] = useState(false)
   const [loggedInUser] = useContext(LoggedInUserContext)
 
-
   const [user, setUser] = useState({
     name: '',
     email:'',
@@ -21,10 +20,7 @@ export default function ManageAccount(props) {
     zipcode:''
   });
 
-  // Temporary ID to test CRUD 
-  // Will take signedInUser._id state when user sign-in is implemented
   let userID = loggedInUser._id
-
 
   useEffect(() => {
     const fetchUser = async () => {

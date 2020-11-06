@@ -10,7 +10,7 @@ import PlanRoute from './screens/PlanRoute/PlanRoute';
 import Error from './screens/Error/Error'
 import CreateAccount from './screens/CreateAccount/CreateAccount'
 import ManageAccount from './screens/ManageAccount/ManageAccount';
-import Sad from './screens/SadToSeeYouGo/:(.jsx'
+import Sad from './screens/SadToSeeYouGo/SadToSeeYouGo'
 import Login from './screens/Login/Login';
 import { LoggedInUserProvider } from './components/LoggedInUser/LoggedInUserContext'
 

@@ -217,7 +217,7 @@ const StyledSanFran = styled.div`
     display: flex;
     flex-direction: column;
     width: 110vw;
-          font-size: 38px;
+          font-size: 24px;
           margin: 0 auto;
   }
   .in-works{
