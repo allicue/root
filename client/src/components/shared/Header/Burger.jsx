@@ -13,7 +13,8 @@ const StyledBurger = styled.div`
   margin-left: 20px;
   
   &:hover {
-    cursor: pointer;
+    cursor: pointer;  
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   }
 
   @media (max-width: 500px) {
@@ -25,7 +26,7 @@ const StyledBurger = styled.div`
     width: 2.4rem;
     height: 0.2rem;
     background-color: #3d3d3d;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    /* box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25); */
   }
 `;
 
