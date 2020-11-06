@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import "./Header.css";
 import Ul from "./Ul";
 import { onResize } from "../../../utils/helpers";
-import { LoggedInUserContext } from '../../LoggedInUser/LoggedInUserContext'
+import { LoggedInUserContext } from "../../LoggedInUser/LoggedInUserContext";
 
 function Header({ open, setOpen }) {
-  const [loggedInUser] = useContext(LoggedInUserContext)
+  const [loggedInUser] = useContext(LoggedInUserContext);
 
   useEffect(() => {
     onResize();
@@ -32,15 +32,28 @@ function Header({ open, setOpen }) {
           />
         </Link>
       </div>
-      <div className="userpic-container">
-        <Link to="/manage-your-account">
-          <img
-            className="profile-pic"
-            src={loggedInUser?.imgURL}
-            alt="User"
-          />
+      {Object.keys(loggedInUser).length !== 0 ? (
+        <div className="userpic-container">
+          <Link to="/manage-your-account">
+            <img
+              className="profile-pic"
+              src={loggedInUser?.imgURL}
+              alt="User"
+            />
+          </Link>
+        </div>
+      ) : (
+        <Link to="/login">
+          <div className="userpic-container">
+            <img
+              className="profile-pic"
+                src="https://i.imgur.com/thepnzF.png"
+              alt="User profile"
+            />
+          </div>
         </Link>
-      </div>
+      )}
+
       <Ul id="menu" className="menu" open={open}>
         <div className="header-link-container" id="header-home">
           <li>
@@ -74,29 +87,47 @@ function Header({ open, setOpen }) {
         </div>
         <div className="header-link-container" id="header-transport">
           <li>
-            <Link to="/transportation-types" className="header-link" id="link-transport">
+            <Link
+              to="/transportation-types"
+              className="header-link"
+              id="link-transport"
+            >
               <img
                 className="burger-image leaf"
                 src="https://i.imgur.com/aqpyzDP.png"
                 alt="Leaf Icon"
               />
               <div className="header-span">
-                {" "}
-                Climate Impact By <br></br> Transportation Type{" "}
+                Climate Impact By <br></br> Transportation Type
               </div>
             </Link>
           </li>
         </div>
         <div>
-          <img
-            className="header-image"
-            src="https://i.imgur.com/thepnzF.png"
-            alt="user profile"
-          />
+          {Object.keys(loggedInUser).length !== 0 ? (
+            <Link to="/manage-your-account">
+              <img
+                className="header-image"
+                src={loggedInUser?.imgURL}
+                alt="User"
+              />
+            </Link>
+          ) : (
+            <Link to="/login">
+              <img
+                className="header-image"
+                src="https://i.imgur.com/thepnzF.png"
+              alt="Root Logo Primary"/>
+            </Link>
+          )}
         </div>
         <div className="header-link-container" id="header-polices">
           <li>
-            <Link to="/policies-and-initiatives" className="header-link" id="link-polices">
+            <Link
+              to="/policies-and-initiatives"
+              className="header-link"
+              id="link-polices"
+            >
               <img
                 className="burger-image leaf"
                 src="https://i.imgur.com/g8kmLXl.png"
@@ -117,35 +148,41 @@ function Header({ open, setOpen }) {
               {!open ? (
                 <>
                   <div className="header-span">
-                    {" "}
-                    Community <br></br> + Advocacy{" "}
+                    Community <br></br> + Advocacy
                   </div>
                 </>
               ) : (
-                  <div className="header-span">
-                    {" "}
-                    <>Community/Advocacy</>{" "}
-                  </div>
-                )}
+                <div className="header-span">
+                  <>Community/Advocacy</>
+                </div>
+              )}
             </Link>
           </li>
         </div>
         <div className="header-link-container" id="header-account">
           <li>
             {!open ? (
-              <Link to="create-your-account" className="header-link" id="link-account">
+              <Link
+                to="create-your-account"
+                className="header-link"
+                id="link-account"
+              >
                 <div id="header-span"> Account </div>
               </Link>
             ) : (
-                <Link to="manage-your-account" className="header-link" id="link-account">
-                  <img
-                    className="burger-image manage-account"
-                    src="https://i.imgur.com/rHmqcSX.png"
-                    alt="Manage Your Account Icon"
-                  />
-                  <div id="header-span"> Manage Account </div>
-                </Link>
-              )}
+              <Link
+                to="manage-your-account"
+                className="header-link"
+                id="link-account"
+              >
+                <img
+                  className="burger-image manage-account"
+                  src="https://i.imgur.com/rHmqcSX.png"
+                  alt="Manage Your Account Icon"
+                />
+                <div id="header-span"> Manage Account </div>
+              </Link>
+            )}
           </li>
         </div>
       </Ul>
