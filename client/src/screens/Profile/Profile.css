@@ -1,0 +1,55 @@
+.profile-title-info {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  margin-top: 40px;
+}
+
+.profile-content {
+display: flex;
+}
+
+#profile-policies {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: url(https://i.imgur.com/jkMuMqO.png);
+  background-size: 100%;
+  height: 200px;
+  margin: 20px;
+  width: 100%;
+  color: white;
+}
+
+#profile-image {
+  width: 100px;
+  border-radius: 50%;
+}
+
+#profile-community {
+background-color: #3d3d3d;
+color: white;
+}
+
+#community-logo {
+width: 50px;
+}
+
+#community-image {
+  width: 200px;
+}
+
+
+
+
+
+
+@media screen and (max-width: 500px) {
+  #logo-banner {
+    display: none;
+  }
+
+  .profile-title-info {
+    margin-top: 150px;
+  }
+}
