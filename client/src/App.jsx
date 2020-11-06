@@ -10,11 +10,15 @@ import PlanRoute from './screens/PlanRoute/PlanRoute';
 import Error from './screens/Error/Error'
 import CreateAccount from './screens/CreateAccount/CreateAccount'
 import ManageAccount from './screens/ManageAccount/ManageAccount';
+import Sad from './screens/SadToSeeYouGo/:(.jsx'
 import Login from './screens/Login/Login';
+import { LoggedInUserProvider } from './components/LoggedInUser/LoggedInUserContext'
+
 
 function App() {
+
   return (
-    <div>
+    <LoggedInUserProvider>
       <Switch>
         <Route exact path='/policies-and-initiatives' component={PoliciesInitiatives} />
         <Route exact path='/san-fransisco' component={SanFranPolicy} />
@@ -24,11 +28,13 @@ function App() {
         <Route exact path='/add-transportation-type' component={AddTransportationType} />
         <Route exact path='/plan-your-route' component={PlanRoute} />
         <Route path='/create-your-account' exact component={CreateAccount} />
-        <Route path='/manage-your-account' component={ManageAccount} />
-        <Route path="/login" component={Login}/>
+        <Route exact path='/sad-to-see-you-go'  component={Sad} />
+        <Route exact path='/manage-your-account'  component={ManageAccount} />
+          
+          <Route path="/login" exact component={Login}/>
         <Route component={Error} /> {/* keep this the lowest route */}
       </Switch>
-    </div>
+    </LoggedInUserProvider>
   );
 }
 

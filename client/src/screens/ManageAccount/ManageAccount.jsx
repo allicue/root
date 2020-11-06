@@ -1,20 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import DeleteAccountConfirm from './DeleteAccountConfirm/DeleteAccountConfirm'
 import Layout from '../../components/shared/Layout/Layout';
 import LogoBanner from '../../components/shared/LogoBanner/LogoBanner';
 import { updateUser, deleteUser, getUser } from '../../services/users';
+import { LoggedInUserContext } from '../../components/LoggedInUser/LoggedInUserContext'
 import './ManageAccount.css';
 
 export default function ManageAccount(props) {
-  const [updateName, setUpdateName] = useState(false)
-  const [updateEmail, setUpdateEmail] = useState(false)
-  const [updatePassword, setUpdatePassword] = useState(false)
-  const [updateZipCode, setUpdateZipCode] = useState(false)
-  const [updateImgUrl, setUpdateImgUrl] = useState(false)
-  const selectedColor = { backgroundColor: "rgba(117, 159, 92, .5)" }
-
   const [updated, setUpdated] = useState(false)
-  
   const [showImageInput, setShowImageInput] = useState(false)
+  const [deleteConfirm, setDeleteConfirm] = useState(false)
+  const [loggedInUser] = useContext(LoggedInUserContext)
+
+
   const [user, setUser] = useState({
     name: '',
     email:'',
@@ -24,13 +22,13 @@ export default function ManageAccount(props) {
   });
 
   // Temporary ID to test CRUD 
-  // Will take signedInUser.id state when user sign-in is implemented
-  let tempID = "5fa0749a80028c20b7bdac29"
+  // Will take signedInUser._id state when user sign-in is implemented
+  let userID = loggedInUser._id
 
 
   useEffect(() => {
     const fetchUser = async () => {
-      const user = await getUser(tempID);
+      const user = await getUser(userID);
       setUser(user)
     }
     fetchUser(user);
@@ -46,15 +44,17 @@ export default function ManageAccount(props) {
 
   const handleSubmit = async (e) => {
     e.preventDefault(); 
-    await updateUser(tempID, user)
+    await updateUser(userID, user)
     setUpdated(!updated)
+  }
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    setDeleteConfirm(!deleteConfirm)
   }
 
   const handleImageSelect = () => {
     setShowImageInput(!showImageInput)
-    if (showImageInput === true) {
-      setUpdateImgUrl(false)
-    }
   }
 
   return (
@@ -62,6 +62,7 @@ export default function ManageAccount(props) {
       <Layout>
         <LogoBanner title="Manage Your Account" />
         <div className="manage-account-main">
+          {deleteConfirm ? <DeleteAccountConfirm id={userID} setDeleteConfirm={setDeleteConfirm}/> : <></>}
           <div className="user-image-parent">
             <img className="user-photo" src ={ user.imgURL } />
             <p className="toggle-input-img" onClick={handleImageSelect}>Edit</p>
@@ -74,12 +75,9 @@ export default function ManageAccount(props) {
                 type="text"
                 name="name"
                 value={user.name}
-                onChange={updateName ? handleChange : null}
-                style={updateName ? selectedColor : null}
-                placeholder="Enter Username"
+                onChange={handleChange}
                 required
               />
-              <button onClick={() => setUpdateName(!updateName)} className="edit-toggle">Edit</button>
             </div>
             <div
               className="inline-input-field">
@@ -89,13 +87,10 @@ export default function ManageAccount(props) {
                 type="text"
                 name="email"
                 value={user.email}
-                onChange={updateEmail ? handleChange : null}
-                style={updateEmail ? selectedColor : null}
-                placeholder="Enter Email Address"
+                onChange={handleChange}
                 required
               
                 />
-              <button onClick={() => setUpdateEmail(!updateEmail)} className="edit-toggle">Edit</button>
             </div>
             <div className="inline-input-field">
               <div id="password-left">
@@ -106,13 +101,10 @@ export default function ManageAccount(props) {
                 type="password"
                 name="password"
                 value={user.password}
-                onChange={updatePassword ? handleChange : null}
-                style={updatePassword ? selectedColor : null}
-                placeholder="Enter Password"
+                onChange={handleChange}
                 required
                 />
                 </div>
-              <button onClick={() => setUpdatePassword(!updatePassword)}className="edit-toggle">Edit</button>
             </div>
             <div className="inline-input-field">
               <label className="label-manage-account"  htmlFor="zipcode" id="zip-code">ZIP CODE</label>
@@ -120,13 +112,10 @@ export default function ManageAccount(props) {
                 className="manage-account-input"
                 type="text"
                 value={user.zipcode}
-                onChange={updateZipCode ? handleChange : null}
-                style={updateZipCode ? selectedColor : null}
+                onChange={handleChange}
                 name="zipcode"
-                placeholder="enter Zip Code"
                 required
               />
-              <button onClick={() => setUpdateZipCode(!updateZipCode)}className="edit-toggle">Edit</button>
             </div>
             {showImageInput ?
               <div className="inline-input-field">
@@ -136,16 +125,13 @@ export default function ManageAccount(props) {
                   type="text"
                   name="imgURL"
                   value={user.imgURL}
-                  onChange={updateImgUrl ? handleChange : null}
-                  style={updateImgUrl ? selectedColor: null}
-                  placeholder="enter Zip Code"
+                  onChange={handleChange}
                   required
                 />
-                <button onClick={() => setUpdateImgUrl(!updateImgUrl)} className="edit-toggle">Edit</button>
               </div> : <></>}
             <div className="edit-buttons-container">
               <button type="submit" className="changes-button" id="save-changes">SAVE CHANGES</button>
-              <button className="changes-button" id="delete-account">DELETE ACCOUNT</button>
+              <button onClick={handleClick}className="changes-button" id="delete-account">DELETE ACCOUNT</button>
             </div>
           </form>
         </div>

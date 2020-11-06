@@ -5,10 +5,8 @@ display: flex;
 flex-direction: column;
 font-family: 'Montserrat', sans serif;
 color: #3d3d3d;
-font-size: 24px;
 font-weight: bold;
 text-align: center;
-text-transform: uppercase;
 margin-bottom: 100px;
 
 a {
@@ -23,9 +21,27 @@ h1:hover{
   cursor: default;
 }
 
-p {
+.sad {
   color: #000000;
-  margin-bottom: 20px;  
+  margin-bottom: 23px;  
+  font-size: 48px;
+  text-transform: uppercase; 
+
+}
+
+.although{
+  font-size: 24px;
+  font-family: 'Montserrat', sans serif;
+margin: 5px 20px 5px 20px;
+}
+span{
+  color: #749f5c;
+}
+span:hover{
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: #749f5c;
+  text-decoration-thickness: 2.2px;
 }
 
 a:hover{

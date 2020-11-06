@@ -41,18 +41,11 @@
   /* background: yellow; */
 }
 
-#password-manage-account::placeholder {
-  font-size: 18px;
-}
 
 #zip-code {
   min-width: fit-content;
 }
 
-#password-manage-account {
-  /* max-width: 64%; */
-  font-size: 32px;
-}
 
 #password-left {
   display: flex;
@@ -76,6 +69,7 @@
 
 .manage-account-input:focus {
   outline: none;
+  background-color: rgba(117, 159, 92, .5);
 }
 
 .input-field-bottom {
@@ -144,7 +138,7 @@
 background-color: #e21a1a;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 500px) {
   .user-image-parent {
     margin: initial;
     padding: initial;

@@ -134,7 +134,7 @@ function CreateAccountForm(props) {
         </div>
 
         <div>
-          <label className="password-label" for="imgURL">
+          <label className="image-label" for="imgURL">
             IMAGE URL
           </label>
           <input
@@ -166,7 +166,7 @@ function CreateAccountForm(props) {
             <button className="create-button">Create Account</button>
           </div>
             <div className="already">
-          <p>  Already have an account? <Link to="/log-in"><span>Log in</span> </Link></p>
+          <p>  Already have an account? <Link to="/login"><span>Log in</span> </Link></p>
            </div>
         </div>
       </Form>
