@@ -80,7 +80,7 @@ const Form = styled.form`
     font-size: 16px;
     font-weight: 500;
     text-align: left;
-    color: #3d3d3d;
+    color: rgba(61, 61, 61, 0.4);
   }
 
   input:focus {
