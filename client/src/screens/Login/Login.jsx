@@ -86,6 +86,7 @@ function Login() {
               <input
                 className="login-password"
                 name="password"
+                type="password"
                 value={userInfo.password}
                 onChange={handleChange}
                 placeholder="Password"
