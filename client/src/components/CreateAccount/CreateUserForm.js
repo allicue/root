@@ -251,6 +251,7 @@ const Form = styled.form`
     .image-label {
       display: none;
     }
+   
     .take-me-back{
       display: none;
     }
