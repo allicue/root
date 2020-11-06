@@ -1,0 +1,115 @@
+.root-parent{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.account-root{
+  margin-top: 150px;
+  margin-bottom: 50px;
+  width: 350px;
+}
+
+.welcome-parent{
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.button-parent{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.account-button{
+  border: none;
+  height: 40px;
+  width: 250px;
+  border-radius: 25px;
+  background-color: #749f5c;
+  border: solid 1px #3d3d3d;
+  box-shadow: 2px 2px 4px 1px #999;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.continue{
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+
+@media (max-width: 500px) {
+  .header {
+    padding: initial;
+  }
+
+    .header-image {
+      display: none;
+    }
+
+    .header-home{
+      margin-top: -250px;
+      margin-right: 90px;
+    }
+
+    .header-span:active{
+      cursor: pointer;
+      max-width: 100%;
+      padding-bottom: 5px;
+      position:relative;
+    }
+
+    .header-span:active:after{
+      content:'';
+      position:absolute;
+      bottom:0;
+      left:0;
+      right:0;
+      background: #759f5c;
+      height: 3px;
+      border-radius:10px;
+    }
+
+    .header-link:hover {
+      margin-bottom: 0px;
+    }
+
+    .header-link {
+      font-size: 16px;
+      text-decoration: none;
+      /* max-width: 210px; */
+      padding: initial;
+    }
+
+    .profile-pic{
+      display: flex;
+      max-width: 50px;
+      background-color: #999;
+      border-radius: 50%;
+    }
+    .root-image {
+      display: block;
+      padding: 1px;
+      margin-top: 10px;
+
+    }
+  .header{
+    background-color: #f2f2f2;
+    height: 9vh;
+  }
+  .burger-image {
+    display: flex;
+    max-width: 50px;
+    min-width: 50px;
+    left: 17%;
+    margin-right: 15px;
+    }
+
+  .root-parent,.account-root,.welcome-parent,.button-parent,.button-parent{
+    width: 340px;
+  }
+
+  .continue{
+    text-transform: uppercase;
+  }
+} 
