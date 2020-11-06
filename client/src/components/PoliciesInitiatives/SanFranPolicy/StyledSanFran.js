@@ -258,6 +258,9 @@ const StyledSanFran = styled.div`
         }    
         span:hover{
       cursor: pointer;
+      text-decoration: underline;
+      text-decoration-color: #759f5c;
+      text-decoration-thickness: 0.100rem;
     }
     .wrapper {
       display: flex;
