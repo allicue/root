@@ -82,7 +82,7 @@ function SanFranPolicyStatic() {
                     vero eros et accumsan et iusto odio dignissim qui blandit
                     praesent luptatum zzril delenit augue duis dolore te feugait
                     nulla facilisi. Lorem ipsum dolor sit amet, cons ectetuer
-                    adipiscing elit, sed diam nonummy nibh euismod{" "}
+                    adipiscing elit, sed diam nonummy nibh euismod
                   </p>
                   <p className="box-text-mobile">
                     Owners of commercial buildings must either provide secure
