@@ -26,7 +26,7 @@ a {
   flex-direction: column;
   text-align: center;
   position: relative;
-  top: 40px;
+  top: 38px;
   left: 50px;
   margin: 0 auto;
   margin-bottom: auto;
@@ -47,7 +47,9 @@ a {
     cursor: pointer;
   }
 
-
+.add-image{
+  margin-top: 10px
+}
 .add-image:hover{
   cursor: pointer;
   text-shadow: 1px 2px #999;
