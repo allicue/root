@@ -23,27 +23,18 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     let user = userInfo.email
-    let response = await getUserEmail(user)
-    console.log(response)
-    setLoggedInUser(response)
-    setLoggedIn(true)
 
-    // try {
-    //   if (userInfo.password === response.password) {
-    //     props.setLoggedInUser(response)
-    //     setLoggedIn(true) 
-    //   } else {
-    //     alert("Username and/or password does not match")
-    //   }
+    let response
 
-    // } catch(error) {
-    //   alert("Username and/or password does not match")
-    // }
-
-    if (user !== response.email || userInfo.password !== response.password) {
-      alert("Username and/or password does not match")
+    try {
+      response = await getUserEmail(user)
+    } catch (error) {
+      response = {email: undefined}
     }
-      else if (user != response.email && userInfo.password != response.password) {
+
+    if (response.email === undefined) {
+      alert("Username and/or password does not match")
+    } else if (userInfo.password !== response.password) {
       alert("Username and/or password does not match")
     } else {
      setLoggedInUser(response)
