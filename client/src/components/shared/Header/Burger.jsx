@@ -32,8 +32,6 @@ const StyledBurger = styled.div`
 function Burger( ) {
   const [open, setOpen] = useState(false);
 
-  // console.log(ploggedInUser)
-
   return (
     <>
       <StyledBurger open={open} onClick={() => setOpen(!open)}>

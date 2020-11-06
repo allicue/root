@@ -76,6 +76,7 @@
  text-indent: 20px;
  box-shadow: 2px 2px 4px 1px #999;
  margin-bottom: 10px;
+ outline: none;
 }
 
 .login-password{
@@ -91,6 +92,7 @@
   background-color: #ffffff;
   text-indent: 20px;
   box-shadow: 2px 2px 4px 1px #999;
+  outline: none;
 }
 
 .login-div-button{
@@ -107,10 +109,17 @@
   width: 250px;
   border-radius: 25px;
   background-color: #749f5c;
-  border: solid 1px #3d3d3d;
+  border: none;
   box-shadow: 2px 2px 4px 1px #999;
   margin-bottom: 20px;
   margin-top: 20px;
+  text-transform: uppercase;
+}
+
+.login-button:hover {
+  cursor: pointer;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-shadow: 2px 2px 5px rgb(54, 54, 54);
 }
 
 .button-link{

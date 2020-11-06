@@ -71,8 +71,25 @@
 .header-image {
   height: 100px;
   width: 100px;
+
 }
 
+.header-image2 {
+  z-index: 1;
+  height: 100px;
+  width: 100px;
+  object-fit: contain;
+  position: absolute;
+}
+
+.header-image-user{
+  border-radius: 50%;
+  max-width: 70px;
+  max-height: 70px;
+  margin-top: 15px;
+  object-fit: contain;
+  margin-left: 15px;
+}
 .burger-image {
   display: none;
 }
@@ -81,6 +98,7 @@
   display: none;
   max-height: 45px;
 }
+
 .root-image2{
   display:none;
   max-height: 55px;
@@ -89,19 +107,46 @@
   position: fixed;
   top: 10px;
 }
+
 .profile-pic{
   display: none;
 }
+
 .userpic-container{
   position: fixed;
   top: 17px;
   right: 5px;
 }
+
 .root-image-container{
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+.dropdownmenu {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  background-color: white;
+  position: fixed;
+  margin-top: 55px;
+  margin-left: -15px;
+  width: 100%;
+}
+
+.dropdown-item {
+  display: flex;
+  text-decoration: none;
+  color: #3d3d3d;
+  margin: 25px 10px 25px 15px;
+}
+
+#header-account-link:hover {
+  margin-bottom: 0px;
+}
+
+
 @media (max-width: 500px) {
 .header {
   padding: initial;
@@ -111,6 +156,10 @@
     display: none;
   }
   
+  .header-image-user{
+    display: none;
+  }
+
   .header-home{
     margin-top: -250px;
     margin-right: 90px;
@@ -141,7 +190,6 @@
   .header-link {
     font-size: 16px;
     text-decoration: none;
-    /* max-width: 210px; */
     padding: initial;
   }
 
@@ -150,6 +198,7 @@
     max-width: 50px;
     background-color: #999;
     border-radius: 50%;
+    margin-top: -10px;
   }
   .root-image {
     display: block;

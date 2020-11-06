@@ -4,7 +4,6 @@ let StyledDiv = styled.div`
 .top-container {
   display: flex;
   flex-direction: row;
-  /* justify-content: space-around; */
   align-items: center;
 }
 
@@ -48,17 +47,6 @@ a {
     cursor: pointer;
   }
 
-/* .add-image {
-text-align: center;
-font-family: 'Montserrat', sans-serif;
-color: #3d3d3d;
-width: 200px;
-margin-top: 125px;
-margin-left: -145px;
-font-size: 24px;
-font-weight: 500;
- margin-bottom: auto;
-} */
 
 .add-image:hover{
   cursor: pointer;
@@ -67,7 +55,6 @@ font-weight: 500;
 
 .middle-container {
   display: flex;
-  /* flex-flow: row wrap; */
   align-items: flex-end;
   margin-top: 106px;
   margin-bottom: 150px;
@@ -92,7 +79,6 @@ font-weight: 500;
     flex-flow: column wrap;
     justify-content: center;
     align-items: flex-start;
-    /* margin-top: 33px; */
     margin: 0 auto;
   }
 
@@ -123,13 +109,16 @@ font-weight: 500;
   }
 }
 
+@media screen and (max-width: 500px) {
+  .title{
+    width: 100vw;
+  }
+}
 @media screen and (max-width: 1000px) {
   .top-container {
     display: flex;
     flex-flow: column wrap;
-    left: 0;
-    /* margin-top: 33px; */
- 
+    left: 0; 
   }
 
   .logo-title-container{
@@ -139,11 +128,6 @@ margin:0 auto;
 margin-bottom: 50px;
 left: 0%;
 }
-
-
-  .top-left-container {
-
-    }
 
   .middle-container {
     display: flex;  
