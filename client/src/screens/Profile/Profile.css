@@ -1,3 +1,10 @@
+.profile-main {
+width: 80vw;
+margin: 0 auto;
+font-family: 'Montserrat', sans-serif;
+color: #3d3d3d;
+}
+
 .profile-title-info {
   display: flex;
   flex-direction: row;
@@ -6,41 +13,113 @@
 }
 
 .profile-content {
+margin: 20px auto; 
+margin-top: 70px;
 display: flex;
-height: 400px;
+height: 360px;
+width: 800px;
+
+}
+
+.profile-name {
+  text-transform: uppercase;
 }
 
 #profile-policies {
+  font-size: 25px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   background: url(https://i.imgur.com/jkMuMqO.png);
-  background-size: 100%;
-  height: 75%;
-  /* height: 200px; */
-  /* margin: 20px; */
+  background-size: 102%;
+  height: 73%;
   width: 100%;
   color: white;
+  margin-bottom: 18px;
+  padding: 20px;
+  padding-right: 100px;
+}
+
+#policies-community-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 65%; 
 }
 
 #profile-image {
-  width: 100px;
+  width: 200px;
   border-radius: 50%;
 }
 
 #profile-community {
+  display: flex;
+  flex-wrap: nowrap;
 background-color: #3d3d3d;
 color: white;
-height: 25%;
+height: 27%;
+
+}
+
+#community-text-icon {
+  position: relative;
+  display: flex;
+  flex-flow: row-nowrap;
+  padding: 5px;
+  padding: 10px;
+  width: 38%;
 }
 
 #community-logo {
-width: 50px;
+  position: absolute;
+  right: 8px;
+  bottom: -10px;
+min-width: 80px;
+width: 70px;
+margin-top: 20px;
+padding: 0;
+
+}
+
+.h3-profile {
+  text-transform: uppercase;
 }
 
 #community-image {
-  width: 200px;
+  z-index: 1;
+  background: url(https://i.imgur.com/m0jiLpB.jpeg);
+  background-size: 100%;
+  background-position: center;
+  width: 62%;
+  max-height: 100%;
 }
+
+#climate-impact-image {
+  height: 250px;
+  max-width: 100%;
+}
+
+#climate-impact-container {
+  background: #e8e4d9;
+  margin-left: 18px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+}
+
+#climate-impact-text  {
+  margin-top: 18px;
+  padding: 0 50px 10px 10px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+#advocacy-text {
+  margin-bottom: 10px;
+  
+}
+
+
 
 
 

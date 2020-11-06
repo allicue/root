@@ -12,11 +12,12 @@ function Profile() {
 
 
   return (
-    <div>
+    <div >
       <Layout >
         <div id="logo-banner">
           <LogoBanner title="Your Profile" />
         </div>
+        <div className="profile-main">
         <section className="profile-title-info">
           <img src="https://i.imgur.com/9gUEvjL.png" id="profile-image" alt="profile pic" />
           <h1 className="profile-name">Eddie's Profile</h1>
@@ -24,19 +25,25 @@ function Profile() {
         <section className="profile-content" >
           <div id="policies-community-container">
             <div id="profile-policies">
-              <h3 id="profile-policies-text">San Francisco Transportation Policies + Initiatives</h3>
+              <h3 className="h3-profile" id="profile-policies-text">San Francisco Transportation Policies + Initiatives</h3>
             </div>
             <div id="profile-community">
               <div id="community-text-icon">
-                <h3>Community + Advocacy</h3>
+                <h3 className="h3-profile" >Community + Advocacy</h3>
                 <img src={Community} id="community-logo" alt="Community Logo" />
               </div>
-              <img src="https://i.imgur.com/m0jiLpB.jpeg" id="community-image" alt="Community + Advocacy" />
+              <div id="community-image" ></div>
             </div>
           </div>
           <div id="climate-impact-container">
+            <img id="climate-impact-image" src="https://i.imgur.com/Y7fhEUT.png" alt="Climate Impact" />
+            <div id="climate-impact-text">
+              <h3 className="h3-profile" id="advocacy-text">Climate Impact</h3>
+              <p >Your Transportation options ranked by carbon emissions.</p>
+            </div>
           </div>
         </section>
+        </div>
       </Layout>
     </div>
   )
