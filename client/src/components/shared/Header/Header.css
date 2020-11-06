@@ -14,7 +14,7 @@
 .header-span:hover{
   cursor: pointer;
   max-width: 100%;
-  padding-bottom: 0.7px;
+  padding-bottom: 5px;
   position:relative;
 }
 
@@ -37,24 +37,26 @@
 
 .header-link-container {
   display: flex;
-  /* margin: 10px; */
+  padding: 10px;
+}
+
+.header-link:hover {
+  margin-bottom: -5px;
 }
 
 .header-link {
+  text-decoration: none;
+  text-align: center;
+  color: #3d3d3d;
   display: flex;
+  align-items: center;
   font-size: 16px;
   font-family: Montserrat, Semi bold;
   font-weight: 600;
 }
 
-.link-plan {
-  display: flex;
-  margin-top: 25px;
-  color: #3d3d3d;
-  text-decoration: none;
-  align-items: center;
+#link-plan {
   max-width: 240px;
-  padding: 20px;
 }
 
 #header-transport {
@@ -74,6 +76,7 @@
 .burger-image {
   display: none;
 }
+
 .root-image{
   display: none;
   max-height: 45px;
@@ -90,8 +93,6 @@
   display: none;
 }
 .userpic-container{
-  /* display: flex; */
-  /* margin-right: 20px; */
   position: fixed;
   top: 17px;
   right: 5px;
@@ -115,11 +116,6 @@
     margin-right: 90px;
   }
 
-  #link-plan{
-    padding: 0;
-    display: inline;
-  }
-
   .header-span:active{
     cursor: pointer;
     max-width: 100%;
@@ -138,15 +134,14 @@
     border-radius:10px;
   }
 
+  .header-link:hover {
+    margin-bottom: 0px;
+  }
 
   .header-link {
-    /* display: block; */
     font-size: 16px;
-    font-family: Montserrat, Semi bold;
-    font-weight: 600;
-    color: #3d3d3d;
     text-decoration: none;
-    max-width: 210px;
+    /* max-width: 210px; */
     padding: initial;
   }
 
@@ -170,35 +165,8 @@
     display: flex;
     max-width: 50px;
     min-width: 50px;
-    position: fixed;
     left: 17%;
-    margin-right: 10px;
+    margin-right: 15px;
   }
 
-  #link-home{
-    font-weight: 500;
-  }
-  #header-plan {
-    margin-left: -15px;
-    margin-bottom: -30px
-  }
-  #header-transport {
-    margin-left: 20px;
-  }
-  #header-polices {
-    position: relative;
-    right: -20px;
-  }
-  #header-community {
-    position: relative;
-    right: -17.5px;
-  }
-  .header-account {
-    position: relative;
-    right: 29px;
-  }
-  #route-image {
-    margin-top: -20px;
-    align-items: center;
-  }
 }
