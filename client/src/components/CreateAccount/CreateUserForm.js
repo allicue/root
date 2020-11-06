@@ -247,7 +247,8 @@ const Form = styled.form`
     .username,
     .email-label,
     .password-label,
-    .zipcode-label {
+    .zipcode-label,
+    .image-label {
       display: none;
     }
     .take-me-back{
