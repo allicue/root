@@ -106,6 +106,9 @@ const StyledSanFran = styled.div`
     align-items: center;
     overflow-y: scroll;
   }
+.box-text-container::-webkit-scrollbar{
+  display: none;
+}
 
   .box-text {
     font-family: "Montserrat", sans-serif;
