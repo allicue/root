@@ -244,11 +244,11 @@
     height: 30px;
   }
 
-  .link-social{
+  .link-social {
     width: 60px;
   }
 
-  .page-links{
+  .page-links {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
@@ -269,7 +269,7 @@
     width: 100%;
   }
 
-  .message-parent{
+  .message-parent {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -283,7 +283,7 @@
     width: 100%;
   }
 
-  .message-commit{
+  .message-commit {
     font-size: 12px;
     text-align: center;
     font-weight: 500;
@@ -292,29 +292,18 @@
     width: 70%;
   }
   
-  .message-mission{
+  .message-mission {
     font-size: 11px;
     text-align: center;
     margin: 0 auto;
     margin-bottom: 10px;
     width: 70%;
   }
-
-  .leaf-parent {
-    margin: -10px;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .message-leaf {
-    width: 50px;
-    height: 50px;
-    transform: rotate(230deg);
-  }
   
   .footer-line {
     display: none;
   }
+
   .mobile-footer-line {
     display: flex;
     width: 80%;
@@ -326,7 +315,7 @@
     margin-bottom: 10px;
   }
   
-  .contact-div{
+  .contact-div {
     display: flex;
     text-align: center;
     width: 100%;
@@ -337,7 +326,7 @@
     margin: 0 auto;
   }
 
-  .info-email{
+  .info-email {
     font-size: 16px;
     font-weight: 400;
     text-align: center;
@@ -350,18 +339,18 @@
     margin: 0 auto;
   }
 
-  .address-parent{
+  .address-parent {
     margin-bottom: 80px;
     font-size: 9px;
     text-align: center;
     width: 100%;
   }
 
-  .phone-number-box{
+  .phone-number-box {
     display: none;
   }
 
-  .address{
+  .address {
     width: 80%;
     margin: 0 auto;
   }
@@ -404,6 +393,5 @@
     color: white;
     font-family: 'Montserrat', sans-serif;
   }
-
 
 }

@@ -29,8 +29,7 @@ function PlanRoute(props) {
                 <img src={MapPin} className="location-icon" alt="map-pin" />
               </div>
 
-            <input className="plan-input plan-input-a" placeholder="Destination"></input>
-            <input className="plan-input plan-input-b" placeholder="Destination"></input>
+            <input className="plan-input" placeholder="Destination"></input>
             <button className="plan-button">Find my route options!</button>
             </form>
           </div>
