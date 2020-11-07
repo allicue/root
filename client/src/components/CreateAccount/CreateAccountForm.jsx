@@ -60,8 +60,7 @@ function CreateAccountForm(props) {
           <div
             onClick={() => props.setImagePreview(user.imgURL)}
             className="user-picture"
-          >
-          </div>
+          ></div>
         ) : (
           <ImagePreview
             src={props.imagePreview}
@@ -150,11 +149,17 @@ function CreateAccountForm(props) {
         <div className="bottom-container">
           <div className="terms-of-service">
             <p>
-    <input required className="checkbox" type="checkbox" id="terms-checkbox" />
-    <label for="terms-checkbox"></label>
-  </p>
+              <input
+                required
+                className="checkbox"
+                type="checkbox"
+                id="terms-checkbox"
+              />
+              <label for="terms-checkbox"></label>
+            </p>
             <p>
-              I agree to all statements in <span className="terms">Terms of Service</span>
+              I agree to all statements in
+              <span className="terms">Terms of Service</span>
             </p>
           </div>
           <div className="buttons">
