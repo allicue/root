@@ -39,7 +39,7 @@ function Profile() {
             <img id="climate-impact-image" src="https://i.imgur.com/Y7fhEUT.png" alt="Climate Impact" />
             <div id="climate-impact-text">
               <h3 className="h3-profile" id="advocacy-text">Climate Impact</h3>
-              <p >Your Transportation options ranked by carbon emissions.</p>
+              <p id="p-profile">Your Transportation options ranked by carbon emissions.</p>
             </div>
           </div>
         </section>

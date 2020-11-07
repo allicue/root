@@ -16,8 +16,8 @@ color: #3d3d3d;
 margin: 20px auto; 
 margin-top: 70px;
 display: flex;
-height: 360px;
-width: 800px;
+height: 460px;
+width: 1000px;
 
 }
 
@@ -31,13 +31,18 @@ width: 800px;
   flex-direction: column;
   justify-content: flex-end;
   background: url(https://i.imgur.com/jkMuMqO.png);
-  background-size: 102%;
+  background-size: 105%;
   height: 73%;
   width: 100%;
   color: white;
   margin-bottom: 18px;
   padding: 20px;
   padding-right: 100px;
+}
+
+#profile-policies-text {
+  font-size: 35px;
+  max-width: 500px;
 }
 
 #policies-community-container {
@@ -72,9 +77,9 @@ height: 27%;
 #community-logo {
   position: absolute;
   right: 8px;
-  bottom: -10px;
-min-width: 80px;
-width: 70px;
+  bottom: -5px;
+min-width: 90px;
+width: 80px;
 margin-top: 20px;
 padding: 0;
 
@@ -82,6 +87,7 @@ padding: 0;
 
 .h3-profile {
   text-transform: uppercase;
+  font-size: 25px;
 }
 
 #community-image {
@@ -94,7 +100,7 @@ padding: 0;
 }
 
 #climate-impact-image {
-  height: 250px;
+  height: 322px;
   max-width: 100%;
 }
 
@@ -112,6 +118,10 @@ padding: 0;
   padding: 0 50px 10px 10px;
   font-weight: 500;
   font-size: 16px;
+}
+
+#p-profile {
+  max-width: 60%;
 }
 
 #advocacy-text {
