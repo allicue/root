@@ -140,6 +140,7 @@ const Form = styled.form`
     -moz-appearance: none;
     -webkit-appearance: none;
     -ms-progress-appearance: none;
+    -o-appearance: none;
   }
 
   .checkbox:invalid {
