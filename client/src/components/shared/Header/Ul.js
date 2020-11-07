@@ -25,12 +25,14 @@ const Ul = styled.ul`
     width: 100vw;
     padding-top: 3.5rem;
     padding-bottom: 100px;
+    
     li {
       margin: 0 auto;
       text-transform: capitalize;
       font-weight: 500;
       padding: 18px 10px;
     }
+    
   }
 `;
 
