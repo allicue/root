@@ -11,9 +11,13 @@ const StyledBurger = styled.div`
   display: none;
   left: 0;
   margin-left: 20px;
+  cursor: pointer;  
   
-  &:hover {
-    cursor: pointer;  
+  &:hover .bar-line{
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  &:active .bar-line{
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   }
 
@@ -22,13 +26,16 @@ const StyledBurger = styled.div`
     justify-content: space-around;
     flex-flow: column nowrap;
   }
-  div {
+  .bar-line {
     width: 2.4rem;
     height: 0.2rem;
     background-color: #3d3d3d;
-    /* box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25); */
   }
+ 
 `;
+
+let ParentDiv = styled.div`
+`
 
 function Burger( ) {
   const [open, setOpen] = useState(false);
@@ -36,9 +43,9 @@ function Burger( ) {
   return (
     <>
       <StyledBurger open={open} onClick={() => setOpen(!open)}>
-        <div />
-        <div />
-        <div />
+        <div className='bar-line'/>
+        <div className='bar-line'/>
+        <div className='bar-line'/>
       </StyledBurger>
         <Header open={open} setOpen={setOpen} />
     </>
