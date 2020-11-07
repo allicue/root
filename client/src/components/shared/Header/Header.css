@@ -208,10 +208,6 @@
     position: relative;
   }
 
-  .header-image2 {
-    display: none;
-  }
-  
   .header-span:active:after {
     content: "";
     position: absolute;
@@ -221,6 +217,10 @@
     background: #759f5c;
     height: 3px;
     border-radius: 10px;
+  }
+
+  .header-image2 {
+    display: none;
   }
 
   .header-link:hover {

@@ -26,9 +26,11 @@ function PoliciesInitiativesStatic() {
               <div className="middle-left">
                 <div className="content-container">
                   <div className="content-image-container">
-                    <Link className="image-text" to="/san-fransisco">
-                      SAN FRANCISCO
-                    </Link>
+                    <div className="title-span">
+                      <Link className="image-text" to="/san-fransisco">
+                        SAN FRANCISCO
+                      </Link>
+                    </div>
                     <img
                       className="content-image"
                       src="https://i.imgur.com/XX7kg1z.png"
@@ -45,7 +47,9 @@ function PoliciesInitiativesStatic() {
 
                 <div className="content-container">
                   <div className="content-image-container">
-                    <h1 className="image-text">LOS ANGELES</h1>
+                    <div className="title-span">
+                      <h1 className="image-text">LOS ANGELES</h1>
+                    </div>
                     <img
                       className="content-image"
                       src="https://i.imgur.com/WYjE0sv.jpg"
@@ -62,7 +66,9 @@ function PoliciesInitiativesStatic() {
 
                 <div className="content-container">
                   <div className="content-image-container">
-                    <h1 className="image-text">PORTLAND</h1>
+                    <div className="title-span">
+                      <h1 className="image-text">PORTLAND</h1>
+                    </div>
                     <img
                       className="content-image"
                       src="https://i.imgur.com/Jvc4VTr.jpg"
@@ -80,7 +86,9 @@ function PoliciesInitiativesStatic() {
               <div className="middle-right">
                 <div className="content-container">
                   <div className="content-image-container">
-                    <h1 className="image-text">SEATTLE</h1>
+                    <div className="title-span-short">
+                      <h1 className="image-text">SEATTLE</h1>
+                    </div>
                     <img
                       className="content-image"
                       src="https://i.ibb.co/Rcy7c1S/seattle-citiypolicies-hi-res.png"
@@ -97,7 +105,9 @@ function PoliciesInitiativesStatic() {
 
                 <div className="content-container">
                   <div className="content-image-container">
-                    <h1 className="image-text">NEW YORK</h1>
+                    <div className="title-span">
+                      <h1 className="image-text">NEW YORK</h1>
+                    </div>
                     <img
                       className="content-image"
                       src="https://i.imgur.com/x9wKRcK.jpg"
@@ -114,7 +124,9 @@ function PoliciesInitiativesStatic() {
 
                 <div className="content-container">
                   <div className="content-image-container">
-                    <h1 className="image-text">CHICAGO</h1>
+                    <div className="title-span-short">
+                      <h1 className="image-text">CHICAGO</h1>
+                    </div>
                     <img
                       className="content-image"
                       src="https://i.imgur.com/xiZTdOz.jpg"

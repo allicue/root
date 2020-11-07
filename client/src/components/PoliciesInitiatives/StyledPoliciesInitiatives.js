@@ -88,25 +88,17 @@ const StyledPoliciesInitiatives = styled.div`
     filter: contrast(70%) brightness(92%);
   }
 
-  .content-image-container:hover  .content-image {
+  .content-image-container:hover .content-image {
     filter: contrast(90%) brightness(70%);
     cursor: pointer;
   }
 
-
-  .content-image-container:hover .content-image-text{
+  .content-image-container:hover .content-image-text {
     cursor: pointer;
     transform: translate(0.7px);
     text-decoration: underline;
     text-decoration-thickness: 3px;
   }
-
-  
-/* 
-  &:active .bar-line,
-  &:hover .bar-line {
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-  } */
 
   .box-text-container {
     width: 287px;
@@ -166,11 +158,47 @@ const StyledPoliciesInitiatives = styled.div`
     z-index: 1;
   }
 
-  .image-text:hover {
+  .title-span,
+  .title-span-short {
+    z-index: 1;
+  }
+
+  .title-span:hover {
     cursor: pointer;
-    transform: translate(0.7px);
-    text-decoration: underline;
-    text-decoration-thickness: 3px;
+    max-width: 50%;
+    position: relative;
+  }
+
+  .title-span:hover:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 5rem;
+    right: -4rem;
+    top: 10.2em;
+    background: #fff;
+    height: 0.3rem;
+    border-radius: 10px;
+    border-width: 50%;
+  }
+
+  .title-span-short:hover {
+    cursor: pointer;
+    max-width: 30%;
+    position: relative;
+  }
+
+  .title-span-short:hover:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 6rem;
+    right: -6.8rem;
+    top: 10.2em;
+    background: #fff;
+    height: 0.3rem;
+    border-radius: 10px;
+    border-width: 50%;
   }
 
   .middle-container {
