@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, Redirect } from "react-router-dom";
 import { createUser } from "../../services/users";
 import Form from "./CreateUserForm";
@@ -49,8 +49,7 @@ function CreateAccountForm(props) {
   };
 
   if (isCreated) {
-    alert(`Welcome to ROOT, ${user.name}!`);
-    return <Redirect to={"/"} />;
+    return <Redirect to={"/login"} />;
   }
 
   return (
