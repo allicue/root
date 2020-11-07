@@ -49,8 +49,7 @@ function CreateAccountForm(props) {
   };
 
   if (isCreated) {
-    alert(`Welcome to ROOT, ${user.name}!`);
-    return <Redirect to={"/"} />;
+    return <Redirect to={"/login"} />;
   }
 
   return (

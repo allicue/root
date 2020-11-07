@@ -259,9 +259,11 @@ const Form = styled.form`
       left: 0;
       right: 0;
     }
+
     .account-input {
       width: 60vw;
     }
+
     .buttons {
       display: flex;
       flex-direction: column;
@@ -284,6 +286,7 @@ const Form = styled.form`
     div {
       margin: 20px auto;
     }
+
     .bottom-container {
       position: relative;
       display: flex;
@@ -293,6 +296,7 @@ const Form = styled.form`
       margin: 0 auto;
     }
   }
+
   @media screen and (max-width: 500px) {
     .account-input {
       background-color: rgba(196, 196, 196, 0.8);
