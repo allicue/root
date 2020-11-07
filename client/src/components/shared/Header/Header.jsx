@@ -15,6 +15,7 @@ function Header({ open, setOpen }) {
       window.removeEventListener("resize", onResize);
     };
   }, []);
+  
   useEffect(() => {
     open
       ? (document.body.style.overflow = "hidden")

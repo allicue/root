@@ -27,6 +27,8 @@
 
 .profile-name {
   text-transform: uppercase;
+  font-size: 30px;
+  margin: 0 0 40px 20px;
 }
 
 #profile-policies {
@@ -140,6 +142,12 @@
   .profile-main {
     width: 90vw;
     margin: 0 auto;
+  }
+
+  .profile-name {
+    text-transform: uppercase;
+    font-size: 25px;
+    margin: initial;
   }
 
   .h3-profile {

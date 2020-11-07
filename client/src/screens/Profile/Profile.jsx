@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import Layout from '../../components/shared/Layout/Layout'
 import LogoBanner from '../../components/shared/LogoBanner/LogoBanner'
 import Community from '../../Assets/Icons/ROOT_Community_RevWhite.svg'
@@ -7,12 +7,24 @@ import { LoggedInUserContext } from '../../components/LoggedInUser/LoggedInUserC
 
 function Profile() {
   const [loggedInUser] = useContext(LoggedInUserContext)
+  const [firstName, setFirstName] = useState('')
 
-  // const firstName = loggedInUser.name.split(' ')[0]+ "'s"
+  const handler = () => {
+    window.innerWidth < 500 ? setFirstName(loggedInUser.name.split(' ')[0] + "'s Profile") : setFirstName(loggedInUser.name.split(' ')[0])
+  }
+  
+  useEffect(() => {
+    if (loggedInUser.name !== undefined) {
+      handler();
+      window.addEventListener("resize", handler);
+      return () => window.removeEventListener("resize", handler)
+    }
 
+  },[])
+  
 
   return (
-    <div >
+    <div id="profile-page">
       <Layout >
         <div id="logo-banner">
           <LogoBanner title="Your Profile" />
@@ -20,7 +32,7 @@ function Profile() {
         <div className="profile-main">
         <section className="profile-title-info">
           <img src="https://i.imgur.com/9gUEvjL.png" id="profile-image" alt="profile pic" />
-          <h1 className="profile-name">Eddie's Profile</h1>
+            <h1 className="profile-name">{firstName ? firstName : <></>}</h1>
         </section>
         <section className="profile-content" >
           <div id="policies-community-container">
