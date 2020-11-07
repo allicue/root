@@ -60,9 +60,7 @@ function CreateAccountForm(props) {
           <div
             onClick={() => props.setImagePreview(user.imgURL)}
             className="user-picture"
-          >
-            {" "}
-          </div>
+          ></div>
         ) : (
           <ImagePreview
             src={props.imagePreview}
@@ -90,7 +88,6 @@ function CreateAccountForm(props) {
             onChange={handleChange}
           />
         </div>
-
         <div>
           <label className="email-label" for="email">
             Email
@@ -121,7 +118,6 @@ function CreateAccountForm(props) {
             onChange={handleChange}
           />
         </div>
-
         <div>
           <label className="zipcode-label" for="zipcode">
             ZIP CODE
@@ -136,7 +132,6 @@ function CreateAccountForm(props) {
             onChange={handleChange}
           />
         </div>
-
         <div>
           <label className="image-label" for="imgURL">
             IMAGE
@@ -151,12 +146,20 @@ function CreateAccountForm(props) {
             onChange={handleChange}
           />
         </div>
-
         <div className="bottom-container">
           <div className="terms-of-service">
-            <input type="checkbox" className="checkbox" required />
             <p>
-              I agree to all statements in <span>Terms of Service</span>
+              <input
+                required
+                className="checkbox"
+                type="checkbox"
+                id="terms-checkbox"
+              />
+              <label for="terms-checkbox"></label>
+            </p>
+            <p>
+              I agree to all statements in
+              <span className="terms">Terms of Service</span>
             </p>
           </div>
           <div className="buttons">
@@ -171,10 +174,9 @@ function CreateAccountForm(props) {
           </div>
           <div className="already">
             <p>
-              {" "}
-              Already have an account?{" "}
+              Already have an account? &nbsp;
               <Link to="/login">
-                <span>Log in</span>{" "}
+                <span className="login">Log in</span>
               </Link>
             </p>
           </div>
