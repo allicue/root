@@ -97,7 +97,6 @@
   margin-top: 40px;
   height: 300px;
   border-left: 4px solid #759f5c;
-
 }
 
 .grid-icons {
@@ -129,10 +128,6 @@
   display: none;
 }
 
-.plan-input-b {
-  display: none;
-}
-
 .mobile-breakpoint {
   display: none;
 }
@@ -149,14 +144,14 @@
     text-align: center;
   }
 
-  .plan-form-container {
-    width: 100%;
-  }
-
   .plan-header-mobile {
     margin-top: 90px;
     display: flex;
     font-size: 24px;
+  }
+
+  .plan-form-container {
+    width: 100%;
   }
 
   .column-a {
@@ -201,14 +196,6 @@
     justify-content: flex-end;
     width: 70px;
     height: 70px;
-  }
-
-  .plan-input-a {
-    display: none;
-  }
-
-  .plan-input-b {
-    display: flex;
   }
 
   .plan-form {
