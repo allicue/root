@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
-import {Redirect} from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 import DeleteAccountConfirm from './DeleteAccountConfirm/DeleteAccountConfirm'
 import Layout from '../../components/shared/Layout/Layout';
 import LogoBanner from '../../components/shared/LogoBanner/LogoBanner';
@@ -16,11 +16,12 @@ export default function ManageAccount(props) {
 
   const [user, setUser] = useState({
     name: '',
-    email:'',
-    password:'',
+    email: '',
+    password: '',
     imgURL: '',
-    zipcode:''
+    zipcode: ''
   });
+
 
   let userID = loggedInUser._id
 
@@ -30,6 +31,7 @@ export default function ManageAccount(props) {
       setUser(user)
     }
     fetchUser(user);
+
   }, [updated]);
 
   const handleChange = (e) => {
@@ -41,7 +43,8 @@ export default function ManageAccount(props) {
   }
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
+    setTimeout(() => setDeleteConfirm(!deleteConfirm), 500)
     await updateUser(userID, user)
     setUpdated(!updated)
     setManaged(true)
@@ -65,9 +68,9 @@ export default function ManageAccount(props) {
       <Layout>
         <LogoBanner title="Manage Your Account" />
         <div className="manage-account-main">
-          {deleteConfirm ? <DeleteAccountConfirm id={userID} setDeleteConfirm={setDeleteConfirm}/> : <></>}
+          {deleteConfirm ? <DeleteAccountConfirm id={userID} setDeleteConfirm={setDeleteConfirm} /> : <></>}
           <div className="user-image-parent">
-            <img className="user-photo" src ={ user.imgURL } />
+            <img className="user-photo" src={user.imgURL} />
             <p className="toggle-input-img" onClick={handleImageSelect}>Edit</p>
           </div>
           <form className="manage-account-form" onSubmit={handleSubmit}>
@@ -84,7 +87,7 @@ export default function ManageAccount(props) {
             </div>
             <div
               className="inline-input-field">
-              <label  className="label-manage-account" htmlFor="email">Email</label>
+              <label className="label-manage-account" htmlFor="email">Email</label>
               <input
                 className="manage-account-input"
                 type="text"
@@ -92,12 +95,12 @@ export default function ManageAccount(props) {
                 value={user.email}
                 onChange={handleChange}
                 required
-              
-                />
+
+              />
             </div>
             <div className="inline-input-field">
-              
-              <label  className="label-manage-account" htmlFor="password">PASSWORD</label>
+
+              <label className="label-manage-account" htmlFor="password">PASSWORD</label>
               <input
                 className="manage-account-input"
                 id="password-manage-account"
@@ -106,11 +109,11 @@ export default function ManageAccount(props) {
                 value={user.password}
                 onChange={handleChange}
                 required
-                />
-            
+              />
+
             </div>
             <div className="inline-input-field">
-              <label className="label-manage-account"  htmlFor="zipcode" id="zip-code">Zip Code</label>
+              <label className="label-manage-account" htmlFor="zipcode" id="zip-code">Zip Code</label>
               <input
                 className="manage-account-input"
                 type="text"
@@ -134,7 +137,7 @@ export default function ManageAccount(props) {
               </div> : <></>}
             <div className="edit-buttons-container">
               <button type="submit" className="changes-button" id="save-changes">Save Changes</button>
-              <button onClick={handleClick}className="changes-button" id="delete-account">Delete Account</button>
+              <button onClick={handleClick} className="changes-button" id="delete-account">Delete Account</button>
             </div>
           </form>
         </div>

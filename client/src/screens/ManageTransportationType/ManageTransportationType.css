@@ -41,6 +41,16 @@
 
   }
 
+  .add-icon {
+    width: 40px;
+  }
+
+  #add-icon-text {
+    margin-left: 10px;
+    font-size: 16px;
+  }
+  
+
   .edit-transportation-types {
     min-width: 100vw;
 

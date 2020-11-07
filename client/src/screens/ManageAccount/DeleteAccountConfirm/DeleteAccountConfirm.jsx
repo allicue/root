@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { Redirect } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 import Styled from './DeleteAccount'
 import { deleteUser } from '../../../services/users'
 
@@ -15,6 +15,23 @@ export default function DeleteAccountConfirm(props) {
 
   if (isDeleted) {
     return <Redirect to='/sad-to-see-you-go' />
+  }
+
+  if (!props.id) {
+    return (
+      <Styled >
+      <div className="modal-parent">
+      <div className="modal">
+        <form>
+          <h4 style={{marginTop: "40px"}}>Please <Link to="/login" style={{color: "#749f5c", textDecoration: "none"}}>log in</Link> if you'd like to manage your account</h4>
+          <div className="confirm">
+            <button onClick={() => props.setDeleteConfirm(false)} className="confirm-button" id="cancel-delete">Cancel</button>
+          </div>
+        </form>
+      </div>
+      </div>
+    </Styled>
+    )
   }
 
   return (
