@@ -74,7 +74,7 @@
 
 .manage-account-input:focus {
   outline: none;
-  background-color: rgba(117, 159, 92, .5);
+  background-color: rgba(207, 207, 207, 0.5);
 }
 
 .input-field-bottom {
@@ -148,6 +148,10 @@ background-color: #e21a1a;
   .user-image-parent {
     margin: initial;
     padding: initial;
+  }
+
+  .manage-account-input:focus {
+    background-color: white;
   }
 
  .inline-input-field {

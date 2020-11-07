@@ -22,6 +22,7 @@ export default function ManageAccount(props) {
     zipcode:''
   });
 
+
   let userID = loggedInUser._id
 
   useEffect(() => {
@@ -30,6 +31,7 @@ export default function ManageAccount(props) {
       setUser(user)
     }
     fetchUser(user);
+
   }, [updated]);
 
   const handleChange = (e) => {
@@ -42,6 +44,7 @@ export default function ManageAccount(props) {
 
   const handleSubmit = async (e) => {
     e.preventDefault(); 
+    setDeleteConfirm(!deleteConfirm)
     await updateUser(userID, user)
     setUpdated(!updated)
     setManaged(true)
@@ -65,7 +68,7 @@ export default function ManageAccount(props) {
       <Layout>
         <LogoBanner title="Manage Your Account" />
         <div className="manage-account-main">
-          {deleteConfirm ? <DeleteAccountConfirm id={userID} setDeleteConfirm={setDeleteConfirm}/> : <></>}
+          {deleteConfirm ? <DeleteAccountConfirm id={userID} setDeleteConfirm={setDeleteConfirm} /> : <></>}
           <div className="user-image-parent">
             <img className="user-photo" src ={ user.imgURL } />
             <p className="toggle-input-img" onClick={handleImageSelect}>Edit</p>
