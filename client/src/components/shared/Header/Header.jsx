@@ -179,8 +179,8 @@ function Header({ open, setOpen }) {
                   <Link className="header-link header-span" id='header-account-link' onMouseOver={handleMouseOver}>Account</Link>
                   {openDropdown ?
                     <div className='dropdownmenu'>
-                    <Link className="dropdown-item header-span" to="login">LOGIN/ REGISTER</Link>
-                    <Link className="dropdown-item header-span" to="manage-your-account">MANAGE ACCOUNT</Link>
+                    <Link className="dropdown-item dropdown-span" to="login">LOGIN/ REGISTER</Link>
+                    <Link className="dropdown-item dropdown-span2" to="manage-your-account">MANAGE ACCOUNT</Link>
                   </div>
                   :
                   <></>

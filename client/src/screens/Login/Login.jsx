@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react"
 import { Link, Redirect } from "react-router-dom"
 import { getUserEmail } from '../../services/users';
 import Layout from "../../../src/components/shared/Layout/Layout"
-import footerroot from "../../Assets/Icons/ROOT_Logo_Primary.svg"
+import footerRoot from "../../Assets/Icons/ROOT_Logo_Primary.svg"
 import "./Login.css"
 import { LoggedInUserContext } from '../../components/LoggedInUser/LoggedInUserContext'
 
@@ -14,11 +14,6 @@ function Login() {
   })
   const [loggedIn, setLoggedIn] = useState(false)
 
-  // First find if that email exists in our database
-  // If the email exists, test to see if the password in the 
-  // input field matches the password in our database
-  // If it matches, log the user in, and redirect to the Home Page
-  // If it doesn't match, alert the user that the password/username is incorrectj
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -58,7 +53,7 @@ function Login() {
     <Layout>
       <div className="login-body">
         <div className="login-logo">
-          <img src={footerroot} alt="Root logo" className="login-root" />
+          <img src={footerRoot} alt="Root logo" className="login-root"/>
         </div>
         <div className="login-div">
           <h1 className="login-sign">Sign in</h1>
@@ -98,7 +93,6 @@ function Login() {
             </div>
           </form>
         </div>
-
         <div className="login-create">
           <p>Don't have an account? <Link to="/create-your-account" className="link-register">Register</Link></p>
         </div>

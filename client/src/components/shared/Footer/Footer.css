@@ -81,15 +81,6 @@
   flex-direction: column;
 }
 
-.leaf-parent {
-  margin: -20px;
-}
-
-.message-leaf {
-  height: 90px;
-  transform: rotate(220deg);
-}
-
 .link-sitemap {
   color: #3d3d3d;
   text-decoration: none;
@@ -147,9 +138,11 @@
 }
 
 .email-text{
+  outline: none;
   border: none;
   height: 34px;
   width: 70%;
+  padding-left: 10px;
 }
 
 .email-submit{
