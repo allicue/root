@@ -120,32 +120,69 @@ const Form = styled.form`
     text-align: center;
   }
 
-  span {
+  .terms, .login {
     color: #82a1ab;
   }
 
-  span:hover {
+  .terms:hover, .login:hover{
     cursor: pointer;
     text-decoration: underline;
     text-decoration-color: #82a1ab;
     text-decoration-thickness: 0.099rem;
   }
 
-  .checkbox {
-    width: 33px;
-    border-radius: 5px;
-    height: 26px;
-    margin-right: 14px;
-    align-items: center;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    -o-appearance: none;
-    border: 1px solid #000000;
-  }
+.checkbox:not(:checked),
+.checkbox:checked {
+  position: absolute;
+  appearance: none;
+  -moz-appearance:none;
+  -webkit-appearance: none;
+  -ms-progress-appearance: none;
+}
 
-  .checkbox:hover {
-    cursor: pointer;
-  }
+.checkbox:invalid {
+  margin-top: 30px;
+  position: absolute;
+  margin-left: 15px;
+  appearance: none;
+  -moz-appearance:none;
+  -webkit-appearance: none;
+  -ms-progress-appearance: none;
+}
+
+.checkbox:not(:checked) + label,
+.checkbox:checked + label {
+  position: relative;
+  padding-left: 1.95em;
+  cursor: pointer;
+}
+
+.checkbox:not(:checked) + label:before,
+.checkbox:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0;
+  width: 32px; height: 26px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+.checkbox:not(:checked) + label:after,
+.checkbox:checked + label:after {
+  content: '✔';
+  left: 5px;
+  bottom: 2px;
+  position: absolute;
+  color: #759f5c;
+}
+
+.checkbox:not(:checked) + label:after {
+  opacity: 0;
+}
+
+.checkbox:checked + label:after {
+  opacity: 1;
+}
 
   .create-button {
     font-family: "Montserrat", sans-serif;
