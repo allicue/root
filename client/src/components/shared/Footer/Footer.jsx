@@ -4,7 +4,6 @@ import twitter from "../../../Assets/Icons/ROOT_Twitter.svg"
 import instagram from "../../../Assets/Icons/ROOT_Instagram.svg"
 import community from "../../../Assets/Icons/ROOT_Vector_Community.svg"
 import footerroot from "../../../Assets/Icons/ROOT_Logo_Primary.svg"
-import Leaf from '../../../Assets/Icons/ROOT_Leaf.svg'
 import "./Footer.css"
 
 function Footer() {

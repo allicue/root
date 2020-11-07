@@ -1,15 +1,17 @@
 .homepage {
   margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
 }
+
 .homepage-header {
+  color: white;
   background-image: linear-gradient(
   rgba(0, 0, 0, 0.5),
   rgba(0, 0, 0, 0.5)), url("../../Assets/Images/Hi-Res/root_header_hi_res.png");
   background-size: cover;
-  padding: 50px;
   background-position: center;
+  padding: 50px;
   height: 961px;
-  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,7 +23,6 @@
 }
 
 .homepage-subtitle {
-  font-family: 'Montserrat', sans-serif;
   font-size: 48px;
 }
 
@@ -36,7 +37,6 @@
 }
 
 .homepage-subtitle-a {
-  font-family: 'Montserrat', sans-serif;
   font-size: 24px;
   font-weight: 500;
   width: 550px;
@@ -44,7 +44,6 @@
 }
 
 .homepage-subtitle-b {
-  font-family: 'Montserrat', sans-serif;
   width: 550px;
   font-size: 16px;
   display: flex;
@@ -68,7 +67,6 @@
   background-color: white;
 }
 
-
 .homepage-header-navbar {
   display: flex;
   margin-top: 50px;
@@ -90,7 +88,6 @@
 
 .homepage-button:hover {
   cursor: pointer;
-  text-shadow: 2px 2px 5px rgb(54, 54, 54);
   box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -123,13 +120,12 @@
     rgba(0, 0, 0, 0.5),
     rgba(0, 0, 0, 0.5)), url("../../Assets/Images/Hi-Res/chicago_citiypolicies_hi_res.png");
   background-position-y: 45%;
+  background-size: cover;
   width: 796px;
   height: 381px;
-  background-size: cover;
   color: white;
   text-align: left;
   position: relative;
-  font-family: 'Montserrat', sans-serif;
 }
 
 .policies-text {
@@ -150,7 +146,6 @@
   height: 547px;
   margin-left: 34px;
   background-color: #e8e4d9;
-  font-family: 'Montserrat', sans-serif;
   color: #3d3d3d;
 }
 
@@ -197,7 +192,6 @@
 .community-a {
   width: 318px;
   padding: 10px;
-  font-family: 'Montserrat', sans-serif;
   font-size: 30px;
   font-weight: 700;
   display: flex;
@@ -213,6 +207,7 @@
   position: relative;
   align-self: flex-end;
   margin-top: 10%;
+  margin-right: -10px;
   width: 120px;
   height: 120px;
 }
@@ -240,9 +235,7 @@
 
   .homepage-header {
     height: 450px;
-    width: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: flex-end;
     background-image: linear-gradient(
       rgba(0, 0, 0, 0.0),
@@ -253,6 +246,10 @@
   
   .homepage-root-logo {
     display: none;
+  }
+
+  .homepage-subtitle-a {
+    width: 100%;
   }
 
   .homepage-subtitle-b {
