@@ -6,8 +6,7 @@ import { onResize } from "../../../utils/helpers";
 import { LoggedInUserContext } from "../../LoggedInUser/LoggedInUserContext";
 
 function Header({ open, setOpen }) {
-  window.scrollTo(0, 0)
-  
+
   const [loggedInUser] = useContext(LoggedInUserContext);
 
   useEffect(() => {
