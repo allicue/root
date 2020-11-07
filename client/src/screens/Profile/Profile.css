@@ -32,6 +32,7 @@
 }
 
 #profile-policies {
+  text-decoration: none;
   font-size: 25px;
   display: flex;
   flex-direction: column;
@@ -118,6 +119,7 @@
   padding: 0 50px 10px 10px;
   font-weight: 500;
   font-size: 16px;
+  color: #3d3d3d;
 }
 
 #p-profile {
@@ -152,6 +154,7 @@
 
   .h3-profile {
     text-transform: capitalize;
+  
     font-size: 25px;
     font-weight: 500;
   }
