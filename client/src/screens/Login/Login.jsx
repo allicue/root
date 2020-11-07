@@ -7,7 +7,7 @@ import "./Login.css";
 import { LoggedInUserContext } from '../../components/LoggedInUser/LoggedInUserContext';
 
 function Login() {
-  const [loggedInuser, setLoggedInUser] = useContext(LoggedInUserContext)
+  const [loggedInUser, setLoggedInUser] = useContext(LoggedInUserContext)
   const [loggedIn, setLoggedIn] = useState(false)
   const [userInfo, setUserInfo] = useState({
     email: "",
