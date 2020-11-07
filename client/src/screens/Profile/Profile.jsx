@@ -29,7 +29,7 @@ function Profile() {
             </div>
             <div id="profile-community">
               <div id="community-text-icon">
-                <h3 className="h3-profile" >Community + Advocacy</h3>
+                <h3 className="h3-profile" >community + advocacy</h3>
                 <img src={Community} id="community-logo" alt="Community Logo" />
               </div>
               <div id="community-image" ></div>
@@ -38,7 +38,7 @@ function Profile() {
           <div id="climate-impact-container">
             <img id="climate-impact-image" src="https://i.imgur.com/Y7fhEUT.png" alt="Climate Impact" />
             <div id="climate-impact-text">
-              <h3 className="h3-profile" id="advocacy-text">Climate Impact</h3>
+              <h3 className="h3-profile" id="advocacy-text">climate impact</h3>
               <p id="p-profile">Your Transportation options ranked by carbon emissions.</p>
             </div>
           </div>

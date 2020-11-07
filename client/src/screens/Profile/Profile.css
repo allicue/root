@@ -1,8 +1,13 @@
 .profile-main {
-width: 80vw;
-margin: 0 auto;
-font-family: 'Montserrat', sans-serif;
-color: #3d3d3d;
+  width: 80vw;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+  color: #3d3d3d;
+}
+
+.h3-profile {
+  text-transform: uppercase;
+  font-size: 25px;
 }
 
 .profile-title-info {
@@ -13,12 +18,11 @@ color: #3d3d3d;
 }
 
 .profile-content {
-margin: 20px auto; 
-margin-top: 70px;
-display: flex;
-height: 460px;
-width: 1000px;
-
+  margin: 20px auto; 
+  margin-top: 70px;
+  display: flex;
+  height: 460px;
+  width: 1000px;
 }
 
 .profile-name {
@@ -59,9 +63,9 @@ width: 1000px;
 #profile-community {
   display: flex;
   flex-wrap: nowrap;
-background-color: #3d3d3d;
-color: white;
-height: 27%;
+  background-color: #3d3d3d;
+  color: white;
+  height: 27%;
 
 }
 
@@ -78,16 +82,11 @@ height: 27%;
   position: absolute;
   right: 8px;
   bottom: -5px;
-min-width: 90px;
-width: 80px;
-margin-top: 20px;
-padding: 0;
+  min-width: 90px;
+  width: 80px;
+  margin-top: 20px;
+  padding: 0;
 
-}
-
-.h3-profile {
-  text-transform: uppercase;
-  font-size: 25px;
 }
 
 #community-image {
@@ -110,7 +109,6 @@ padding: 0;
   display: flex;
   flex-direction: column;
   height: 100%;
-
 }
 
 #climate-impact-text  {
@@ -132,16 +130,96 @@ padding: 0;
 
 
 
-
-
-
+/* Mobile Media Breakpoint */
 
 @media screen and (max-width: 500px) {
   #logo-banner {
     display: none;
   }
 
-  .profile-title-info {
-    margin-top: 150px;
+  .profile-main {
+    width: 90vw;
+    margin: 0 auto;
   }
+
+  .h3-profile {
+    text-transform: capitalize;
+    font-size: 25px;
+    font-weight: 500;
+  }
+
+  .profile-title-info {
+    margin-top: 100px;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .profile-content {
+    width: 80vw;
+    margin: 20px auto;
+    height: initial;
+  }
+
+  #profile-image {
+    width: 100px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+
+  #policies-community-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 100vw;
+    height: 360px;
+  }
+
+  #profile-policies {
+    height: initial;
+    max-height: 45%;
+    min-height: 45%;
+    background-position: center;
+    background-size: cover;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  #profile-policies-text {
+    font-size: 25px;
+  }
+  
+  #policies-community-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #profile-community {
+    flex-direction: column-reverse;
+    background: url(https://i.imgur.com/DEr3yUq.png);
+    background-size: cover;
+    height: 50%;
+  }
+  
+  #community-text-icon {
+    flex-flow: row-nowrap;
+    padding: 5px;
+    padding: 10px;
+  }
+  
+  #community-logo {
+    top: -120px;
+    left: 5px;
+    right: initial;
+    bottom: initial;
+    min-width: 60px;
+    width: 60px;
+  }
+  
+  #community-image {
+    display: none;
+  }
+  
+  #climate-impact-container {
+    display: none;
+}
+  
 }
