@@ -3,6 +3,7 @@ import { Redirect } from 'react-router-dom'
 import DeleteAccountConfirm from './DeleteAccountConfirm/DeleteAccountConfirm'
 import Layout from '../../components/shared/Layout/Layout';
 import LogoBanner from '../../components/shared/LogoBanner/LogoBanner';
+import Leaf from '../../Assets/Icons/ROOT_Leaf.png'
 import { updateUser, getUser } from '../../services/users';
 import { LoggedInUserContext } from '../../components/LoggedInUser/LoggedInUserContext'
 import './ManageAccount.css';
@@ -22,10 +23,10 @@ export default function ManageAccount(props) {
     zipcode: ''
   });
 
-
   let userID = loggedInUser._id
 
   useEffect(() => {
+    
     const fetchUser = async () => {
       const user = await getUser(userID);
       setUser(user)
@@ -70,7 +71,7 @@ export default function ManageAccount(props) {
         <div className="manage-account-main">
           {deleteConfirm ? <DeleteAccountConfirm id={userID} setDeleteConfirm={setDeleteConfirm} /> : <></>}
           <div className="user-image-parent">
-            <img className="user-photo" src={user.imgURL} />
+            <img className="user-photo" src={user.imgURL ? user.imgURL : Leaf} />
             <p className="toggle-input-img" onClick={handleImageSelect}>Edit</p>
           </div>
           <form className="manage-account-form" onSubmit={handleSubmit}>

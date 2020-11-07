@@ -50,7 +50,6 @@ const Styled = styled.div`
 
   .confirm-button:hover {
     box-shadow: 2px 2px 4px 1px #999;
-    text-shadow: 2px 2px 5px rgb(54, 54, 54);
   }
 
   h4 {

@@ -6,6 +6,8 @@ import { onResize } from "../../../utils/helpers";
 import { LoggedInUserContext } from "../../LoggedInUser/LoggedInUserContext";
 
 function Header({ open, setOpen }) {
+  window.scrollTo(0, 0)
+  
   const [loggedInUser] = useContext(LoggedInUserContext);
 
   useEffect(() => {
@@ -39,7 +41,7 @@ function Header({ open, setOpen }) {
       </div>
       {Object.keys(loggedInUser).length !== 0 ? (
         <div className="userpic-container">
-          <Link to="/manage-your-account">
+          <Link to="/profile">
             <img
               className="profile-pic"
               src={loggedInUser?.imgURL}
@@ -110,7 +112,7 @@ function Header({ open, setOpen }) {
         </div>
         <div>
           {Object.keys(loggedInUser).length !== 0 ? (
-            <Link to="/manage-your-account">
+            <Link to="/profile">
               <img
                 className="header-image2"
                 src="https://i.imgur.com/gC1ttIE.png"

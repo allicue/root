@@ -107,11 +107,20 @@
 }
 
 #climate-impact-container {
+  position: relative;
   background: #e8e4d9;
   margin-left: 18px;
   display: flex;
   flex-direction: column;
   height: 100%;
+}
+
+#leaf-icon {
+  width: 50px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+
 }
 
 #climate-impact-text  {
