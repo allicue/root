@@ -303,6 +303,7 @@ const Form = styled.form`
       border: none;
       box-shadow: none;
     }
+
     .image,
     .username,
     .email-label,
