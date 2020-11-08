@@ -1,16 +1,16 @@
-import React, {useState} from 'react'
-import { Link, Redirect } from 'react-router-dom'
-import Styled from './DeleteAccount'
-import { deleteUser } from '../../../services/users'
+import React, { useState } from 'react';
+import { Link, Redirect } from 'react-router-dom';
+import Styled from './DeleteAccount';
+import { deleteUser } from '../../../services/users';
 
 export default function DeleteAccountConfirm(props) {
-  const [isDeleted, setDeleted] = useState(false)
+  const [isDeleted, setDeleted] = useState(false);
 
   const handleDelete = async (e) => {
     e.preventDefault();
     let id = props.id;
-    const deleted = await deleteUser(id)
-    setDeleted(deleted)
+    const deleted = await deleteUser(id);
+    setDeleted(deleted);
   }
 
   if (isDeleted) {
@@ -25,7 +25,7 @@ export default function DeleteAccountConfirm(props) {
         <form>
           <h4 style={{marginTop: "40px"}}>Please <Link to="/login" style={{color: "#749f5c", textDecoration: "none"}}>log in</Link> if you'd like to manage your account</h4>
           <div className="confirm">
-            <button onClick={() => props.setDeleteConfirm(false)} className="confirm-button" id="cancel-delete">Cancel</button>
+            <button onClick={() => props.setDeleteConfirm(false)} className="confirm-button" id="cancel-delete">Go Back</button>
           </div>
         </form>
       </div>

@@ -1,18 +1,19 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { Redirect } from 'react-router-dom'
+import { Redirect } from 'react-router-dom';
 import DeleteAccountConfirm from './DeleteAccountConfirm/DeleteAccountConfirm'
 import Layout from '../../components/shared/Layout/Layout';
 import LogoBanner from '../../components/shared/LogoBanner/LogoBanner';
+import Leaf from '../../Assets/Icons/ROOT_Leaf.png'
 import { updateUser, getUser } from '../../services/users';
-import { LoggedInUserContext } from '../../components/LoggedInUser/LoggedInUserContext'
+import { LoggedInUserContext } from '../../components/LoggedInUser/LoggedInUserContext';
 import './ManageAccount.css';
 
 export default function ManageAccount(props) {
-  const [updated, setUpdated] = useState(false)
-  const [showImageInput, setShowImageInput] = useState(false)
-  const [managed, setManaged] = useState(false)
-  const [deleteConfirm, setDeleteConfirm] = useState(false)
-  const [loggedInUser] = useContext(LoggedInUserContext)
+  const [updated, setUpdated] = useState(false);
+  const [showImageInput, setShowImageInput] = useState(false);
+  const [managed, setManaged] = useState(false);
+  const [deleteConfirm, setDeleteConfirm] = useState(false);
+  const [loggedInUser] = useContext(LoggedInUserContext);
 
   const [user, setUser] = useState({
     name: '',
@@ -22,13 +23,12 @@ export default function ManageAccount(props) {
     zipcode: ''
   });
 
-
-  let userID = loggedInUser._id
+  let userID = loggedInUser._id;
 
   useEffect(() => {
     const fetchUser = async () => {
       const user = await getUser(userID);
-      setUser(user)
+      setUser(user);
     }
     fetchUser(user);
 
@@ -44,19 +44,19 @@ export default function ManageAccount(props) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setTimeout(() => setDeleteConfirm(!deleteConfirm), 500)
-    await updateUser(userID, user)
-    setUpdated(!updated)
-    setManaged(true)
+    setTimeout(() => setDeleteConfirm(!deleteConfirm), 500);
+    await updateUser(userID, user);
+    setUpdated(!updated);
+    setManaged(true);
   }
 
   const handleClick = (e) => {
     e.preventDefault();
-    setDeleteConfirm(!deleteConfirm)
+    setDeleteConfirm(!deleteConfirm);
   }
 
   const handleImageSelect = () => {
-    setShowImageInput(!showImageInput)
+    setShowImageInput(!showImageInput);
   }
 
   if (managed) {
@@ -70,7 +70,7 @@ export default function ManageAccount(props) {
         <div className="manage-account-main">
           {deleteConfirm ? <DeleteAccountConfirm id={userID} setDeleteConfirm={setDeleteConfirm} /> : <></>}
           <div className="user-image-parent">
-            <img className="user-photo" src={user.imgURL} />
+            <img className="user-photo" src={user.imgURL ? user.imgURL : Leaf} />
             <p className="toggle-input-img" onClick={handleImageSelect}>Edit</p>
           </div>
           <form className="manage-account-form" onSubmit={handleSubmit}>

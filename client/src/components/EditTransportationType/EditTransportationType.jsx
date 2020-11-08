@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react'
-import './EditTransportationType.css'
-import { updateTransportationType, deleteTransportationType } from '../../services/transportationTypes'
-import Logo from '../../Assets/Icons/ROOT_Logo_Icon_Primary.png'
+import React, { useEffect, useState } from 'react';
+import './EditTransportationType.css';
+import { updateTransportationType, deleteTransportationType } from '../../services/transportationTypes';
+import Logo from '../../Assets/Icons/ROOT_Logo_Icon_Primary.png';
 
 
 export default function EditTransportationType(props) {
@@ -14,11 +14,11 @@ export default function EditTransportationType(props) {
 
   useEffect(() => {
     const fetchType = async () => {
-      const type = await updateTransportationType(props.id)
-      setTransportationType(type)
+      const type = await updateTransportationType(props.id);
+      setTransportationType(type);
     }
     fetchType()
-  }, [props.id])
+  }, [props.id]);
 
   const handleChange = (e) => {
     const { name, value } = e.target

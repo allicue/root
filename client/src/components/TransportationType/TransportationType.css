@@ -1,60 +1,62 @@
 
 .transportation-type {
-  font-family: Montserrat;
-  color: #3d3d3d;
   display: flex;
   align-items: center;
+  font-family: Montserrat;
+  color: #3d3d3d;
   margin: 10px;
 }
 
-.mobile-title-container {
+.mobile-title {
   display: none;
 }
 
 .title-plus-description {
-  width: 100%;
   margin-left: 20px;
+  width: 100%;
 }
 
  .h3-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
   font-size: 25px;
+  background: rgba(0, 0, 0, .4);
+  margin: 0 auto;
   height: 250px;
   width: 300px;
-  background: rgba(0, 0, 0, .4);
 }
 
 .type-title {
-  color: white;
   font-weight: bold;
+  color: white;
 }
 
 .description-container {
-  height: 100%;
-  width: 100%;
-  max-height: 250px;
-  min-height: 250px;
-  max-width: 900px;
   display: flex;
   align-items: center;
   background: #e8e4d9;
+  height: 250px;
+  max-width: 900px;
+  width: 100%;
 }
 
 .description {
   font-size: 26px;
-  line-height: 30px;
   font-weight: 500;
+  line-height: 30px;
   padding: 20px;
 } 
 
+
+
+/* Mobile Media Breakpoint */
+
 @media screen and (max-width:500px) {
   .transportation-type {
-    height: 70px;
     margin-bottom: 20px;
     min-height: fit-content;
+    height: 70px;
     max-width: 90vw;
   }
 
@@ -64,16 +66,14 @@
 
   .h3-container {
     max-width: 60px;
-    height: 60px;
     border-radius: 5px;
+    height: 60px;
     background: rgba(196, 196, 196, 0.3);
-
   }
 
-  .mobile-title-container {
+  .mobile-title {
     display: block;
     font-size: 15px;
-    /* margin-bottom: 8px; */
     padding: 2px 0 7px 0;
   }
 
@@ -95,13 +95,13 @@
   }
   
   .description {
-    height: initial;
-    max-height: 70px;
-    min-height: initial;
-    padding: initial;
-    font-size: 14px;
     font-weight: normal;
     line-height: initial;
+    font-size: 14px;
+    padding: initial;
+    height: initial;
+    min-height: initial;
+    max-height: 70px;
   }
 
 }
