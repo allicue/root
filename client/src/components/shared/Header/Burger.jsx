@@ -13,7 +13,8 @@ const StyledBurger = styled.div`
   margin-left: 20px;
   cursor: pointer;
 
-  &:active .bar-line, &:hover .bar-line {
+  &:active .bar-line,
+  &:hover .bar-line {
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   }
 
@@ -22,13 +23,12 @@ const StyledBurger = styled.div`
     justify-content: space-around;
     flex-flow: column nowrap;
   }
-  
+
   .bar-line {
     width: 2.4rem;
     height: 0.2rem;
     background-color: #3d3d3d;
   }
-
 `;
 
 function Burger() {
