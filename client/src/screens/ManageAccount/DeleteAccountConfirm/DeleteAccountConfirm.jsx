@@ -1,16 +1,16 @@
-import React, {useState} from 'react'
-import { Link, Redirect } from 'react-router-dom'
-import Styled from './DeleteAccount'
-import { deleteUser } from '../../../services/users'
+import React, { useState } from 'react';
+import { Link, Redirect } from 'react-router-dom';
+import Styled from './DeleteAccount';
+import { deleteUser } from '../../../services/users';
 
 export default function DeleteAccountConfirm(props) {
-  const [isDeleted, setDeleted] = useState(false)
+  const [isDeleted, setDeleted] = useState(false);
 
   const handleDelete = async (e) => {
     e.preventDefault();
     let id = props.id;
-    const deleted = await deleteUser(id)
-    setDeleted(deleted)
+    const deleted = await deleteUser(id);
+    setDeleted(deleted);
   }
 
   if (isDeleted) {

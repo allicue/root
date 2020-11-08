@@ -14,21 +14,22 @@ const Styled = styled.div`
   }
 
   .modal {
-    background: #e8e4d9;
     position: fixed;
-    z-index: 2;
-    margin-left: -200px;
-    margin-top: -150px;
     top: 50%;
     left: 50%;
+    margin-left: -200px;
+    margin-top: -150px;
+    background: #e8e4d9;
     max-width: 400px;
-    height: 300px;
     padding: 20px;
     border-radius: 15px;
+    height: 300px;
+    z-index: 2;
   }
 
   .confirm-button {
-    width: 250px;
+    position: relative;
+    text-align: center;
     margin: 0 auto;
     margin-top: 15px;
     min-width: 110px;
@@ -39,9 +40,8 @@ const Styled = styled.div`
     border-style: none;
     border-radius: 45px;
     font-size: 20px;
-    text-align: center;
     color: white;
-    position: relative;
+    width: 250px;
   }
 
   .confirm-button:focus {

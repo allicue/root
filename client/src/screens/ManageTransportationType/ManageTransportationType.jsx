@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import EditTransportationType from '../../components/EditTransportationType/EditTransportationType'
-import Layout from '../../components/shared/Layout/Layout'
-import LogoBanner from '../../components/shared/LogoBanner/LogoBanner'
-import Icon from '../../Assets/Icons/ROOT_Add_Note_Icon.png'
-import Leaf from '../../Assets/Icons/ROOT_Leaf.png'
-import './ManageTransportationType.css'
-import { getTransportationTypes } from '../../services/transportationTypes'
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import EditTransportationType from '../../components/EditTransportationType/EditTransportationType';
+import Layout from '../../components/shared/Layout/Layout';
+import LogoBanner from '../../components/shared/LogoBanner/LogoBanner';
+import Icon from '../../Assets/Icons/ROOT_Add_Note_Icon.png';
+import Leaf from '../../Assets/Icons/ROOT_Leaf.png';
+import './ManageTransportationType.css';
+import { getTransportationTypes } from '../../services/transportationTypes';
 
 export default function ManageTransportationTypes() {
   const [loaded, setLoaded] = useState(false);
@@ -17,7 +17,7 @@ export default function ManageTransportationTypes() {
     const getData = async () => {
       const types = await getTransportationTypes();
       setTransportationTypes(types);
-      setLoaded(true)
+      setLoaded(true);
     }
     getData();
   }, [updated]);

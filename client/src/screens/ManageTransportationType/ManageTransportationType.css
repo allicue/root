@@ -1,8 +1,6 @@
 
-
 .add-icon-link {
   display: flex;
-  flex-direction: row;
   height: 60px;
   align-items: center;  
   margin: 60px 0 -10px 9vw;
@@ -14,8 +12,8 @@
 }
 
 #add-icon-text {
-  margin-left: 10px;
   font-size: 20px;
+  margin-left: 10px;
 }
 
 .manage-parent {
@@ -26,19 +24,23 @@
 }
 
 #add-link {
-  text-decoration: none;
-  color: #749f5c;
   font-weight: 600;
+  color: #749f5c;
+  text-decoration: none;
 }
 
 .edit-transportation-types {
   min-width: 900px;
 }
 
+
+/* Mobile Media Breakpoint */
+
+
+
 @media screen and (max-width: 600px) {
   .manage-parent {
     min-width: 100vw;
-
   }
 
   .add-icon {
@@ -46,15 +48,12 @@
   }
 
   #add-icon-text {
-    margin-left: 10px;
     font-size: 16px;
+    margin-left: 10px;
   }
   
-
   .edit-transportation-types {
     min-width: 100vw;
-
   }
-
 
 }

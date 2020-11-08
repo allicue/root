@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Redirect } from 'react-router-dom'
 import Layout from '../../components/shared/Layout/Layout'
 import LogoBanner from '../../components/shared/LogoBanner/LogoBanner'
 import Community from '../../Assets/Icons/ROOT_Community_RevWhite.svg'
@@ -8,8 +8,9 @@ import "./Profile.css"
 import { LoggedInUserContext } from '../../components/LoggedInUser/LoggedInUserContext'
 
 function Profile() {
-  const [loggedInUser] = useContext(LoggedInUserContext)
+  const [loggedInUser, setLoggedInUser] = useContext(LoggedInUserContext)
 
+  const [isLoggedIn, setLoggedIn] = useState(true)
   const [firstName, setFirstName] = useState('')
 
   const handler = () => {
@@ -24,6 +25,15 @@ function Profile() {
     }
   }, [])
 
+  const handleClick = () => {
+    setLoggedInUser({})
+    setFirstName('')
+    setLoggedIn(false)
+  }
+
+  if (!isLoggedIn) {
+    return <Redirect to="/login"/>
+  }
 
   return (
     <div id="profile-page">
@@ -34,7 +44,7 @@ function Profile() {
         <div className="profile-main">
           <section className="profile-title-info">
             <img style={loggedInUser.imgURL ? {} : {border: "2px solid lightgray"}}src={loggedInUser.imgURL ? loggedInUser.imgURL : Leaf} id="profile-image" alt="profile pic" />
-            <h1 className="profile-name" >{firstName ? firstName : "* Sample * - nobody logged in at this time"}</h1>
+            <h1 className="profile-name" >{firstName ? firstName : "nobody logged in at this time"}</h1>
           </section>
           <section className="profile-content" >
             <div id="policies-community-container">
@@ -58,6 +68,7 @@ function Profile() {
               </div>
             </NavLink>
           </section>
+          <button id="log-out" onClick={handleClick}>Log Out</button>
         </div>
       </Layout>
     </div>
