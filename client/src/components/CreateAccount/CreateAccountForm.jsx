@@ -157,7 +157,7 @@ function CreateAccountForm(props) {
               <label for="terms-checkbox"></label>
             </p>
             <p>
-              I agree to all statements in
+              I agree to all statements in &nbsp;
               <span className="terms">Terms of Service</span>
             </p>
           </div>
