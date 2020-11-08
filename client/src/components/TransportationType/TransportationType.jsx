@@ -31,7 +31,7 @@ export default function TransportationType(props) {
       </div>
       </TitleContainer>
       <div className="title-plus-description">
-        <h3 className="mobile-title-container" >{props.title}</h3>
+        <h3 className="mobile-title" >{props.title}</h3>
         <div className="description-container">
           <p className="description">{props.description}</p>
         </div>

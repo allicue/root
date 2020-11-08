@@ -7,7 +7,7 @@
   margin: 10px;
 }
 
-.mobile-title-container {
+.mobile-title {
   display: none;
 }
 
@@ -71,7 +71,7 @@
     background: rgba(196, 196, 196, 0.3);
   }
 
-  .mobile-title-container {
+  .mobile-title {
     display: block;
     font-size: 15px;
     padding: 2px 0 7px 0;
