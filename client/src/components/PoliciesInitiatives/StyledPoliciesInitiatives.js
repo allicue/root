@@ -159,23 +159,26 @@ const StyledPoliciesInitiatives = styled.div`
   }
 
   .title-span,
-  .title-span-short {
+  .title-span-short,
+  .title-span-sf {
     z-index: 1;
   }
 
-  .title-span:hover {
+  .title-span:hover,
+  .title-span-sf:hover {
     cursor: pointer;
     max-width: 50%;
     position: relative;
   }
 
-  .title-span:hover:after {
+  .title-span:hover:after,
+  .title-span-sf:hover:after {
     content: "";
     position: absolute;
     bottom: 0;
     left: 5rem;
     right: -4rem;
-    top: 10.2em;
+    top: 10.2rem;
     background: #fff;
     height: 0.3rem;
     border-radius: 10px;
@@ -193,7 +196,7 @@ const StyledPoliciesInitiatives = styled.div`
     position: absolute;
     bottom: 0;
     left: 6rem;
-    right: -6.8rem;
+    right: -7rem;
     top: 10.2em;
     background: #fff;
     height: 0.3rem;
@@ -280,6 +283,45 @@ const StyledPoliciesInitiatives = styled.div`
       width: 200px;
       height: 101px;
       margin-top: 95px;
+    }
+
+    .title-span:hover:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 2.5rem;
+      right: -3.6rem;
+      top: 8.5rem;
+      background: #fff;
+      height: 0.3rem;
+      border-radius: 10px;
+      border-width: 50%;
+    }
+
+    .title-span-sf:hover:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 3.5rem;
+      right: -3.1rem;
+      top: 10.3rem;
+      background: #fff;
+      height: 0.3rem;
+      border-radius: 10px;
+      border-width: 50%;
+    }
+
+    .title-span-short:hover:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 4rem;
+      right: -5rem;
+      top: 8.5rem;
+      background: #fff;
+      height: 0.3rem;
+      border-radius: 10px;
+      border-width: 50%;
     }
 
     .logo-title-container {

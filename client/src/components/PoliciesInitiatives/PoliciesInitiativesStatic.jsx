@@ -26,7 +26,7 @@ function PoliciesInitiativesStatic() {
               <div className="middle-left">
                 <div className="content-container">
                   <div className="content-image-container">
-                    <div className="title-span">
+                    <div className="title-span-sf">
                       <Link className="image-text" to="/san-fransisco">
                         SAN FRANCISCO
                       </Link>
@@ -66,7 +66,7 @@ function PoliciesInitiativesStatic() {
 
                 <div className="content-container">
                   <div className="content-image-container">
-                    <div className="title-span">
+                    <div className="title-span-short">
                       <h1 className="image-text">PORTLAND</h1>
                     </div>
                     <img
