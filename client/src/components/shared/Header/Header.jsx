@@ -2,7 +2,7 @@ import React, { useEffect, useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 import Ul from "./Ul";
-import { onResize } from "../../../utils/helpers";
+import { onResize } from "../../../utils/onResize";
 import { LoggedInUserContext } from "../../LoggedInUser/LoggedInUserContext";
 
 function Header({ open, setOpen }) {
