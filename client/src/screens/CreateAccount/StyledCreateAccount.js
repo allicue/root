@@ -51,6 +51,7 @@ let StyledDiv = styled.div`
   .add-image {
     margin-top: 10px;
   }
+
   .add-image:hover {
     cursor: pointer;
   }
@@ -110,6 +111,7 @@ let StyledDiv = styled.div`
   @media screen and (max-width: 500px) {
     .title {
       width: 100vw;
+      margin-top: 20px;
     }
   }
 
