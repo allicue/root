@@ -9,6 +9,7 @@ const StyledSanFran = styled.div`
   .title {
     width: 1000px;
   }
+
   .top-left-container {
     margin-left: -1.5vw;
     display: flex;
@@ -68,6 +69,7 @@ const StyledSanFran = styled.div`
   .in-works {
     display: none;
   }
+
   .get-involved {
     display: none;
   }
@@ -107,9 +109,11 @@ const StyledSanFran = styled.div`
     align-items: center;
     overflow-y: scroll;
   }
+  
   .box-text-container::-webkit-scrollbar {
     display: none;
   }
+
   .box-text {
     font-family: "Montserrat", sans-serif;
     display: flex;
@@ -220,6 +224,7 @@ const StyledSanFran = styled.div`
       width: 110vw;
       font-size: 24px;
       margin: 0 auto;
+      margin-top: 20px;
     }
 
     .in-works {
