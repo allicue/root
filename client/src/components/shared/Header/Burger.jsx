@@ -25,8 +25,8 @@ const StyledBurger = styled.div`
   }
 
   .bar-line {
-    width: 2.4rem;
-    height: 0.2rem;
+    width: 38px;
+    height: 3px;
     background-color: #3d3d3d;
   }
 `;

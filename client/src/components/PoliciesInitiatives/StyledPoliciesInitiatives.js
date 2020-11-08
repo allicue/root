@@ -257,7 +257,9 @@ const StyledPoliciesInitiatives = styled.div`
     .title {
       display: flex;
       flex-direction: column;
+      margin-top: 20px;
     }
+
     .wrapper {
       display: flex;
       flex-direction: column-reverse;
