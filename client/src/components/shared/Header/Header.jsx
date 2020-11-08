@@ -6,7 +6,6 @@ import { onResize } from "../../../utils/helpers";
 import { LoggedInUserContext } from "../../LoggedInUser/LoggedInUserContext";
 
 function Header({ open, setOpen }) {
-
   const [loggedInUser] = useContext(LoggedInUserContext);
 
   useEffect(() => {
@@ -16,16 +15,15 @@ function Header({ open, setOpen }) {
       window.removeEventListener("resize", onResize);
     };
   }, []);
-  
+
   useEffect(() => {
     open
       ? (document.body.style.overflow = "hidden")
       : (document.body.style.overflow = "auto");
   }, [open]);
 
-  //DROPDOWN CODE//
-  const [openDropdown, setOpenDropdown] = useState(false)
-  const handleMouseOver = () => setOpenDropdown(!openDropdown)
+  const [openDropdown, setOpenDropdown] = useState(false);
+  const handleMouseOver = () => setOpenDropdown(!openDropdown);
 
   return (
     <header className="header">
@@ -53,7 +51,7 @@ function Header({ open, setOpen }) {
           <div className="userpic-container">
             <img
               className="profile-pic"
-                src="https://i.imgur.com/thepnzF.png"
+              src="https://i.imgur.com/thepnzF.png"
               alt="User profile"
             />
           </div>
@@ -115,7 +113,8 @@ function Header({ open, setOpen }) {
               <img
                 className="header-image2"
                 src="https://i.imgur.com/gC1ttIE.png"
-              alt="Root Logo Primary"/>
+                alt="Root Logo Primary"
+              />
               <img
                 className="header-image-user"
                 src={loggedInUser?.imgURL}
@@ -127,7 +126,8 @@ function Header({ open, setOpen }) {
               <img
                 className="header-image"
                 src="https://i.imgur.com/thepnzF.png"
-              alt="Root Logo Primary"/>
+                alt="Root Logo Primary"
+              />
             </Link>
           )}
         </div>
@@ -177,20 +177,33 @@ function Header({ open, setOpen }) {
                 className="header-link"
                 id="link-account"
               >
-                <div className="dropdown-container" id="header-span"> 
-                  <Link className="header-link header-span" id='header-account-link' onMouseOver={handleMouseOver}>Account</Link>
-                  {openDropdown ?
-                    <div className='dropdownmenu'>
-                    <Link className="dropdown-item dropdown-span" to="login">LOGIN/ REGISTER</Link>
-                    <Link className="dropdown-item dropdown-span2" to="manage-your-account">MANAGE ACCOUNT</Link>
-                  </div>
-                  :
-                  <></>
-                  }
+                <div className="dropdown-container" id="header-span">
+                  <Link
+                    className="header-link header-span"
+                    id="header-account-link"
+                    onMouseOver={handleMouseOver}
+                  >
+                    Account
+                  </Link>
+                  {openDropdown ? (
+                    <div className="dropdownmenu">
+                      <Link className="dropdown-item dropdown-span" to="login">
+                        LOGIN/ REGISTER
+                      </Link>
+                      <Link
+                        className="dropdown-item dropdown-span2"
+                        to="manage-your-account"
+                      >
+                        MANAGE ACCOUNT
+                      </Link>
+                    </div>
+                  ) : (
+                    <></>
+                  )}
                 </div>
               </Link>
             ) : (
-              < Link
+              <Link
                 to="manage-your-account"
                 className="header-link"
                 id="link-account"
@@ -199,10 +212,10 @@ function Header({ open, setOpen }) {
                   className="burger-image manage-account"
                   src="https://i.imgur.com/rHmqcSX.png"
                   alt="Manage Your Account Icon"
-                  />
-                  
+                />
+
                 <div id="header-span"> Manage Account </div>
-              </Link> 
+              </Link>
             )}
           </li>
         </div>
