@@ -147,6 +147,9 @@
     margin: initial;
     padding: initial;
   }
+  .title{
+    margin-top: 20px;
+  }
 
   .manage-account-input:focus {
     background-color: white;
