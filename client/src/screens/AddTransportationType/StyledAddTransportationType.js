@@ -101,7 +101,6 @@ let StyledDiv = styled.div`
     margin: 16px 19px 16px 19px;
   }
 
-
   .image-text {
     position: absolute;
     font-family: "Montserrat", sans-serif;

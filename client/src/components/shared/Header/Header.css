@@ -18,6 +18,14 @@
   position: relative;
 }
 
+link-account{
+  display: flex;
+}
+
+#link-account-mobile {
+  display: none;
+}
+
 .header-span:hover:after {
   content: "";
   position: absolute;
@@ -185,16 +193,30 @@
 }
 
 @media (max-width: 1280px) {
-
   .dropdown-item {
     font-size: 13px;
   }
-
 }
 
 @media (max-width: 500px) {
   .header {
     padding: initial;
+  }
+
+  .user-root-image-desktop {
+    margin-bottom: -2vh;
+  }
+
+  .dropdownmenu {
+    display: none;
+  }
+
+  #header-account-link {
+    display: none;
+  }
+
+  #header-account {
+    margin-bottom: 50px;
   }
 
   .header-image {
@@ -203,11 +225,6 @@
 
   .header-image-user {
     display: none;
-  }
-
-  .header-home {
-    margin-top: -250px;
-    margin-right: 90px;
   }
 
   .header-span:active {
@@ -234,6 +251,14 @@
 
   .header-link:hover {
     margin-bottom: 0px;
+  }
+  
+  #link-account{
+    display: none;
+  }
+
+  #link-account-mobile {
+    display: flex;
   }
 
   .header-link {
@@ -269,3 +294,5 @@
     margin-right: 15px;
   }
 }
+
+
