@@ -230,17 +230,16 @@
   display: none;
 }
 
-/* MOBILE BREAKPOINT */
 @media only screen and (max-width: 500px) {
 
   .homepage-header {
-    height: 450px;
+    height: 350px;
     display: flex;
     justify-content: flex-end;
     background-image: linear-gradient(
       rgba(0, 0, 0, 0.0),
       rgba(0, 0, 0, 0.0)), url("../../Assets/Images/Hi-Res/root_header_hi_res.png");
-    background-position-y: 20%;
+    background-position-y: 35%;
     padding: 0px;
   }
   

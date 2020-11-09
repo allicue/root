@@ -1,12 +1,12 @@
-import React, { useState, useEffect, useContext } from 'react';
-import { Redirect } from 'react-router-dom';
-import DeleteAccountConfirm from './DeleteAccountConfirm/DeleteAccountConfirm'
-import Layout from '../../components/shared/Layout/Layout';
-import LogoBanner from '../../components/shared/LogoBanner/LogoBanner';
-import Leaf from '../../Assets/Icons/ROOT_Leaf.png'
-import { updateUser, getUser } from '../../services/users';
-import { LoggedInUserContext } from '../../components/LoggedInUser/LoggedInUserContext';
-import './ManageAccount.css';
+import React, { useState, useEffect, useContext } from "react";
+import { Redirect } from "react-router-dom";
+import DeleteAccountConfirm from "./DeleteAccountConfirm/DeleteAccountConfirm";
+import Layout from "../../components/shared/Layout/Layout";
+import LogoBanner from "../../components/shared/LogoBanner/LogoBanner";
+import Leaf from "../../Assets/Icons/ROOT_Leaf.png";
+import { updateUser, getUser } from "../../services/users";
+import { LoggedInUserContext } from "../../components/LoggedInUser/LoggedInUserContext";
+import "./ManageAccount.css";
 
 export default function ManageAccount(props) {
   const [updated, setUpdated] = useState(false);
@@ -16,11 +16,11 @@ export default function ManageAccount(props) {
   const [loggedInUser] = useContext(LoggedInUserContext);
 
   const [user, setUser] = useState({
-    name: '',
-    email: '',
-    password: '',
-    imgURL: '',
-    zipcode: ''
+    name: "",
+    email: "",
+    password: "",
+    imgURL: "",
+    zipcode: "",
   });
 
   let userID = loggedInUser?._id;
@@ -41,12 +41,12 @@ export default function ManageAccount(props) {
 
 
   const handleChange = (e) => {
-    const { name, value } = e.target
+    const { name, value } = e.target;
     setUser({
       ...user,
-      [name]: value
+      [name]: value,
     });
-  }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -54,19 +54,19 @@ export default function ManageAccount(props) {
     await updateUser(userID, user);
     setUpdated(!updated);
     setManaged(true);
-  }
+  };
 
   const handleClick = (e) => {
     e.preventDefault();
     setDeleteConfirm(!deleteConfirm);
-  }
+  };
 
   const handleImageSelect = () => {
     setShowImageInput(!showImageInput);
-  }
+  };
 
   if (managed) {
-    return <Redirect to={"/profile"} />
+    return <Redirect to={"/profile"} />;
   }
 
   return (
@@ -74,14 +74,29 @@ export default function ManageAccount(props) {
       <Layout>
         <LogoBanner title="Manage Your Account" />
         <div className="manage-account-main">
-          {deleteConfirm ? <DeleteAccountConfirm id={userID} setDeleteConfirm={setDeleteConfirm} /> : <></>}
+          {deleteConfirm ? (
+            <DeleteAccountConfirm
+              id={userID}
+              setDeleteConfirm={setDeleteConfirm}
+            />
+          ) : (
+            <></>
+          )}
           <div className="user-image-parent">
-            <img className="user-photo" src={user.imgURL ? user.imgURL : Leaf} />
-            <p className="toggle-input-img" onClick={handleImageSelect}>Edit</p>
+            <img
+              className="user-photo"
+              src={user.imgURL ? user.imgURL : Leaf}
+              alt={user.name}
+            />
+            <p className="toggle-input-img" onClick={handleImageSelect}>
+              Edit
+            </p>
           </div>
           <form className="manage-account-form" onSubmit={handleSubmit}>
             <div className="inline-input-field">
-              <label className="label-manage-account" htmlFor="name">Name</label>
+              <label className="label-manage-account" htmlFor="name">
+                Name
+              </label>
               <input
                 className="manage-account-input"
                 type="text"
@@ -91,9 +106,10 @@ export default function ManageAccount(props) {
                 required
               />
             </div>
-            <div
-              className="inline-input-field">
-              <label className="label-manage-account" htmlFor="email">Email</label>
+            <div className="inline-input-field">
+              <label className="label-manage-account" htmlFor="email">
+                Email
+              </label>
               <input
                 className="manage-account-input"
                 type="text"
@@ -101,11 +117,9 @@ export default function ManageAccount(props) {
                 value={user?.email}
                 onChange={handleChange}
                 required
-
               />
             </div>
             <div className="inline-input-field">
-
               <label className="label-manage-account" htmlFor="password">Password</label>
               <input
                 className="manage-account-input"
@@ -116,10 +130,15 @@ export default function ManageAccount(props) {
                 onChange={handleChange}
                 required
               />
-
             </div>
             <div className="inline-input-field">
-              <label className="label-manage-account" htmlFor="zipcode" id="zip-code">Zip Code</label>
+              <label
+                className="label-manage-account"
+                htmlFor="zipcode"
+                id="zip-code"
+              >
+                Zip Code
+              </label>
               <input
                 className="manage-account-input"
                 type="text"
@@ -129,9 +148,11 @@ export default function ManageAccount(props) {
                 required
               />
             </div>
-            {showImageInput ?
+            {showImageInput ? (
               <div className="inline-input-field">
-                <label className="label-manage-account" htmlFor="imgURL">Image URL</label>
+                <label className="label-manage-account" htmlFor="imgURL">
+                  Image URL
+                </label>
                 <input
                   className="manage-account-input"
                   type="text"
@@ -140,14 +161,29 @@ export default function ManageAccount(props) {
                   onChange={handleChange}
                   required
                 />
-              </div> : <></>}
+              </div>
+            ) : (
+              <></>
+            )}
             <div className="edit-buttons-container">
-              <button type="submit" className="changes-button" id="save-changes">Save Changes</button>
-              <button onClick={handleClick} className="changes-button" id="delete-account">Delete Account</button>
+              <button
+                type="submit"
+                className="changes-button"
+                id="save-changes"
+              >
+                Save Changes
+              </button>
+              <button
+                onClick={handleClick}
+                className="changes-button"
+                id="delete-account"
+              >
+                Delete Account
+              </button>
             </div>
           </form>
         </div>
       </Layout>
     </div>
-  )
+  );
 }
