@@ -141,15 +141,50 @@
 }
 
 @media (max-width: 500px) {
-  .name-parent,
-  .login-name,
-  .password-parent,
-  .login-password,
-  .link-register {
+
+  .login-root{
+    margin-top: 70px;
+    height: 150px;
+    width: 250px;
+  }
+
+  .name-parent,.login-name,.password-parent,.login-password,.link-register{
     width: 340px;
   }
 
-  .login-button {
+  .login-name{
+    background-color: lightgray;
+    box-shadow: none;
+    border: none;
+    height: 35px;
+    width: 280px;
+  }
+
+  .login-password{
+    background-color: lightgray;
+    box-shadow: none;
+    border: none;
+    height: 35px;
+    width: 280px;
+  }
+
+  .username{
+    display: none;
+  }
+
+  .password{
+    display: none;
+  }
+
+  .login-button{
+    margin-top: 60px;
+    margin-bottom: 60px;
     text-transform: uppercase;
+    box-shadow: none;
+    border: none;
+  }
+
+  .link-register{
+    font-weight: bold;
   }
 }
