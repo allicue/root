@@ -109,7 +109,7 @@ const StyledSanFran = styled.div`
     align-items: center;
     overflow-y: scroll;
   }
-  
+
   .box-text-container::-webkit-scrollbar {
     display: none;
   }
@@ -151,6 +151,7 @@ const StyledSanFran = styled.div`
     flex-flow: column nowrap;
     margin: 16px 19px 16px 19px;
   }
+
   .image-text {
     position: absolute;
     font-family: "Montserrat", sans-serif;
@@ -178,17 +179,21 @@ const StyledSanFran = styled.div`
     margin-bottom: 118px;
     justify-content: center;
   }
+
   .box-text-mobile {
     display: none;
   }
+
   .mobile-image {
     display: none;
   }
+
   @media screen and (max-width: 768px) {
     .content-image {
       max-width: 70vw;
       max-height: 200px;
     }
+
     .top-left-container {
       margin: 0 auto;
     }
@@ -217,6 +222,7 @@ const StyledSanFran = styled.div`
       margin: 20px;
     }
   }
+  
   @media screen and (max-width: 500px) {
     .title {
       display: flex;
