@@ -18,6 +18,7 @@ const Ul = styled.ul`
     justify-content: space-around;
     padding-left: 20px;
     position: fixed;
+    overflow-y: scroll; 
     transform: ${({ open }) => (open ? "translateY(0)" : "translateY(-100%)")};
     top: 0;
     left: 0;

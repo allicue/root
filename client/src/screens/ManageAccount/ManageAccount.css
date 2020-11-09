@@ -169,6 +169,7 @@
 
  .manage-account-form {
    min-width: initial;
+   min-width: auto;
    width: 100vw;
  }
  .edit-buttons-container {
