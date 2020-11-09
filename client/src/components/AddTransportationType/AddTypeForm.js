@@ -15,7 +15,7 @@ const Form = styled.form`
     margin: 36px 44px;
     text-transform: uppercase;
   }
-  
+
   button:focus {
     outline: none;
   }
@@ -45,7 +45,7 @@ const Form = styled.form`
     padding-left: 40px;
     box-shadow: 2px 2px 4px 1px #999;
     resize: none;
-    padding: 10px;
+    padding-top: 15px;
     padding-left: 20px;
   }
 
