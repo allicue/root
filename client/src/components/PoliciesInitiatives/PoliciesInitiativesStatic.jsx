@@ -24,19 +24,15 @@ function PoliciesInitiativesStatic() {
           <div className="middle-wrapper">
             <div className="middle-container">
               <div className="middle-left">
-                <div className="content-container">
-                  <div className="content-image-container">
-                    <div className="title-span-sf">
-                      <Link className="image-text" to="/san-fransisco">
-                        SAN FRANCISCO
-                      </Link>
+
+                <div className="content-container" >
+                  <Link to="/san-fransisco">
+                    <div className="content-image-container" id="sf-image-container">
+                      <div className="title-span-sf">
+                        <h1 className="image-text" id="sf-image-text">SAN FRANCISCO</h1>
+                      </div>
                     </div>
-                    <img
-                      className="content-image"
-                      src="https://i.imgur.com/XX7kg1z.png"
-                      alt="San Fransisco"
-                    />
-                  </div>
+                  </Link>
                   <div className="box-text-container">
                     <p className="box-text1">Commuter Benefits Ordinance </p>
                     <p className="box-text1"> Tenant Bicycle Parking </p>
@@ -46,15 +42,10 @@ function PoliciesInitiativesStatic() {
                 </div>
 
                 <div className="content-container">
-                  <div className="content-image-container">
-                    <div className="title-span">
+                  <div className="content-image-container" id="la-image-container">
+                    <div className="title-span-la">
                       <h1 className="image-text">LOS ANGELES</h1>
                     </div>
-                    <img
-                      className="content-image"
-                      src="https://i.imgur.com/WYjE0sv.jpg"
-                      alt="Los Angeles"
-                    />
                   </div>
                   <div className="box-text-container">
                     <p className="box-text">Lorem ipsum dolor sir amet </p>
@@ -63,17 +54,11 @@ function PoliciesInitiativesStatic() {
                     <p className="box-text-small">California EPA ></p>
                   </div>
                 </div>
-
                 <div className="content-container">
-                  <div className="content-image-container">
+                  <div className="content-image-container" id="portland-image-container">
                     <div className="title-span-short">
                       <h1 className="image-text">PORTLAND</h1>
                     </div>
-                    <img
-                      className="content-image"
-                      src="https://i.imgur.com/Jvc4VTr.jpg"
-                      alt="Seattle"
-                    />
                   </div>
                   <div className="box-text-container">
                     <p className="box-text">Lorem ipsum dolor sir amet </p>
@@ -83,17 +68,14 @@ function PoliciesInitiativesStatic() {
                   </div>
                 </div>
               </div>
+
               <div className="middle-right">
-                <div className="content-container">
-                  <div className="content-image-container">
+
+                <div className="content-container" >
+                  <div className="content-image-container" id="seattle-image-container">
                     <div className="title-span-short">
                       <h1 className="image-text">SEATTLE</h1>
                     </div>
-                    <img
-                      className="content-image"
-                      src="https://i.ibb.co/Rcy7c1S/seattle-citiypolicies-hi-res.png"
-                      alt="Seattle"
-                    />
                   </div>
                   <div className="box-text-container">
                     <p className="box-text">Lorem ipsum dolor sir amet </p>
@@ -104,15 +86,10 @@ function PoliciesInitiativesStatic() {
                 </div>
 
                 <div className="content-container">
-                  <div className="content-image-container">
-                    <div className="title-span">
+                  <div className="content-image-container" id="ny-image-container">
+                    <div className="title-span-ny">
                       <h1 className="image-text">NEW YORK</h1>
                     </div>
-                    <img
-                      className="content-image"
-                      src="https://i.imgur.com/x9wKRcK.jpg"
-                      alt="New York"
-                    />
                   </div>
                   <div className="box-text-container">
                     <p className="box-text">Lorem ipsum dolor sir amet </p>
@@ -123,15 +100,10 @@ function PoliciesInitiativesStatic() {
                 </div>
 
                 <div className="content-container">
-                  <div className="content-image-container">
+                  <div className="content-image-container" id="chicago-image-container">
                     <div className="title-span-short">
                       <h1 className="image-text">CHICAGO</h1>
                     </div>
-                    <img
-                      className="content-image"
-                      src="https://i.imgur.com/xiZTdOz.jpg"
-                      alt="Chicago"
-                    />
                   </div>
                   <div className="box-text-container">
                     <p className="box-text">Lorem ipsum dolor sir amet </p>
