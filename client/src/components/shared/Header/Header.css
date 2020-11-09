@@ -197,6 +197,9 @@
   .user-root-image-desktop {
     margin-bottom: -20px;
   }
+  .dropdownmenu{
+    display: none;
+  }
 
   #header-account-link {
     display: none;
