@@ -18,6 +18,10 @@
   position: relative;
 }
 
+#header-account{
+margin-bottom: 50px;
+}
+
 .header-span:hover:after {
   content: "";
   position: absolute;
@@ -195,6 +199,10 @@
 @media (max-width: 500px) {
   .header {
     padding: initial;
+  }
+
+  #header-account-link {
+    display: none;
   }
 
   .header-image {
