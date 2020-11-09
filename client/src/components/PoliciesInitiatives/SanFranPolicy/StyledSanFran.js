@@ -6,10 +6,15 @@ const StyledSanFran = styled.div`
     color: #3d3d3d;
   }
 
+  .total-text-container{
+    margin-top: -30px;
+  }
+
+
   .title {
     width: 1000px;
   }
-
+  
   .top-left-container {
     margin-left: -1.5vw;
     display: flex;
@@ -115,7 +120,7 @@ const StyledSanFran = styled.div`
     max-width: 83.5vw;
     background-color: #e8e4d9;
     padding-bottom: -30px;
-    margin-bottom: -20px;
+    /* margin-bottom: -20px; */
   }
 
   .box-text-container::-webkit-scrollbar {
@@ -130,7 +135,7 @@ const StyledSanFran = styled.div`
     font-weight: 500;
     text-align: left;
     color: black;
-    margin: 10px 19px 40px 22px;
+    margin: 20px 19px 40px 22px;
   }
 
   .box-text-title {
@@ -140,8 +145,9 @@ const StyledSanFran = styled.div`
     text-align: left;
     color: #3d3d3d;
     display: flex;
-    margin: 29px 19px 29px 22px;
+    margin: 0 19px 0 22px;
     text-transform: uppercase;
+    padding-top: 20px;
   }
 
   .box-text-title:hover {
@@ -222,7 +228,7 @@ const StyledSanFran = styled.div`
   }
 
     .box-text {
-      margin-top: -20px;
+      /* margin-top: 50px; */
     }
 
     .top-right-container {
@@ -237,6 +243,15 @@ const StyledSanFran = styled.div`
   }
 
   @media screen and (max-width: 500px) {
+    .middle-wrapper{
+      display: flex;
+      justify-content: center;
+    }
+
+    .total-text-container{
+      margin-left: 10px;
+    }
+
     .title {
       display: flex;
       flex-direction: column;
@@ -244,7 +259,7 @@ const StyledSanFran = styled.div`
       font-size: 24px;
       margin: 0 auto;
     }
-
+  
     .in-works {
       display: flex;
       font-family: Montserrat, sans-serif;
@@ -308,13 +323,11 @@ const StyledSanFran = styled.div`
       overflow: initial;
       overflow-y: initial;
       margin-bottom: 20px;
-      margin-left: -340px;
     }
 
     .title-text-container {
       background: none;
       height: 30px;
-      margin-left: 15px;
       flex-direction: row;
     }
 
@@ -325,8 +338,8 @@ const StyledSanFran = styled.div`
     .box-text-mobile {
       display: flex;
       color: #3d3d3d;
-      margin-top: 30px;
-      margin-bottom: -20px;
+      margin-top: 10px;
+      margin-bottom: -5px;
     }
 
     .content-container {
