@@ -101,13 +101,21 @@ const StyledSanFran = styled.div`
   .box-text-container {
     width: 1202px;
     height: 236px;
-    max-height: 30vh;
+    max-height: 20vh;
     max-width: 83.5vw;
     background-color: #e8e4d9;
     padding-top: 1px;
-    padding-bottom: 20px;
+    padding-bottom: 5px;
     align-items: center;
     overflow-y: scroll;
+  }
+
+  .title-text-container {
+    width: 1202px;
+    max-width: 83.5vw;
+    background-color: #e8e4d9;
+    padding-bottom: -30px;
+    margin-bottom: -20px;
   }
 
   .box-text-container::-webkit-scrollbar {
@@ -122,7 +130,7 @@ const StyledSanFran = styled.div`
     font-weight: 500;
     text-align: left;
     color: black;
-    margin: 40px 19px 40px 22px;
+    margin: 10px 19px 40px 22px;
   }
 
   .box-text-title {
@@ -208,6 +216,11 @@ const StyledSanFran = styled.div`
       height: 20vh;
     }
 
+
+  .title-text-container {
+    width: 70vw;
+  }
+
     .box-text {
       margin-top: -20px;
     }
@@ -289,13 +302,20 @@ const StyledSanFran = styled.div`
     }
 
     .box-text-container {
-      background: #fff;
+      background: none;
       overflow-y: elipsis;
       flex-direction: row;
       overflow: initial;
       overflow-y: initial;
       margin-bottom: 20px;
-      margin-left: 20px;
+      margin-left: -340px;
+    }
+
+    .title-text-container {
+      background: none;
+      height: 30px;
+      margin-left: 15px;
+      flex-direction: row;
     }
 
     .box-text {
@@ -305,7 +325,8 @@ const StyledSanFran = styled.div`
     .box-text-mobile {
       display: flex;
       color: #3d3d3d;
-      margin-top: 10px;
+      margin-top: 30px;
+      margin-bottom: -20px;
     }
 
     .content-container {
