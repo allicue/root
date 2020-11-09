@@ -260,7 +260,6 @@ const StyledPoliciesInitiatives = styled.div`
     .title {
       display: flex;
       flex-direction: column;
-      margin-top: 20px;
     }
 
     .wrapper {

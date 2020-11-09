@@ -222,7 +222,7 @@ const StyledSanFran = styled.div`
       margin: 20px;
     }
   }
-  
+
   @media screen and (max-width: 500px) {
     .title {
       display: flex;
@@ -230,7 +230,6 @@ const StyledSanFran = styled.div`
       width: 110vw;
       font-size: 24px;
       margin: 0 auto;
-      margin-top: 20px;
     }
 
     .in-works {
