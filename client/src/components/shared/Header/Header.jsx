@@ -107,7 +107,7 @@ function Header({ open, setOpen }) {
             </Link>
           </li>
         </div>
-        <div>
+        <div className="user-root-image-desktop">
           {Object.keys(loggedInUser).length !== 0 ? (
             <Link to="/profile">
               <img
@@ -171,51 +171,44 @@ function Header({ open, setOpen }) {
         </div>
         <div className="header-link-container" id="header-account">
           <li>
-            {!open ? (
-              <div
-                className="header-link"
-                id="link-account"
-              >
-                <div className="dropdown-container" id="header-span">
-                  <div
-                    className="header-link header-span"
-                    id="header-account-link"
-                    onMouseOver={handleMouseOver}
-                  >
-                    Account
-                  </div>
-                  {openDropdown ? (
-                    <div className="dropdownmenu">
-                      <Link className="dropdown-item dropdown-span" to="login">
-                        LOGIN/ REGISTER
-                      </Link>
-                      <Link
-                        className="dropdown-item dropdown-span2"
-                        to="manage-your-account"
-                      >
-                        MANAGE ACCOUNT
-                      </Link>
-                    </div>
-                  ) : (
-                    <></>
-                  )}
+            <div className="header-link" id="link-account">
+              <div className="dropdown-container" id="header-span">
+                <div
+                  className="header-link header-span"
+                  id="header-account-link"
+                  onMouseOver={handleMouseOver}
+                >
+                  Account
                 </div>
+                {openDropdown ? (
+                  <div className="dropdownmenu">
+                    <Link className="dropdown-item dropdown-span" to="login">
+                      LOGIN/ REGISTER
+                    </Link>
+                    <Link
+                      className="dropdown-item dropdown-span2"
+                      to="manage-your-account"
+                    >
+                      MANAGE ACCOUNT
+                    </Link>
+                  </div>
+                ) : (
+                  <></>
+                )}
               </div>
-            ) : (
-              <Link
-                to="manage-your-account"
-                className="header-link"
-                id="link-account"
-              >
-                <img
-                  className="burger-image manage-account"
-                  src="https://i.imgur.com/rHmqcSX.png"
-                  alt="Manage Your Account Icon"
-                />
-
-                <div id="header-span"> Manage Account </div>
-              </Link>
-            )}
+            </div>
+            <Link
+              to="manage-your-account"
+              className="header-link"
+              id="link-account-mobile"
+            >
+              <img
+                className="burger-image manage-account"
+                src="https://i.imgur.com/rHmqcSX.png"
+                alt="Manage Your Account Icon"
+              />
+              <div className="header-span"> Manage Account </div>
+            </Link>
           </li>
         </div>
       </Ul>
