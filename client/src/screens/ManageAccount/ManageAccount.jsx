@@ -100,7 +100,7 @@ export default function ManageAccount(props) {
             </div>
             <div className="inline-input-field">
 
-              <label className="label-manage-account" htmlFor="password">PASSWORD</label>
+              <label className="label-manage-account" htmlFor="password">Password</label>
               <input
                 className="manage-account-input"
                 id="password-manage-account"

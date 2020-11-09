@@ -178,13 +178,13 @@ function Header({ open, setOpen }) {
                 id="link-account"
               >
                 <div className="dropdown-container" id="header-span">
-                  <Link
+                  <div
                     className="header-link header-span"
                     id="header-account-link"
                     onMouseOver={handleMouseOver}
                   >
                     Account
-                  </Link>
+                  </div>
                   {openDropdown ? (
                     <div className="dropdownmenu">
                       <Link className="dropdown-item dropdown-span" to="login">
