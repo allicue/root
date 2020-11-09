@@ -26,10 +26,10 @@ function PoliciesInitiativesStatic() {
               <div className="middle-left">
 
                 <div className="content-container" >
-                  <Link className="image-text" to="/san-fransisco">
+                  <Link to="/san-fransisco">
                     <div className="content-image-container" id="sf-image-container">
                       <div className="title-span-sf">
-                        <h1 className="image-text">SAN FRANCISCO</h1>
+                        <h1 className="image-text" id="sf-image-text">SAN FRANCISCO</h1>
                       </div>
                     </div>
                   </Link>
@@ -43,7 +43,7 @@ function PoliciesInitiativesStatic() {
 
                 <div className="content-container">
                   <div className="content-image-container" id="la-image-container">
-                    <div className="title-span-sf">
+                    <div className="title-span-la">
                       <h1 className="image-text">LOS ANGELES</h1>
                     </div>
                   </div>
@@ -68,48 +68,49 @@ function PoliciesInitiativesStatic() {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="middle-right">
 
-              <div className="content-container" >
-                <div className="content-image-container" id="seattle-image-container">
-                  <div className="title-span-short">
-                    <h1 className="image-text">SEATTLE</h1>
-                  </div>
-                </div>
-                <div className="box-text-container">
-                  <p className="box-text">Lorem ipsum dolor sir amet </p>
-                  <p className="box-text"> Ut wisi enim ad </p>
-                  <p className="box-text"> Duis autem vel eum</p>
-                  <p className="box-text-small">Washington EPA ></p>
-                </div>
-              </div>
+              <div className="middle-right">
 
-              <div className="content-container">
-                <div className="content-image-container" id="ny-image-container">
-                  <div className="title-span-ny">
-                    <h1 className="image-text">NEW YORK</h1>
+                <div className="content-container" >
+                  <div className="content-image-container" id="seattle-image-container">
+                    <div className="title-span-short">
+                      <h1 className="image-text">SEATTLE</h1>
+                    </div>
+                  </div>
+                  <div className="box-text-container">
+                    <p className="box-text">Lorem ipsum dolor sir amet </p>
+                    <p className="box-text"> Ut wisi enim ad </p>
+                    <p className="box-text"> Duis autem vel eum</p>
+                    <p className="box-text-small">Washington EPA ></p>
                   </div>
                 </div>
-                <div className="box-text-container">
-                  <p className="box-text">Lorem ipsum dolor sir amet </p>
-                  <p className="box-text"> Ut wisi enim ad </p>
-                  <p className="box-text"> Duis autem vel eum</p>
-                  <p className="box-text-small">New York EPA ></p>
-                </div>
-              </div>
-              
-              <div className="content-container">
-                <div className="content-image-container" id="chicago-image-container">
-                  <div className="title-span-short">
-                    <h1 className="image-text">CHICAGO</h1>
+
+                <div className="content-container">
+                  <div className="content-image-container" id="ny-image-container">
+                    <div className="title-span-ny">
+                      <h1 className="image-text">NEW YORK</h1>
+                    </div>
+                  </div>
+                  <div className="box-text-container">
+                    <p className="box-text">Lorem ipsum dolor sir amet </p>
+                    <p className="box-text"> Ut wisi enim ad </p>
+                    <p className="box-text"> Duis autem vel eum</p>
+                    <p className="box-text-small">New York EPA ></p>
                   </div>
                 </div>
-                <div className="box-text-container">
-                  <p className="box-text">Lorem ipsum dolor sir amet </p>
-                  <p className="box-text"> Ut wisi enim ad </p>
-                  <p className="box-text"> Duis autem vel eum</p>
-                  <p className="box-text-small">Illinois EPA ></p>
+
+                <div className="content-container">
+                  <div className="content-image-container" id="chicago-image-container">
+                    <div className="title-span-short">
+                      <h1 className="image-text">CHICAGO</h1>
+                    </div>
+                  </div>
+                  <div className="box-text-container">
+                    <p className="box-text">Lorem ipsum dolor sir amet </p>
+                    <p className="box-text"> Ut wisi enim ad </p>
+                    <p className="box-text"> Duis autem vel eum</p>
+                    <p className="box-text-small">Illinois EPA ></p>
+                  </div>
                 </div>
               </div>
             </div>

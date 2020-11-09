@@ -88,21 +88,29 @@ const StyledPoliciesInitiatives = styled.div`
     justify-content: center;
     width: 288px;
     height: 256px;
-
+    cursor: pointer;
   }
 
   #sf-image-container {
-    background: linear-gradient(rgba(122, 121, 121, 0.3), rgba(122, 121, 121, 0.3)), url(https://i.imgur.com/XX7kg1z.png);
+    background: linear-gradient(rgba(122, 121, 121, 0.4), rgba(122, 121, 121, 0.4)), url(https://i.imgur.com/XX7kg1z.png);
     background-size: cover;
-    background-position-y: 45%;
+    cursor: pointer;
+  }
+  
+  #sf-image-container:hover {
+    background: linear-gradient(rgba(80, 80, 80, 0.5), rgba(80, 80, 80, 0.5)), url(https://i.imgur.com/XX7kg1z.png);
+    background-size: cover;
+  }
+  
+  #la-image-container {
+    background: linear-gradient(rgba(122, 121, 121, 0.4), rgba(122, 121, 121, 0.4)), url(https://i.imgur.com/WYjE0sv.jpg);
+    background-size: cover;
     cursor: pointer;
   }
 
-  #la-image-container {
-    background: linear-gradient(rgba(122, 121, 121, 0.3), rgba(122, 121, 121, 0.3)), url(https://i.imgur.com/WYjE0sv.jpg);
+  #la-image-container:hover {
+    background: linear-gradient(rgba(80, 80, 80, 0.3), rgba(80, 80, 80, 0.3)), url(https://i.imgur.com/WYjE0sv.jpg);
     background-size: cover;
-    background-position-y: 45%;
-    cursor: pointer;
   }
 
   #ny-image-container{
@@ -111,28 +119,43 @@ const StyledPoliciesInitiatives = styled.div`
     background-position-y: 45%;
 }
 
-  #sf-image-container:hover {
-    opacity: .9;
-  }
+  #ny-image-container:hover {
+    background: linear-gradient(rgba(80, 80, 80, 0.3), rgba(80, 80, 80, 0.3)), url(https://i.imgur.com/x9wKRcK.jpg);
+    background-size: cover;
+    background-size: cover;
+    background-position-y: 45%;
+}
 
   #seattle-image-container {
     background:  linear-gradient(rgba(122, 121, 121, 0.3), rgba(122, 121, 121, 0.3)), url(https://i.ibb.co/Rcy7c1S/seattle-citiypolicies-hi-res.png);
     background-size: cover;
-    background-position-y: 45%;
+  }
+
+  #seattle-image-container:hover {
+    background: linear-gradient(rgba(80, 80, 80, 0.3), rgba(80, 80, 80, 0.3)), url(https://i.ibb.co/Rcy7c1S/seattle-citiypolicies-hi-res.png);
+    background-size: cover;
   }
 
   #chicago-image-container {
     background:  linear-gradient(rgba(122, 121, 121, 0.3), rgba(122, 121, 121, 0.3)), url(https://i.imgur.com/xiZTdOz.jpg); 
     background-size: cover;
-    background-position-y: 45%;
+  }
+
+  #chicago-image-container:hover {
+    background: linear-gradient(rgba(80, 80, 80, 0.3), rgba(80, 80, 80, 0.3)), url(https://i.imgur.com/xiZTdOz.jpg);
+    background-size: cover;
   }
 
   #portland-image-container {
     background: linear-gradient(rgba(122, 121, 121, 0.3), rgba(122, 121, 121, 0.3)), url(https://i.imgur.com/Jvc4VTr.jpg);
     background-size: cover;
-    background-position-y: 45%;
   }
 
+  #portland-image-container:hover {
+    background: linear-gradient(rgba(80, 80, 80, 0.3), rgba(80, 80, 80, 0.3)), url(https://i.imgur.com/Jvc4VTr.jpg);
+    background-size: cover;
+  }
+  
   .content-image {
     width: 288px;
     height: 256px;
@@ -194,22 +217,14 @@ const StyledPoliciesInitiatives = styled.div`
     flex-flow: row nowrap;
     margin: 16px 8px 16px 9px;
     object-fit: cover;
-    // position: relative;
   }
 
   .image-text {
-    // position: absolute;
     font-family: "Montserrat", sans-serif;
     font-size: 27px;
     font-weight: bold;
     text-align: center;
     color: #ffffff;
-    whitespace: nowrap;
-    /* width: 100%; */
-    // width: 290px;
-    // height: 101px;
-    // margin-top: 120px;
-    // z-index: 1;
   }
 
   .title-span,
@@ -218,29 +233,30 @@ const StyledPoliciesInitiatives = styled.div`
     z-index: 1;
   }
 
-  .title-span:hover,
- {
+  .title-span:hover{
     cursor: pointer;
     max-width: 50%;
     position: relative;
   }
 
   .title-span-sf:hover,
-  .title-span-ny:hover {
+  .title-span-ny:hover,
+  .title-span-la:hover {
     cursor: pointer;
     max-width: 100%;
     position: relative;
   }
 
   .title-span:hover:after,
-  .title-span-sf:hover:after {
+  .title-span-sf:hover:after,
+  .title-span-la:hover:after {
     content: "";
     position: absolute;
     bottom: 0;
     left: 2rem;
     right: 2rem;
     top: 2.5rem;
-    background: red;
+    background: #fff;
     height: 0.3rem;
     border-radius: 10px;
     border-width: 50%;
@@ -272,7 +288,7 @@ const StyledPoliciesInitiatives = styled.div`
     left: 2rem;
     right: 2rem;
     top: 2.5rem;
-    background: red;
+    background: #fff;
     height: 0.3rem;
     border-radius: 10px;
     border-width: 50%;
@@ -343,17 +359,9 @@ const StyledPoliciesInitiatives = styled.div`
   }
 
   @media screen and (max-width: 600px) {
-    .content-image {
-      max-width: 200px;
-      max-height: 200px;
-    }
 
-    #sf-image-container{
-      max-width: 200px;
-      max-height: 200px;
-    }
 
-    .image-container{
+    .content-image-container{
       max-width: 200px;
       max-height: 200px;
     }
@@ -365,7 +373,11 @@ const StyledPoliciesInitiatives = styled.div`
       color: #ffffff;
       width: 200px;
       height: 101px;
-      margin-top: 95px;
+      margin-top: 75px;
+    }
+
+    #sf-image-text {
+      margin-top: 35px;
     }
 
     .title-span:hover:after {
@@ -375,7 +387,7 @@ const StyledPoliciesInitiatives = styled.div`
       left: 2.5rem;
       right: -3.6rem;
       top: 8.5rem;
-      background: red;
+      background: #fff;
       height: 0.3rem;
       border-radius: 10px;
       border-width: 50%;
@@ -386,8 +398,32 @@ const StyledPoliciesInitiatives = styled.div`
       position: absolute;
       bottom: 0;
       left: 3.5rem;
-      right: -3.1rem;
-      top: 10.3rem;
+      right: 3rem;
+      top: 6.5rem;
+      height: 0.3rem;
+      border-radius: 10px;
+      border-width: 50%;
+    }
+
+    .title-span-la:hover:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 3.5rem;
+      right: 3rem;
+      top: 7rem;
+      height: 0.3rem;
+      border-radius: 10px;
+      border-width: 50%;
+    }
+
+    .title-span-ny:hover:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 3.5rem;
+      right: 3rem;
+      top: 7rem;
       height: 0.3rem;
       border-radius: 10px;
       border-width: 50%;
@@ -398,8 +434,8 @@ const StyledPoliciesInitiatives = styled.div`
       position: absolute;
       bottom: 0;
       left: 4rem;
-      right: -5rem;
-      top: 8.5rem;
+      right: 4rem;
+      top: 7rem;
       height: 0.3rem;
       border-radius: 10px;
       border-width: 50%;
