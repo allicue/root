@@ -39,7 +39,7 @@
 }
 
 @media (max-width: 500px) {
-  .header {
+  /* .header {
     padding: initial;
   }
 
@@ -92,17 +92,19 @@
       margin-top: 10px;
 
     }
+  
   .header{
     background-color: #f2f2f2;
     height: 9vh;
   }
+
   .burger-image {
     display: flex;
     max-width: 50px;
     min-width: 50px;
     left: 17%;
     margin-right: 15px;
-    }
+    } */
 
   .root-parent,.account-root,.welcome-parent,.button-parent,.button-parent{
     width: 340px;

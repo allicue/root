@@ -141,7 +141,7 @@
 }
 
 @media (max-width: 500px) {
-  .header {
+  /* .header {
     padding: initial;
   }
   
@@ -204,7 +204,7 @@
     min-width: 50px;
     left: 17%;
     margin-right: 15px;
-    }
+    } */
   
   .name-parent,.login-name,.password-parent,.login-password,.link-register{
     width: 340px;
