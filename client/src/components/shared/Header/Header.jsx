@@ -171,7 +171,7 @@ function Header({ open, setOpen }) {
         </div>
         <div className="header-link-container" id="header-account">
           <li>
-            {!open ? (
+            
               <div
                 className="header-link"
                 id="link-account"
@@ -201,11 +201,11 @@ function Header({ open, setOpen }) {
                   )}
                 </div>
               </div>
-            ) : (
+            
               <Link
                 to="manage-your-account"
                 className="header-link"
-                id="link-account"
+                id="link-account-mobile"
               >
                 <img
                   className="burger-image manage-account"
@@ -214,7 +214,7 @@ function Header({ open, setOpen }) {
                 />
                 <div id="header-span"> Manage Account </div>
               </Link>
-            )}
+            
           </li>
         </div>
       </Ul>
