@@ -107,7 +107,7 @@ function Header({ open, setOpen }) {
             </Link>
           </li>
         </div>
-        <div>
+        <div className="user-root-image-desktop">
           {Object.keys(loggedInUser).length !== 0 ? (
             <Link to="/profile">
               <img
