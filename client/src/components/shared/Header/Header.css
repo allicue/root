@@ -18,7 +18,6 @@
   position: relative;
 }
 
-
 .header-span:hover:after {
   content: "";
   position: absolute;
@@ -195,27 +194,15 @@
   .header {
     padding: initial;
   }
-  .user-root-image-desktop{
-  margin-bottom: -20px;
+  .user-root-image-desktop {
+    margin-bottom: -20px;
   }
-
-  /* #header-home {
-    margin-bottom: -50px;
-  } */
 
   #header-account-link {
     display: none;
   }
-  /* #header-plan {
-    margin-bottom: -50px;
-  } */
 
-  /* #header-community{
-    margin-top: -40px;
-    margin-bottom: -40px;
-  } */
-
-  #header-account{
+  #header-account {
     margin-bottom: 50px;
   }
 
