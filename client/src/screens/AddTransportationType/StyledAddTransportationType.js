@@ -101,6 +101,7 @@ let StyledDiv = styled.div`
     margin: 16px 19px 16px 19px;
   }
 
+
   .image-text {
     position: absolute;
     font-family: "Montserrat", sans-serif;
@@ -122,7 +123,6 @@ let StyledDiv = styled.div`
 
   .middle-container {
     display: flex;
-    /* flex-flow: row wrap; */
     align-items: flex-end;
     margin-top: 66px;
     margin-bottom: 118px;
