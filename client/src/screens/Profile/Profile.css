@@ -1,0 +1,240 @@
+.profile-main {
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+  color: #3d3d3d;
+  width: 80vw;
+}
+
+.h3-profile {
+  text-transform: uppercase;
+  font-size: 25px;
+}
+
+.profile-title-info {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  margin-top: 40px;
+}
+
+.profile-content {
+  display: flex;
+  margin: 20px auto; 
+  margin-top: 70px;
+  height: 460px;
+  width: 1000px;
+}
+
+.profile-name {
+  text-transform: uppercase;
+  font-size: 30px;
+  margin: 0 0 40px 20px;
+}
+
+#profile-policies {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  background: url(https://i.imgur.com/jkMuMqO.png);
+  background-size: 105%;
+  margin-bottom: 18px;
+  padding: 20px;
+  padding-right: 100px;
+  height: 73%;
+  width: 100%;
+}
+
+#profile-policies-text {
+  font-size: 35px;
+  max-width: 500px;
+}
+
+#policies-community-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 65%; 
+}
+
+#profile-image {
+  width: 200px;
+  border-radius: 50%;
+}
+
+#profile-community {
+  display: flex;
+  flex-wrap: nowrap;
+  color: white;
+  background-color: #3d3d3d;
+  height: 27%;
+
+}
+
+#community-text-icon {
+  position: relative;
+  display: flex;
+  flex-flow: row-nowrap;
+  padding: 5px;
+  padding: 10px;
+  width: 38%;
+}
+
+#community-logo {
+  position: absolute;
+  right: 8px;
+  bottom: -5px;
+  margin-top: 20px;
+  width: 90px;
+}
+
+#community-image {
+  background: url(https://i.imgur.com/m0jiLpB.jpeg);
+  background-size: 100%;
+  background-position: center;
+  width: 62%;
+  z-index: 1;
+}
+
+#climate-impact-image {
+  height: 322px;
+}
+
+#climate-impact-container {
+  position: relative;
+  background: #e8e4d9;
+  margin-left: 18px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#leaf-icon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 50px;
+}
+
+#climate-impact-text  {
+  font-size: 16px;
+  font-weight: 500;
+  color: #3d3d3d;
+  margin-top: 18px;
+  padding: 0 50px 10px 10px;
+}
+
+#p-profile {
+  max-width: 60%;
+}
+
+#advocacy-text {
+  margin-bottom: 10px;
+}
+
+#log-out {
+  border: none;
+  background: none;
+  color: #749f5c;
+  cursor: pointer;
+}
+
+ #log-out:focus {
+   outline: none;
+ }
+
+
+/* Mobile Media Breakpoint */
+
+@media screen and (max-width: 500px) {
+  #logo-banner {
+    display: none;
+  }
+
+  .profile-main {
+    width: 90vw;
+    margin: 0 auto;
+  }
+
+  .profile-name {
+    margin: initial;
+    text-transform: uppercase;
+    font-size: 25px;
+  }
+
+  .h3-profile {
+    text-transform: capitalize;
+  
+    font-size: 25px;
+    font-weight: 500;
+  }
+
+  .profile-title-info {
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-top: 100px;
+  }
+
+  .profile-content {
+    margin: 20px auto;
+    height: initial;
+    width: 80vw;
+  }
+
+  #profile-image {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    width: 100px;
+  }
+
+  #policies-community-container {
+    height: 360px;
+    max-width: 100vw;
+  }
+
+  #profile-policies {
+    height: initial;
+    max-height: 45%;
+    min-height: 45%;
+    background-position: center;
+    background-size: cover;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  #profile-policies-text {
+    font-size: 25px;
+  }
+  
+  #profile-community {
+    flex-direction: column-reverse;
+    background: url(https://i.imgur.com/DEr3yUq.png);
+    background-size: cover;
+    height: 50%;
+  }
+  
+  #community-text-icon {
+    flex-flow: row-nowrap;
+    padding: 5px;
+    padding: 10px;
+  }
+  
+  #community-logo {
+    top: -120px;
+    left: 5px;
+    right: initial;
+    bottom: initial;
+    min-width: 60px;
+    width: 60px;
+  }
+  
+  #community-image {
+    display: none;
+  }
+  
+  #climate-impact-container {
+    display: none;
+}
+  
+}

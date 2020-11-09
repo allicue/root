@@ -5,6 +5,7 @@ const cors = require('cors')
 const PORT = process.env.PORT || 3000
 const db = require('./db/connection')
 const transportationTypeRoutes = require('./routes/transportationTypes')
+const userRoutes = require('./routes/users')
 
 const app = express()
 
@@ -13,6 +14,8 @@ app.use(bodyParser.json())
 app.use(logger('dev'))
 
 app.use('/api', transportationTypeRoutes)
+app.use('/api', userRoutes)
+
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 

@@ -1,117 +1,119 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const Form = styled.form`
-display: flex;
-flex-flow: column nowrap;
-align-items: center;
-margin-top: 103px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin-top: 103px;
 
-label {
-font-family: 'Monsterrat', sans serif;
-color: #3d3d3d;
-font-size: 24px;
-font-weight: bold;
-text-align: center;
-margin: 36px 44px;
-text-transform: uppercase;
-}
-button:focus{
-  outline: none;
-}
+  label {
+    font-family: "Montserrat", sans serif;
+    color: #3d3d3d;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin: 36px 44px;
+    text-transform: uppercase;
+  }
 
-input {
-  width: 409px;
-  height: 52px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  border-radius: 30px;
-  border: solid 1px #3d3d3d;
-  background-color: #ffffff;
-  text-indent: 20px;
-  box-shadow: 2px 2px 4px 1px #999;
-}
+  button:focus {
+    outline: none;
+  }
 
-textarea{
-  width: 409px;
-  height: 52px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  border-radius: 30px;
-  border: solid 1px #3d3d3d;
-  background-color: #ffffff;
-  /* text-indent: 40px; */
-  padding-left: 40px;
-  box-shadow: 2px 2px 4px 1px #999;
-  resize: none;
-  padding: 10px;
-}
+  input {
+    width: 409px;
+    height: 52px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 30px;
+    border: solid 1px #3d3d3d;
+    background-color: #ffffff;
+    text-indent: 20px;
+    box-shadow: 2px 2px 4px 1px #999;
+  }
 
-::-moz-placeholder { 
-    line-height:600px;
-}
-::-webkit-input-placeholder  {
-    line-height:600px;
-}
-:-ms-input-placeholder {
-    line-height:600px;
-}
+  textarea {
+    width: 409px;
+    height: 52px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 30px;
+    border: solid 1px #3d3d3d;
+    background-color: #ffffff;
+    padding-left: 40px;
+    box-shadow: 2px 2px 4px 1px #999;
+    resize: none;
+    padding-top: 15px;
+    padding-left: 20px;
+  }
 
-textarea::placeholder {
-  font-family: "Monsterrat", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  color: #3d3d3d;
-}
+  ::-moz-placeholder {
+    line-height: 600px;
+  }
+  ::-webkit-input-placeholder {
+    line-height: 600px;
+  }
+  :-ms-input-placeholder {
+    line-height: 600px;
+  }
 
-textarea:focus {
-  outline: none;
-}
+  textarea::placeholder {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: left;
+    color: rgba(61, 61, 61, 0.4);
+  }
 
-input::placeholder {
-  font-family: "Monsterrat", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  text-align: left;
-  color: #3d3d3d;
-}
+  textarea:focus {
+    outline: none;
+  }
 
-input:focus {
-  outline: none;
-}
+  input::placeholder {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: left;
+    color: rgba(61, 61, 61, 0.4);
+  }
 
-div {
-  margin: 20px auto;
-  text-align: center;
-}
+  input:focus {
+    outline: none;
+  }
+
+  div {
+    margin: 20px auto;
+    text-align: center;
+  }
 
   button {
-  font-family: "Monsterrat", sans-serif;
-  font-size: 24px;
-  font-weight: bold;
-  border: none;
-  width: 311px;
-  height: 66.5px;
-  background-color: #749f5c;
-  border-radius: 30px;
-  font-size: 24px;
-  text-align: center;
-  color: white;
-  margin: 15px;
-}
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    width: 311px;
+    height: 66.5px;
+    background-color: #749f5c;
+    border-radius: 30px;
+    font-size: 24px;
+    text-align: center;
+    color: white;
+    margin: 15px;
+  }
 
-.description {
-  margin-right: -70px;
-  position: relative;
-  left: -70px;
-  top: -15px;
-}
-button:hover {
-  cursor: pointer;
-  text-shadow: 2px 2px 5px rgb(54, 54, 54);
-  box-shadow: 2px 4px 4px 1px #999;
-}
-`
+  .description {
+    margin-right: -80px;
+    position: relative;
+    left: -90px;
+    top: -15px;
+  }
 
-export default Form
+  button:hover {
+    cursor: pointer;
+    box-shadow: 2px 4px 4px 1px #999;
+  }
+`;
+
+export default Form;

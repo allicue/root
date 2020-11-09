@@ -4,9 +4,9 @@ import Logo from '../../Assets/Icons/ROOT_Logo_RevWhite.png';
 import LeafIcon from '../../Assets/Icons/ROOT_Menu_Leaf.png';
 import CommunityIcon from '../../Assets/Icons/ROOT_Community_RevWhite.png';
 import { Link } from 'react-router-dom';
-import Layout from '../../components/shared/Layout/Layout'
+import Layout from '../../components/shared/Layout/Layout';
 
-function Home(props) {
+function Home() {
   return (
     <Layout title="">
     <div className="homepage">
@@ -30,7 +30,12 @@ function Home(props) {
         </nav>
       </div>
 
-      <div className="homepage-body">
+        <div className="homepage-body">
+          <nav className="homepage-body-navbar">
+            <Link to="/plan-your-route"><button className="homepage-button"><p className="button-text">Plan Your Route</p></button></Link>
+            <Link to="/transportation-types"><button className="homepage-button"><p className="button-text">Climate Impact By Transportation Type</p></button></Link>
+            <Link to="/policies-and-initiatives"><button className="homepage-button"><p className="button-text">Transportation <br></br>Policies + Initiatives</p></button></Link>
+          </nav>
           <div className="column">
           <Link to="/policies-and-initiatives">
             <section className="policies-section">

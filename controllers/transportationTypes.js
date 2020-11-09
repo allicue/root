@@ -1,6 +1,5 @@
 const TransportationType = require('../models/transportationType')
 const db = require('../db/connection')
-const transportationType = require('../models/transportationType')
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 

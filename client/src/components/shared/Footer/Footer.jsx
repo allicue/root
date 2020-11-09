@@ -4,7 +4,6 @@ import twitter from "../../../Assets/Icons/ROOT_Twitter.svg"
 import instagram from "../../../Assets/Icons/ROOT_Instagram.svg"
 import community from "../../../Assets/Icons/ROOT_Vector_Community.svg"
 import footerroot from "../../../Assets/Icons/ROOT_Logo_Primary.svg"
-import Leaf from '../../../Assets/Icons/ROOT_Leaf.svg'
 import "./Footer.css"
 
 function Footer() {
@@ -13,9 +12,9 @@ function Footer() {
     <footer className="footer">
       <div className="parent-links">
         <div className="footer-social">
-          <Link to="/"><img src={twitter} alt="twitter logo" className="link-social" /></Link>
-          <Link><img src={instagram} alt="instagram logo" className="link-social" /></Link>
-          <Link><img src={community} alt="community logo" className="link-social" /></Link>
+          <a href="https://twitter.com/ROOT26795570" rel="noreferrer" target="_blank"><img src={twitter} alt="twitter logo" className="link-social" /></a>
+          <Link to="#" ><img src={instagram} alt="instagram logo" className="link-social" /></Link>
+          <Link to="#" ><img src={community} alt="community logo" className="link-social" /></Link>
         </div>
         <div className="root-logo">
           <img src={footerroot} alt="Root logo" className="footer-root" />
@@ -23,26 +22,38 @@ function Footer() {
       </div>
       <div className="page-links">
         <Link to="/" className="link-bar">HOME</Link>
-        <Link className="link-bar">ABOUT US</Link>
-        <Link className="link-bar">CONTACT</Link>
-        <Link className="link-bar">STAY CONNECTED</Link>
+        <Link to="#" className="link-bar">ABOUT US</Link>
+        <Link to="#" className="link-bar">CONTACT</Link>
+        <Link to="#" className="link-bar">STAY CONNECTED</Link>
       </div>
       <hr className="footer-line"></hr>
+      <hr className="mobile-footer-line"></hr>
+      <div className="footer-social-static-mobile">
+        <a href="https://twitter.com/ROOT26795570" rel="noreferrer" target="_blank"><img src={twitter} alt="twitter logo" className="link-social" /></a>
+        <Link to="#"><img src={instagram} alt="instagram logo" className="link-social" /></Link>
+        <Link to="#"><img src={community} alt="community logo" className="link-social" /></Link>
+      </div>
+      <hr className="mobile-footer-line"></hr>
       <div className="footer-bottom">
         <div className="footer-map">
-          <Link className="link-sitemap">Sitemap</Link>
-          <Link className="link-sitemap">Privacy Policy</Link>
-          <Link className="link-sitemap">Careers</Link>
+          <div className="footer-column">
+            <Link to="#" className="link-sitemap">Sitemap</Link>
+            <Link to="#" className="link-sitemap">Privacy Policy</Link>
+            <Link to="#" className="link-sitemap">Careers</Link>
+          </div>
+          <div className="footer-column footer-column-b">
+            <div className="phone-number-box-mobile">
+              <small id="phone-number-box-mobile">1 (327) 496-6765</small>
+            </div>
+          </div>
         </div>
         <div className="message-parent">
           <div className="message-container">
             <p className="message-commit">COMMITTED TO OUR SUSTAINABLE FOCUSED COMMUNITY</p>
-            <div className="leaf-parent">
-              <img src={Leaf} alt="leaf logo" className="message-leaf" />
-            </div>
           </div>
           <p className="message-mission">ROOT is committed to supporting the community of sustainable minded warriors working to support a more sustainable lifestyle.</p>
         </div>
+        <hr className="mobile-footer-line"></hr>
         <div className="contact-div">
           <div className="info-div">
             <p className="info-email">Join our community for news, tips, and advocacy information</p>
@@ -52,6 +63,7 @@ function Footer() {
                 <button type="submit" className="email-submit">Sign Up</button>
               </div>
             </form>
+            <hr className="mobile-footer-line"></hr>
             <div className="phone-number-box">
               <small id="phone-number-box">1 (327) 496-6765</small>
             </div>

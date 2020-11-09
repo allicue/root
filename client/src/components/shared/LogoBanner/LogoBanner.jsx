@@ -1,10 +1,10 @@
-import React from 'react'
-import Styled from "./Styled";
-import { Link, useLocation } from 'react-router-dom'
+import React from 'react';
+import StyledLogoBanner from "./StyledLogoBanner";
+import { Link, useLocation } from 'react-router-dom';
 
 function LogoBanner(props) {
   
-  let location = useLocation()
+  let location = useLocation();
 
   if (location.pathname === '/') {
     return <> </>
@@ -12,7 +12,7 @@ function LogoBanner(props) {
 
   return (
     <>
-      <Styled>
+      <StyledLogoBanner>
     {/* <div className="top-left-container"> */}
           <div className="logo-title-container">
       <p className="page-direction">
@@ -26,10 +26,10 @@ function LogoBanner(props) {
           alt="ROOT Logo"
         />
       </Link>
-      <h1 className="title">{props.title.toUpperCase()}</h1>
+      <h1 className="title">{props.title}</h1>
           </div>
           {/* </div> */}
-        </Styled>
+        </StyledLogoBanner>
         </>
   )
 }

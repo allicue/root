@@ -1,31 +1,34 @@
 import styled from "styled-components";
 
 const StyledSanFran = styled.div`
-  
-
   a {
     text-decoration: none;
     color: #3d3d3d;
   }
+
+  .total-text-container{
+    margin-top: -30px;
+  }
+
+
+  .title {
+    width: 1000px;
+  }
   
-.title{
-  width: 1000px;
-}
-.top-left-container {
+  .top-left-container {
     margin-left: -1.5vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
 
-.top-right-container {
+  .top-right-container {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     margin-top: -80px;
     width: 92vw;
   }
-
 
   .title {
     display: flex;
@@ -57,7 +60,7 @@ const StyledSanFran = styled.div`
   }
 
   input::placeholder {
-    font-family: "Monsterrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 16px;
     font-weight: 500;
     text-align: left;
@@ -66,6 +69,14 @@ const StyledSanFran = styled.div`
 
   input:focus {
     outline: none;
+  }
+
+  .in-works {
+    display: none;
+  }
+
+  .get-involved {
+    display: none;
   }
 
   .enter-location {
@@ -86,43 +97,57 @@ const StyledSanFran = styled.div`
   }
 
   .content-image {
-    width: 1204px;
+    width: 1202px;
     height: 319px;
-    max-width: 83.5vw 
+    max-width: 83.5vw;
+    object-fit: fill;
   }
 
   .box-text-container {
-    
     width: 1202px;
     height: 236px;
-    max-height: 30vh;
+    max-height: 20vh;
     max-width: 83.5vw;
     background-color: #e8e4d9;
     padding-top: 1px;
-    padding-bottom: 20px;
+    padding-bottom: 5px;
     align-items: center;
+    overflow-y: scroll;
+  }
+
+  .title-text-container {
+    width: 1202px;
+    max-width: 83.5vw;
+    background-color: #e8e4d9;
+    padding-bottom: -30px;
+    /* margin-bottom: -20px; */
+  }
+
+  .box-text-container::-webkit-scrollbar {
+    display: none;
   }
 
   .box-text {
-    font-family: "Monsterrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
     display: flex;
     flex-direction: column;
     font-size: 16px;
     font-weight: 500;
     text-align: left;
     color: black;
-    margin: 40px 19px 40px 22px;
+    margin: 20px 19px 40px 22px;
   }
 
   .box-text-title {
-    font-family: "Monsterrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 27px;
     font-weight: bold;
     text-align: left;
     color: #3d3d3d;
     display: flex;
-    margin: 29px 19px 29px 22px;
+    margin: 0 19px 0 22px;
     text-transform: uppercase;
+    padding-top: 20px;
   }
 
   .box-text-title:hover {
@@ -135,9 +160,15 @@ const StyledSanFran = styled.div`
     margin: 16px 19px 16px 19px;
   }
 
+  .content-container-mobile {
+    display: none;
+    flex-flow: column nowrap;
+    margin: 16px 19px 16px 19px;
+  }
+
   .image-text {
     position: absolute;
-    font-family: "Monsterrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 27px;
     font-weight: bold;
     text-align: center;
@@ -163,21 +194,25 @@ const StyledSanFran = styled.div`
     justify-content: center;
   }
 
+  .box-text-mobile {
+    display: none;
+  }
+
+  .mobile-image {
+    display: none;
+  }
+
   @media screen and (max-width: 768px) {
-
-    .content-container{
-      text-overflow: scroll;
-    }
-
-    .content-image{
+    .content-image {
       max-width: 70vw;
       max-height: 200px;
     }
+
     .top-left-container {
       margin: 0 auto;
     }
 
-    .root-logo{
+    .root-logo {
       width: 400px;
     }
 
@@ -187,8 +222,13 @@ const StyledSanFran = styled.div`
       height: 20vh;
     }
 
-    .box-text{
-      display: none;
+
+  .title-text-container {
+    width: 70vw;
+  }
+
+    .box-text {
+      /* margin-top: 50px; */
     }
 
     .top-right-container {
@@ -200,10 +240,127 @@ const StyledSanFran = styled.div`
       display: flex;
       margin: 20px;
     }
-        .title{
-          width: 600px;
-          font-size: 38px;
-        }
+  }
+
+  @media screen and (max-width: 500px) {
+    .middle-wrapper{
+      display: flex;
+      justify-content: center;
+    }
+
+    .total-text-container{
+      margin-left: 10px;
+    }
+
+    .title {
+      display: flex;
+      flex-direction: column;
+      width: 110vw;
+      font-size: 24px;
+      margin: 0 auto;
+    }
+  
+    .in-works {
+      display: flex;
+      font-family: Montserrat, sans-serif;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-bottom: 2px solid rgb(129, 161, 171);
+      margin: 0 2rem;
+    }
+
+    .get-involved {
+      display: flex;
+      font-family: Montserrat, sans-serif;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-bottom: 2px solid rgb(129, 161, 171);
+      margin-right: auto;
+      margin-left: 8px;
+    }
+
+    .mobile-image {
+      display: flex;
+      max-width: 4rem;
+      max-height: 4rem;
+      min-width: 4rem;
+      min-height: 4rem;
+      margin-right: 2px;
+      margin-left: -10px;
+      margin-top: 1.5rem;
+    }
+
+    .box-text-title {
+      text-transform: capitalize;
+      font-size: 15px;
+      white-space: nowrap;
+      margin: 5px auto;
+    }
+
+    span {
+      display: flex;
+      color: #3d3d3d;
+      margin-top: 10px;
+      white-space: nowrap;
+    }
+
+    span:hover {
+      cursor: pointer;
+      text-decoration: underline;
+      text-decoration-color: #759f5c;
+      text-decoration-thickness: 0.1rem;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .box-text-container {
+      background: none;
+      overflow-y: elipsis;
+      flex-direction: row;
+      overflow: initial;
+      overflow-y: initial;
+      margin-bottom: 20px;
+    }
+
+    .title-text-container {
+      background: none;
+      height: 30px;
+      flex-direction: row;
+    }
+
+    .box-text {
+      display: none;
+    }
+
+    .box-text-mobile {
+      display: flex;
+      color: #3d3d3d;
+      margin-top: 10px;
+      margin-bottom: -5px;
+    }
+
+    .content-container {
+      display: flex;
+      flex-flow: row nowrap;
+      margin: 16px 19px 16px 19px;
+    }
+
+    .content-container-mobile {
+      display: flex;
+      flex-flow: row nowrap;
+      margin: 16px 19px 16px 19px;
+    }
+
+    .content-image {
+      display: none;
+    }
+
+    .input-container {
+      display: none;
+    }
   }
 `;
 
