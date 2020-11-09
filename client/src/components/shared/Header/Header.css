@@ -18,10 +18,6 @@
   position: relative;
 }
 
-link-account{
-  display: flex;
-}
-
 #link-account-mobile {
   display: none;
 }
@@ -79,6 +75,7 @@ link-account{
 .menu {
   display: flex;
   align-content: center;
+  margin-top: 10px;
 }
 
 .header-link-container {
@@ -176,7 +173,7 @@ link-account{
   text-align: left;
   background-color: white;
   position: fixed;
-  margin-top: 60px;
+  margin-top: 44px;
   margin-left: -15px;
   white-space: nowrap;
 }
@@ -252,10 +249,7 @@ link-account{
   .header-link:hover {
     margin-bottom: 0px;
   }
-  
-  #link-account{
-    display: none;
-  }
+
 
   #link-account-mobile {
     display: flex;
@@ -292,6 +286,10 @@ link-account{
     min-width: 50px;
     left: 17%;
     margin-right: 15px;
+  }
+
+  .menu {
+    margin-top: 0px;
   }
 }
 
