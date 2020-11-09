@@ -207,7 +207,7 @@ function Header({ open, setOpen }) {
                 src="https://i.imgur.com/rHmqcSX.png"
                 alt="Manage Your Account Icon"
               />
-              <div id="header-span"> Manage Account </div>
+              <div className="header-span"> Manage Account </div>
             </Link>
           </li>
         </div>
