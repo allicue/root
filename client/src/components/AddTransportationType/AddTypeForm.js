@@ -15,6 +15,7 @@ const Form = styled.form`
     margin: 36px 44px;
     text-transform: uppercase;
   }
+  
   button:focus {
     outline: none;
   }
