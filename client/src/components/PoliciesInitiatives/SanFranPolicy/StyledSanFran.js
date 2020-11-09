@@ -9,6 +9,7 @@ const StyledSanFran = styled.div`
   .title {
     width: 1000px;
   }
+
   .top-left-container {
     margin-left: -1.5vw;
     display: flex;
@@ -68,6 +69,7 @@ const StyledSanFran = styled.div`
   .in-works {
     display: none;
   }
+
   .get-involved {
     display: none;
   }
@@ -99,17 +101,27 @@ const StyledSanFran = styled.div`
   .box-text-container {
     width: 1202px;
     height: 236px;
-    max-height: 30vh;
+    max-height: 20vh;
     max-width: 83.5vw;
     background-color: #e8e4d9;
     padding-top: 1px;
-    padding-bottom: 20px;
+    padding-bottom: 5px;
     align-items: center;
     overflow-y: scroll;
   }
+
+  .title-text-container {
+    width: 1202px;
+    max-width: 83.5vw;
+    background-color: #e8e4d9;
+    padding-bottom: -30px;
+    margin-bottom: -20px;
+  }
+
   .box-text-container::-webkit-scrollbar {
     display: none;
   }
+
   .box-text {
     font-family: "Montserrat", sans-serif;
     display: flex;
@@ -118,7 +130,7 @@ const StyledSanFran = styled.div`
     font-weight: 500;
     text-align: left;
     color: black;
-    margin: 40px 19px 40px 22px;
+    margin: 10px 19px 40px 22px;
   }
 
   .box-text-title {
@@ -147,6 +159,7 @@ const StyledSanFran = styled.div`
     flex-flow: column nowrap;
     margin: 16px 19px 16px 19px;
   }
+
   .image-text {
     position: absolute;
     font-family: "Montserrat", sans-serif;
@@ -174,17 +187,21 @@ const StyledSanFran = styled.div`
     margin-bottom: 118px;
     justify-content: center;
   }
+
   .box-text-mobile {
     display: none;
   }
+
   .mobile-image {
     display: none;
   }
+
   @media screen and (max-width: 768px) {
     .content-image {
       max-width: 70vw;
       max-height: 200px;
     }
+
     .top-left-container {
       margin: 0 auto;
     }
@@ -198,6 +215,11 @@ const StyledSanFran = styled.div`
       max-height: 20vh;
       height: 20vh;
     }
+
+
+  .title-text-container {
+    width: 70vw;
+  }
 
     .box-text {
       margin-top: -20px;
@@ -213,6 +235,7 @@ const StyledSanFran = styled.div`
       margin: 20px;
     }
   }
+
   @media screen and (max-width: 500px) {
     .title {
       display: flex;
@@ -279,13 +302,20 @@ const StyledSanFran = styled.div`
     }
 
     .box-text-container {
-      background: #fff;
+      background: none;
       overflow-y: elipsis;
       flex-direction: row;
       overflow: initial;
       overflow-y: initial;
       margin-bottom: 20px;
-      margin-left: 20px;
+      margin-left: -340px;
+    }
+
+    .title-text-container {
+      background: none;
+      height: 30px;
+      margin-left: 15px;
+      flex-direction: row;
     }
 
     .box-text {
@@ -295,7 +325,8 @@ const StyledSanFran = styled.div`
     .box-text-mobile {
       display: flex;
       color: #3d3d3d;
-      margin-top: 10px;
+      margin-top: 30px;
+      margin-bottom: -20px;
     }
 
     .content-container {
