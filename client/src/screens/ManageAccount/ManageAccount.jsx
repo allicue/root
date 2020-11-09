@@ -23,16 +23,22 @@ export default function ManageAccount(props) {
     zipcode: ''
   });
 
-  let userID = loggedInUser._id;
+  let userID = loggedInUser?._id;
 
   useEffect(() => {
     const fetchUser = async () => {
-      const user = await getUser(userID);
-      setUser(user);
+      if (Object.keys(loggedInUser).length !== 0  ) {
+        const user = await getUser(userID);
+        setUser(user);
+        return () => {
+          setUser(user);
+        }
+      }
     }
     fetchUser(user);
-
   }, [updated]);
+
+
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -80,7 +86,7 @@ export default function ManageAccount(props) {
                 className="manage-account-input"
                 type="text"
                 name="name"
-                value={user.name}
+                value={user?.name}
                 onChange={handleChange}
                 required
               />
@@ -92,7 +98,7 @@ export default function ManageAccount(props) {
                 className="manage-account-input"
                 type="text"
                 name="email"
-                value={user.email}
+                value={user?.email}
                 onChange={handleChange}
                 required
 
@@ -106,7 +112,7 @@ export default function ManageAccount(props) {
                 id="password-manage-account"
                 type="password"
                 name="password"
-                value={user.password}
+                value={user?.password}
                 onChange={handleChange}
                 required
               />
@@ -117,7 +123,7 @@ export default function ManageAccount(props) {
               <input
                 className="manage-account-input"
                 type="text"
-                value={user.zipcode}
+                value={user?.zipcode}
                 onChange={handleChange}
                 name="zipcode"
                 required
@@ -130,7 +136,7 @@ export default function ManageAccount(props) {
                   className="manage-account-input"
                   type="text"
                   name="imgURL"
-                  value={user.imgURL}
+                  value={user?.imgURL}
                   onChange={handleChange}
                   required
                 />
