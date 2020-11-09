@@ -8,10 +8,12 @@ const StyledPoliciesInitiatives = styled.div`
     align-items: center;
     margin-top: 33px;
   }
-.wrapper{
-  display: flex;
-  flex-direction: column;
-}
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
   a {
     text-decoration: none;
     color: #3d3d3d;
@@ -34,9 +36,6 @@ const StyledPoliciesInitiatives = styled.div`
     align-items: flex-end;
     margin-top: -80px;
     width: 91vw;
-  }
-
-  .input-container {
   }
 
   .root-logo {
@@ -80,9 +79,6 @@ const StyledPoliciesInitiatives = styled.div`
     text-align: center;
     color: #3d3d3d;
     margin-bottom: 5px;
-  }
-
-  .enter-location:hover {
     cursor: default;
   }
 
@@ -92,10 +88,18 @@ const StyledPoliciesInitiatives = styled.div`
     filter: contrast(70%) brightness(92%);
   }
 
-  .content-image:hover {
+  .content-image-container:hover .content-image {
     filter: contrast(90%) brightness(70%);
     cursor: pointer;
   }
+
+  .content-image-container:hover .content-image-text {
+    cursor: pointer;
+    transform: translate(0.7px);
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+  }
+
   .box-text-container {
     width: 287px;
     height: 256px;
@@ -114,7 +118,6 @@ const StyledPoliciesInitiatives = styled.div`
     margin: 29px 19px 29px 22px;
   }
 
-  
   .box-text1 {
     font-family: "Montserrat", sans-serif;
     font-size: 21.5px;
@@ -125,11 +128,6 @@ const StyledPoliciesInitiatives = styled.div`
     margin: 25px 19px 15px 22px;
   }
 
-  .box-text:hover {
-    /* cursor: pointer; */
-    /* transform: translate(0.5px); */
-  }
-
   .box-text-small {
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
@@ -137,11 +135,7 @@ const StyledPoliciesInitiatives = styled.div`
     font-style: italic;
     margin-left: 22px;
     color: #3d3d3d;
-  }
-
-  .box-text-small:hover {
     cursor: pointer;
-    /* transform: translate(0.5px); */
   }
 
   .content-container {
@@ -161,13 +155,53 @@ const StyledPoliciesInitiatives = styled.div`
     width: 290px;
     height: 101px;
     margin-top: 120px;
+    z-index: 1;
   }
 
-  .image-text:hover {
+  .title-span,
+  .title-span-short,
+  .title-span-sf {
+    z-index: 1;
+  }
+
+  .title-span:hover,
+  .title-span-sf:hover {
     cursor: pointer;
-    transform: translate(0.7px);
-    text-decoration: underline;
-    text-decoration-thickness: 3px;
+    max-width: 50%;
+    position: relative;
+  }
+
+  .title-span:hover:after,
+  .title-span-sf:hover:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 5rem;
+    right: -4rem;
+    top: 10.2rem;
+    background: #fff;
+    height: 0.3rem;
+    border-radius: 10px;
+    border-width: 50%;
+  }
+
+  .title-span-short:hover {
+    cursor: pointer;
+    max-width: 30%;
+    position: relative;
+  }
+
+  .title-span-short:hover:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 6rem;
+    right: -7rem;
+    top: 10.2em;
+    background: #fff;
+    height: 0.3rem;
+    border-radius: 10px;
+    border-width: 50%;
   }
 
   .middle-container {
@@ -205,14 +239,16 @@ const StyledPoliciesInitiatives = styled.div`
     .box-text-container {
       display: none;
     }
+
     .top-right-container {
       margin: 0 auto;
       margin-top: 10px;
     }
-    
-    .root-logo{
+
+    .root-logo {
       width: 400px;
     }
+
     .middle-container {
       display: flex;
       flex-flow: row nowrap;
@@ -222,20 +258,22 @@ const StyledPoliciesInitiatives = styled.div`
 
   @media screen and (max-width: 500px) {
     .title {
-    display: flex;
-    flex-direction: column;
-  }
-  .wrapper{
-    display: flex;
-    flex-direction: column-reverse;
-}
+      display: flex;
+      flex-direction: column;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column-reverse;
+    }
   }
 
   @media screen and (max-width: 600px) {
-  .content-image {
+    .content-image {
       max-width: 200px;
       max-height: 200px;
     }
+
     .image-text {
       font-size: 26px;
       font-weight: bold;
@@ -245,10 +283,49 @@ const StyledPoliciesInitiatives = styled.div`
       height: 101px;
       margin-top: 95px;
     }
-    .logo-title-container{
-    display: inline-block;
+
+    .title-span:hover:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 2.5rem;
+      right: -3.6rem;
+      top: 8.5rem;
+      background: #fff;
+      height: 0.3rem;
+      border-radius: 10px;
+      border-width: 50%;
     }
-  
+
+    .title-span-sf:hover:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 3.5rem;
+      right: -3.1rem;
+      top: 10.3rem;
+      background: #fff;
+      height: 0.3rem;
+      border-radius: 10px;
+      border-width: 50%;
+    }
+
+    .title-span-short:hover:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 4rem;
+      right: -5rem;
+      top: 8.5rem;
+      background: #fff;
+      height: 0.3rem;
+      border-radius: 10px;
+      border-width: 50%;
+    }
+
+    .logo-title-container {
+      display: inline-block;
+    }
   }
 `;
 

@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
 import StyledLogoBanner from "./StyledLogoBanner";
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom';
 
 function LogoBanner(props) {
   
-  let location = useLocation()
+  let location = useLocation();
 
   if (location.pathname === '/') {
     return <> </>

@@ -6,14 +6,16 @@ const StyledBurger = styled.div`
   width: 2rem;
   height: 2rem;
   position: fixed;
-  top: 15px;
+  top: 18px;
   z-index: 9999;
   display: none;
   left: 0;
   margin-left: 20px;
-  
-  &:hover {
-    cursor: pointer;
+  cursor: pointer;
+
+  &:active .bar-line,
+  &:hover .bar-line {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   }
 
   @media (max-width: 500px) {
@@ -21,26 +23,26 @@ const StyledBurger = styled.div`
     justify-content: space-around;
     flex-flow: column nowrap;
   }
-  div {
-    width: 2.4rem;
-    height: 0.2rem;
+
+  .bar-line {
+    width: 38px;
+    height: 3px;
     background-color: #3d3d3d;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   }
 `;
 
-function Burger( ) {
+function Burger() {
   const [open, setOpen] = useState(false);
 
   return (
     <>
       <StyledBurger open={open} onClick={() => setOpen(!open)}>
-        <div />
-        <div />
-        <div />
+        <div className="bar-line" />
+        <div className="bar-line" />
+        <div className="bar-line" />
       </StyledBurger>
-        <Header open={open} setOpen={setOpen} />
+      <Header open={open} setOpen={setOpen} />
     </>
   );
-};
+}
 export default Burger;

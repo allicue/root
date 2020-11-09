@@ -1,26 +1,23 @@
-import React, { useState, useContext } from "react"
-import { Link, Redirect } from "react-router-dom"
+import React, { useState, useContext } from "react";
+import { Link, Redirect } from "react-router-dom";
 import { getUserEmail } from '../../services/users';
-import Layout from "../../../src/components/shared/Layout/Layout"
-import footerRoot from "../../Assets/Icons/ROOT_Logo_Primary.svg"
-import "./Login.css"
-import { LoggedInUserContext } from '../../components/LoggedInUser/LoggedInUserContext'
+import Layout from "../../../src/components/shared/Layout/Layout";
+import footerRoot from "../../Assets/Icons/ROOT_Logo_Primary.svg";
+import "./Login.css";
+import { LoggedInUserContext } from '../../components/LoggedInUser/LoggedInUserContext';
 
 function Login() {
-  const [loggedInuser, setLoggedInUser] = useContext(LoggedInUserContext)
+  const [loggedInUser, setLoggedInUser] = useContext(LoggedInUserContext)
+  const [loggedIn, setLoggedIn] = useState(false)
   const [userInfo, setUserInfo] = useState({
     email: "",
     password: "",
   })
-  const [loggedIn, setLoggedIn] = useState(false)
-
-
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     let user = userInfo.email
-
     let response
-
     try {
       response = await getUserEmail(user)
     } catch (error) {

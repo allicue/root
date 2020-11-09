@@ -21,7 +21,6 @@ function AddTransportationType() {
             imagePreview={imagePreview}
             setImagePreview={setImagePreview}
           />
-          
         </div>
       </StyledDiv>
     </Layout>

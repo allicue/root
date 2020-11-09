@@ -14,15 +14,15 @@ function CreateAccountForm(props) {
   `;
 
   const P = styled.p`
-      width: 50%;
-      white-space: wrap;
-      margin: 0 auto;
+    width: 50%;
+    white-space: wrap;
+    margin: 0 auto;
 
-      @media screen  and (max-width: 500px){
-        width: 100%;
+    @media screen and (max-width: 500px) {
+      width: 100%;
       white-space: nowrap;
-      }
-  `
+    }
+  `;
 
   const [user, setUser] = useState({
     name: "",
@@ -49,26 +49,27 @@ function CreateAccountForm(props) {
   };
 
   if (isCreated) {
-    alert(`Welcome to ROOT, ${user.name}!`)
-    return <Redirect to={"/"} />;
+    return <Redirect to={"/login"} />;
   }
 
   return (
     <>
       <div className="picture-container">
         {props.imagePreview === "" ? (
-          <div className="user-picture"> </div>
+          <div
+            onClick={() => props.setImagePreview(user.imgURL)}
+            className="user-picture"
+          ></div>
         ) : (
-          <ImagePreview src={props.imagePreview} alt="Error: Invalid Image URL" />
+          <ImagePreview
+            src={props.imagePreview}
+            alt="Error: Invalid Image URL"
+          />
         )}
         <div className="add-image">
-        <P
-          className=""
-          onClick={() => props.setImagePreview(user.imgURL)}
-        >
-            Preview
-            image
-        </P>
+          <P onClick={() => props.setImagePreview(user.imgURL)}>
+            Preview image
+          </P>
         </div>
       </div>
       <Form onSubmit={handleSubmit}>
@@ -86,7 +87,6 @@ function CreateAccountForm(props) {
             onChange={handleChange}
           />
         </div>
-
         <div>
           <label className="email-label" for="email">
             Email
@@ -117,7 +117,6 @@ function CreateAccountForm(props) {
             onChange={handleChange}
           />
         </div>
-
         <div>
           <label className="zipcode-label" for="zipcode">
             ZIP CODE
@@ -132,27 +131,34 @@ function CreateAccountForm(props) {
             onChange={handleChange}
           />
         </div>
-
         <div>
           <label className="image-label" for="imgURL">
-            IMAGE URL
+            IMAGE
           </label>
           <input
             className="account-input"
             name="imgURL"
-            placeholder="Image URL"
+            placeholder="Enter image URL"
             required
             value={user.imgURL}
             autoFocus
             onChange={handleChange}
           />
         </div>
-
         <div className="bottom-container">
           <div className="terms-of-service">
-            <input type="checkbox" className="checkbox" required />
             <p>
-              I agree to all statements in <span>Terms of Service</span>
+              <input
+                required
+                className="checkbox"
+                type="checkbox"
+                id="terms-checkbox"
+              />
+              <label for="terms-checkbox"></label>
+            </p>
+            <p>
+              I agree to all statements in&nbsp;
+              <span className="terms">Terms of Service</span>
             </p>
           </div>
           <div className="buttons">
@@ -165,9 +171,14 @@ function CreateAccountForm(props) {
             </Link>
             <button className="create-button">Create Account</button>
           </div>
-            <div className="already">
-          <p>  Already have an account? <Link to="/login"><span>Log in</span> </Link></p>
-           </div>
+          <div className="already">
+            <p>
+              Already have an account? &nbsp;
+              <Link to="/login">
+                <span className="login">Log in</span>
+              </Link>
+            </p>
+          </div>
         </div>
       </Form>
     </>

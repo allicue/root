@@ -6,9 +6,15 @@ const StyledSanFran = styled.div`
     color: #3d3d3d;
   }
 
+  .total-text-container{
+    margin-top: -30px;
+  }
+
+
   .title {
     width: 1000px;
   }
+  
   .top-left-container {
     margin-left: -1.5vw;
     display: flex;
@@ -68,6 +74,7 @@ const StyledSanFran = styled.div`
   .in-works {
     display: none;
   }
+
   .get-involved {
     display: none;
   }
@@ -90,25 +97,36 @@ const StyledSanFran = styled.div`
   }
 
   .content-image {
-    width: 1204px;
+    width: 1202px;
     height: 319px;
     max-width: 83.5vw;
+    object-fit: fill;
   }
 
   .box-text-container {
     width: 1202px;
     height: 236px;
-    max-height: 30vh;
+    max-height: 20vh;
     max-width: 83.5vw;
     background-color: #e8e4d9;
     padding-top: 1px;
-    padding-bottom: 20px;
+    padding-bottom: 5px;
     align-items: center;
     overflow-y: scroll;
   }
+
+  .title-text-container {
+    width: 1202px;
+    max-width: 83.5vw;
+    background-color: #e8e4d9;
+    padding-bottom: -30px;
+    /* margin-bottom: -20px; */
+  }
+
   .box-text-container::-webkit-scrollbar {
     display: none;
   }
+
   .box-text {
     font-family: "Montserrat", sans-serif;
     display: flex;
@@ -117,7 +135,7 @@ const StyledSanFran = styled.div`
     font-weight: 500;
     text-align: left;
     color: black;
-    margin: 40px 19px 40px 22px;
+    margin: 20px 19px 40px 22px;
   }
 
   .box-text-title {
@@ -127,8 +145,9 @@ const StyledSanFran = styled.div`
     text-align: left;
     color: #3d3d3d;
     display: flex;
-    margin: 29px 19px 29px 22px;
+    margin: 0 19px 0 22px;
     text-transform: uppercase;
+    padding-top: 20px;
   }
 
   .box-text-title:hover {
@@ -137,6 +156,12 @@ const StyledSanFran = styled.div`
 
   .content-container {
     display: flex;
+    flex-flow: column nowrap;
+    margin: 16px 19px 16px 19px;
+  }
+
+  .content-container-mobile {
+    display: none;
     flex-flow: column nowrap;
     margin: 16px 19px 16px 19px;
   }
@@ -168,17 +193,21 @@ const StyledSanFran = styled.div`
     margin-bottom: 118px;
     justify-content: center;
   }
+
   .box-text-mobile {
     display: none;
   }
+
   .mobile-image {
     display: none;
   }
+
   @media screen and (max-width: 768px) {
     .content-image {
       max-width: 70vw;
       max-height: 200px;
     }
+
     .top-left-container {
       margin: 0 auto;
     }
@@ -193,8 +222,13 @@ const StyledSanFran = styled.div`
       height: 20vh;
     }
 
+
+  .title-text-container {
+    width: 70vw;
+  }
+
     .box-text {
-      margin-top: -20px;
+      /* margin-top: 50px; */
     }
 
     .top-right-container {
@@ -207,7 +241,17 @@ const StyledSanFran = styled.div`
       margin: 20px;
     }
   }
+
   @media screen and (max-width: 500px) {
+    .middle-wrapper{
+      display: flex;
+      justify-content: center;
+    }
+
+    .total-text-container{
+      margin-left: 10px;
+    }
+
     .title {
       display: flex;
       flex-direction: column;
@@ -215,6 +259,7 @@ const StyledSanFran = styled.div`
       font-size: 24px;
       margin: 0 auto;
     }
+  
     .in-works {
       display: flex;
       font-family: Montserrat, sans-serif;
@@ -233,6 +278,7 @@ const StyledSanFran = styled.div`
       margin-right: auto;
       margin-left: 8px;
     }
+
     .mobile-image {
       display: flex;
       max-width: 4rem;
@@ -250,38 +296,50 @@ const StyledSanFran = styled.div`
       white-space: nowrap;
       margin: 5px auto;
     }
+
     span {
       display: flex;
       color: #3d3d3d;
       margin-top: 10px;
       white-space: nowrap;
     }
+
     span:hover {
       cursor: pointer;
       text-decoration: underline;
       text-decoration-color: #759f5c;
       text-decoration-thickness: 0.1rem;
     }
+
     .wrapper {
       display: flex;
       flex-direction: column-reverse;
     }
+
     .box-text-container {
-      background: #fff;
+      background: none;
       overflow-y: elipsis;
       flex-direction: row;
       overflow: initial;
       overflow-y: initial;
       margin-bottom: 20px;
-      margin-left: 20px;
     }
+
+    .title-text-container {
+      background: none;
+      height: 30px;
+      flex-direction: row;
+    }
+
     .box-text {
       display: none;
     }
+
     .box-text-mobile {
       display: flex;
       color: #3d3d3d;
       margin-top: 10px;
+      margin-bottom: -5px;
     }
 
     .content-container {
@@ -290,9 +348,16 @@ const StyledSanFran = styled.div`
       margin: 16px 19px 16px 19px;
     }
 
+    .content-container-mobile {
+      display: flex;
+      flex-flow: row nowrap;
+      margin: 16px 19px 16px 19px;
+    }
+
     .content-image {
       display: none;
     }
+
     .input-container {
       display: none;
     }
