@@ -87,6 +87,10 @@
   margin-bottom: -5px;
 }
 
+#header-account-link:hover {
+  margin-bottom: -10px;
+}
+
 .header-link {
   text-decoration: none;
   text-align: center;
@@ -94,7 +98,7 @@
   display: flex;
   align-items: center;
   font-size: 16px;
-  font-family: Montserrat, Semi bold;
+  font-family: "Montserrat", Semi bold;
   font-weight: 600;
 }
 
@@ -173,16 +177,26 @@
   text-align: left;
   background-color: white;
   position: fixed;
-  margin-top: 44px;
-  margin-left: -15px;
+  margin-top: 49px;
+  margin-left: -40px;
   white-space: nowrap;
 }
+
 
 .dropdown-item {
   display: flex;
   text-decoration: none;
+  font-family: "Montserrat", Semi bold;
   color: #3d3d3d;
   margin: 25px 10px 25px 15px;
+  text-decoration: none;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.dropdown-item:hover {
+  margin-bottom: 20px;
 }
 
 #header-account-link:hover {
