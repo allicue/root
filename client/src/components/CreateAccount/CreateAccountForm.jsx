@@ -154,9 +154,9 @@ function CreateAccountForm(props) {
                 type="checkbox"
                 id="terms-checkbox"
               />
-              <label for="terms-checkbox"></label>
+              <label id="terms-label" for="terms-checkbox"></label>
             </p>
-            <p>
+            <p id="terms-paragraph">
               I agree to all statements in&nbsp;
               <span className="terms">Terms of Service</span>
             </p>
