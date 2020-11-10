@@ -1,5 +1,10 @@
 # root
 
+## Project Overview
+Root is an application designed to provide sustainable transportation methods to users. The first iteration will include information on the different types of transportation where users can add, delete, edit or view options and shows transportion policies and initatives for select cities in the US. The second iteration introduces the concept of a user login as well as mobile breakpoints throughout the site. 
+
+This project was built by a team of developers in collaboration with a UX/UI team who provided the overall concept & design of the app, wireframes and all assets.
+
 ## Team Expectations Worksheet
 https://docs.google.com/document/d/1O9Oq98FUw1qUGOwiCEekuJjSE56oMeLVoL6ADvQQzQ8/edit?usp=sharing
 
@@ -20,5 +25,3 @@ const transportationType = new Schema(
 )
 ```
 
-## Project Overview
-Root is an application designed to provide sustainable transportation methods to users. The first iteration will include information on the different types of transportation where users can add, delete, edit or view options. Application also shows transportion policies and initatives for select cities in the US.
