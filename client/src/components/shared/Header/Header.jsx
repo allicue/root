@@ -23,7 +23,14 @@ function Header({ open, setOpen }) {
   }, [open]);
 
   const [openDropdown, setOpenDropdown] = useState(false);
-  const handleMouseOver = () => setOpenDropdown(!openDropdown);
+  const [margin, setMargin] = useState(false)
+  const handleMouseOver = () => {
+    setOpenDropdown(!openDropdown)
+    setMargin(true)
+  };
+  const handleMouseLeave = () => {
+    setMargin(false)
+  };
 
   return (
     <header className="header">
@@ -47,16 +54,16 @@ function Header({ open, setOpen }) {
           </Link>
         </div>
       ) : (
-        <Link to="/login">
-          <div className="userpic-container">
-            <img
-              className="profile-pic"
-              src="https://i.imgur.com/thepnzF.png"
-              alt="User profile"
-            />
-          </div>
-        </Link>
-      )}
+          <Link to="/login">
+            <div className="userpic-container">
+              <img
+                className="profile-pic"
+                src="https://i.imgur.com/thepnzF.png"
+                alt="User profile"
+              />
+            </div>
+          </Link>
+        )}
 
       <Ul id="menu" className="menu" open={open}>
         <div className="header-link-container" id="header-home">
@@ -111,7 +118,7 @@ function Header({ open, setOpen }) {
           {Object.keys(loggedInUser).length !== 0 ? (
             <Link to="/profile">
               <img
-                className="header-image2"
+                className="header-image2 "
                 src="https://i.imgur.com/gC1ttIE.png"
                 alt="Root Logo Primary"
               />
@@ -122,14 +129,14 @@ function Header({ open, setOpen }) {
               />
             </Link>
           ) : (
-            <Link to="/login">
-              <img
-                className="header-image"
-                src="https://i.imgur.com/thepnzF.png"
-                alt="Root Logo Primary"
-              />
-            </Link>
-          )}
+              <Link to="/login">
+                <img
+                  className="header-image"
+                  src="https://i.imgur.com/thepnzF.png"
+                  alt="Root Logo Primary"
+                />
+              </Link>
+            )}
         </div>
         <div className="header-link-container" id="header-polices">
           <li>
@@ -162,39 +169,42 @@ function Header({ open, setOpen }) {
                   </div>
                 </>
               ) : (
-                <div className="header-span">
-                  <>Community/Advocacy</>
-                </div>
-              )}
+                  <div className="header-span">
+                    <>Community/Advocacy</>
+                  </div>
+                )}
             </Link>
           </li>
         </div>
         <div className="header-link-container" id="header-account">
           <li>
-            <div className="header-link" id="link-account">
+            <div id="link-account">
               <div className="dropdown-container" id="header-span">
                 <div
                   className="header-link header-span"
                   id="header-account-link"
                   onMouseOver={handleMouseOver}
+                  onMouseLeave={handleMouseLeave}
+                  style={margin ? { marginBottom: "-5px" } : {}}
                 >
                   Account
                 </div>
                 {openDropdown ? (
-                  <div className="dropdownmenu">
-                    <Link className="dropdown-item dropdown-span" to="login">
+                  <div className="dropdownmenu" 
+                  >
+                    <Link className="dropdown-item dropdown-span " to="login">
                       LOGIN/ REGISTER
                     </Link>
                     <Link
-                      className="dropdown-item dropdown-span2"
+                      className="dropdown-item dropdown-span2 "
                       to="manage-your-account"
                     >
                       MANAGE ACCOUNT
                     </Link>
                   </div>
                 ) : (
-                  <></>
-                )}
+                    <></>
+                  )}
               </div>
             </div>
             <Link
