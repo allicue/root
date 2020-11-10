@@ -102,6 +102,7 @@ let StyledDiv = styled.div`
     .root-logo {
       width: 400px;
     }
+    
     .title {
       width: 400px;
       white-space: pre-wrap;
@@ -111,10 +112,7 @@ let StyledDiv = styled.div`
   @media screen and (max-width: 500px) {
     .title {
       width: 100vw;
-      margin-top: 20px;
-    }
   }
-
   @media screen and (max-width: 1000px) {
     .top-container {
       display: flex;

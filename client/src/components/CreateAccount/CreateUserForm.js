@@ -137,6 +137,7 @@ const Form = styled.form`
   .checkbox:checked {
     position: absolute;
     appearance: none;
+    display: none;
     -moz-appearance: none;
     -webkit-appearance: none;
     -ms-progress-appearance: none;
