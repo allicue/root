@@ -122,7 +122,6 @@ const StyledPoliciesInitiatives = styled.div`
   #ny-image-container:hover {
     background: linear-gradient(rgba(80, 80, 80, 0.3), rgba(80, 80, 80, 0.3)), url(https://i.imgur.com/x9wKRcK.jpg);
     background-size: cover;
-    background-size: cover;
     background-position-y: 45%;
 }
 
@@ -359,8 +358,6 @@ const StyledPoliciesInitiatives = styled.div`
   }
 
   @media screen and (max-width: 600px) {
-
-
     .content-image-container{
       max-width: 200px;
       max-height: 200px;
