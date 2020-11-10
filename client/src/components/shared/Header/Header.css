@@ -224,6 +224,9 @@
     display: none;
   }
 
+  .header-span {
+    text-align: left;
+  }
   .header-span:active {
     cursor: pointer;
     max-width: 100%;
