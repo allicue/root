@@ -36,7 +36,7 @@ function Footer() {
       <hr className="mobile-footer-line"></hr>
       <div className="footer-bottom">
         <div className="footer-map">
-          <div className="footer-column">
+          <div className="footer-column footer-column-a">
             <Link to="#" className="link-sitemap">Sitemap</Link>
             <Link to="#" className="link-sitemap">Privacy Policy</Link>
             <Link to="#" className="link-sitemap">Careers</Link>
