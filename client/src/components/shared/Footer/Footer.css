@@ -376,12 +376,19 @@
 
   .footer-column {
     display: flex;
+    flex-flow: wrap;
+  }
+
+  .footer-column-a {
+    width: 50%;
     flex-direction: column;
   }
 
   .footer-column-b {
+    width: 50%;
+    justify-content: flex-end;
     display: flex;
-    justify-content: space-around;
+    align-content: center;
     align-items: flex-end;
   }
 
