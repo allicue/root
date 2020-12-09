@@ -43,7 +43,7 @@ function Header({ open, setOpen }) {
           />
         </Link>
       </div>
-      {loggedInUser._id ? (
+      {loggedInUser?._id ? (
         <div className="userpic-container">
           <Link to="/profile">
             <img
@@ -115,7 +115,7 @@ function Header({ open, setOpen }) {
           </li>
         </div>
         <div className="user-root-image-desktop">
-          {loggedInUser._id ? (
+          {loggedInUser?._id ? (
             <Link to="/profile">
               <img
                 className="header-image2 "
