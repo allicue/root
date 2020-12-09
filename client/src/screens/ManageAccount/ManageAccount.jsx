@@ -4,12 +4,12 @@ import DeleteAccountConfirm from "./DeleteAccountConfirm/DeleteAccountConfirm";
 import Layout from "../../components/shared/Layout/Layout";
 import LogoBanner from "../../components/shared/LogoBanner/LogoBanner";
 import Leaf from "../../Assets/Icons/ROOT_Leaf.png";
-import Title from './ManageAccountStyled';
+import Title from "./ManageAccountStyled";
 import { updateUser, getUser } from "../../services/users";
 import { LoggedInUserContext } from "../../components/LoggedInUser/LoggedInUserContext";
 import "./ManageAccount.css";
 
-export default function ManageAccount(props) {
+export default function ManageAccount() {
   const [updated, setUpdated] = useState(false);
   const [showImageInput, setShowImageInput] = useState(false);
   const [managed, setManaged] = useState(false);
@@ -28,18 +28,16 @@ export default function ManageAccount(props) {
 
   useEffect(() => {
     const fetchUser = async () => {
-      if (Object.keys(loggedInUser).length !== 0) {
+      if (userID) {
         const user = await getUser(userID);
         setUser(user);
         return () => {
           setUser(user);
-        }
+        };
       }
-    }
+    };
     fetchUser(user);
   }, [updated]);
-
-
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -72,7 +70,7 @@ export default function ManageAccount(props) {
 
   return (
     <div>
-      <Title >
+      <Title>
         <Layout>
           <LogoBanner title="Manage Your Account" />
           <div className="manage-account-main">
@@ -82,8 +80,8 @@ export default function ManageAccount(props) {
                 setDeleteConfirm={setDeleteConfirm}
               />
             ) : (
-                <></>
-              )}
+              <></>
+            )}
             <div className="user-image-parent">
               <img
                 className="user-photo"
@@ -92,13 +90,13 @@ export default function ManageAccount(props) {
               />
               <p className="toggle-input-img" onClick={handleImageSelect}>
                 Edit
-            </p>
+              </p>
             </div>
             <form className="manage-account-form" onSubmit={handleSubmit}>
               <div className="inline-input-field">
                 <label className="label-manage-account" htmlFor="name">
                   Name
-              </label>
+                </label>
                 <input
                   className="manage-account-input"
                   type="text"
@@ -111,7 +109,7 @@ export default function ManageAccount(props) {
               <div className="inline-input-field">
                 <label className="label-manage-account" htmlFor="email">
                   Email
-              </label>
+                </label>
                 <input
                   className="manage-account-input"
                   type="text"
@@ -122,7 +120,9 @@ export default function ManageAccount(props) {
                 />
               </div>
               <div className="inline-input-field">
-                <label className="label-manage-account" htmlFor="password">Password</label>
+                <label className="label-manage-account" htmlFor="password">
+                  Password
+                </label>
                 <input
                   className="manage-account-input"
                   id="password-manage-account"
@@ -140,7 +140,7 @@ export default function ManageAccount(props) {
                   id="zip-code"
                 >
                   Zip Code
-              </label>
+                </label>
                 <input
                   className="manage-account-input"
                   type="text"
@@ -154,7 +154,7 @@ export default function ManageAccount(props) {
                 <div className="inline-input-field">
                   <label className="label-manage-account" htmlFor="imgURL">
                     Image URL
-                </label>
+                  </label>
                   <input
                     className="manage-account-input"
                     type="text"
@@ -165,8 +165,8 @@ export default function ManageAccount(props) {
                   />
                 </div>
               ) : (
-                  <></>
-                )}
+                <></>
+              )}
               <div className="edit-buttons-container">
                 <button
                   type="submit"
@@ -174,14 +174,14 @@ export default function ManageAccount(props) {
                   id="save-changes"
                 >
                   Save Changes
-              </button>
+                </button>
                 <button
                   onClick={handleClick}
                   className="changes-button"
                   id="delete-account"
                 >
                   Delete Account
-              </button>
+                </button>
               </div>
             </form>
           </div>

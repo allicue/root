@@ -23,13 +23,13 @@ function Header({ open, setOpen }) {
   }, [open]);
 
   const [openDropdown, setOpenDropdown] = useState(false);
-  const [margin, setMargin] = useState(false)
+  const [margin, setMargin] = useState(false);
   const handleMouseOver = () => {
-    setOpenDropdown(!openDropdown)
-    setMargin(true)
+    setOpenDropdown(!openDropdown);
+    setMargin(true);
   };
   const handleMouseLeave = () => {
-    setMargin(false)
+    setMargin(false);
   };
 
   return (
@@ -43,7 +43,7 @@ function Header({ open, setOpen }) {
           />
         </Link>
       </div>
-      {Object.keys(loggedInUser).length !== 0 ? (
+      {loggedInUser?._id ? (
         <div className="userpic-container">
           <Link to="/profile">
             <img
@@ -54,16 +54,16 @@ function Header({ open, setOpen }) {
           </Link>
         </div>
       ) : (
-          <Link to="/login">
-            <div className="userpic-container">
-              <img
-                className="profile-pic"
-                src="https://i.imgur.com/thepnzF.png"
-                alt="User profile"
-              />
-            </div>
-          </Link>
-        )}
+        <Link to="/login">
+          <div className="userpic-container">
+            <img
+              className="profile-pic"
+              src="https://i.imgur.com/thepnzF.png"
+              alt="User profile"
+            />
+          </div>
+        </Link>
+      )}
 
       <Ul id="menu" className="menu" open={open}>
         <div className="header-link-container" id="header-home">
@@ -115,7 +115,7 @@ function Header({ open, setOpen }) {
           </li>
         </div>
         <div className="user-root-image-desktop">
-          {Object.keys(loggedInUser).length !== 0 ? (
+          {loggedInUser?._id ? (
             <Link to="/profile">
               <img
                 className="header-image2 "
@@ -129,14 +129,14 @@ function Header({ open, setOpen }) {
               />
             </Link>
           ) : (
-              <Link to="/login">
-                <img
-                  className="header-image"
-                  src="https://i.imgur.com/thepnzF.png"
-                  alt="Root Logo Primary"
-                />
-              </Link>
-            )}
+            <Link to="/login">
+              <img
+                className="header-image"
+                src="https://i.imgur.com/thepnzF.png"
+                alt="Root Logo Primary"
+              />
+            </Link>
+          )}
         </div>
         <div className="header-link-container" id="header-polices">
           <li>
@@ -169,10 +169,10 @@ function Header({ open, setOpen }) {
                   </div>
                 </>
               ) : (
-                  <div className="header-span">
-                    <>Community/Advocacy</>
-                  </div>
-                )}
+                <div className="header-span">
+                  <>Community/Advocacy</>
+                </div>
+              )}
             </Link>
           </li>
         </div>
@@ -190,8 +190,7 @@ function Header({ open, setOpen }) {
                   Account
                 </div>
                 {openDropdown ? (
-                  <div className="dropdownmenu" 
-                  >
+                  <div className="dropdownmenu">
                     <Link className="dropdown-item dropdown-span " to="login">
                       LOGIN/ REGISTER
                     </Link>
@@ -203,8 +202,8 @@ function Header({ open, setOpen }) {
                     </Link>
                   </div>
                 ) : (
-                    <></>
-                  )}
+                  <></>
+                )}
               </div>
             </div>
             <Link
