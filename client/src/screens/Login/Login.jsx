@@ -7,7 +7,7 @@ import "./Login.css";
 import { useStateValue } from "../../components/LoggedInUser/LoggedInUserContext";
 
 function Login() {
-  const [{ loggedInUser }, dispatch] = useStateValue();
+  const [, dispatch] = useStateValue();
 
   const [loggedIn, setLoggedIn] = useState(false);
   const [userInfo, setUserInfo] = useState({

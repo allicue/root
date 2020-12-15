@@ -15,12 +15,12 @@ function Profile() {
 
   const handler = () => {
     window.innerWidth <= 500
-      ? setFirstName(loggedInUser.name.split(" ")[0] + "'s Profile")
-      : setFirstName(loggedInUser.name.split(" ")[0]);
+      ? setFirstName(loggedInUser?.name.split(" ")[0] + "'s Profile")
+      : setFirstName(loggedInUser?.name.split(" ")[0]);
   };
 
   useEffect(() => {
-    if (loggedInUser.name !== undefined) {
+    if (loggedInUser?.name !== undefined) {
       handler();
       window.addEventListener("resize", handler);
       return () => window.removeEventListener("resize", handler);
@@ -47,9 +47,9 @@ function Profile() {
           <section className="profile-title-info">
             <img
               style={
-                loggedInUser.imgURL ? {} : { border: "2px solid lightgray" }
+                loggedInUser?.imgURL ? {} : { border: "2px solid lightgray" }
               }
-              src={loggedInUser.imgURL ? loggedInUser.imgURL : Leaf}
+              src={loggedInUser?.imgURL ? loggedInUser.imgURL : Leaf}
               id="profile-image"
               alt="profile pic"
             />

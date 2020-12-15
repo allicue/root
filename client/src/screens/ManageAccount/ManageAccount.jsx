@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import { Redirect } from "react-router-dom";
 import DeleteAccountConfirm from "./DeleteAccountConfirm/DeleteAccountConfirm";
 import Layout from "../../components/shared/Layout/Layout";
@@ -6,7 +6,7 @@ import LogoBanner from "../../components/shared/LogoBanner/LogoBanner";
 import Leaf from "../../Assets/Icons/ROOT_Leaf.png";
 import Title from "./ManageAccountStyled";
 import { updateUser, getUser } from "../../services/users";
-import { LoggedInUserContext } from "../../components/LoggedInUser/LoggedInUserContext";
+import { useStateValue } from "../../components/LoggedInUser/LoggedInUserContext";
 import "./ManageAccount.css";
 
 export default function ManageAccount() {
@@ -14,7 +14,7 @@ export default function ManageAccount() {
   const [showImageInput, setShowImageInput] = useState(false);
   const [managed, setManaged] = useState(false);
   const [deleteConfirm, setDeleteConfirm] = useState(false);
-  const [loggedInUser] = useContext(LoggedInUserContext);
+  const [{ loggedInUser }, dispatch] = useStateValue();
 
   const [user, setUser] = useState({
     name: "",
@@ -76,6 +76,8 @@ export default function ManageAccount() {
           <div className="manage-account-main">
             {deleteConfirm ? (
               <DeleteAccountConfirm
+                dispatch={dispatch}
+                loggedInUser={loggedInUser}
                 id={userID}
                 setDeleteConfirm={setDeleteConfirm}
               />
