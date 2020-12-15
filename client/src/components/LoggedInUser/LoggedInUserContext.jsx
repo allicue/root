@@ -1,15 +1,14 @@
-import React, { useState } from "react";
+import React, { createContext, useReducer, useContext } from "react";
 
-const LoggedInUserContext = React.createContext([{}, () => {}]);
+const LoggedInUserContext = createContext();
 
-function LoggedInUserProvider(props) {
-  const [loggedInUser, setLoggedInUser] = useState(null);
-
+function LoggedInUserProvider({ children, reducer, initialState }) {
   return (
-    <LoggedInUserContext.Provider value={[loggedInUser, setLoggedInUser]}>
-      {props.children}
+    <LoggedInUserContext.Provider value={useReducer(reducer, initialState)}>
+      {children}
     </LoggedInUserContext.Provider>
   );
 }
 
-export { LoggedInUserContext, LoggedInUserProvider };
+const useStateValue = () => useContext(LoggedInUserContext);
+export { LoggedInUserContext, LoggedInUserProvider, useStateValue };
