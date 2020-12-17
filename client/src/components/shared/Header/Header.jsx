@@ -1,12 +1,12 @@
-import React, { useEffect, useContext, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 import Ul from "./Ul";
 import { onResize } from "../../../utils/onResize";
-import { LoggedInUserContext } from "../../LoggedInUser/LoggedInUserContext";
+import { useStateValue } from "../../LoggedInUser/LoggedInUserContext";
 
 function Header({ open, setOpen }) {
-  const [loggedInUser] = useContext(LoggedInUserContext);
+  const [{ loggedInUser }] = useStateValue();
 
   useEffect(() => {
     onResize();
