@@ -1,18 +1,18 @@
-import React, { useState } from "react";
-import { Link, Redirect } from "react-router-dom";
-import { getUserEmail } from "../../services/users";
-import Layout from "../../../src/components/shared/Layout/Layout";
-import footerRoot from "../../Assets/Icons/ROOT_Logo_Primary.svg";
-import "./Login.css";
-import { useStateValue } from "../../components/LoggedInUser/LoggedInUserContext";
+import React, { useState } from 'react';
+import { Link, Redirect } from 'react-router-dom';
+import { getUserEmail } from '../../services/users';
+import Layout from '../../../src/components/shared/Layout/Layout';
+import footerRoot from '../../Assets/Icons/ROOT_Logo_Primary.svg';
+import './Login.css';
+import { useStateValue } from '../../components/LoggedInUser/LoggedInUserContext';
 
 function Login() {
   const [, dispatch] = useStateValue();
 
   const [loggedIn, setLoggedIn] = useState(false);
   const [userInfo, setUserInfo] = useState({
-    email: "",
-    password: "",
+    email: '',
+    password: '',
   });
 
   const handleSubmit = async (e) => {
@@ -26,11 +26,11 @@ function Login() {
     }
 
     if (response.email === undefined) {
-      alert("Username and/or password does not match");
+      alert('Username and/or password does not match');
     } else if (userInfo.password !== response.password) {
-      alert("Username and/or password does not match");
+      alert('Username and/or password does not match');
     } else {
-      dispatch({ type: "SET_USER", loggedInUser: response });
+      dispatch({ type: 'SET_USER', loggedInUser: response });
       setLoggedIn(true);
     }
   };
@@ -44,7 +44,7 @@ function Login() {
   };
 
   if (loggedIn) {
-    return <Redirect to={"/"} />;
+    return <Redirect to={'/'} />;
   }
 
   return (
@@ -91,7 +91,7 @@ function Login() {
         </div>
         <div className="login-create">
           <p>
-            Don't have an account?{" "}
+            Don't have an account?{' '}
             <Link to="/create-your-account" className="link-register">
               Register
             </Link>

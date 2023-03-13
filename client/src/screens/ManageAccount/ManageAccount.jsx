@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react";
-import { Redirect } from "react-router-dom";
-import DeleteAccountConfirm from "./DeleteAccountConfirm/DeleteAccountConfirm";
-import Layout from "../../components/shared/Layout/Layout";
-import LogoBanner from "../../components/shared/LogoBanner/LogoBanner";
-import Leaf from "../../Assets/Icons/ROOT_Leaf.png";
-import Title from "./ManageAccountStyled";
-import { updateUser, getUser } from "../../services/users";
-import { useStateValue } from "../../components/LoggedInUser/LoggedInUserContext";
-import "./ManageAccount.css";
+import React, { useState, useEffect, useMemo } from 'react';
+import { Redirect } from 'react-router-dom';
+import DeleteAccountConfirm from './DeleteAccountConfirm/DeleteAccountConfirm';
+import Layout from '../../components/shared/Layout/Layout';
+import LogoBanner from '../../components/shared/LogoBanner/LogoBanner';
+import Leaf from '../../Assets/Icons/ROOT_Leaf.png';
+import Title from './ManageAccountStyled';
+import { updateUser, getUser } from '../../services/users';
+import { useStateValue } from '../../components/LoggedInUser/LoggedInUserContext';
+import './ManageAccount.css';
 
 export default function ManageAccount() {
   const [updated, setUpdated] = useState(false);
@@ -17,14 +17,14 @@ export default function ManageAccount() {
   const [{ loggedInUser }, dispatch] = useStateValue();
 
   const [user, setUser] = useState({
-    name: "",
-    email: "",
-    password: "",
-    imgURL: "",
-    zipcode: "",
+    name: '',
+    email: '',
+    password: '',
+    imgURL: '',
+    zipcode: '',
   });
 
-  let userID = loggedInUser?._id;
+  let userID = useMemo(() => loggedInUser?._id, [loggedInUser]);
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -49,23 +49,23 @@ export default function ManageAccount() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setTimeout(() => setDeleteConfirm(!deleteConfirm), 500);
+    setTimeout(() => setDeleteConfirm((prevState) => !prevState), 500);
     await updateUser(userID, user);
-    setUpdated(!updated);
+    setUpdated(true);
     setManaged(true);
   };
 
   const handleClick = (e) => {
     e.preventDefault();
-    setDeleteConfirm(!deleteConfirm);
+    setDeleteConfirm((prevState) => !prevState);
   };
 
   const handleImageSelect = () => {
-    setShowImageInput(!showImageInput);
+    setShowImageInput((prevState) => !prevState);
   };
 
   if (managed) {
-    return <Redirect to={"/profile"} />;
+    return <Redirect to={'/profile'} />;
   }
 
   return (
@@ -139,8 +139,7 @@ export default function ManageAccount() {
                 <label
                   className="label-manage-account"
                   htmlFor="zipcode"
-                  id="zip-code"
-                >
+                  id="zip-code">
                   Zip Code
                 </label>
                 <input
@@ -173,15 +172,13 @@ export default function ManageAccount() {
                 <button
                   type="submit"
                   className="changes-button"
-                  id="save-changes"
-                >
+                  id="save-changes">
                   Save Changes
                 </button>
                 <button
                   onClick={handleClick}
                   className="changes-button"
-                  id="delete-account"
-                >
+                  id="delete-account">
                   Delete Account
                 </button>
               </div>
