@@ -1,13 +1,13 @@
-import axios from "axios";
+import axios from 'axios';
 
 let apiUrl;
 
 const apiUrls = {
-  production: "https://root-db.herokuapp.com/api",
-  development: "http://localhost:3000/api",
+  production: 'https://root-api-f5uw.onrender.com/api',
+  development: 'http://localhost:3000/api',
 };
 
-if (window.location.hostname === "localhost") {
+if (window.location.hostname === 'localhost') {
   apiUrl = apiUrls.development;
 } else {
   apiUrl = apiUrls.production;
