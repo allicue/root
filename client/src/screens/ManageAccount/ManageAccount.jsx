@@ -63,6 +63,10 @@ export default function ManageAccount() {
     setShowImageInput((prevState) => !prevState);
   };
 
+  if (!userID) {
+    return <Redirect to={'/login'} />;
+  }
+
   if (managed) {
     return <Redirect to={'/profile'} />;
   }
