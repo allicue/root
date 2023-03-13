@@ -3,6 +3,7 @@ import { Link, Redirect } from "react-router-dom";
 import { createUser } from "../../services/users";
 import Form from "./CreateUserForm";
 import styled from "styled-components";
+import { useStateValue } from "../LoggedInUser/LoggedInUserContext";
 
 function CreateAccountForm(props) {
   const ImagePreview = styled.img`
@@ -33,6 +34,7 @@ function CreateAccountForm(props) {
   });
 
   const [isCreated, setCreated] = useState(false);
+  const [{ loggedInUser }, dispatch] = useStateValue();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -45,11 +47,12 @@ function CreateAccountForm(props) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const created = await createUser(user);
+    dispatch({ type: "SET_USER", loggedInUser: created });
     setCreated({ created });
   };
 
   if (isCreated) {
-    return <Redirect to={"/login"} />;
+    return <Redirect to={"/profile"} />;
   }
 
   return (

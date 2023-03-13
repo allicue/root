@@ -1,15 +1,22 @@
-import React, { useState }  from 'react'
+import React, { createContext, useReducer, useContext } from 'react';
 
-const LoggedInUserContext = React.createContext([{}, () => {}])
+const LoggedInUserContext = createContext();
 
-function LoggedInUserProvider(props) {
-  const [loggedInUser, setLoggedInUser] = useState({})
+function LoggedInUserProvider({ children, reducer, initialState }) {
+  const getUserState = () => {
+    const currentUser = JSON.parse(localStorage.getItem('current-user'));
+    if (!!currentUser) {
+      return { loggedInUser: currentUser };
+    }
+    return initialState;
+  };
 
   return (
-    <LoggedInUserContext.Provider value={[loggedInUser, setLoggedInUser]} >
-      {props.children}
-    </LoggedInUserContext.Provider> 
-  )
+    <LoggedInUserContext.Provider value={useReducer(reducer, getUserState())}>
+      {children}
+    </LoggedInUserContext.Provider>
+  );
 }
 
-export {LoggedInUserContext, LoggedInUserProvider}
+const useStateValue = () => useContext(LoggedInUserContext);
+export { LoggedInUserContext, LoggedInUserProvider, useStateValue };
