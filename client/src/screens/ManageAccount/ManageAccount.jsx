@@ -10,13 +10,12 @@ import { useStateValue } from '../../components/LoggedInUser/LoggedInUserContext
 import './ManageAccount.css';
 
 export default function ManageAccount() {
-  const [updated, setUpdated] = useState(false);
   const [showImageInput, setShowImageInput] = useState(false);
   const [managed, setManaged] = useState(false);
   const [deleteConfirm, setDeleteConfirm] = useState(false);
   const [{ loggedInUser }, dispatch] = useStateValue();
 
-  const [user, setUser] = useState({
+  const [formUser, setFormUser] = useState({
     name: '',
     email: '',
     password: '',
@@ -30,19 +29,19 @@ export default function ManageAccount() {
     const fetchUser = async () => {
       if (userID) {
         const user = await getUser(userID);
-        setUser(user);
+        setFormUser(user);
         return () => {
-          setUser(user);
+          setFormUser(user);
         };
       }
     };
-    fetchUser(user);
-  }, [updated]);
+    fetchUser();
+  }, [userID]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setUser({
-      ...user,
+    setFormUser({
+      ...formUser,
       [name]: value,
     });
   };
@@ -50,8 +49,8 @@ export default function ManageAccount() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setTimeout(() => setDeleteConfirm((prevState) => !prevState), 500);
-    await updateUser(userID, user);
-    setUpdated(true);
+    const updatedUser = await updateUser(userID, formUser);
+    dispatch({ type: 'EDIT_USER', loggedInUser: updatedUser });
     setManaged(true);
   };
 
@@ -87,8 +86,8 @@ export default function ManageAccount() {
             <div className="user-image-parent">
               <img
                 className="user-photo"
-                src={user.imgURL ? user.imgURL : Leaf}
-                alt={user.name}
+                src={formUser.imgURL ? formUser.imgURL : Leaf}
+                alt={formUser.name}
               />
               <p className="toggle-input-img" onClick={handleImageSelect}>
                 Edit
@@ -103,7 +102,7 @@ export default function ManageAccount() {
                   className="manage-account-input"
                   type="text"
                   name="name"
-                  value={user?.name}
+                  value={formUser?.name}
                   onChange={handleChange}
                   required
                 />
@@ -116,7 +115,7 @@ export default function ManageAccount() {
                   className="manage-account-input"
                   type="text"
                   name="email"
-                  value={user?.email}
+                  value={formUser?.email}
                   onChange={handleChange}
                   required
                 />
@@ -130,7 +129,7 @@ export default function ManageAccount() {
                   id="password-manage-account"
                   type="password"
                   name="password"
-                  value={user?.password}
+                  value={formUser?.password}
                   onChange={handleChange}
                   required
                 />
@@ -145,7 +144,7 @@ export default function ManageAccount() {
                 <input
                   className="manage-account-input"
                   type="text"
-                  value={user?.zipcode}
+                  value={formUser?.zipcode}
                   onChange={handleChange}
                   name="zipcode"
                   required
@@ -160,7 +159,7 @@ export default function ManageAccount() {
                     className="manage-account-input"
                     type="text"
                     name="imgURL"
-                    value={user?.imgURL}
+                    value={formUser?.imgURL}
                     onChange={handleChange}
                     required
                   />
