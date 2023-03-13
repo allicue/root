@@ -1,25 +1,25 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import "./Header.css";
-import Ul from "./Ul";
-import { onResize } from "../../../utils/onResize";
-import { useStateValue } from "../../LoggedInUser/LoggedInUserContext";
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import './Header.css';
+import Ul from './Ul';
+import { onResize } from '../../../utils/onResize';
+import { useStateValue } from '../../LoggedInUser/LoggedInUserContext';
 
 function Header({ open, setOpen }) {
-  const [{ loggedInUser }] = useStateValue();
+  const [{ loggedInUser }, dispatch] = useStateValue();
 
   useEffect(() => {
     onResize();
-    window.addEventListener("resize", onResize);
+    window.addEventListener('resize', onResize);
     return () => {
-      window.removeEventListener("resize", onResize);
+      window.removeEventListener('resize', onResize);
     };
   }, []);
 
   useEffect(() => {
     open
-      ? (document.body.style.overflow = "hidden")
-      : (document.body.style.overflow = "auto");
+      ? (document.body.style.overflow = 'hidden')
+      : (document.body.style.overflow = 'auto');
   }, [open]);
 
   const [openDropdown, setOpenDropdown] = useState(false);
@@ -30,6 +30,10 @@ function Header({ open, setOpen }) {
   };
   const handleMouseLeave = () => {
     setMargin(false);
+  };
+
+  const onLogOutClick = () => {
+    dispatch({ type: 'LOGOUT_USER' });
   };
 
   return (
@@ -84,8 +88,7 @@ function Header({ open, setOpen }) {
               to="/plan-your-route"
               className="header-link"
               id="link-plan"
-              onClick={() => setOpen(!open)}
-            >
+              onClick={() => setOpen(!open)}>
               <img
                 className="burger-image route"
                 id="route-image"
@@ -101,8 +104,7 @@ function Header({ open, setOpen }) {
             <Link
               to="/transportation-types"
               className="header-link"
-              id="link-transport"
-            >
+              id="link-transport">
               <img
                 className="burger-image leaf"
                 src="https://i.imgur.com/aqpyzDP.png"
@@ -143,8 +145,7 @@ function Header({ open, setOpen }) {
             <Link
               to="/policies-and-initiatives"
               className="header-link"
-              id="link-polices"
-            >
+              id="link-polices">
               <img
                 className="burger-image leaf"
                 src="https://i.imgur.com/g8kmLXl.png"
@@ -185,19 +186,26 @@ function Header({ open, setOpen }) {
                   id="header-account-link"
                   onMouseOver={handleMouseOver}
                   onMouseLeave={handleMouseLeave}
-                  style={margin ? { marginBottom: "-5px" } : {}}
-                >
+                  style={margin ? { marginBottom: '-5px' } : {}}>
                   Account
                 </div>
                 {openDropdown ? (
                   <div className="dropdownmenu">
-                    <Link className="dropdown-item dropdown-span " to="login">
-                      LOGIN/ REGISTER
-                    </Link>
+                    {!loggedInUser?._id ? (
+                      <Link className="dropdown-item dropdown-span " to="login">
+                        LOGIN/ REGISTER
+                      </Link>
+                    ) : (
+                      <Link
+                        className="dropdown-item dropdown-span"
+                        to="/login"
+                        onClick={onLogOutClick}>
+                        LOGOUT
+                      </Link>
+                    )}
                     <Link
                       className="dropdown-item dropdown-span2 "
-                      to="manage-your-account"
-                    >
+                      to="manage-your-account">
                       MANAGE ACCOUNT
                     </Link>
                   </div>
@@ -209,8 +217,7 @@ function Header({ open, setOpen }) {
             <Link
               to="manage-your-account"
               className="header-link"
-              id="link-account-mobile"
-            >
+              id="link-account-mobile">
               <img
                 className="burger-image manage-account"
                 src="https://i.imgur.com/rHmqcSX.png"

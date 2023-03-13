@@ -1,71 +1,70 @@
-import React, { useState, useEffect } from "react";
-import { Redirect } from "react-router-dom";
-import DeleteAccountConfirm from "./DeleteAccountConfirm/DeleteAccountConfirm";
-import Layout from "../../components/shared/Layout/Layout";
-import LogoBanner from "../../components/shared/LogoBanner/LogoBanner";
-import Leaf from "../../Assets/Icons/ROOT_Leaf.png";
-import Title from "./ManageAccountStyled";
-import { updateUser, getUser } from "../../services/users";
-import { useStateValue } from "../../components/LoggedInUser/LoggedInUserContext";
-import "./ManageAccount.css";
+import React, { useState, useEffect, useMemo } from 'react';
+import { Redirect } from 'react-router-dom';
+import DeleteAccountConfirm from './DeleteAccountConfirm/DeleteAccountConfirm';
+import Layout from '../../components/shared/Layout/Layout';
+import LogoBanner from '../../components/shared/LogoBanner/LogoBanner';
+import Leaf from '../../Assets/Icons/ROOT_Leaf.png';
+import Title from './ManageAccountStyled';
+import { updateUser, getUser } from '../../services/users';
+import { useStateValue } from '../../components/LoggedInUser/LoggedInUserContext';
+import './ManageAccount.css';
 
 export default function ManageAccount() {
-  const [updated, setUpdated] = useState(false);
   const [showImageInput, setShowImageInput] = useState(false);
   const [managed, setManaged] = useState(false);
   const [deleteConfirm, setDeleteConfirm] = useState(false);
   const [{ loggedInUser }, dispatch] = useStateValue();
 
-  const [user, setUser] = useState({
-    name: "",
-    email: "",
-    password: "",
-    imgURL: "",
-    zipcode: "",
+  const [formUser, setFormUser] = useState({
+    name: '',
+    email: '',
+    password: '',
+    imgURL: '',
+    zipcode: '',
   });
 
-  let userID = loggedInUser?._id;
+  const userID = useMemo(() => loggedInUser?._id, [loggedInUser]);
 
   useEffect(() => {
     const fetchUser = async () => {
       if (userID) {
         const user = await getUser(userID);
-        setUser(user);
+        setFormUser(user);
         return () => {
-          setUser(user);
+          setFormUser(user);
         };
       }
     };
-    fetchUser(user);
-  }, [updated]);
+    fetchUser();
+  }, [userID]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setUser({
-      ...user,
+    setFormUser((prevState) => ({
+      ...prevState,
       [name]: value,
-    });
+    }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setTimeout(() => setDeleteConfirm(!deleteConfirm), 500);
-    await updateUser(userID, user);
-    setUpdated(!updated);
+    setTimeout(() => setDeleteConfirm((prevState) => !prevState), 500);
+    const updatedUser = await updateUser(userID, formUser);
+    dispatch({ type: 'EDIT_USER', loggedInUser: updatedUser });
     setManaged(true);
   };
 
   const handleClick = (e) => {
     e.preventDefault();
-    setDeleteConfirm(!deleteConfirm);
+    setDeleteConfirm((prevState) => !prevState);
   };
 
   const handleImageSelect = () => {
-    setShowImageInput(!showImageInput);
+    setShowImageInput((prevState) => !prevState);
   };
 
   if (managed) {
-    return <Redirect to={"/profile"} />;
+    return <Redirect to={'/profile'} />;
   }
 
   return (
@@ -87,8 +86,8 @@ export default function ManageAccount() {
             <div className="user-image-parent">
               <img
                 className="user-photo"
-                src={user.imgURL ? user.imgURL : Leaf}
-                alt={user.name}
+                src={formUser.imgURL ? formUser.imgURL : Leaf}
+                alt={formUser.name}
               />
               <p className="toggle-input-img" onClick={handleImageSelect}>
                 Edit
@@ -103,7 +102,7 @@ export default function ManageAccount() {
                   className="manage-account-input"
                   type="text"
                   name="name"
-                  value={user?.name}
+                  value={formUser?.name}
                   onChange={handleChange}
                   required
                 />
@@ -116,7 +115,7 @@ export default function ManageAccount() {
                   className="manage-account-input"
                   type="text"
                   name="email"
-                  value={user?.email}
+                  value={formUser?.email}
                   onChange={handleChange}
                   required
                 />
@@ -130,7 +129,7 @@ export default function ManageAccount() {
                   id="password-manage-account"
                   type="password"
                   name="password"
-                  value={user?.password}
+                  value={formUser?.password}
                   onChange={handleChange}
                   required
                 />
@@ -139,14 +138,13 @@ export default function ManageAccount() {
                 <label
                   className="label-manage-account"
                   htmlFor="zipcode"
-                  id="zip-code"
-                >
+                  id="zip-code">
                   Zip Code
                 </label>
                 <input
                   className="manage-account-input"
                   type="text"
-                  value={user?.zipcode}
+                  value={formUser?.zipcode}
                   onChange={handleChange}
                   name="zipcode"
                   required
@@ -161,7 +159,7 @@ export default function ManageAccount() {
                     className="manage-account-input"
                     type="text"
                     name="imgURL"
-                    value={user?.imgURL}
+                    value={formUser?.imgURL}
                     onChange={handleChange}
                     required
                   />
@@ -173,15 +171,13 @@ export default function ManageAccount() {
                 <button
                   type="submit"
                   className="changes-button"
-                  id="save-changes"
-                >
+                  id="save-changes">
                   Save Changes
                 </button>
                 <button
                   onClick={handleClick}
                   className="changes-button"
-                  id="delete-account"
-                >
+                  id="delete-account">
                   Delete Account
                 </button>
               </div>
